@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;600&family=Marcellus&display=swap');
+
+* {
+    box-sizing: border-box;
+    border: red dotted 1px; 
+}
+
+.resaltado {
+  background-image: linear-gradient(transparent 60%, #FFEA7C 60%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: inline-block;
+}
+
+.contenedor {
+  text-align: center;
+  margin-top: 10px;
+  background-color: #FBF8EF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.tituloprincipal {
+  font-size: 4rem;
+  font-weight: normal;
+  font-family: 'EB Garamond';
+  color: #4A2C2A;
+  max-width: 700px;
+  line-height: 1;
+  margin-top: 55px;
+
+}
+.titulo {
+  font-size: 3rem;
+  font-weight: normal;
+  font-family: 'EB Garamond';
+  color: #4A2C2A;
+  max-width: 700px;
+  line-height: 1;
+  margin-top: 25px;
+}
+
+.descripcion {
+  font-size: 1.4rem;
+  font-family: 'Nunito';
+  font-weight: 400;
+  color: #5C3D3B;
+  margin-top: -20px;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+.botones {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+  }
+  
+  .boton {
+    background-color: #4A2C2A;
+    color: #fff;
+    font-family: 'Karla', sans-serif;
+    font-size: 1rem;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .boton:hover {
+    background-color: #6b403c;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+
+@media (max-width: 768px) {
+  .titulo {
+    font-size: 3rem;
+  }
+
+  .descripcion {
+    font-size: 1.2rem;
+  }
+}
