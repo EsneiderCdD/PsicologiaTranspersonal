@@ -2,11 +2,11 @@
 
 * {
     box-sizing: border-box;
-    border: red dotted 1px; 
+ 
 }
 
 .resaltado {
-  background-image: linear-gradient(transparent 60%, #FFEA7C 60%);
+  background-image: linear-gradient(transparent 60%, #ffef08d8 60%);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   display: inline-block;
@@ -19,7 +19,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  justify-content: auto;
+  height: 90vh;
 }
 
 .tituloprincipal {
@@ -59,7 +60,7 @@
   }
   
   .boton {
-    background-color: #4A2C2A;
+    background-color: #321033;
     color: #fff;
     font-family: 'Karla', sans-serif;
     font-size: 1rem;
@@ -71,7 +72,7 @@
   }
   
   .boton:hover {
-    background-color: #6b403c;
+    background-color: #9b02a0;
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   }

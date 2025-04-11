@@ -2,6 +2,7 @@
 import './App.css'
 
 import Home from './componentes/Home'
+import Servicios from './componentes/servicios/Servicios'
 
 function App() {
 
@@ -9,6 +10,8 @@ function App() {
   return (
     <>
       <Home />
+      <Servicios />
+
     </>
   )
 }
