@@ -24,6 +24,8 @@ export default function Home() {
         <button className={estilos.boton}>Sobre Mí</button>
         <button className={estilos.boton}>Agendar</button>
       </div>
+
+       
     </div>
   );
 }
