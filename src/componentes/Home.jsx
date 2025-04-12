@@ -1,6 +1,8 @@
 import { useState } from "react";
 import estilos from "./Home.module.css";
 import Modal from "./modalwindows/Modal";
+import { Link } from "react-router-dom";
+
 
 export default function Home() {
   const [modalAbierto, setModalAbierto] = useState(false);
@@ -31,11 +33,14 @@ export default function Home() {
       </p>
 
       <div className={estilos.botones}>
-        <button className={estilos.boton}>Sobre Mí</button>
+        <Link to="/about" className={estilos.boton}>
+          Sobre Mí
+        </Link>
         <button className={estilos.boton} onClick={() => setModalAbierto(true)}>
           Agendar
         </button>
       </div>
+
 
       {/* Aquí se monta el modal */}
       <Modal abierto={modalAbierto} cerrar={() => setModalAbierto(false)} precios={precios} />
