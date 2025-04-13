@@ -1,0 +1,108 @@
+
+
+.contenedorHeroico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FBF8EF;
+    max-width: 95%;
+    border-radius: 45px;
+    margin: auto;
+    
+    padding: 0px 20px;
+  }
+  
+  .envaseContenido {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+  .contenidoHeroico {
+    max-width: 50%;
+    text-align: center;
+  }
+  
+  .contenidoHeroico h1 {
+    font-size: 3rem;
+    color: #db1b02;
+    min-width: 500px;
+    margin-top: -5px;
+    
+    text-align: right;
+    font-weight: bold;
+  }
+  .contenidoHeroico h2 {
+    font-size: 1.3rem;
+    color: #db1b02;
+    min-width: 500px;
+    line-height: 1.5;
+    text-align: right;
+    font-weight: bold;
+  }
+  
+  .contenidoHeroico p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.5;
+    text-align:justify;
+  }
+  
+  .imagenHeroica {
+    width: 500px;
+    height: 700px;
+    border-radius: 37.5%;
+    
+  }
+  
+  .seccionExperiencia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  
+    background-color: #FBF8EF;
+  }
+  
+  .cardsEstadisticas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: #FBF8EF;
+    padding: 20px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+  
+  }
+  .card p {
+  
+    text-align: left;
+  }
+  
+  
+  
+  
+  .numero {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #ff5733;
+    margin-right: 15px;
+    
+  }
+  
+  
+  
