@@ -2,7 +2,6 @@ import React from "react";
 import estilos from "../modalwindows/Modal.module.css";
 
 function Modal({ abierto, cerrar, precios, abrirModal2 }) {
-
   return (
     <div className={`${estilos.fondo} ${abierto ? estilos.visible : ""}`} onClick={cerrar}>
       <div className={estilos.contenido} onClick={(e) => e.stopPropagation()}>
@@ -28,7 +27,6 @@ function Modal({ abierto, cerrar, precios, abrirModal2 }) {
             <button className={estilos.botonAgendar} onClick={abrirModal2}>
               Agendar Cita
             </button>
-
           </div>
 
           {/* Card: Sesión Grupal */}
@@ -42,7 +40,9 @@ function Modal({ abierto, cerrar, precios, abrirModal2 }) {
             <p className={estilos.descripcion}>
               Comparte, conecta y crece junto a otros. Una experiencia enriquecedora donde descubrirás que no estás solo y que sanar en grupo también es poderoso.
             </p>
-            <button className={estilos.botonAgendar}>Reservar</button>
+            <button className={estilos.botonAgendar} onClick={abrirModal2}>
+              Reservar
+            </button>
           </div>
         </div>
 
