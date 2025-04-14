@@ -89,31 +89,40 @@ useEffect(() => {
   };
 
   return (
-    <div className={estilos.contenedor}>
-      <h1 className={estilos.tituloprincipal}>Psicología Transpersonal</h1>
-
-      <p className={estilos.titulo}>
-        <span className={estilos.resaltado}>Espacio</span> de crecimiento y acompañamiento{" "}
-        <span className={estilos.resaltado}>terapéutico</span>
-      </p>
-
-      <p className={estilos.descripcion}>
-        Empieza una transformación de la mano de un{" "}
-        <span className={estilos.resaltado}>enfoque</span>{" "}
-        que <span className={estilos.resaltado}>equilibra</span> <span className={estilos.resaltado}>ciencia</span>,{" "}
-        <span className={estilos.resaltado}>humanidad</span> y{" "}
-        <span className={estilos.resaltado}>espiritualidad</span>.
-      </p>
-
-      <div className={estilos.botones}>
-        <Link to="/about" className={estilos.boton}>
-          Sobre Mí
-        </Link>
-        <button className={estilos.boton} onClick={() => setModalAbierto(true)}>
-          Agendar
-        </button>
+    <div className={estilos.layout}>
+      <div className={estilos.texto}>
+        <div className={estilos.contenedor}>
+          <h1 className={estilos.tituloprincipal}>Psicología Transpersonal</h1>
+  
+          <p className={estilos.titulo}>
+            <span className={estilos.resaltado}>Espacio</span> de crecimiento y acompañamiento{" "}
+            <span className={estilos.resaltado}>terapéutico</span>
+          </p>
+  
+          <p className={estilos.descripcion}>
+            Empieza una transformación de la mano de un{" "}
+            <span className={estilos.resaltado}>enfoque</span>{" "}
+            que <span className={estilos.resaltado}>equilibra</span>,{" "}
+            <span className={estilos.resaltado}>ciencia</span>,{" "}
+            <span className={estilos.resaltado}>humanidad</span> y{" "}
+            <span className={estilos.resaltado}>espiritualidad</span>.
+          </p>
+  
+          <div className={estilos.botones}>
+            <Link to="/about" className={estilos.boton}>
+              Sobre Mí
+            </Link>
+            <button className={estilos.boton} onClick={() => setModalAbierto(true)}>
+              Agendar
+            </button>
+          </div>
+        </div>
       </div>
-
+  
+      <div className={estilos.imagen}>
+        <img src="/src/assets/imagenes/PsicoT.png" alt="imagen decorativa" />
+      </div>
+  
       {/* Modales */}
       <Modal
         abierto={modalAbierto}
@@ -121,21 +130,21 @@ useEffect(() => {
         precios={precios}
         abrirModal2={abrirModal2}
       />
-
+  
       <Modal2
         abierto={modal2Abierto}
         cerrar={() => setModal2Abierto(false)}
         precios={precios}
         abrirModal3={abrirModal3}
-        seleccionarSesion={seleccionarSesion} // Pasamos la función para actualizar la sesión
+        seleccionarSesion={seleccionarSesion}
       />
-
+  
       <Modal3
         abierto={modal3Abierto}
         cerrar={() => setModal3Abierto(false)}
-        seleccionarPais={seleccionarPais} // Pasamos la función para actualizar el país
-        redirigirAlPago={redirigirAlPago} // Pasamos la función para redirigir al pago
+        seleccionarPais={seleccionarPais}
+        redirigirAlPago={redirigirAlPago}
       />
     </div>
   );
-}
+}  
