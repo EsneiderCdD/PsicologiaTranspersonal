@@ -1,0 +1,95 @@
+.testimoniosSection {
+    background-color: #fff;
+    padding: 4rem 1rem;
+    text-align: center;
+  }
+  
+  .titulo h2 {
+    font-size: 2rem;
+    color: #111827;
+    font-weight: 700;
+  }
+  
+  .titulo h2 span {
+    color: #a78bfa; /* Violeta suave */
+  }
+  
+  .titulo p {
+    color: #6b7280;
+    margin-top: 0.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  
+  .card {
+    background-color: #fafafa;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    padding: 1.5rem;
+    max-width: 330px;
+    text-align: left;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .avatar {
+    background-color: #a78bfa;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.25rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .nombre {
+    margin-bottom: 0.5rem;
+  }
+  
+  .nombre strong {
+    display: block;
+    font-size: 1rem;
+    color: #111827;
+  }
+  
+  .nombre span {
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+  
+  .estrellas {
+    color: #fbbf24;
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .texto {
+    font-size: 0.95rem;
+    color: #374151;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  
+  .fecha {
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+  

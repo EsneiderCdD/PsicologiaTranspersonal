@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './componentes/Home';
-import Servicios from './componentes/servicios/Servicios';
-import ServicioGrupal from './componentes/servicios/ServicioGrupal';
 import Footer from './componentes/footer/Footer';
 import About from './componentes/about/About'; // lo crearemos a continuación
 import Ocupacion from './componentes/ocupacion/Ocupacion';
+import Carousel from './componentes/carousel/carousel';
+import Testimonios from './componentes/testimonios/testimonios';
 
 function App() {
   return (
@@ -15,7 +15,10 @@ function App() {
             <Home />
             
             <Ocupacion />
+            <Carousel />
+            <Testimonios />
             
+           
             <Footer />
           </>
         } />
