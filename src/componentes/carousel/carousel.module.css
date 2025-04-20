@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;600&family=Marcellus&display=swap');
 
 .text h2{
   font-size: 2.75rem;
@@ -24,13 +25,7 @@
   margin-bottom: 50px;  
   }
 
-    /*
 
-  .descripcion {
-    
-    
-  }
-*/
 
 .carouselContainer {
     width: 100%;

@@ -5,39 +5,43 @@ export default function Footer() {
   return (
     <footer className={styles.container}>
       <div className={styles.content}>
-        <div className={styles.image}></div>
-        <div className={styles.text}>
-          <h3>¿En qué te puedo servir?</h3>
-          <p>
-            Tal vez no buscabas exactamente una terapia, sino una guía, un consejo, o
-            simplemente alguien que pueda escucharte y orientarte.
+        <div className={styles.column}>
+          <h3 className={styles.title}>Psyche<span>Trans</span></h3>
+          <p className={styles.description}>
+            Un espacio para la transformación personal a través del acompañamiento terapéutico
+            y herramientas de psicología transpersonal.
           </p>
-          <p>
-            Si tienes dudas o necesitas más información sobre cómo puedo ayudarte,
-            no dudes en escribirme. ¡Estoy aquí para acompañarte!
-          </p>
+          <div className={styles.social}>
+            <a href="https://wa.me/123456789" target="_blank" rel="noopener noreferrer">
+              <FaWhatsapp />
+            </a>
+            <a href="https://www.instagram.com/tuInstagram" target="_blank" rel="noopener noreferrer">
+              <FaInstagram />
+            </a>
+          </div>
         </div>
-        <div className={styles.socialButtons}>
-          <a
-            href="https://wa.me/123456789"
-            target="_blank"
-            className={styles.socialButton}
-            rel="noopener noreferrer"
-          >
-            <FaWhatsapp size={30} />
-          </a>
-          <a
-            href="https://www.instagram.com/tuInstagram"
-            target="_blank"
-            className={styles.socialButton}
-            rel="noopener noreferrer"
-          >
-            <FaInstagram size={30} />
-          </a>
+
+        <div className={styles.column}>
+          <h4 className={styles.subtitle}>¿En qué te puedo servir?</h4>
+          <p className={styles.helper}>
+            Tal vez no encontraste justo lo que buscabas. Podés escribirme un mensaje, compartir tu inquietud o simplemente saludar. Estoy aquí para acompañarte.
+          </p>
+          <p className={styles.contacto}>📱 WhatsApp: +123 456 789</p>
+          <p className={styles.contacto}>📷 Instagram: @tuInstagram</p>
+        </div>
+
+        <div className={styles.column}>
+          <h4 className={styles.subtitle}>Horario de atención</h4>
+          <p>Lunes a Viernes: 9:00 - 19:00</p>
+          <p>Sábados: 10:00 - 14:00</p>
+          <p>Domingos: Cerrado</p>
+          <small className={styles.nota}>Las sesiones grupales se programan mensualmente. Consulta el calendario.</small>
         </div>
       </div>
+
       <div className={styles.bottom}>
-        <p>&copy; {new Date().getFullYear()} Tu Nombre o Empresa. Todos los derechos reservados.</p>
+      <small>&copy; {new Date().getFullYear()} PsycheTrans. Todos los derechos reservados.</small>
+        <small>Hecho con 💜 </small>
       </div>
     </footer>
   );
