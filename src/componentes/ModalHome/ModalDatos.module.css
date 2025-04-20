@@ -189,3 +189,60 @@ h3 {
   gap: 1rem;
   margin-bottom: 2rem;
 }
+.acordeonUbicacion {
+  margin-top: 2rem;
+  position: relative;
+}
+
+.selectorPrincipal {
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.iconoFlecha {
+  font-size: 0.8rem;
+  margin-left: 1rem;
+}
+
+.listaOpciones {
+  margin-top: 0.25rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fafafa;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  padding: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 300px; /* Evita que crezca indefinidamente */
+  overflow-y: auto;   /* Permite hacer scroll si hay muchas opciones */
+}
+
+.opcion,
+.opcionGrupo {
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+
+
+.opcion:hover,
+.opcionGrupo:hover {
+  background-color: #f0f0f0;
+}
+
+.opcionActiva {
+  background-color: #eae4ff;
+}

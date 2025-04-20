@@ -9,6 +9,8 @@ export default function ModalDatos({ abierto, cerrar, onSeleccion }) {
   const [pais, setPais] = useState(null);
   const [error, setError] = useState("");
   const [confirmacion, setConfirmacion] = useState(false);
+  const [mostrarOpciones, setMostrarOpciones] = useState(false);
+
 
   const manejarClick = () => {
     if (sesion && pais) {
@@ -54,21 +56,54 @@ export default function ModalDatos({ abierto, cerrar, onSeleccion }) {
           </div>
         </div>
 
-        <h3 className={estilos.subtituloPais}>¿Dónde te encuentras actualmente?</h3>
-        <div className={estilos.botonesPais}>
-          <button
-            className={pais === "COL" ? estilos.activo : ""}
-            onClick={() => setPais("COL")}
-          >
-            Colombia
-          </button>
-          <button
-            className={pais === "INT" ? estilos.activo : ""}
-            onClick={() => setPais("INT")}
-          >
-            Internacional
-          </button>
-        </div>
+        <div className={estilos.acordeonUbicacion}>
+  <button
+    className={estilos.selectorPrincipal}
+    onClick={() => setMostrarOpciones(!mostrarOpciones)}
+  >
+    {pais === "COL"
+      ? "Colombia"
+      : pais === "INT"
+      ? "Internacional"
+      : "Selecciona tu región"}
+    <span className={estilos.iconoFlecha}>
+      {mostrarOpciones ? "▲" : "▼"}
+    </span>
+  </button>
+
+  {mostrarOpciones && (
+    <div className={estilos.listaOpciones}>
+      <div
+        className={`${estilos.opcion} ${
+          pais === "COL" ? estilos.opcionActiva : ""
+        }`}
+        onClick={() => {
+          setPais("COL");
+          setMostrarOpciones(false);
+        }}
+      >
+        <strong>Colombia</strong>
+        <p>Colombia</p>
+      </div>
+
+      <div className={estilos.opcionGrupo}>
+        <strong>Latinoamérica</strong>
+        <p>México, Argentina, Chile, Perú, Otros países de Latinoamérica</p>
+      </div>
+
+      <div className={estilos.opcionGrupo}>
+        <strong>Estados Unidos y Canadá</strong>
+        <p>Estados Unidos, Canadá</p>
+      </div>
+
+      <div className={estilos.opcionGrupo}>
+        <strong>Europa</strong>
+        <p>España, Reino Unido, Francia, Alemania, Otros países europeos</p>
+      </div>
+    </div>
+  )}
+</div>
+
 
         {error && <p className={estilos.error}>{error}</p>}
         {confirmacion && (
