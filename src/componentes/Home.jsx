@@ -90,16 +90,21 @@ useEffect(() => {
 
   return (
     <div className={estilos.layout}>
-      <div className={estilos.texto}>
-        <div className={estilos.contenedor}>
+      <div className={estilos.contenedor}>
+        
           <h1 className={estilos.tituloprincipal}>Psicología Transpersonal</h1>
   
           <p className={estilos.titulo}>
-            <span className={estilos.resaltado}>Espacio</span> de crecimiento y acompañamiento{" "}
-            <span className={estilos.resaltado}>terapéutico</span>
+            
           </p>
   
           <p className={estilos.descripcion}>
+
+            <span className={estilos.resaltado}>Espacio</span> de crecimiento y acompañamiento{" "}
+            <span className={estilos.resaltado}>terapéutico. 
+            
+            </span>
+
             Empieza una transformación de la mano de un{" "}
             <span className={estilos.resaltado}>enfoque</span>{" "}
             que <span className={estilos.resaltado}>equilibra</span>,{" "}
@@ -116,7 +121,7 @@ useEffect(() => {
               Agendar
             </button>
           </div>
-        </div>
+        
       </div>
   
       <div className={estilos.imagen}>
