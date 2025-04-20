@@ -7,10 +7,39 @@ export default function ModalServicio({ abierto, cerrar, abrirModalDatos }) {
     <div className={estilos.modalFondo}>
       <div className={estilos.modal}>
         <h2>¿Qué tipo de sesión estás buscando?</h2>
+        <p className={estilos.subtitulo}>Elige el servicio que te interesa</p>
 
         <div className={estilos.botones}>
-          <button onClick={abrirModalDatos}>Terapia Individual</button>
-          <button disabled>Terapia Grupal (próximamente)</button>
+          {/* Card - Terapia Individual */}
+          <div className={estilos.cardServicio}>
+            <img
+              src="/imagenes/terapia-individual.jpg"
+              alt="Terapia Individual"
+            />
+            <h3>Terapia Individual</h3>
+            <p>
+              Sesión terapéutica profesional con enfoque en psicología
+              transpersonal. Virtual, personalizada, centrada en tu proceso
+              interior. Espacios seguros y confidenciales desde cualquier lugar
+              del mundo.
+            </p>
+            <button onClick={abrirModalDatos}>Agendar</button>
+          </div>
+
+          {/* Card - Terapia Grupal */}
+          <div className={`${estilos.cardServicio} ${estilos.cardGrupal}`}>
+            <img
+              src="/imagenes/terapia-grupal.jpg"
+              alt="Terapia Grupal"
+            />
+            <h3>Terapia Grupal (próximamente)</h3>
+            <p>
+              Encuentros presenciales, eventuales y holísticos, creados junto a
+              otras mujeres terapeutas. Un círculo de contención, sanación y
+              conexión femenina. Espacios únicos y mágicos.
+            </p>
+            <button disabled>Reservar Cupo</button>
+          </div>
         </div>
 
         <button onClick={cerrar} className={estilos.cerrar}>Cerrar</button>
