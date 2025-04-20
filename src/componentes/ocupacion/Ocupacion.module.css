@@ -1,31 +1,34 @@
-/* Ocupacion.module.css */
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;600&family=Marcellus&display=swap');
 
+*{
+  border: 1px dotted red;
+}
 .tituloSeccion {
     font-size: 2.75rem;
-    font-weight: 800;
-    margin-bottom: 20px;
+    font-weight: 650;
+    
     text-align: center;
     justify-content: center;
     color: #000000;
     font-family: 'EB Garamond';
     background-color: #f5edea15;
-  }
-
-  .descripcion2 {
+    margin-top: 75px ;
+    margin-bottom: 40px;
+    
+}
+  .descripcion {
     font-size: 1.4rem;
     font-family: 'Nunito';
     font-weight: 400;
     color: #5C3D3B;
-    margin-top: -20px;
+    
     max-width: 850px;
     line-height: 1.5;
     margin: auto;
     text-align: center;
-   
+    margin-bottom: 30px;
     
   }
-  
 
 .container {
     display: flex;
@@ -38,9 +41,10 @@
   .cardPrincipal {
     display: flex;
     flex-direction: column;
-    background: white;
+    background: rgba(0, 0, 0, 0);
     border-radius: 1rem;
     overflow: hidden;
+    min-height: 0px;
     max-width: 850px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     position: relative;
@@ -50,12 +54,12 @@
     height: 300px;
     background-image: url('../../assets/imagenes/meditacion.jpg');
     background-size: 60%;
-    background-position: 50% 55%;
+    background-position: 50% 65%;
     
   }
-  
   .contentPrincipal {
     padding: 1.5rem;
+    font-family: 'Nunito'; ;
   }
   
   .etiquetaPrincipal {
@@ -77,26 +81,60 @@
     color: #6b21a8;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
+    margin: 0px;
   }
+
+  .icon {
+    height: 50px;
+    width: 50px;
+  }
+
+
+
   
-  .beneficiosBox {
+  .listaBeneficios {
     display: flex;
-    justify-content: space-between;
-    padding: 1rem 0;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-    font-size: 0.9rem;
-  }
-  
-  .duracion {
-    font-size: 1rem;
+    flex-wrap: nowrap;
+    gap: 1.5rem; /* Aumenté el espacio entre los íconos */
     margin-top: 1rem;
+    padding: 0;
+    list-style: none;
+    justify-content: center; /* Centra los íconos en la fila */
+    padding: 10px;
+    border-radius: 15px;
+    background: #6b21a800;  
   }
   
+  .listaBeneficios li {
+    display: flex;
+    flex-direction: column; /* Alinea los íconos arriba y los textos abajo */
+    align-items: center; /* Centra el contenido */
+    font-size: 1rem; /* Aumenté un poco el tamaño del texto */
+    color: #000000;
+    text-align: center;
+    background: #6b21a800;   /* Alinea el texto al centro */
+  }
+  
+  .iconoInline {
+    font-size: 2rem; /* Aumenté el tamaño del icono */
+    margin-bottom: 0.5rem; /* Añadí espacio entre el icono y el texto */
+    color: var(--color-icono, #000000); /* Usé el color que ya tienes definido */
+    flex-shrink: 0;
+    background: #6b21a800;  
+  }
+  
+
+  
+  p {
+    font-size: 20px;
+    line-height: 1.5;
+    
+  }
+  
+
+  
+
   .botonPrincipal {
     background-color: #7c3aed;
     color: white;
@@ -153,12 +191,7 @@
     gap: 0.5rem;
   }
   
-  .frecuenciaBox {
-    background-color: #fef3c7;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    margin: 1rem 0;
-  }
+
   
   .botonSecundario {
     background-color: white;
