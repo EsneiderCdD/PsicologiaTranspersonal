@@ -35,57 +35,69 @@ h2 {
 
 .subtitulo {
   font-size: 1rem;
-  color: #666;
+  color: #000000;
   margin-bottom: 1.5rem;
 }
 
 /* Contenedor de servicios */
-.botones {
+.contenedorServicios {
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap; /* 👈 ahora sí se ajustan en filas si hay espacio */
+  justify-content: center; /* o "space-between" si quieres más separación */
   gap: 1.5rem;
-  justify-content: center;
-  flex-wrap: nowrap; /* para que en móviles no se rompa */
+  margin-bottom: 2rem;
+  padding: 0 1rem;
 }
 
-/* Cada tarjeta */
 .cardServicio {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 240px;
+  min-width: 240px; /* 👈 Necesario para scroll horizontal */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  background-color: #fdfdfd;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  padding: 1.5rem;
-  text-align: left;
-  transition: box-shadow 0.3s ease;
-}
+  gap: 0.8rem;
+  border-radius: 13%;
+  transition: border 0.3s ease, background-color 0.3s ease;
+  margin-top: 100px;
 
-.cardServicio:hover {
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.12);
-}
-
+    /* shadow inicial */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .cardServicio:hover {
+    box-shadow: 0 6px 20px rgba(208, 67, 255, 0.4); /* 💜 más fuerte al hover */
+    
+    background-color: #fff;
+  }
+  
 /* Imagen */
 .cardServicio img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 1rem;
+  margin-top: -150px;
+  background-color: #f9f9f900;
+
 }
 
 /* Título de la tarjeta */
 .cardServicio h3 {
-  font-size: 1.3rem;
-  color: #333;
-  margin-bottom: 0.5rem;
+  margin: 0;
+  font-size: 2rem;
+  color: #ca66eb;
+  font-family: 'EB Garamond'; ;
+  justify-content: center;
 }
 
 /* Descripción */
 .cardServicio p {
-  font-size: 0.95rem;
-  color: #444;
-  line-height: 1.4;
-  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #000000;
+  margin-top: 0;
 }
 
 /* Botones de acción */

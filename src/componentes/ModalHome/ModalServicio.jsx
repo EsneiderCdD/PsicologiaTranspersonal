@@ -8,10 +8,10 @@ export default function ModalServicio({ abierto, cerrar, abrirModalDatos }) {
   return (
     <div className={estilos.modalFondo}>
       <div className={estilos.modal}>
-        <h2>¿Qué tipo de sesión estás buscando?</h2>
+        
         <p className={estilos.subtitulo}>Elige el servicio que te interesa</p>
 
-        <div className={estilos.botones}>
+        <div className={estilos.contenedorServicios}>
           {/* Card - Terapia Individual */}
           <div className={estilos.cardServicio}>
             <img

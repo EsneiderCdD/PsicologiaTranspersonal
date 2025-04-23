@@ -1,4 +1,4 @@
-// src/components/Testimonios.jsx
+
 import React from 'react';
 import styles from '../testimonios/Testimonios.module.css';
 

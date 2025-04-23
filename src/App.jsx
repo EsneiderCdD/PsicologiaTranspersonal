@@ -4,7 +4,7 @@ import Footer from './componentes/footer/Footer';
 import About from './componentes/about/About'; // lo crearemos a continuación
 import Ocupacion from './componentes/ocupacion/Ocupacion';
 import Carousel from './componentes/carousel/carousel';
-import Testimonios from './componentes/testimonios/testimonios';
+import Testimonios from './componentes/testimonios/Testimonios';
 
 function App() {
   return (
