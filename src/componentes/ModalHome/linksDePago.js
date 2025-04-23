@@ -1,4 +1,4 @@
-{
+const linksDePago = {
     "1-COL": "https://biz.payulatam.com/L0f9bc3790C2CDE",
     "4-COL": "https://biz.payulatam.com/L0f9bc37D4823B3",
     "6-COL": "https://biz.payulatam.com/L0f9bc34514C813",
@@ -8,5 +8,7 @@
     "1-LA": "https://biz.payulatam.com/L0f9bc3454A86E0",
     "4-LA": "https://biz.payulatam.com/L0f9bc32B99A966",
     "6-LA": "https://biz.payulatam.com/L0f9bc31908263C"
-  }
+  };
+  
+  export default linksDePago;
   
