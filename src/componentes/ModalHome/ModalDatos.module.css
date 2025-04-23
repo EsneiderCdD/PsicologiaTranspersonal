@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;600&family=Marcellus&display=swap');
+
 /* ModalDatos.module.css */
 .modal {
   position: fixed;
@@ -10,15 +12,30 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .contenido {
-  background: white;
+  background: #FBF8EF;
   border-radius: 10px;
   padding: 2rem;
   max-width: 90%;
+  max-height: 90%;
   z-index: 10000;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.contenido p {
+  font-size: 1.5rem;
+  color: #000000;
+  padding: 0;
+  font-family: 'EB Garamond';
+  font-weight: 400;
+  
 }
 
 
@@ -111,9 +128,11 @@ h3 {
 
 .subtitulo {
   font-size: 1rem;
-  color: #777;
+  color: #000000;
   margin-bottom: 1.5rem;
 }
+
+
 .cardsSesion {
   display: flex;
   flex-direction: row;
@@ -136,25 +155,49 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
-  border: 2px solid transparent;
+  border-radius: 13%;
   transition: border 0.3s ease, background-color 0.3s ease;
+  margin-top: 100px;
+
+    /* shadow inicial */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .cardSesion:hover {
+    box-shadow: 0 6px 20px rgba(208, 67, 255, 0.4); /* 💜 más fuerte al hover */
+    
+    background-color: #fff;
+  }
+  
+
+
+.cardSesion img {
+
+  margin-top: -125px;
+  background-color: #f9f9f900;
+
 
 }
 
 .cardSesion:hover {
-  border-color: #0077cc;
+  border-color: #d043ff;
   background-color: #fff;
+
 }
 
-.cardSesion h4 {
+.cardSesion h3 {
   margin: 0;
-  font-size: 1.2rem;
-  color: #333;
+  font-size: 2rem;
+  color: #ca66eb;
+  font-family: 'EB Garamond'; ;
+  justify-content: center;
 }
 
 .cardSesion p {
-  font-size: 0.95rem;
-  color: #555;
+  font-size: 1.2rem;
+  color: #000000;
+  margin-top: 0;
 }
 
 .cardSesion button {

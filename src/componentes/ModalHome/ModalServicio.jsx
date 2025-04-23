@@ -1,4 +1,6 @@
 import estilos from "./ModalServicio.module.css";
+import Terapiai from "../../assets/imagenes/Terapiai.png";
+import terapiagrupal from "../../assets/imagenes/terapiagrupal.png";
 
 export default function ModalServicio({ abierto, cerrar, abrirModalDatos }) {
   if (!abierto) return null;
@@ -13,7 +15,7 @@ export default function ModalServicio({ abierto, cerrar, abrirModalDatos }) {
           {/* Card - Terapia Individual */}
           <div className={estilos.cardServicio}>
             <img
-              src="/imagenes/terapia-individual.jpg"
+              src={Terapiai}
               alt="Terapia Individual"
             />
             <h3>Terapia Individual</h3>
@@ -29,7 +31,7 @@ export default function ModalServicio({ abierto, cerrar, abrirModalDatos }) {
           {/* Card - Terapia Grupal */}
           <div className={`${estilos.cardServicio} ${estilos.cardGrupal}`}>
             <img
-              src="/imagenes/terapia-grupal.jpg"
+              src={terapiagrupal}
               alt="Terapia Grupal"
             />
             <h3>Terapia Grupal (próximamente)</h3>
