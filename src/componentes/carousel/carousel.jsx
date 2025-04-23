@@ -7,7 +7,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 
-import styles from './Carousel.module.css';
+import styles from './carousel.module.css';
 
 // Imágenes (reemplazar con las reales)
 import img1 from '../../assets/imagenes/Img3.jpeg';
