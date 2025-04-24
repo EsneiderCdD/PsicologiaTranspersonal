@@ -3,6 +3,8 @@ import estilos from "./Home.module.css";
 import ModalServicio from "./ModalHome/ModalServicio";
 import ModalDatos from "./ModalHome/ModalDatos";
 import { obtenerLinkDePago } from "./ModalHome/helpers"; // Importamos el helper
+import { useNavigate } from "react-router-dom";
+
 
 export default function Home() {
   const [modalServicioAbierto, setModalServicioAbierto] = useState(false);
@@ -11,6 +13,8 @@ export default function Home() {
     sesiones: null,
     pais: null,
   });
+  const navigate = useNavigate();
+
 
   const manejarSeleccion = ({ sesiones, pais }) => {
     setDatosSeleccionados({ sesiones, pais });
@@ -48,13 +52,21 @@ export default function Home() {
         </p>
 
         <div className={estilos.botones}>
-          <button
-            className={estilos.boton}
-            onClick={() => setModalServicioAbierto(true)}
-          >
-            Agendar
-          </button>
-        </div>
+  <button
+    className={estilos.boton}
+    onClick={() => setModalServicioAbierto(true)}
+  >
+    Agendar
+  </button>
+
+  <button
+    className={estilos.botonSecundario}
+    onClick={() => navigate("/about")}
+  >
+    Sobre mí
+  </button>
+</div>
+
       </div>
 
       <div className={estilos.imagen}>

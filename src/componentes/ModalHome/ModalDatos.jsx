@@ -110,10 +110,7 @@ export default function ModalDatos({ abierto, cerrar, onSeleccion }) {
           </p>
         )}
 
-        <div className={estilos.botonesFinales}>
-          
-          <button onClick={manejarClick}>Continuar</button>
-        </div>
+      
       </div>
     </div>,
     document.getElementById("modal-root")

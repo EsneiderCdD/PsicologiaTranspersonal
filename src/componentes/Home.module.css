@@ -101,7 +101,21 @@
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   }
 
-
+  .botonSecundario {
+    padding: 12px 24px;
+    background-color: transparent;
+    color: #ca66eb;
+    border: 2px solid #ca66eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .botonSecundario:hover {
+    background-color: #f7edff;
+  }
+  
   
   
 

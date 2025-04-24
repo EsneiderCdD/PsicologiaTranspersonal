@@ -44,10 +44,17 @@ const About = () => {
           <h1>Susana Santamaría</h1>
           <h2>Psicóloga Especialista en Bienestar Emocional y Desarrollo Personal</h2>
           <p>
-            Soy psicóloga con amplia experiencia en salud mental, bienestar emocional y desarrollo del potencial humano. Mi enfoque está basado en la psicología transpersonal, un modelo terapéutico que integra la mente, el cuerpo y la dimensión espiritual para generar procesos de transformación profunda. Creo firmemente en la capacidad del ser humano para sanar, crecer y encontrar un equilibrio entre sus emociones, pensamientos y propósito de vida.
+          Soy psicóloga con amplia experiencia en salud mental, bienestar emocional y desarrollo del potencial humano. Mi enfoque está basado en la psicología transpersonal, un modelo terapéutico que integra la mente, el cuerpo y la dimensión espiritual para generar procesos de transformación profunda. Creo firmemente en la capacidad del ser humano para sanar, crecer y encontrar un equilibrio entre sus emociones, pensamientos, realidad y propósito de vida.
+
           </p>
           <p>
-            Además de mi formación en psicología clínica, me he especializado en terapia transpersonal y manejo del trauma, lo que me ha permitido profundizar en los procesos de sanación de experiencias difíciles, especialmente aquellas que se originan en la infancia. Entender el impacto de estas vivencias y trabajarlas desde un enfoque terapéutico adecuado puede marcar la diferencia en la manera en que enfrentamos la vida y construimos nuestras relaciones.
+          Además de mi formación en psicología clínica, me he especializado en terapia transpersonal y terapia enfocada a los ciclos y necesidades femeninas, lo que me ha permitido profundizar en los procesos de sanación de la mujer, experiencias de vida difíciles originadas en la infancia y cambios de vida importantes en el ciclo vital humano.
+
+          </p>
+
+          <p>
+
+          Entender el impacto de tus vivencias y trabajarlas desde un enfoque terapéutico adecuado puede marcar la diferencia en la manera en que enfrentas la vida y construyes tus relaciones, especialmente la relación contigo misma.
           </p>
         </div>
         <img src={Img6} alt="Susana Santamaría" className={estilos.imagenHeroica} />
