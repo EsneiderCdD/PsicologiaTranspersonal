@@ -1,0 +1,79 @@
+.container {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', sans-serif;
+    color: #4a4a4a;
+  }
+  
+  .title {
+    text-align: center;
+    color: #7d5ba6;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+  }
+  
+  .tabButtons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .tabButton {
+    background-color: #f3f4f6;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+  
+  .tabButton:hover {
+    background-color: #e5e7eb;
+  }
+  
+  .active {
+    background-color: #e9dff9;
+    border-bottom: 2px solid #7d5ba6;
+    font-weight: bold;
+  }
+  
+  .contentBox {
+    background-color: #f8f5fd;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+  }
+  
+  .sectionTitle {
+    color: #7d5ba6;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  .list {
+    list-style: none;
+    padding-left: 1rem;
+  }
+  
+  .listItem {
+    margin-bottom: 0.75rem;
+  }
+  
+  .footer {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #777;
+    border-top: 1px solid #ddd;
+    padding-top: 1rem;
+  }
+  

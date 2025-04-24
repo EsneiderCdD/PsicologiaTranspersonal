@@ -1,12 +1,19 @@
 import React, { useEffect, useState } from "react";
 import Img6 from "../../assets/imagenes/Img6.jpeg";
-import estilos from "./About.module.css";  
+import estilos from "./About.module.css";
+import { FiMessageCircle, FiUsers, FiCalendar } from "react-icons/fi";
+import { FaInstagram } from "react-icons/fa";
+import { FiUser, FiCompass } from "react-icons/fi";
+
+
 
 const About = () => {
   const [experiencia, setExperiencia] = useState(0);
   const [sesiones, setSesiones] = useState(0);
   const [pacientes, setPacientes] = useState(0);
   const [seguidores, setSeguidores] = useState(0);
+  const [mostrarSobreMi, setMostrarSobreMi] = useState(true);
+
 
   useEffect(() => {
     const experienciaInterval = setInterval(() => {
@@ -36,54 +43,102 @@ const About = () => {
       clearInterval(seguidoresInterval);
     };
   }, []);
+  const alternarTexto = () => {
+    setMostrarSobreMi((prev) => !prev);
+  };
+  
 
   return (
-    <div className={estilos.contenedorHeroico}>
-      <div className={estilos.envaseContenido}>
-        <div className={estilos.contenidoHeroico}>
-          <h1>Susana Santamaría</h1>
-          <h2>Psicóloga Especialista en Bienestar Emocional y Desarrollo Personal</h2>
-          <p>
-          Soy psicóloga con amplia experiencia en salud mental, bienestar emocional y desarrollo del potencial humano. Mi enfoque está basado en la psicología transpersonal, un modelo terapéutico que integra la mente, el cuerpo y la dimensión espiritual para generar procesos de transformación profunda. Creo firmemente en la capacidad del ser humano para sanar, crecer y encontrar un equilibrio entre sus emociones, pensamientos, realidad y propósito de vida.
-
-          </p>
-          <p>
-          Además de mi formación en psicología clínica, me he especializado en terapia transpersonal y terapia enfocada a los ciclos y necesidades femeninas, lo que me ha permitido profundizar en los procesos de sanación de la mujer, experiencias de vida difíciles originadas en la infancia y cambios de vida importantes en el ciclo vital humano.
-
-          </p>
-
-          <p>
-
-          Entender el impacto de tus vivencias y trabajarlas desde un enfoque terapéutico adecuado puede marcar la diferencia en la manera en que enfrentas la vida y construyes tus relaciones, especialmente la relación contigo misma.
-          </p>
-        </div>
-        <img src={Img6} alt="Susana Santamaría" className={estilos.imagenHeroica} />
+    <div className={estilos.aboutPage}>
+      <div className={estilos.heroSection}>
+        <h1>Conoce sobre nuestra terapeuta</h1>
       </div>
+
+      <div className={estilos.fotoPerfil}>
+        <img src={Img6} alt="Susana Santamaría" />
+        <h2>Susana Santamaría</h2>
+        <h3>Psicóloga Especialista en Bienestar Emocional y Desarrollo Personal</h3>
+      </div>
+
+      <div className={estilos.hojaContenido}>
+  <div className={estilos.textoInfo}>
+    {mostrarSobreMi ? (
+      <>
+        <p>
+          Soy psicóloga con amplia experiencia en salud mental, bienestar emocional y desarrollo del potencial humano. Mi enfoque está basado en la psicología transpersonal, un modelo terapéutico que integra la mente, el cuerpo y la dimensión espiritual para generar procesos de transformación profunda. Creo firmemente en la capacidad del ser humano para sanar, crecer y encontrar un equilibrio entre sus emociones, pensamientos, realidad y propósito de vida.
+        </p>
+        <p>
+          Además de mi formación en psicología clínica, me he especializado en terapia transpersonal y terapia enfocada a los ciclos y necesidades femeninas, lo que me ha permitido profundizar en los procesos de sanación de la mujer, experiencias de vida difíciles originadas en la infancia y cambios de vida importantes en el ciclo vital humano.
+        </p>
+        <p>
+          Entender el impacto de tus vivencias y trabajarlas desde un enfoque terapéutico adecuado puede marcar la diferencia en la manera en que enfrentas la vida y construyes tus relaciones, especialmente la relación contigo misma.
+        </p>
+      </>
+    ) : (
+      <>
+        <p>
+          Mi enfoque terapéutico está basado en la Psicología Transpersonal, una corriente que entiende al ser humano como una totalidad: cuerpo, mente, emociones y espíritu. No solo trabajo con lo que piensas o sientes, sino con el significado profundo de tus experiencias.
+        </p>
+        <p>
+          Utilizo herramientas como la meditación guiada, el trabajo con símbolos, respiración consciente y técnicas narrativas para ayudarte a conectar con tu sabiduría interior, sanar heridas emocionales profundas y encontrar sentido en momentos de crisis.
+        </p>
+        <p>
+          Este enfoque es ideal para quienes sienten que hay algo más allá de lo que se ve, que buscan transformación real y están listos para iniciar un camino hacia su autenticidad y propósito.
+        </p>
+      </>
+    )}
+  </div>
+
+  <button onClick={alternarTexto} className={estilos.botonAlternar}>
+    {mostrarSobreMi ? (
+      <>
+        <FiCompass className={estilos.iconoBoton} /> Sobre Mi Enfoque
+      </>
+    ) : (
+      <>
+        <FiUser className={estilos.iconoBoton} /> Sobre Mí
+      </>
+    )}
+  </button>
+</div>
+
 
       <div className={estilos.seccionExperiencia}>
-        <div className={estilos.cardsEstadisticas}>
-          <div className={estilos.card}>
-            <h2>+<span className={estilos.numero}>{experiencia} años</span></h2>
-            <p>Me he formado profesionalmente, especializado, tomado cursos, hasta la actualidad, siendo esta mi profesión y mi pasión.</p>
-          </div>
-          <div className={estilos.card}>
-            <h3>+<span className={estilos.numero}>{sesiones}</span></h3>
-            <p>Sesiones de terapia realizadas a lo largo de mi trayectoria, he atendido en más de 500 sesiones de terapia individual.</p>
-          </div>
-          <div className={estilos.card}>
-            <h3>+<span className={estilos.numero}>{pacientes}</span></h3>
-            <p>He ayudado a más de 200 pacientes en su camino de autoconocimiento y sanación.</p>
-          </div>
-          <div className={estilos.card}>
-            <h3>+<span className={estilos.numero}>{seguidores}</span></h3>
-            <p>Seguidores. Desde el 2021 inicia una comunidad que he construido de manera organizada y leal a mi servicio.</p>
-          </div>
-        </div>
+  <h2 className={estilos.tituloImpacto}>Impacto</h2>
+  <div className={estilos.cardsEstadisticas}>
+    <div className={estilos.card}>
+      <div className={`${estilos.iconoFondo} ${estilos.morado}`}>
+        <FiCalendar />
       </div>
+      <h3 className={estilos.valor}>+{experiencia}</h3>
+      <p className={estilos.descripcion}>Años de experiencia</p>
+    </div>
+    <div className={estilos.card}>
+      <div className={`${estilos.iconoFondo} ${estilos.rosa}`}>
+        <FiMessageCircle />
+      </div>
+      <h3 className={estilos.valor}>+{sesiones}</h3>
+      <p className={estilos.descripcion}>Sesiones realizadas</p>
+    </div>
+    <div className={estilos.card}>
+      <div className={`${estilos.iconoFondo} ${estilos.durazno}`}>
+        <FiUsers />
+      </div>
+      <h3 className={estilos.valor}>+{pacientes}</h3>
+      <p className={estilos.descripcion}>Personas acompañadas</p>
+    </div>
+    <div className={estilos.card}>
+      <div className={`${estilos.iconoFondo} ${estilos.azul}`}>
+        <FaInstagram />
+      </div>
+      <h3 className={estilos.valor}>{seguidores >= 1000 ? `${Math.round(seguidores / 1000)}K+` : seguidores}</h3>
+      <p className={estilos.descripcion}>Seguidores en Instagram</p>
+    </div>
+  </div>
+</div>
+
     </div>
   );
 };
 
 export default About;
-
-  
