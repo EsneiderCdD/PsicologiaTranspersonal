@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './Terminos.module.css';
 
+
 const Terminos = () => {
   const tabs = {
     Horarios: {
@@ -77,6 +78,7 @@ const Terminos = () => {
         Al agendar una sesión, confirmas que has leído, comprendido y aceptado estos términos y condiciones en su totalidad.
       </p>
     </div>
+    
   );
 };
 
