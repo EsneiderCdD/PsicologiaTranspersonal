@@ -14,7 +14,6 @@
   align-items: center;
   
 }
-
 .contenido {
   background: #FBF8EF;
   border-radius: 10px;
@@ -28,7 +27,6 @@
   align-items: center;
 }
 
-
 .contenido p {
   font-size: 1.5rem;
   color: #000000;
@@ -38,7 +36,6 @@
   
 }
 
-
 @media (max-width: 768px) {
   .contenido {
     padding: 2rem;
@@ -46,84 +43,15 @@
   }
 }
 
-
 h2 {
   font-size: 1.5rem;
   color: #333;
   margin-bottom: 1.5rem;
 }
-
 h3 {
   font-size: 1.2rem;
   color: #555;
   margin-bottom: 1rem;
-}
-
-.botones {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.botones button {
-  padding: 12px 24px;
-  background-color: #0077cc;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
-}
-
-.botones button:hover {
-  background-color: #005fa3;
-}
-
-.activo {
-  background-color: #005fa3 !important;
-}
-
-.error {
-  color: red;
-  font-size: 1rem;
-  margin-top: 15px;
-}
-
-.botonesFinales {
-  margin-top: 20px;
-  display: flex;
-  ;
-  justify-content: space-between;
-}
-
-.botonesFinales button {
-  padding: 10px 20px;
-  background-color: #f1f1f1;
-  color: #333;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1rem;
-  
-}
-
-.botonesFinales button:hover {
-  background-color: #e0e0e0;
-}
-
-/* Nuevo estilo para el mensaje de confirmación */
-.confirmacion {
-  color: green;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-/* Mensaje de error */
-.error {
-  color: red;
-  margin-top: 10px;
 }
 
 .subtitulo {
@@ -218,74 +146,99 @@ h3 {
 }
 
 
-/* País */
 .subtituloPais {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
   font-size: 1rem;
-  color: #555;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 500;
 }
 
 .botonesPais {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 2rem;
-}
-.acordeonUbicacion {
-  margin-top: 2rem;
-  position: relative;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
 }
 
-.selectorPrincipal {
-  width: 100%;
-  text-align: left;
-  padding: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  background: #fff;
+.botonRegion {
+  padding: 0.75rem 1.25rem;
+  background-color: #f4f4f4;
+  border: 2px solid transparent;
+  border-radius: 10px;
   font-size: 1rem;
   cursor: pointer;
+  transition: all 0.3s ease;
+  color: #333;
+  min-width: 200px;
+}
+
+.botonRegion:hover {
+  background-color: #eae4ff;
+  border-color: #d1c4e9;
+}
+
+.regionActiva {
+  background-color: #eae4ff;
+  border-color: #ca66eb;
+  font-weight: 600;
+  color: #ca66eb;
+}
+.cerrarX {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #555;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  z-index: 10;
+}
+
+.cerrarX:hover {
+  color: #ca66eb;
+}
+
+.filaRegionYContinuar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
-.iconoFlecha {
-  font-size: 0.8rem;
-  margin-left: 1rem;
-}
-
-.listaOpciones {
-  margin-top: 0.25rem;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  background: #fafafa;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  padding: 0.25rem;
+.bloqueIzquierdo {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  max-height: 300px; /* Evita que crezca indefinidamente */
-  overflow-y: auto;   /* Permite hacer scroll si hay muchas opciones */
+  align-items: flex-start;
+  flex-grow: 1;
 }
 
-.opcion,
-.opcionGrupo {
-  padding: 0.5rem 0.75rem;
-  border-radius: 8px;
+.bloqueDerecho {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.botonContinuar {
+  padding: 0.75rem 1.5rem;
+  background-color: #ca66eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s ease;
-  font-size: 0.95rem;
-  line-height: 1.3;
+  transition: background-color 0.3s ease;
+  min-width: 150px;
 }
 
-
-.opcion:hover,
-.opcionGrupo:hover {
-  background-color: #f0f0f0;
+.botonContinuar:hover {
+  background-color: #a748c6;
 }
 
-.opcionActiva {
-  background-color: #eae4ff;
-}

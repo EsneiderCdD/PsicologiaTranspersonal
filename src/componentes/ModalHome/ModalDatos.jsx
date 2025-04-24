@@ -30,6 +30,8 @@ export default function ModalDatos({ abierto, cerrar, onSeleccion }) {
   return ReactDOM.createPortal(
     <div className={estilos.modal}>
       <div className={estilos.contenido}>
+      <button className={estilos.cerrarX} onClick={cerrar}>×</button>
+
         
         <p className={estilos.subtitulo}>Selecciona el numero de sesiones, la region donde te encuentras y dale continuar ...
         </p>
@@ -67,67 +69,38 @@ export default function ModalDatos({ abierto, cerrar, onSeleccion }) {
         </div>
         
         
-        <div className={estilos.acordeonUbicacion}>
-  <button
-    className={estilos.selectorPrincipal}
-    onClick={() => setMostrarOpciones(!mostrarOpciones)}
-  >
-  {pais === "COL"
-  ? "Colombia"
-  : pais === "EEC"
-  ? "Europa, EE.UU. y Canadá"
-  : pais === "LA"
-  ? "Latinoamérica"
-  : "Selecciona tu región"}
-
-    <span className={estilos.iconoFlecha}>
-      {mostrarOpciones ? "▲" : "▼"}
-    </span>
-  </button>
-
-  {mostrarOpciones && (
-    <div className={estilos.listaOpciones}>
-      <div
-        className={`${estilos.opcion} ${
-          pais === "COL" ? estilos.opcionActiva : ""
-        }`}
-        onClick={() => {
-          setPais("COL");
-          setMostrarOpciones(false);
-        }}
+        <div className={estilos.filaRegionYContinuar}>
+  <div className={estilos.bloqueIzquierdo}>
+    <p className={estilos.subtituloPais}>Selecciona tu región</p>
+    <div className={estilos.botonesPais}>
+      <button
+        className={`${estilos.botonRegion} ${pais === "COL" ? estilos.regionActiva : ""}`}
+        onClick={() => setPais("COL")}
       >
-        <strong>Colombia</strong>
-        <p>Colombia</p>
-      </div>
-
-          <div
-      className={`${estilos.opcion} ${pais === "EEC" ? estilos.opcionActiva : ""}`}
-      onClick={() => {
-        setPais("EEC");
-        setMostrarOpciones(false);
-      }}
-    >
-      <strong>Europa, EE.UU. y Canadá</strong>
-      <p>Incluye España, Reino Unido, Francia, Alemania, EE.UU., Canadá</p>
+        Colombia
+      </button>
+      <button
+        className={`${estilos.botonRegion} ${pais === "EEC" ? estilos.regionActiva : ""}`}
+        onClick={() => setPais("EEC")}
+      >
+        Europa, EE.UU. o Canadá
+      </button>
+      <button
+        className={`${estilos.botonRegion} ${pais === "LA" ? estilos.regionActiva : ""}`}
+        onClick={() => setPais("LA")}
+      >
+        Latinoamérica y Australia
+      </button>
     </div>
+  </div>
 
-
-        <div
-      className={`${estilos.opcion} ${pais === "LA" ? estilos.opcionActiva : ""}`}
-      onClick={() => {
-        setPais("LA");
-        setMostrarOpciones(false);
-      }}
-    >
-      <strong>Latinoamérica</strong>
-      <p>México, Argentina, Chile, Perú, y otros países latinoamericanos</p>
-    </div>
-
-
-      
-    </div>
-  )}
+  <div className={estilos.bloqueDerecho}>
+    <button onClick={manejarClick} className={estilos.botonContinuar}>
+      Continuar
+    </button>
+  </div>
 </div>
+
 
 
         {error && <p className={estilos.error}>{error}</p>}
@@ -138,7 +111,7 @@ export default function ModalDatos({ abierto, cerrar, onSeleccion }) {
         )}
 
         <div className={estilos.botonesFinales}>
-          <button onClick={cerrar}>Cancelar</button>
+          
           <button onClick={manejarClick}>Continuar</button>
         </div>
       </div>
