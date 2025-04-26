@@ -8,7 +8,7 @@
   flex-wrap: wrap;
   min-height: 100vh;
   background: #FBF8EF;
-  
+  padding: 20px;
 }
 
 .contenedor {
@@ -24,16 +24,16 @@
 }
 
 .imagen img {
-  width: 65%;
-  height: 65%;
+  width: 500px;
+  height: 600px;
   border-radius: 50%;
   margin-right: 70px;
-  
-  
-
+  margin-top: -50px;
+  object-fit: cover;
 }
+
 .resaltado {
-  background-image: linear-gradient(transparent 60%, #ffd900 60%);
+  background-image: linear-gradient(transparent 60%, #cd84685c 60%);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   display: inline-block;
@@ -47,8 +47,8 @@
   max-width: 750px;
   line-height: 1;
   margin-top: 25px;
-
 }
+
 .titulo {
   font-size: 3rem;
   font-weight: normal;
@@ -66,65 +66,113 @@
   font-weight: 400;
   color: #000000;
   margin-top: 0px;
-  max-width: 750px;;
+  max-width: 750px;
   line-height: 1.4;
 }
 
 .botones {
-    display: flex;
-    gap: 50px;
-    margin-top: 30px;
-    height: 100px;
-    justify-content: left;
+  display: flex;
+  gap: 50px;
+  margin-top: 30px;
+  height: 100px;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.boton {
+  background-color: #321033;
+  color: #fff;
+  font-family: 'Cairo', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.boton:hover {
+  background-color: #9b02a0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.botonSecundario {
+  padding: 12px 24px;
+  background-color: transparent;
+  color: #ca66eb;
+  border: 2px solid #ca66eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.botonSecundario:hover {
+  background-color: #f7edff;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .layout {
+    flex-direction: column;
     align-items: center;
-   
-  }
-  
-  .boton {
-    
-    background-color: #321033;
-    color: #fff;
-    font-family: 'Cairo', sans-serif;
-    font-weight: 600;
-    font-size: 1rem;
-    text-decoration: none;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  
-  .boton:hover {
-    background-color: #9b02a0;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    padding: 40px 20px;
   }
 
-  .botonSecundario {
-    padding: 12px 24px;
-    background-color: transparent;
-    color: #ca66eb;
-    border: 2px solid #ca66eb;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  .contenedor {
+    margin-left: 0;
+    margin-bottom: 30px;
   }
-  
-  .botonSecundario:hover {
-    background-color: #f7edff;
-  }
-  
-  
-  
 
-@media (max-width: 768px) {
-  .titulo {
+  .imagen img {
+    width: 300px;
+    height: 350px;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  .tituloprincipal {
     font-size: 3rem;
   }
 
   .descripcion {
+    font-size: 1.5rem;
+    margin-top: 15px;
+  }
+
+  .botones {
+    justify-content: center;
+    gap: 20px;
+    height: auto;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .tituloprincipal {
+    font-size: 2.5rem;
+  }
+
+  .descripcion {
     font-size: 1.2rem;
+  }
+
+  .imagen img {
+    width: 250px;
+    height: 300px;
+  }
+
+  .boton, .botonSecundario {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .botones {
+    flex-direction: column;
+    gap: 15px;
   }
 }

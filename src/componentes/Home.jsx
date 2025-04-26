@@ -70,7 +70,7 @@ export default function Home() {
       </div>
 
       <div className={estilos.imagen}>
-        <img src="/src/assets/imagenes/PsicoT.png" alt="imagen decorativa" />
+        <img src="/src/assets/imagenes/susana.jpg" alt="imagen decorativa" />
       </div>
 
       <ModalServicio
