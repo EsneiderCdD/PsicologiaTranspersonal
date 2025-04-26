@@ -6,6 +6,7 @@ import Ocupacion from './componentes/ocupacion/Ocupacion';
 import Carousel from './componentes/carousel/carousel';
 import Testimonios from './componentes/testimonios/Testimonios';
 import Terminos from './componentes/terminos/Terminos'; // 👈 nuevo import
+import Slider2 from './componentes/slider2/Slider2'; // 👈 nuevo import
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Carousel />
             <Testimonios />
             <Footer />
+            <Slider2 />
           </>
         } />
         <Route path="/about" element={<About />} />
