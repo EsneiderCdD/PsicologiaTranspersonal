@@ -4,6 +4,8 @@ import ModalServicio from "./ModalHome/ModalServicio";
 import ModalDatos from "./ModalHome/ModalDatos";
 import { obtenerLinkDePago } from "./ModalHome/helpers"; // Importamos el helper
 import { useNavigate } from "react-router-dom";
+import PalabraAnimada from "./home/PalabraAnimada"; // Importamos el componente de animación
+import { motion } from "framer-motion";
 
 
 export default function Home() {
@@ -41,23 +43,37 @@ export default function Home() {
       <div className={estilos.contenedor}>
         <h1 className={estilos.tituloprincipal}>Psicología Transpersonal</h1>
         <p className={estilos.descripcion}>
-          <span className={estilos.resaltado}>Espacio</span> de crecimiento y
-          acompañamiento <span className={estilos.resaltado}>terapéutico</span>.
-          Empieza una transformación de la mano de un{" "}
-          <span className={estilos.resaltado}>enfoque</span> que{" "}
-          <span className={estilos.resaltado}>equilibra</span>,{" "}
-          <span className={estilos.resaltado}>ciencia</span>,{" "}
-          <span className={estilos.resaltado}>humanidad</span> y{" "}
-          <span className={estilos.resaltado}>espiritualidad</span>.
+          <PalabraAnimada texto="Espacio" delay={1.43} /> de crecimiento y
+          acompañamiento <PalabraAnimada texto="terapéutico" delay={3} />. Empieza
+          una transformación de la mano de un <PalabraAnimada texto="enfoque" delay={5} />{" "}
+          que <PalabraAnimada texto="equilibra, ciencia, humanidad y espiritualidad." delay={6} />
         </p>
 
+
+
         <div className={estilos.botones}>
-  <button
-    className={estilos.boton}
-    onClick={() => setModalServicioAbierto(true)}
-  >
-    Agendar
-  </button>
+        <motion.button
+          className={estilos.boton}
+          onClick={() => setModalServicioAbierto(true)}
+          initial={{ boxShadow: "none", backgroundColor: "#321033" }}
+          animate={{
+            boxShadow: "0 0 20px #ca66eb, 0 0 40px #ca66eb66",
+            backgroundColor: "#800089",
+            transition: {
+              delay: 7, // Cambia este valor según cuánto quieras esperar
+              duration: 2,
+              ease: "easeInOut"
+            }
+          }}
+          whileHover={{
+            backgroundColor: "#9b02a0",
+            boxShadow: "0 0 25px #ca66eb, 0 0 50px #ca66ebaa",
+            transition: { duration: 1.5 }
+          }}
+        >
+          Agendar
+        </motion.button>
+
 
   <button
     className={estilos.botonSecundario}
