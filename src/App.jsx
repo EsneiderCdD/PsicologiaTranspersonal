@@ -20,6 +20,8 @@ function App() {
             <Testimonios />
             <Footer />
             <Slider2 />
+            <Terminos></Terminos>
+            
           </>
         } />
         <Route path="/about" element={<About />} />
