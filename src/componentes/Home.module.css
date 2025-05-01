@@ -1,7 +1,7 @@
 
 
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;600&family=Marcellus&display=swap');
-
+* { border: red dotted 1px;}
 .layout {
   display: flex;
   flex-direction: row;
@@ -19,7 +19,7 @@
   flex-direction: column;
   justify-content: center;
   gap: 25px;
-  margin-left: 90px;
+  margin-left: 70px;
   margin-bottom: 85px;
 }
 
@@ -30,6 +30,11 @@
   align-items: center;
   margin-bottom: 150px;
 }
+
+.imagenMobile {
+  display: none;
+}
+
 
 .imagen img {
   width: 100%;
@@ -128,6 +133,7 @@
     margin-bottom: 40px;
     align-items: center;
     text-align: center;
+    gap: 25px;
   }
 
   .descripcion {
@@ -138,15 +144,23 @@
     justify-content: center;
   }
 
-  .imagen {
-    justify-content: center;
-    margin-bottom: 60px;
+  /* ← Oculta la imagen de escritorio y enseña la móvil */
+  .imagenDesktop {
+    display: none;
   }
 
-  .imagen img {
+  .imagenMobile {
+    display: flex;
+    margin: 20px 0; 
+    justify-content: center;
+  }
+
+  /* Ajusta tamaño de la móvil a este breakpoint */
+  .imagenMobile img {
     width: 80%;
     max-width: 400px;
-    border-radius: 200px;
+    border-radius: 50%;
+    object-fit: cover;
   }
 }
 
@@ -154,22 +168,35 @@
 
 
 
+
 @media (max-width: 600px) {
+/* 1) ocultamos la imagen de escritorio */
+.imagenDesktop {
+  display: none;
+}
+
+/* 2) mostramos la imagen que está DENTRO del contenedor */
+.imagenMobile {
+  display: flex;
+  margin: 20px 0;       /* separa un poco del título y la descripción */
+}
+
+/* 3) reducimos un poco su tamaño */
+.imagenMobile img {
+  max-width: 240px;
+}
+
+  /* 4) ajustes generales de layout en móvil */
   .layout {
-    flex-direction: column-reverse; /* 👈 Cambia el orden visual */
+    flex-direction: column;
     padding: 20px 15px;
   }
 
-  .imagen  {
-    order: 2; /* 👈 Imagen justo después del título (contenedor es ahora primero) */
-    margin-bottom: 20px;
-  }
-
   .contenedor {
-    order: 1;
-    margin-bottom: 0;
     align-items: center;
     text-align: center;
+    margin-left: 0;
+    margin-bottom: 40px;
     gap: 15px;
   }
 
@@ -179,24 +206,16 @@
 
   .descripcion {
     font-size: 1rem;
-    text-align: center;
+  }
+
+  .botones {
+    flex-direction: column;
+    gap: 15px;
   }
 
   .boton,
   .botonSecundario {
     width: 100%;
     text-align: center;
-  }
-
-  .botones {
-    flex-direction: column;
-    gap: 15px;
-    justify-content: center;
-  }
-
-  .imagen img {
-    width: 100%;
-    max-width: 240px;
-    border-radius: 50%;
   }
 }

@@ -35,8 +35,16 @@ export default function Home() {
 
   return (
     <div className={estilos.layout}>
+      
+      {/* Bloque de contenido */}
       <div className={estilos.contenedor}>
         <h1 className={estilos.tituloprincipal}>Psicología Transpersonal</h1>
+
+        {/* Imagen para móvil (aparece aquí, entre título y descripción) */}
+        <div className={`${estilos.imagen} ${estilos.imagenMobile}`}>
+          <img src="/src/assets/imagenes/susana1.png" alt="imagen decorativa" />
+        </div>
+
         <p className={estilos.descripcion}>
           <PalabraAnimada texto="Espacio" delay={1.43} /> de crecimiento y
           acompañamiento <PalabraAnimada texto="terapéutico" delay={3} />. Empieza
@@ -76,10 +84,10 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={estilos.imagen}>
+  {/* Imagen para desktop (aparece al costado) */}
+  <div className={`${estilos.imagen} ${estilos.imagenDesktop}`}>
         <img src="/src/assets/imagenes/susana1.png" alt="imagen decorativa" />
       </div>
-
       <ModalServicio
         abierto={modalServicioAbierto}
         cerrar={() => setModalServicioAbierto(false)}
