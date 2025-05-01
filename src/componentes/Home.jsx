@@ -40,10 +40,7 @@ export default function Home() {
       <div className={estilos.contenedor}>
         <h1 className={estilos.tituloprincipal}>Psicología Transpersonal</h1>
 
-        {/* Imagen para móvil (aparece aquí, entre título y descripción) */}
-        <div className={`${estilos.imagen} ${estilos.imagenMobile}`}>
-          <img src="/src/assets/imagenes/susana1.png" alt="imagen decorativa" />
-        </div>
+    
 
         <p className={estilos.descripcion}>
           <PalabraAnimada texto="Espacio" delay={1.43} /> de crecimiento y
@@ -51,6 +48,11 @@ export default function Home() {
           una transformación de la mano de un <PalabraAnimada texto="enfoque" delay={5} />{" "}
           que <PalabraAnimada texto="equilibra, ciencia, humanidad y espiritualidad." delay={6} />
         </p>
+
+            {/* Imagen para móvil (aparece aquí, entre título y descripción) */}
+            <div className={`${estilos.imagen} ${estilos.imagenMobile}`}>
+          <img src="/src/assets/imagenes/susana1.png" alt="imagen decorativa" />
+        </div>
 
         <div className={estilos.botones}>
           <motion.button
