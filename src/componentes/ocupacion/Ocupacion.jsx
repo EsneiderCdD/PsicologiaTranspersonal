@@ -1,21 +1,54 @@
-// Ocupacion.jsx
-import React from 'react';
+
+
 import styles from '../ocupacion/Ocupacion.module.css';
-import { FaVideo, FaUsers, FaCalendarAlt, } from 'react-icons/fa';
-import { FaUserCheck, FaHome, FaRegLightbulb } from 'react-icons/fa';
-import {FaSpa,
-  FaFemale,
-  FaHandsHelping} from 'react-icons/fa';
-
-
+import { motion, useInView } from 'framer-motion';
+import {
+  FaVideo, FaUsers, FaCalendarAlt, FaUserCheck, FaHome,
+  FaRegLightbulb, FaSpa, FaFemale, FaHandsHelping
+} from 'react-icons/fa';
+import React, { useRef } from 'react';
 
 const Ocupacion = () => {
-  return ( 
+  const tituloRef = useRef(null);
+  const parrafoRef = useRef(null);
+
+  const tituloEnVista = useInView(tituloRef, { once: false, margin: "-100px" });
+  const parrafoEnVista = useInView(parrafoRef, { once: true, margin: "-100px" });
+
+
+  const variantesServicios = {
+    oculto: { color: "#000000" },
+    visible: {
+      color: "#a78bfa",
+      transition: { duration: 0.5, ease: "easeInOut" }
+    }
+  };
+  
+
+  return (
     <div className={styles.servicios}>
-      <h2 className={styles.tituloSeccion}>Mis Servicios</h2>
-        <p className={styles.descripcion}>
-            Acompañamientos personalizados desde la Psicología Transpersonal para ayudarte a reconectar con tu esencia, sanar y transformar tu realidad desde una mirada integradora.
-        </p>
+      <h2 className={styles.tituloSeccion}>
+        Mis{" "}
+        <motion.span
+          ref={tituloRef}
+          variants={variantesServicios}
+          initial="oculto"
+          animate={tituloEnVista ? "visible" : "oculto"}
+        >
+          Servicios
+        </motion.span>
+
+
+      </h2>
+
+      <motion.p
+        ref={parrafoRef}
+        className={styles.descripcion}
+        initial={{ opacity: 0 }}
+        animate={parrafoEnVista ? { opacity: 1, transition: { duration: 1.2, delay: 0.2 } } : {}}
+      >
+        Acompañamientos personalizados desde la Psicología Transpersonal para ayudarte a reconectar con tu esencia, sanar y transformar tu realidad desde una mirada integradora.
+      </motion.p>
       <div className={styles.container}>
       
         <div className={styles.cardPrincipal}>
@@ -48,12 +81,12 @@ const Ocupacion = () => {
             en un espacio de apoyo mutuo y crecimiento colectivo.
           </p>
           <div className={styles.frecuenciaBox}>
-  <ul className={styles.listaBeneficios}>
-    <li><FaSpa className={styles.iconoInline} /> Enfoque holístico y espiritual</li>
-    <li><FaFemale className={styles.iconoInline} /> Círculo íntimo de mujeres</li>
-    <li><FaHandsHelping className={styles.iconoInline} /> Espacio para compartir y reflexionar</li>
-  </ul>
-</div>
+            <ul className={styles.listaBeneficios}>
+              <li><FaSpa className={styles.iconoInline} /> Enfoque holístico y espiritual</li>
+              <li><FaFemale className={styles.iconoInline} /> Círculo íntimo de mujeres</li>
+              <li><FaHandsHelping className={styles.iconoInline} /> Espacio para compartir y reflexionar</li>
+            </ul>
+          </div>
 
           <button className={styles.botonSecundario}>Ver Próximas Fechas</button>
           </div>

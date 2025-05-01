@@ -2,11 +2,10 @@ import { useState, useEffect } from "react";
 import estilos from "./Home.module.css";
 import ModalServicio from "./ModalHome/ModalServicio";
 import ModalDatos from "./ModalHome/ModalDatos";
-import { obtenerLinkDePago } from "./ModalHome/helpers"; // Importamos el helper
+import { obtenerLinkDePago } from "./ModalHome/helpers";
 import { useNavigate } from "react-router-dom";
-import PalabraAnimada from "./home/PalabraAnimada"; // Importamos el componente de animación
+import PalabraAnimada from "./home/PalabraAnimada";
 import { motion } from "framer-motion";
-
 
 export default function Home() {
   const [modalServicioAbierto, setModalServicioAbierto] = useState(false);
@@ -17,20 +16,16 @@ export default function Home() {
   });
   const navigate = useNavigate();
 
-
   const manejarSeleccion = ({ sesiones, pais }) => {
     setDatosSeleccionados({ sesiones, pais });
     setModalDatosAbierto(false);
   };
 
-  // Redirección automática cuando los datos están listos
   useEffect(() => {
     const { sesiones, pais } = datosSeleccionados;
     if (sesiones && pais) {
       const link = obtenerLinkDePago(sesiones, pais);
-
       if (link) {
-        // Redirigir al link correspondiente
         window.location.href = link;
       } else {
         alert("No se encontró un link de pago para esta combinación.");
@@ -49,40 +44,36 @@ export default function Home() {
           que <PalabraAnimada texto="equilibra, ciencia, humanidad y espiritualidad." delay={6} />
         </p>
 
-
-
         <div className={estilos.botones}>
-        <motion.button
-          className={estilos.boton}
-          onClick={() => setModalServicioAbierto(true)}
-          initial={{ boxShadow: "none", backgroundColor: "#321033" }}
-          animate={{
-            boxShadow: "0 0 20px #ca66eb, 0 0 40px #ca66eb66",
-            backgroundColor: "#800089",
-            transition: {
-              delay: 7, // Cambia este valor según cuánto quieras esperar
-              duration: 2,
-              ease: "easeInOut"
-            }
-          }}
-          whileHover={{
-            backgroundColor: "#9b02a0",
-            boxShadow: "0 0 25px #ca66eb, 0 0 50px #ca66ebaa",
-            transition: { duration: 1.5 }
-          }}
-        >
-          Agendar
-        </motion.button>
+          <motion.button
+            className={estilos.boton}
+            onClick={() => setModalServicioAbierto(true)}
+            initial={{ boxShadow: "none", backgroundColor: "#321033" }}
+            animate={{
+              boxShadow: "0 0 20px #ca66eb, 0 0 40px #ca66eb66",
+              backgroundColor: "#800089",
+              transition: {
+                delay: 7,
+                duration: 2,
+                ease: "easeInOut",
+              },
+            }}
+            whileHover={{
+              backgroundColor: "#9b02a0",
+              boxShadow: "0 0 25px #ca66eb, 0 0 50px #ca66ebaa",
+              transition: { duration: 1.5 },
+            }}
+          >
+            Agendar
+          </motion.button>
 
-
-  <button
-    className={estilos.botonSecundario}
-    onClick={() => navigate("/about")}
-  >
-    Sobre mí
-  </button>
-</div>
-
+          <button
+            className={estilos.botonSecundario}
+            onClick={() => navigate("/about")}
+          >
+            Sobre mí
+          </button>
+        </div>
       </div>
 
       <div className={estilos.imagen}>
