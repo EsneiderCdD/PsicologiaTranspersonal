@@ -1,7 +1,7 @@
 
 
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;600&family=Marcellus&display=swap');
-* { border: red dotted 1px;}
+
 .layout {
   display: flex;
   flex-direction: row;
@@ -18,9 +18,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 25px;
   margin-left: 70px;
-  margin-bottom: 85px;
+  margin-bottom: 100px;
 }
 
 .imagen {
@@ -53,37 +52,34 @@
 }
 
 .tituloprincipal {
-  font-size: clamp(2rem, 5vw, 4rem);
+  font-size: clamp(2.5rem, 4.1vw, 4.3rem);
   font-weight: 650;
   font-family: 'EB Garamond';
   color: #4A2C2A;
   line-height: 1;
 }
 
-.titulo {
-  font-size: clamp(1.5rem, 4vw, 3rem);
-  font-weight: normal;
-  font-family: 'EB Garamond';
-  color: #4A2C2A;
-  line-height: 1;
-  margin: 0;
-}
 
 .descripcion {
   font-size: clamp(1rem, 3vw, 2rem);
   font-family: 'Nunito';
   font-weight: 400;
   color: #000000;
-  line-height: 1.4;
+  line-height: 1.5;
   text-align: left;
   max-width: 98%;
+  margin-top: 20px;
+  
 }
 
 .botones {
   display: flex;
+  justify-content: flex-start;
   flex-wrap: wrap;
   gap: 30px;
-  margin-top: 20px;
+  margin-top: 30px;
+  
+
 }
 
 .boton {
@@ -120,12 +116,25 @@
   background-color: #f7edff;
 }
 
+
+
+
+
 /* ✅ MEDIA QUERIES PARA RESPONSIVE DESIGN */
 
 @media (max-width: 1024px) {
   .layout {
     flex-direction: column;
     padding: 30px;
+    
+   
+  }
+  .tituloprincipal {
+     font-size: clamp(3rem, 3vw, 4rem);
+     margin-top: 0px;
+     margin-bottom: 3%;
+     
+     
   }
 
   .contenedor {
@@ -134,14 +143,23 @@
     align-items: center;
     text-align: center;
     gap: 25px;
+    
+   
   }
 
   .descripcion {
     text-align: center;
+    margin-top: 0px ;
+    margin-bottom: 0%;
+    font-size: clamp(1rem, 3vw, 1.7rem);
+    width: 79%;
+
   }
 
   .botones {
     justify-content: center;
+    margin-top: -10px;
+    
   }
 
   /* ← Oculta la imagen de escritorio y enseña la móvil */
@@ -153,6 +171,9 @@
     display: flex;
     margin: 20px 0; 
     justify-content: center;
+    border: 0;
+    margin-top: -6.5%;
+    
   }
 
   /* Ajusta tamaño de la móvil a este breakpoint */
@@ -165,57 +186,107 @@
 }
 
 
+@media (max-width: 900px) and (min-width: 768px) {
+  .layout {
+    padding: 25px;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .contenedor {
+    margin-left: 0;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+  
+  .descripcion {
+    font-size: 1.2rem;
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .botones {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .imagenDesktop {
+    display: none;
+  }
+
+  .imagenMobile {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+  }
+
+  .imagenMobile img {
+    max-width: 320px;
+    height: auto;
+  }
+}
+
+
 
 
 
 
 @media (max-width: 600px) {
-/* 1) ocultamos la imagen de escritorio */
-.imagenDesktop {
-  display: none;
-}
-
-/* 2) mostramos la imagen que está DENTRO del contenedor */
-.imagenMobile {
-  display: flex;
-  margin: 20px 0;       /* separa un poco del título y la descripción */
-}
-
-/* 3) reducimos un poco su tamaño */
-.imagenMobile img {
-  max-width: 240px;
-}
-
-  /* 4) ajustes generales de layout en móvil */
-  .layout {
-    flex-direction: column;
-    padding: 20px 15px;
+  /* 1) ocultamos la imagen de escritorio */
+  .imagenDesktop {
+    display: none;
   }
-
-  .contenedor {
-    align-items: center;
-    text-align: center;
-    margin-left: 0;
-    margin-bottom: 40px;
-    gap: 15px;
+  
+  /* 2) mostramos la imagen que está DENTRO del contenedor */
+  .imagenMobile {
+    display: flex;
+    margin: 0px ; 
+    border-radius: 50%; 
+    border: 0;
+    margin-top: 10%;   /* separa un poco del título y la descripción */
   }
-
-  .tituloprincipal {
-    font-size: 2rem;
+  
+  /* 3) reducimos un poco su tamaño */
+  .imagenMobile img {
+    max-width: 240px;
+    
   }
-
-  .descripcion {
-    font-size: 1rem;
+  
+    /* 4) ajustes generales de layout en móvil */
+    .layout {
+      flex-direction: column;
+      padding: 20px 15px;
+    }
+  
+    .contenedor {
+      align-items: center;
+      text-align: center;
+      margin-left: 0;
+      margin-bottom: 40px;
+      gap: 15px;
+    }
+  
+    .tituloprincipal {
+      font-size: 2rem;
+      
+    }
+  
+    .descripcion {
+      font-size: 1rem;
+    }
+  
+    .botones {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .boton,
+    .botonSecundario {
+      width: 100%;
+      text-align: center;
+    }
   }
-
-  .botones {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .boton,
-  .botonSecundario {
-    width: 100%;
-    text-align: center;
-  }
-}
+  
