@@ -88,7 +88,7 @@ export default function Home() {
 
   {/* Imagen para desktop (aparece al costado) */}
   <div className={`${estilos.imagen} ${estilos.imagenDesktop}`}>
-        <img src="/src/assets/imagenes/SusanaSantamaria.png" alt="imagen decorativa" />
+        <img src="./src/assets/imagenes/SusanaSantamaria.png" alt="imagen decorativa" />
       </div>
       <ModalServicio
         abierto={modalServicioAbierto}
