@@ -1,7 +1,6 @@
 
-
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;600&family=Marcellus&display=swap');
-
+* {border: 1px dotted red; }
 .layout {
   display: flex;
   flex-direction: row;
@@ -44,12 +43,6 @@
   object-fit: cover;
 }
 
-.resaltado {
-  background-image: linear-gradient(transparent 60%, #cd84685c 60%);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  display: inline-block;
-}
 
 .tituloprincipal {
   font-size: clamp(2.5rem, 4.1vw, 4.3rem);
@@ -115,6 +108,16 @@
 .botonSecundario:hover {
   background-color: #f7edff;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -186,12 +189,30 @@
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 900px) and (min-width: 768px) {
   .layout {
     padding: 25px;
     flex-direction: column;
     align-items: center;
     gap: 30px;
+  }
+  
+  .tituloprincipal {
+    font-size: clamp(2.8rem, 5vw, 4rem);
+    /*font-size: clamp(3rem, 3vw, 4rem);*/
+    margin-top: 0px;
+    margin-bottom: 3%;
   }
 
   .contenedor {
@@ -202,7 +223,7 @@
   }
   
   .descripcion {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 3vw, 1.7rem);
     max-width: 90%;
     text-align: center;
   }
@@ -220,14 +241,24 @@
   .imagenMobile {
     display: flex;
     justify-content: center;
-    margin: 30px 0;
+    
+    
   }
-
   .imagenMobile img {
-    max-width: 320px;
+    max-width: 350px;
     height: auto;
+    
+    
   }
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -238,6 +269,8 @@
   /* 1) ocultamos la imagen de escritorio */
   .imagenDesktop {
     display: none;
+    
+  
   }
   
   /* 2) mostramos la imagen que está DENTRO del contenedor */
@@ -246,12 +279,14 @@
     margin: 0px ; 
     border-radius: 50%; 
     border: 0;
-    margin-top: 10%;   /* separa un poco del título y la descripción */
+    margin-top: -6.5%;
+    
+      /* separa un poco del título y la descripción */
   }
   
   /* 3) reducimos un poco su tamaño */
   .imagenMobile img {
-    max-width: 240px;
+    max-width: 275px;
     
   }
   
@@ -265,21 +300,24 @@
       align-items: center;
       text-align: center;
       margin-left: 0;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
       gap: 15px;
     }
   
     .tituloprincipal {
-      font-size: 2rem;
+      font-size: 2.75rem;
+      
       
     }
   
     .descripcion {
-      font-size: 1rem;
+      font-size: 1.33rem;
+      
     }
   
     .botones {
-      flex-direction: column;
+      flex-direction: row;
+      flex-wrap: nowrap;
       gap: 15px;
     }
   
@@ -289,4 +327,7 @@
       text-align: center;
     }
   }
+  
+
+
   

@@ -44,11 +44,10 @@ export default function Home() {
     
 
         <p className={estilos.descripcion}>
-          <PalabraAnimada texto="Espacio" delay={1.43} /> de crecimiento y
-          acompañamiento <PalabraAnimada texto="terapéutico" delay={3} />. Empieza
-          una transformación de la mano de un <PalabraAnimada texto="enfoque" delay={5} />{" "}
-          que <PalabraAnimada texto="equilibra, ciencia, humanidad y espiritualidad." delay={6} />
+          Espacio de crecimiento y acompañamiento terapéutico. Empieza
+          una transformación de la mano de un enfoque que equilibra, ciencia, humanidad y espiritualidad.
         </p>
+
 
             {/* Imagen para móvil (aparece aquí, entre título y descripción) */}
             <div className={`${estilos.imagen} ${estilos.imagenMobile}`}>
