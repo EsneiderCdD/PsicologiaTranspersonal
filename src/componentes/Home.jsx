@@ -6,6 +6,7 @@ import { obtenerLinkDePago } from "./ModalHome/helpers";
 import { useNavigate } from "react-router-dom";
 import PalabraAnimada from "./home/PalabraAnimada";
 import { motion } from "framer-motion";
+import SusanaSantamaria from "../assets/imagenes/SusanaSantamaria.png";
 
 export default function Home() {
   const [modalServicioAbierto, setModalServicioAbierto] = useState(false);
@@ -51,7 +52,7 @@ export default function Home() {
 
             {/* Imagen para móvil (aparece aquí, entre título y descripción) */}
             <div className={`${estilos.imagen} ${estilos.imagenMobile}`}>
-          <img src="/src/assets/imagenes/susana1.png" alt="imagen decorativa" />
+          <img src={SusanaSantamaria} alt="imagen decorativa" />
         </div>
 
         <div className={estilos.botones}>
@@ -88,7 +89,7 @@ export default function Home() {
 
   {/* Imagen para desktop (aparece al costado) */}
   <div className={`${estilos.imagen} ${estilos.imagenDesktop}`}>
-        <img src="./src/assets/imagenes/SusanaSantamaria.png" alt="imagen decorativa" />
+        <img src={SusanaSantamaria} alt="imagen decorativa" />
       </div>
       <ModalServicio
         abierto={modalServicioAbierto}
