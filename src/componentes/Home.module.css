@@ -286,7 +286,7 @@
   
   /* 3) reducimos un poco su tamaño */
   .imagenMobile img {
-    max-width: 275px;
+    max-width: 260px;
     
   }
   
@@ -305,7 +305,7 @@
     }
   
     .tituloprincipal {
-      font-size: 2.75rem;
+      font-size: 2.5rem;
       
       
       
