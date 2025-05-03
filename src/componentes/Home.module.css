@@ -48,7 +48,7 @@
   font-size: clamp(2.5rem, 4.1vw, 4.3rem);
   font-weight: 650;
   font-family: 'EB Garamond';
-  color: #4A2C2A;
+  color: #7B3028; /* #4A2C2A;*/
   line-height: 1;
 }
 

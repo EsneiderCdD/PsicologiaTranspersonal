@@ -10,11 +10,9 @@ import 'swiper/css/thumbs';
 import styles from './carousel.module.css';
 
 // Imágenes (reemplazar con las reales)
-import img1 from '../../assets/imagenes/Img3.jpeg';
-import img2 from '../../assets/imagenes/Img3.jpeg';
+
 import img3 from '../../assets/imagenes/Img3.jpeg';
-import img4 from '../../assets/imagenes/Img3.jpeg';
-import img5 from '../../assets/imagenes/Img3.jpeg';
+
 
 const images = [img1, img2, img3, img4, img5];
 

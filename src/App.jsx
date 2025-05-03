@@ -16,10 +16,10 @@ function App() {
           <>
             <Home />
             <Ocupacion />
-            <Carousel />
+            <Slider2 />
             <Testimonios />
             <Footer />
-            <Slider2 />
+            
             <Terminos></Terminos>
             
           </>
