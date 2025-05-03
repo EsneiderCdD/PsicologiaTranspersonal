@@ -6,6 +6,7 @@
   color: #000000;
   padding: 3rem 2rem 2rem;
   font-family: 'Nunito', sans-serif;
+  background: #f5f2fc;
 }
 
 .content {
@@ -44,17 +45,7 @@
   margin: 0.5rem 0 1.25rem;
 }
 
-.helper {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  margin-bottom: 1rem;
-}
 
-.contacto {
-  font-size: 0.9rem;
-  color: #000000;
-  margin-bottom: 0.25rem;
-}
 
 .nota {
   display: block;

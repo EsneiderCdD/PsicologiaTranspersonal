@@ -48,9 +48,9 @@ h2 {
   flex-direction: row;
   flex-wrap: nowrap; /* 👈 ahora sí se ajustan en filas si hay espacio */
   justify-content: center; /* o "space-between" si quieres más separación */
-  gap: 1.5rem;
-  margin: 0;
-  padding: 0 1rem;
+  margin: auto;
+  gap: 2rem;
+  
 }
 
 .cardServicio {
@@ -67,8 +67,7 @@ h2 {
   gap: 0.8rem;
   border-radius: 13%;
   transition: border 0.3s ease, background-color 0.3s ease;
-  margin-top: 100px;
-
+  margin-bottom: 50px;
     /* shadow inicial */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
@@ -80,12 +79,6 @@ h2 {
     background-color: #fff;
   }
   
-/* Imagen */
-.cardServicio img {
-  margin-top: -150px;
-  background-color: #f9f9f900;
-
-}
 
 /* Título de la tarjeta */
 .cardServicio h3 {
@@ -154,4 +147,49 @@ h2 {
 .cerrar:hover {
   background-color: #f2f2f2;
   border-radius: 50%;
+}
+
+
+
+@media (max-width: 600px) {
+  .contenedorServicios {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .cardServicio {
+    flex-direction: row;
+    align-items: center;
+    width: 95%;
+    max-width: 100%;
+    min-width: unset;
+    border-radius: 12px;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .cardServicio img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+    background-color: #eee; /* para placeholder si no hay imagen */
+  }
+
+  .cardServicio h3 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  .cardServicio p {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .cardServicio button {
+    padding: 8px 12px;
+    font-size: 0.95rem;
+  }
 }

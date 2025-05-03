@@ -1,6 +1,5 @@
 import estilos from "./ModalServicio.module.css";
-import Terapiai from "../../assets/imagenes/Terapiai.png";
-import terapiagrupal from "../../assets/imagenes/terapiagrupal.png";
+
 
 export default function ModalServicio({ abierto, cerrar, abrirModalDatos }) {
   if (!abierto) return null;
@@ -14,6 +13,8 @@ export default function ModalServicio({ abierto, cerrar, abrirModalDatos }) {
         
         <p className={estilos.subtitulo}>Elige el servicio que te interesa</p>
 
+
+        
         <div className={estilos.contenedorServicios}>
         <button onClick={cerrar} className={estilos.cerrar}>X</button>
           
@@ -21,10 +22,9 @@ export default function ModalServicio({ abierto, cerrar, abrirModalDatos }) {
           <div className={estilos.cardServicio}>
           
             <img
-              src={Terapiai}
               alt="Terapia Individual"
             />
-            <h3>Terapia Individual</h3>
+          
             <p>
               Sesión terapéutica profesional con enfoque en psicología
               transpersonal.{/*Virtual, personalizada, centrada en tu proceso
@@ -37,10 +37,9 @@ export default function ModalServicio({ abierto, cerrar, abrirModalDatos }) {
           {/* Card - Terapia Grupal */}
           <div className={`${estilos.cardServicio} ${estilos.cardGrupal}`}>
             <img
-              src={terapiagrupal}
               alt="Terapia Grupal"
             />
-            <h3>Terapia Grupal (próximamente)</h3>
+            
             <p>
               Encuentros presenciales, eventuales y holísticos, creados junto a
               otras mujeres terapeutas. {/*Un círculo de contención, sanación y

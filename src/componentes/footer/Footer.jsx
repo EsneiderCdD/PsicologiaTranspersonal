@@ -21,14 +21,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className={styles.column}>
-          <h4 className={styles.subtitle}>¿En qué te puedo servir?</h4>
-          <p className={styles.helper}>
-            Tal vez no encontraste justo lo que buscabas. Podés escribirme un mensaje, compartir tu inquietud o simplemente saludar. Estoy aquí para acompañarte.
-          </p>
-          <p className={styles.contacto}>📱 WhatsApp: +123 456 789</p>
-          <p className={styles.contacto}>📷 Instagram: @tuInstagram</p>
-        </div>
+
 
         <div className={styles.column}>
           <h4 className={styles.subtitle}>Horario de atención</h4>

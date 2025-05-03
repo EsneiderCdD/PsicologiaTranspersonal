@@ -5,6 +5,7 @@ import { FiMessageCircle, FiUsers, FiCalendar } from "react-icons/fi";
 import { FaInstagram } from "react-icons/fa";
 import { FiUser, FiCompass } from "react-icons/fi";
 import Footer from "../footer/Footer";
+import Terminos from "../terminos/Terminos";
 
 
 
@@ -167,6 +168,8 @@ const togglePregunta = (index) => {
     </div>
   </div>
 </div>
+
+    <Terminos></Terminos>
 
 
 

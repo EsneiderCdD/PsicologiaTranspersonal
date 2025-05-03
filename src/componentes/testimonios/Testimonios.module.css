@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;600&family=Marcellus&display=swap');
 
 
+  .titulo {
+    background: #FBF8EF;
+  }
+
 
   
   .titulo h2 {
@@ -13,6 +17,7 @@
     background-color: #f5edea15;
     margin-top: 75px ;
     margin-bottom: 40px;
+    
   }
   
   .titulo h2 span {
@@ -39,10 +44,11 @@
     justify-content: center;
     gap: 1.5rem;
     margin-top: 3rem;
+    background: #FBF8EF;
   }
   
   .card {
-    background-color: #fafafa;
+    background-color: #ffff;
     border-radius: 0.75rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
     padding: 1.5rem;
@@ -111,3 +117,41 @@
     background-color: #ffffff00;
   }
   
+
+  /* Responsividad para tablets */
+@media (max-width: 1024px) {
+  .cardsContainer {
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+
+  .card {
+    flex: 1 1 calc(50% - 2rem);
+    max-width: 100%;
+  }
+}
+
+/* Responsividad para móviles */
+@media (max-width: 600px) {
+  .cardsContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .titulo h2 {
+    font-size: 2rem;
+  }
+
+  .titulo p {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+}
