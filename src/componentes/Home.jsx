@@ -35,26 +35,65 @@ export default function Home() {
   }, [datosSeleccionados]);
 
   return (
-    <div className={estilos.layout}>
-      
-      {/* Bloque de contenido */}
-      <div className={estilos.contenedor}>
-        <h1 className={estilos.tituloprincipal}>Psicología Transpersonal</h1>
-
-    
-
-        <p className={estilos.descripcion}>
+    <motion.div 
+      className={estilos.layout}
+      initial="hidden"
+      animate="visible"
+      variants={{
+        hidden: {},
+        visible: {
+          transition: {
+            staggerChildren: 0.3,
+          },
+        },
+      }}
+    >
+  
+      <motion.div 
+        className={estilos.contenedor}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
+        <motion.h1 
+          className={estilos.tituloprincipal}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          Psicología Transpersonal
+        </motion.h1>
+  
+        <motion.p 
+          className={estilos.descripcion}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          viewport={{ once: true }}
+        >
           Espacio de crecimiento y acompañamiento terapéutico. Empieza
           una transformación de la mano de un enfoque que equilibra, ciencia, humanidad y espiritualidad.
-        </p>
-
-
-            {/* Imagen para móvil (aparece aquí, entre título y descripción) */}
-            <div className={`${estilos.imagen} ${estilos.imagenMobile}`}>
+        </motion.p>
+  
+        <motion.div 
+          className={`${estilos.imagen} ${estilos.imagenMobile}`}
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+          viewport={{ once: true }}
+        >
           <img src={SusanaSantamaria} alt="imagen decorativa" />
-        </div>
-
-        <div className={estilos.botones}>
+        </motion.div>
+  
+        <motion.div 
+          className={estilos.botones}
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
+          viewport={{ once: true }}
+        >
           <motion.button
             className={estilos.boton}
             onClick={() => setModalServicioAbierto(true)}
@@ -76,20 +115,26 @@ export default function Home() {
           >
             Agendar
           </motion.button>
-
+  
           <button
             className={estilos.botonSecundario}
             onClick={() => navigate("/about")}
           >
             Sobre mí
           </button>
-        </div>
-      </div>
-
-  {/* Imagen para desktop (aparece al costado) */}
-  <div className={`${estilos.imagen} ${estilos.imagenDesktop}`}>
+        </motion.div>
+      </motion.div>
+  
+      <motion.div 
+        className={`${estilos.imagen} ${estilos.imagenDesktop}`}
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+        viewport={{ once: true }}
+      >
         <img src={SusanaSantamaria} alt="imagen decorativa" />
-      </div>
+      </motion.div>
+  
       <ModalServicio
         abierto={modalServicioAbierto}
         cerrar={() => setModalServicioAbierto(false)}
@@ -98,12 +143,12 @@ export default function Home() {
           setModalDatosAbierto(true);
         }}
       />
-
+  
       <ModalDatos
         abierto={modalDatosAbierto}
         cerrar={() => setModalDatosAbierto(false)}
         onSeleccion={manejarSeleccion}
       />
-    </div>
+    </motion.div>
   );
-}
+}  
