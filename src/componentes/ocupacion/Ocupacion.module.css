@@ -142,6 +142,21 @@
     cursor: pointer;
     margin-top: 1rem;
   }
+
+
+  .botonPrincipal:hover {
+    transform: scale(1.05);
+    background-color: #6b21a8;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .botonSecundario:hover {
+    transform: scale(1.05);
+    background-color: #ea580c;
+    color: white;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  }
+  
   
   .cardSecundario {
     max-width: 500px;
@@ -209,3 +224,85 @@
     margin-right: 0.5rem;
   }
   
+
+  /* Responsive para tablets (hasta 1024px) */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 3rem;
+  }
+
+  .cardPrincipal,
+  .cardSecundario {
+    max-width: 100%;
+  }
+
+  .listaBeneficios {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .iconoInline {
+    font-size: 1.5rem;
+  }
+
+  .listaBeneficios li {
+    font-size: 0.95rem;
+  }
+
+  .icon {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+/* Responsive para móviles (hasta 768px) */
+@media (max-width: 768px) {
+  .tituloSeccion {
+    font-size: 2rem;
+    margin-top: 50px;
+    margin-bottom: 25px;
+  }
+
+  .descripcion {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+
+  .contentPrincipal {
+    padding: 1rem;
+  }
+
+  h2, h3 {
+    font-size: 1.25rem;
+    gap: 0.5rem;
+  }
+
+  .icon {
+    height: 30px;
+    width: 30px;
+  }
+
+  .botonPrincipal,
+  .botonSecundario {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+
+  .imagePrincipal,
+  .secundaria {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .etiquetaPrincipal,
+  .etiquetaSecundaria {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.5rem;
+  }
+}

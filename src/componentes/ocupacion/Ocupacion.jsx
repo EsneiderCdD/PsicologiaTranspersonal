@@ -23,7 +23,12 @@ const Ocupacion = () => {
       transition: { duration: 0.5, ease: "easeInOut" }
     }
   };
-  
+  const cardPrincipalRef = useRef(null);
+  const cardSecundarioRef = useRef(null);
+
+  const cardPrincipalEnVista = useInView(cardPrincipalRef, { once: true, margin: "-100px" });
+  const cardSecundarioEnVista = useInView(cardSecundarioRef, { once: true, margin: "-100px" });
+
 
   return (
     <div className={styles.servicios}>
@@ -41,57 +46,69 @@ const Ocupacion = () => {
 
       </h2>
 
-      <motion.p
-        ref={parrafoRef}
-        className={styles.descripcion}
-        initial={{ opacity: 0 }}
-        animate={parrafoEnVista ? { opacity: 1, transition: { duration: 1.2, delay: 0.2 } } : {}}
-      >
-        Acompañamientos personalizados desde la Psicología Transpersonal para ayudarte a reconectar con tu esencia, sanar y transformar tu realidad desde una mirada integradora.
-      </motion.p>
-      <div className={styles.container}>
-      
-        <div className={styles.cardPrincipal}>
-          <div className={styles.imagePrincipal}></div>
-          <div className={styles.contentPrincipal}>
-            <span className={styles.etiquetaPrincipal}>Servicio Principal</span>
-            <h2><FaVideo className={styles.icon} /> Terapia Personalizada Virtual</h2>
-            <p>
-              Sesiones personalizadas en un espacio seguro y confidencial donde trabajaremos juntos
-              para abordar tus desafíos emocionales, construir resiliencia y desarrollar estrategias
-              efectivas para mejorar tu bienestar.
-            </p>
-            <ul className={styles.listaBeneficios}>
-              <li><FaUserCheck className={styles.iconoInline} /> Atención Profesional</li>
-              <li><FaHome className={styles.iconoInline} /> Desde casa </li>
-              <li><FaRegLightbulb className={styles.iconoInline} /> Material de Apoyo Personalzia</li>
-            </ul>
+        <motion.p
+          ref={parrafoRef}
+          className={styles.descripcion}
+          initial={{ opacity: 0 }}
+          animate={parrafoEnVista ? { opacity: 1, transition: { duration: 1.2, delay: 0.2 } } : {}}
+        >
+          Acompañamientos personalizados desde la Psicología Transpersonal para ayudarte a reconectar con tu esencia, sanar y transformar tu realidad desde una mirada integradora.
+        </motion.p>
+        <div className={styles.container}>
+        <motion.div
+          ref={cardPrincipalRef}
+          className={styles.cardPrincipal}
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={cardPrincipalEnVista ? { opacity: 1, scale: 1 } : {}}
+          transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 }}
+        >
 
-            
-            <button className={styles.botonPrincipal}>Reservar Sesión</button>
-          </div>
-        </div>
-        <div className={styles.cardSecundario}>
-        <div className={styles.secundaria}></div>
-        <div className={styles.contentPrincipal}>
-          <span className={styles.etiquetaSecundaria}>Servicio Eventual</span>
-          <h3><FaUsers className={styles.icon} /> Terapia Grupal Presencial</h3>
-          <p>
-            Sesiones en grupo donde compartirás experiencias con otras personas, aprendiendo juntos
-            en un espacio de apoyo mutuo y crecimiento colectivo.
-          </p>
-          <div className={styles.frecuenciaBox}>
-            <ul className={styles.listaBeneficios}>
-              <li><FaSpa className={styles.iconoInline} /> Enfoque holístico y espiritual</li>
-              <li><FaFemale className={styles.iconoInline} /> Círculo íntimo de mujeres</li>
-              <li><FaHandsHelping className={styles.iconoInline} /> Espacio para compartir y reflexionar</li>
-            </ul>
-          </div>
-
-          <button className={styles.botonSecundario}>Ver Próximas Fechas</button>
-          </div>
-        </div>
+      <div className={styles.imagePrincipal}></div>
+      <div className={styles.contentPrincipal}>
+        <span className={styles.etiquetaPrincipal}>Servicio Principal</span>
+        <h2><FaVideo className={styles.icon} /> Terapia Personalizada Virtual</h2>
+        <p>
+          Sesiones personalizadas en un espacio seguro y confidencial donde trabajaremos juntos
+          para abordar tus desafíos emocionales, construir resiliencia y desarrollar estrategias
+          efectivas para mejorar tu bienestar.
+        </p>
+        <ul className={styles.listaBeneficios}>
+          <li><FaUserCheck className={styles.iconoInline} /> Atención Profesional</li>
+          <li><FaHome className={styles.iconoInline} /> Desde casa </li>
+          <li><FaRegLightbulb className={styles.iconoInline} /> Material de Apoyo Personalzia</li>
+        </ul>
+        <button className={styles.botonPrincipal}>Reservar Sesión</button>
       </div>
+    </motion.div>
+
+    <motion.div
+        ref={cardSecundarioRef}
+        className={styles.cardSecundario}
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={cardSecundarioEnVista ? { opacity: 1, scale: 1 } : {}}
+        transition={{ duration: 0.6, ease: 'easeOut', delay: 0.4 }}
+      >
+
+      <div className={styles.secundaria}></div>
+      <div className={styles.contentPrincipal}>
+        <span className={styles.etiquetaSecundaria}>Servicio Eventual</span>
+        <h3><FaUsers className={styles.icon} /> Terapia Grupal Presencial</h3>
+        <p>
+          Sesiones en grupo donde compartirás experiencias con otras personas, aprendiendo juntos
+          en un espacio de apoyo mutuo y crecimiento colectivo.
+        </p>
+        <div className={styles.frecuenciaBox}>
+          <ul className={styles.listaBeneficios}>
+            <li><FaSpa className={styles.iconoInline} /> Enfoque holístico y espiritual</li>
+            <li><FaFemale className={styles.iconoInline} /> Círculo íntimo de mujeres</li>
+            <li><FaHandsHelping className={styles.iconoInline} /> Espacio para compartir y reflexionar</li>
+          </ul>
+        </div>
+        <button className={styles.botonSecundario}>Ver Próximas Fechas</button>
+      </div>
+    </motion.div>
+  </div>
+
     </div>
   );
 };
