@@ -33,40 +33,39 @@ export default function ModalDatos({ abierto, cerrar, onSeleccion }) {
       <button className={estilos.cerrarX} onClick={cerrar}>×</button>
 
         
-        <p className={estilos.subtitulo}>Selecciona el numero de sesiones, la region donde te encuentras y dale continuar ...
-        </p>
-
+  
         <div className={estilos.cardsSesion}>
-          <div
-            className={`${estilos.cardSesion} ${sesion === "1" ? estilos.activoCard : ""}`}
-            onClick={() => setSesion("1")}
-          >
-            
-              <img src={IconoC11} alt="Icono" />
-            <h3>Sesión Única</h3>
-            <p>Un espacio puntual para abordar una necesidad inmediata o conocernos.</p>
-          </div>
+  <div
+    className={`${estilos.cardSesion} ${sesion === "1" ? estilos.activoCard : ""}`}
+    onClick={() => setSesion("1")}
+  >
+    <div className={estilos.contenidoCard}>
+      <img alt="Icono" className={estilos.icono} />
+      <p>Un espacio puntual para abordar una necesidad inmediata o conocernos.</p>
+    </div>
+  </div>
 
-          <div
-            className={`${estilos.cardSesion} ${sesion === "4" ? estilos.activoCard : ""}`}
-            onClick={() => setSesion("4")}
-          > 
-            <img src={IconoC33} alt="Icono" />
-            <h3>Sesión Profunda</h3>
-            <p>Cuatro sesiones para conocerte, trabajar procesos y crear continuidad.</p>
-          </div>
+  <div
+    className={`${estilos.cardSesion} ${sesion === "4" ? estilos.activoCard : ""}`}
+    onClick={() => setSesion("4")}
+  >
+    <div className={estilos.contenidoCard}>
+      <img alt="Icono" className={estilos.icono} />
+      <p>Cuatro sesiones para conocerte, trabajar procesos y crear continuidad.</p>
+    </div>
+  </div>
 
-          <div
-            className={`${estilos.cardSesion} ${sesion === "6" ? estilos.activoCard : ""}`}
-            onClick={() => setSesion("6")}
-          >
-            <img src = { IconoC22} />
-            <h3>Sesión completa</h3>
-            <p>Una experiencia profunda y sostenida para trabajar a fondo tu bienestar.</p>
+  <div
+    className={`${estilos.cardSesion} ${sesion === "6" ? estilos.activoCard : ""}`}
+    onClick={() => setSesion("6")}
+  >
+    <div className={estilos.contenidoCard}>
+      <img alt="Icono" className={estilos.icono} />
+      <p>Una experiencia profunda y sostenida para trabajar a fondo tu bienestar.</p>
+    </div>
+  </div>
+</div>
 
-          </div>
-
-        </div>
         
         
         <div className={estilos.filaRegionYContinuar}>
@@ -95,11 +94,13 @@ export default function ModalDatos({ abierto, cerrar, onSeleccion }) {
   </div>
 
   <div className={estilos.bloqueDerecho}>
-    <button onClick={manejarClick} className={estilos.botonContinuar}>
+    
+  </div>
+  
+</div>
+<button onClick={manejarClick} className={estilos.botonContinuar}>
       Continuar
     </button>
-  </div>
-</div>
 
 
 

@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;600&family=Marcellus&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap');
 
-/* ModalDatos.module.css */
 .modal {
   position: fixed;
   top: 0;
@@ -12,171 +11,140 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  padding: 1rem;
 }
+
 .contenido {
-  background: #FBF8EF;
-  border-radius: 10px;
-  padding: 2rem;
-  max-width: 90%;
-  max-height: 90%;
-  z-index: 10000;
+  background-color: #fffdf8;
+  border-radius: 12px;
+  
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   position: relative;
+  font-family: 'EB Garamond', serif;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 1.5rem;
 }
 
-.contenido p {
-  font-size: 1.5rem;
-  color: #000000;
-  padding: 0;
-  font-family: 'EB Garamond';
-  font-weight: 400;
-  
+.cerrarX {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  color: #777;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.cerrarX:hover {
+  color: #ca66eb;
 }
 
-@media (max-width: 768px) {
-  .contenido {
-    padding: 2rem;
-    max-width: 95%;
-  }
-}
-
-h2 {
-  font-size: 1.5rem;
+.titulo {
+  font-size: 1.4rem;
+  font-weight: 600;
   color: #333;
-  margin-bottom: 1.5rem;
-}
-h3 {
-  font-size: 1.2rem;
-  color: #555;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
 }
 
-.subtitulo {
+.descripcion {
   font-size: 1rem;
-  color: #000000;
+  color: #444;
+  text-align: center;
   margin-bottom: 1.5rem;
 }
-
 
 .cardsSesion {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap; /* 👈 ahora sí se ajustan en filas si hay espacio */
-  justify-content: center; /* o "space-between" si quieres más separación */
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-  padding: 0 1rem;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .cardSesion {
-  background-color: #f9f9f9;
-  padding: 1.5rem;
-  border-radius: 12px;
-  width: 240px;
-  min-width: 240px; /* 👈 Necesario para scroll horizontal */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-  border-radius: 13%;
-  transition: border 0.3s ease, background-color 0.3s ease;
-  margin-top: 100px;
-
-    /* shadow inicial */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-  }
-  
-  .cardSesion:hover {
-    box-shadow: 0 6px 20px rgba(208, 67, 255, 0.4); /* 💜 más fuerte al hover */
-    
-    background-color: #fff;
-  }
-  
-
-
-.cardSesion img {
-
-  margin-top: -125px;
-  background-color: #f9f9f900;
-
-
+ 
+  background-color: #f5f5f5;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .cardSesion:hover {
-  border-color: #d043ff;
-  background-color: #fff;
-
+  background-color: #f0eaff;
+  border-color: #d1b3f7;
 }
 
-.cardSesion h3 {
-  margin: 0;
-  font-size: 2rem;
+.activoCard {
+  background-color: #eae4ff;
+  border-color: #ca66eb;
+  font-weight: 600;
   color: #ca66eb;
-  font-family: 'EB Garamond'; ;
-  justify-content: center;
 }
 
-.cardSesion p {
-  font-size: 1.2rem;
-  color: #000000;
-  margin-top: 0;
+.contenidoCard {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-.cardSesion button {
-  margin-top: auto;
-  padding: 10px 16px;
-  background-color: #0077cc;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  
+.icono {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
 }
 
-.cardSesion button:hover {
-  background-color: #005fa3;
+/* ---------------------- Región y Continuar ---------------------- */
+
+.filaRegionYContinuar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  background-color: #faf7ff;
+ 
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
+.bloqueIzquierdo {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: row;
+}
 
 .subtituloPais {
-  font-size: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-  text-align: center;
-  font-weight: 500;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #4a4a4a;
 }
 
 .botonesPais {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-bottom: 1.5rem;
+  flex-direction: column;
+  gap: 0.6rem;
 }
 
 .botonRegion {
-  padding: 0.75rem 1.25rem;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
   background-color: #f4f4f4;
   border: 2px solid transparent;
-  border-radius: 10px;
-  font-size: 1rem;
   cursor: pointer;
+  font-size: 1rem;
   transition: all 0.3s ease;
-  color: #333;
-  min-width: 200px;
+  text-align: left;
 }
 
 .botonRegion:hover {
-  background-color: #eae4ff;
-  border-color: #d1c4e9;
+  background-color: #f0eaff;
+  border-color: #d1b3f7;
 }
 
 .regionActiva {
@@ -185,44 +153,12 @@ h3 {
   font-weight: 600;
   color: #ca66eb;
 }
-.cerrarX {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: transparent;
-  border: none;
-  font-size: 2rem;
-  color: #555;
-  cursor: pointer;
-  transition: color 0.3s ease;
-  z-index: 10;
-}
-
-.cerrarX:hover {
-  color: #ca66eb;
-}
-
-.filaRegionYContinuar {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 2rem;
-  flex-wrap: wrap;
-  width: 100%;
-  margin-bottom: 1rem;
-}
-
-.bloqueIzquierdo {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  flex-grow: 1;
-}
 
 .bloqueDerecho {
+  flex: 1 1 30%;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
 }
 
 .botonContinuar {
@@ -235,10 +171,60 @@ h3 {
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  min-width: 150px;
+  min-width: 160px;
+  text-align: center;
 }
 
 .botonContinuar:hover {
-  background-color: #a748c6;
+  background-color: #a94ccc;
 }
 
+/* Responsive ajuste */
+@media (max-width: 600px) {
+  .filaRegionYContinuar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .bloqueIzquierdo, .bloqueDerecho {
+    flex: 1 1 100%;
+  }
+
+  .bloqueDerecho {
+    justify-content: flex-start;
+    margin-top: 1rem;
+  }
+}
+
+/* ---------------------- Feedback ---------------------- */
+.error {
+  color: #d10000;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.confirmacion {
+  color: #2c9c4b;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* ---------------------- Responsive ---------------------- */
+@media (max-width: 500px) {
+  .contenido {
+    padding: 1.5rem;
+  }
+
+  .cardsSesion {
+    flex-direction: column;
+  }
+
+  .filaRegionYContinuar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .botonContinuar {
+    align-self: center;
+  }
+}
