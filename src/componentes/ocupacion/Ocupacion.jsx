@@ -4,9 +4,10 @@ import styles from '../ocupacion/Ocupacion.module.css';
 import { motion, useInView } from 'framer-motion';
 import {
   FaVideo, FaUsers, FaCalendarAlt, FaUserCheck, FaHome,
-  FaRegLightbulb, FaSpa, FaFemale, FaHandsHelping
+  FaRegLightbulb, FaSpa, FaFemale, FaHandsHelping, FaPlus
 } from 'react-icons/fa';
 import React, { useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 const Ocupacion = () => {
   const tituloRef = useRef(null);
@@ -73,9 +74,14 @@ const Ocupacion = () => {
           efectivas para mejorar tu bienestar.
         </p>
         <ul className={styles.listaBeneficios}>
-          <li><FaUserCheck className={styles.iconoInline} /> Atención Profesional</li>
-          <li><FaHome className={styles.iconoInline} /> Desde casa </li>
-          <li><FaRegLightbulb className={styles.iconoInline} /> Material de Apoyo Personalzia</li>
+        <li><FaSpa className={styles.iconoInline} /> Enfoque holístico y espiritual</li>
+          
+          <li><FaRegLightbulb className={styles.iconoInline} /> Material de Apoyo Personalizado</li>
+
+          <Link to="/about" className={styles.botonConocerMas}>
+            <FaPlus className={styles.iconoInline} /> Conocer Más
+          </Link>
+
         </ul>
         <button className={styles.botonPrincipal}>Reservar Sesión</button>
       </div>
@@ -92,16 +98,19 @@ const Ocupacion = () => {
       <div className={styles.secundaria}></div>
       <div className={styles.contentPrincipal}>
         <span className={styles.etiquetaSecundaria}>Servicio Eventual</span>
-        <h3><FaUsers className={styles.icon} /> Terapia Grupal Presencial</h3>
+        <h2><FaUsers className={styles.icon} /> Terapia Grupal Presencial</h2>
         <p>
           Sesiones en grupo donde compartirás experiencias con otras personas, aprendiendo juntos
           en un espacio de apoyo mutuo y crecimiento colectivo.
         </p>
         <div className={styles.frecuenciaBox}>
           <ul className={styles.listaBeneficios}>
-            <li><FaSpa className={styles.iconoInline} /> Enfoque holístico y espiritual</li>
+            
             <li><FaFemale className={styles.iconoInline} /> Círculo íntimo de mujeres</li>
             <li><FaHandsHelping className={styles.iconoInline} /> Espacio para compartir y reflexionar</li>
+            <Link to="/about" className={styles.botonConocerMas}>
+            <FaPlus className={styles.iconoInline} /> Conocer Más
+          </Link>
           </ul>
         </div>
         <button className={styles.botonSecundario}>Ver Próximas Fechas</button>
