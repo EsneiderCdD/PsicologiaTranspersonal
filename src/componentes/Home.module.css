@@ -8,6 +8,7 @@
   justify-content: space-between;
   min-height: 100vh;
   background: #FBF8EF;
+  /* background: linear-gradient(190deg, rgba(251, 248, 239, 1) 0%, rgba(251, 248, 239, 1) 40%, rgba(253, 252, 249, 1) 60%, rgba(255, 255, 255, 1) 100%); */
   padding: 40px 60px;
   flex-wrap: wrap;
 }
@@ -98,7 +99,8 @@
   padding: 12px 24px;
   background-color: transparent;
   color: #ca66eb;
-  border: 2px solid #ca66eb;
+  border: none;
+ 
   border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
