@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;600&family=Marcellus&display=swap');
-
+* {
+  border: dotted 1px red;
+}
 
   .titulo {
-    background: #FBF8EF;
+    background: #fff;
   }
 
 
@@ -14,7 +16,7 @@
     justify-content: center;
     color: #000000;
     font-family: 'EB Garamond';
-    background-color: #f5edea15;
+    background-color: #fff;
     margin-top: 75px ;
     margin-bottom: 40px;
     
@@ -34,34 +36,39 @@
       line-height: 1.5;
       margin: auto;
       text-align: center;
-      margin-bottom: 50px;  
+      margin-bottom: 50px;
+       
     }
     
   
-  .cardsContainer {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 3rem;
-    background: #FBF8EF;
-  }
-  
-  .card {
-    background-color: #ffff;
-    border-radius: 0.75rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
-    padding: 1.5rem;
-    max-width: 350px;
-    text-align: left;
-    transition: transform 0.3s ease;
-    font-family: 'Nunito'; 
-    margin-bottom: 50px;
-  }
-  
-  .card:hover {
-    transform: translateY(-5px);
-  }
+    .cardsContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      background: #fff;
+      padding: 0 1rem; /* evita desbordes en móviles */
+      box-sizing: border-box; /* importante para que padding no aumente ancho total */
+    }
+    
+    .card {
+      background-color: #FBF8EF;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+      padding: 1.5rem;
+      text-align: left;
+      transition: transform 0.3s ease;
+      font-family: 'Nunito'; 
+      flex: 1 1 calc(33.333% - 1rem); /* 3 por fila en escritorio */
+      max-width: calc(33.333% - 1rem); /* fijo también el ancho máximo */
+      box-sizing: border-box;
+      margin-bottom: 50px;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    
   
   .avatar {
     background-color: #a78bfa;
@@ -105,9 +112,9 @@
   
   .texto {
     font-size: 1rem;
-    color: #374151;
+    color: #000000;
     margin-bottom: 1rem;
-    line-height: 1.5;
+    line-height: 1.7;
     background-color: #ffffff00;
   }
   
@@ -133,14 +140,8 @@
 }
 
 /* Responsividad para móviles */
+/* Móviles */
 @media (max-width: 600px) {
-  .cardsContainer {
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    padding: 0 1rem;
-  }
-
   .card {
     width: 100%;
     max-width: 100%;
@@ -152,6 +153,13 @@
 
   .titulo p {
     font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+
+  .cardsContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
     padding: 0 1rem;
   }
 }

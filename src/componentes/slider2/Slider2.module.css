@@ -1,6 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;600&family=Marcellus&display=swap');
 
+
 /* Estilos ya existentes */
 
 .sliderContainer {
@@ -42,9 +43,9 @@
 
 /* Estilos añadidos para la sección "Mis Servicios" */
 .servicios {
-  padding: 60px 20px 40px;
+  
   text-align: center;
-  background: #ffff;
+  background: #FBF8EF;
 }
 
 .tituloSeccion {
@@ -61,13 +62,14 @@
 }
 
 .descripcion {
-  font-size: 1.11rem; /* AQUI HAY QUE ORGANIZAR BIEN TIPOGRAFIAS TAMAÑOS */
+  font-size: 1.4rem;
   font-family: 'Nunito';
   font-weight: 400;
   color: #5C3D3B;
+  
   max-width: 850px;
   line-height: 1.5;
   margin: auto;
   text-align: center;
-  margin-bottom: 50px;  
+  margin-bottom: 30px; 
 }
