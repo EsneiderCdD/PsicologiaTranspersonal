@@ -1,5 +1,5 @@
 import estilos from "./Home2.module.css";
-import SusanaSantamaria from "../../assets/imagenes/SusanaSantamaria.png";
+import SusanaS from "../../assets/imagenes/SusanaS.png";
 import React, { useEffect, useState } from "react";
 import { FiMessageCircle, FiUsers, FiCalendar, FiUser, FiCompass } from "react-icons/fi";
 import { FaInstagram } from "react-icons/fa";
@@ -28,7 +28,7 @@ export default function Home2() {
       <div className={estilos.layout}>
       
         <div className={`${estilos.imagen} ${estilos.imagenDesktop}`}>
-          <img src={SusanaSantamaria} alt="imagen decorativa" />
+          <img src={SusanaS} alt="imagen decorativa" />
         </div>
         <div className={estilos.contenedor}>
           <h1 className={estilos.tituloprincipal}>
@@ -40,7 +40,7 @@ export default function Home2() {
           </p>
       
           <div className={`${estilos.imagen} ${estilos.imagenMobile}`}>
-            <img src={SusanaSantamaria} alt="imagen decorativa" />
+            <img src={SusanaS} alt="imagen decorativa" />
           </div>
       
         </div>

@@ -1,6 +1,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;600&family=Marcellus&display=swap');
-
+*{
+  border: 1px dotted red;
+}
 .layout {
   display: flex;
   flex-direction: row;
@@ -36,11 +38,9 @@
 
 
 .imagen img {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  max-height: 600px;
-  border-radius: 50%;
+  width:100%;
+
+
   object-fit: cover;
 }
 
