@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className={styles.container}>
       <div className={styles.content}>
         <div className={styles.column}>
-          <h3 className={styles.title}>Psyche<span>Trans</span></h3>
+          <h3 className={styles.title}>Psicologia <span>Transpersonal</span></h3>
           <p className={styles.description}>
             Un espacio para la transformación personal a través del acompañamiento terapéutico
             y herramientas de psicología transpersonal.
@@ -21,15 +21,6 @@ export default function Footer() {
           </div>
         </div>
 
-
-
-        <div className={styles.column}>
-          <h4 className={styles.subtitle}>Horario de atención</h4>
-          <p>Lunes a Viernes: 9:00 - 19:00</p>
-          <p>Sábados: 10:00 - 14:00</p>
-          <p>Domingos: Cerrado</p>
-          <small className={styles.nota}>Las sesiones grupales se programan mensualmente. Consulta el calendario.</small>
-        </div>
       </div>
 
       <div className={styles.bottom}>

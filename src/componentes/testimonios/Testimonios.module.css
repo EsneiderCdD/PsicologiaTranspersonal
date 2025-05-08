@@ -62,7 +62,8 @@
       flex: 1 1 calc(33.333% - 1rem); /* 3 por fila en escritorio */
       max-width: calc(33.333% - 1rem); /* fijo también el ancho máximo */
       box-sizing: border-box;
-      margin-bottom: 50px;
+      margin-bottom: 10px;
+   
     }
     
     .card:hover {

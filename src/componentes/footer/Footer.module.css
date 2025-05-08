@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;600&family=Marcellus&display=swap');
+
+
 .container {
   border-top: 1px solid #374151;
   margin-top: 2rem;
@@ -24,9 +27,15 @@
 }
 
 .title {
-  font-size: 1.6rem;
-  font-weight: 700;
+  font-size: 2.75rem;
+  font-weight: 650;
+  text-align: center;
+  justify-content: center;
   color: #000000;
+  font-family: 'EB Garamond';
+  background-color: #f5edea15;
+  margin-top: 75px ;
+  margin-bottom: 40px;
 }
 
 .title span {
@@ -40,9 +49,16 @@
 }
 
 .description {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin: 0.5rem 0 1.25rem;
+  font-size: 1.4rem;
+  font-family: 'Nunito';
+  font-weight: 400;
+  color: #5C3D3B;
+
+  max-width: 850px;
+  line-height: 1.5;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 
@@ -56,8 +72,9 @@
 
 .social {
   display: flex;
-  gap: 1rem;
-  font-size: 1.4rem;
+  justify-content: center;
+  gap: 5rem;
+  font-size:3rem;
 }
 
 .social a {
@@ -81,3 +98,55 @@
   gap: 1rem;
   text-align: center;
 }
+
+@media (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .column {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .title {
+    font-size: 2.25rem;
+  }
+
+  .description {
+    font-size: 1.2rem;
+    padding: 0 1rem;
+  }
+
+  .social {
+    gap: 2rem;
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .social {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    font-size: 2rem;
+  }
+
+  .bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+}
+
