@@ -1,0 +1,449 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;600&family=Marcellus&display=swap');
+
+.layout {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  background: #FBF8EF;
+  /* background: linear-gradient(190deg, rgba(251, 248, 239, 1) 0%, rgba(251, 248, 239, 1) 40%, rgba(253, 252, 249, 1) 60%, rgba(255, 255, 255, 1) 100%); */
+  padding: 40px 60px;
+  flex-wrap: wrap;
+}
+
+.contenedor {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 70px;
+  margin-bottom: 100px;
+}
+
+.imagen {
+  flex: 0.75;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 150px;
+}
+
+.imagenMobile {
+  display: none;
+}
+
+
+.imagen img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  max-height: 600px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+.tituloprincipal {
+  font-size: clamp(2.5rem, 4.1vw, 4.3rem);
+  font-weight: 650;
+  font-family: 'EB Garamond';
+  color: #7B3028; /* #4A2C2A;*/
+  line-height: 1;
+}
+
+
+.descripcion {
+  font-size: clamp(1rem, 3vw, 2rem);
+  font-family: 'Nunito';
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.5;
+  text-align: left;
+  max-width: 98%;
+  margin-top: 20px;
+  
+}
+
+.botones {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+  
+
+}
+
+.boton {
+  background-color: #321033;
+  color: #fff;
+  font-family: 'Cairo', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.boton:hover {
+  background-color: #9b02a0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.botonSecundario {
+  padding: 12px 24px;
+  background-color: transparent;
+  color: #ca66eb;
+  border: none;
+ 
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.botonSecundario:hover {
+  background-color: #f7edff;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tituloImpacto {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  color: #ca66eb;
+}
+
+.cardsEstadisticas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  background-color: #fafafa;
+  border-radius: 12px;
+  padding: 1.5rem;
+  flex: 1 1 200px;
+  max-width: 250px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.numero {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ca66eb;
+}
+
+.iconoFondo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  margin: 0 auto 1rem;
+  color: #8e44ad;
+}
+
+.morado {
+  background-color: #ede6fc;
+}
+
+.durazno {
+  background-color: #ffe8d4;
+}
+
+.rosa {
+  background-color: #ffd9df;
+}
+
+.azul {
+  background-color: #f0f0ff;
+}
+
+.valor {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #a349d7;
+}
+
+.descripcion {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.botonAlternar {
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #a349d7;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.botonAlternar:hover {
+  background-color: #8e3bd3;
+}
+
+.iconoBoton {
+  font-size: 1.2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ✅ MEDIA QUERIES PARA RESPONSIVE DESIGN */
+
+@media (max-width: 1024px) {
+  .layout {
+    flex-direction: column;
+    padding: 30px;
+    
+   
+  }
+  .tituloprincipal {
+     font-size: clamp(3rem, 3vw, 4rem);
+     margin-top: 0px;
+     margin-bottom: 3%;
+     
+     
+  }
+
+  .contenedor {
+    margin-left: 0;
+    margin-bottom: 40px;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+    
+   
+  }
+
+  .descripcion {
+    text-align: center;
+    margin-top: 0px ;
+    margin-bottom: 0%;
+    font-size: clamp(1rem, 3vw, 1.7rem);
+    width: 79%;
+
+  }
+
+  .botones {
+    justify-content: center;
+    margin-top: -10px;
+    
+  }
+
+  /* ← Oculta la imagen de escritorio y enseña la móvil */
+  .imagenDesktop {
+    display: none;
+  }
+
+  .imagenMobile {
+    display: flex;
+    margin: 20px 0; 
+    justify-content: center;
+    border: 0;
+    margin-top: -6.5%;
+    
+  }
+
+  /* Ajusta tamaño de la móvil a este breakpoint */
+  .imagenMobile img {
+    width: 80%;
+    max-width: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 900px) and (min-width: 768px) {
+  .layout {
+    padding: 25px;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .tituloprincipal {
+    font-size: clamp(2.8rem, 5vw, 4rem);
+    /*font-size: clamp(3rem, 3vw, 4rem);*/
+    margin-top: 0px;
+    margin-bottom: 3%;
+  }
+
+  .contenedor {
+    margin-left: 0;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+  
+  .descripcion {
+    font-size: clamp(1rem, 3vw, 1.7rem);
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .botones {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .imagenDesktop {
+    display: none;
+  }
+
+  .imagenMobile {
+    display: flex;
+    justify-content: center;
+    
+    
+  }
+  .imagenMobile img {
+    max-width: 350px;
+    height: auto;
+    
+    
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+  /* 1) ocultamos la imagen de escritorio */
+  .imagenDesktop {
+    display: none;
+    
+  
+  }
+  
+  /* 2) mostramos la imagen que está DENTRO del contenedor */
+  .imagenMobile {
+    display: flex;
+    margin: 0px ; 
+    border-radius: 50%; 
+    border: 0;
+    margin-top: -6.5%;
+    
+      /* separa un poco del título y la descripción */
+  }
+  
+  /* 3) reducimos un poco su tamaño */
+  .imagenMobile img {
+    max-width: 260px;
+    
+  }
+  
+    /* 4) ajustes generales de layout en móvil */
+    .layout {
+      flex-direction: column;
+      padding: 20px 15px;
+    }
+  
+    .contenedor {
+      align-items: center;
+      text-align: center;
+      margin-left: 0;
+      margin-bottom: 30px;
+      gap: 15px;
+    }
+  
+    .tituloprincipal {
+      font-size: 2.5rem;
+      
+      
+      
+    }
+  
+    .descripcion {
+      font-size: 1.25rem;
+      min-width: 100%;
+      line-height: 1.5;
+      
+    }
+  
+    .botones {
+      flex-direction: column;
+      width: 100%;
+      gap: 15px;
+    }
+  
+    .boton,
+    .botonSecundario {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+
+
+  

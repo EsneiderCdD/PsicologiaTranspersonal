@@ -4,7 +4,6 @@ import ModalServicio from "./ModalHome/ModalServicio";
 import ModalDatos from "./ModalHome/ModalDatos";
 import { obtenerLinkDePago } from "./ModalHome/helpers";
 import { useNavigate } from "react-router-dom";
-
 import { motion } from "framer-motion";
 import SusanaSantamaria from "../assets/imagenes/SusanaSantamaria.png";
 
