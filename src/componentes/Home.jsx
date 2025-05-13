@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import estilos from "./Home.module.css";
-import ModalServicio from "./ModalHome/ModalServicio";
+
 import ModalDatos from "./ModalHome/ModalDatos";
 import { obtenerLinkDePago } from "./ModalHome/helpers";
 import { useNavigate } from "react-router-dom";
@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import SusanaSantamaria from "../assets/imagenes/SusanaSantamaria.png";
 
 export default function Home() {
-  const [modalServicioAbierto, setModalServicioAbierto] = useState(false);
+  
   const [modalDatosAbierto, setModalDatosAbierto] = useState(false);
   const [datosSeleccionados, setDatosSeleccionados] = useState({
     sesiones: null,
@@ -95,7 +95,7 @@ export default function Home() {
         >
           <motion.button
             className={estilos.boton}
-            onClick={() => setModalServicioAbierto(true)}
+            onClick={() => setModalDatosAbierto(true)}
             initial={{ boxShadow: "none", backgroundColor: "#321033" }}
             animate={{
               boxShadow: "0 0 20px #ca66eb, 0 0 40px #ca66eb66",
@@ -119,7 +119,7 @@ export default function Home() {
             className={estilos.botonSecundario}
             onClick={() => navigate("/about")}
           >
-            Sobre la terapeuta
+            Sobre Mí
           </button>
         </motion.div>
       </motion.div>
@@ -134,14 +134,7 @@ export default function Home() {
         <img src={SusanaSantamaria} alt="imagen decorativa" />
       </motion.div>
   
-      <ModalServicio
-        abierto={modalServicioAbierto}
-        cerrar={() => setModalServicioAbierto(false)}
-        abrirModalDatos={() => {
-          setModalServicioAbierto(false);
-          setModalDatosAbierto(true);
-        }}
-      />
+   
   
       <ModalDatos
         abierto={modalDatosAbierto}
