@@ -2,12 +2,18 @@ import { useState, useEffect } from "react";
 import estilos from "./Home.module.css";
 
 import ModalDatos from "./ModalHome/ModalDatos";
+import PricingModal from "./PricingModal/PricingModal"; // ← reemplaza el import anterior
+
+
 import { obtenerLinkDePago } from "./ModalHome/helpers";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import SusanaSantamaria from "../assets/imagenes/SusanaSantamaria.png";
 
 export default function Home() {
+
+  const [modalPricingAbierto, setModalPricingAbierto] = useState(false);
+
   
   const [modalDatosAbierto, setModalDatosAbierto] = useState(false);
   const [datosSeleccionados, setDatosSeleccionados] = useState({
@@ -114,6 +120,19 @@ export default function Home() {
           >
             Agendar
           </motion.button>
+
+          <motion.button
+              className={estilos.boton}
+              onClick={() => setModalPricingAbierto(true)}
+              whileHover={{
+                backgroundColor: "#7B3029",
+                boxShadow: "0 0 25px #7B3029, 0 0 50px #7B302977",
+                transition: { duration: 1 },
+              }}
+            >
+              Agendar 2
+            </motion.button>
+
   
           <button
             className={estilos.botonSecundario}
@@ -133,7 +152,10 @@ export default function Home() {
       >
         <img src={SusanaSantamaria} alt="imagen decorativa" />
       </motion.div>
-  
+
+     
+
+              
    
   
       <ModalDatos
@@ -141,6 +163,22 @@ export default function Home() {
         cerrar={() => setModalDatosAbierto(false)}
         onSeleccion={manejarSeleccion}
       />
+
+
+
+
+
+      {modalPricingAbierto && (
+        <PricingModal isOpen={modalPricingAbierto} onClose={() => setModalPricingAbierto(false)} />
+      )}
+
+      
     </motion.div>
+
+
+
+
+
+
   );
 }  
