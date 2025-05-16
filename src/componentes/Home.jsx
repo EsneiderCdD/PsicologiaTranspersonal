@@ -8,7 +8,7 @@ import PricingModal from "./PricingModal/PricingModal"; // ← reemplaza el impo
 import { obtenerLinkDePago } from "./ModalHome/helpers";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import SusanaSantamaria from "../assets/imagenes/SusanaSantamaria.png";
+import Heroe2 from "../assets/imagenes/Heroe2.png";
 
 export default function Home() {
 
@@ -89,7 +89,7 @@ export default function Home() {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
           viewport={{ once: true }}
         >
-          <img src={SusanaSantamaria} alt="imagen decorativa" />
+          <img src={Heroe2} alt="imagen decorativa" />
         </motion.div>
   
         <motion.div 
@@ -150,7 +150,7 @@ export default function Home() {
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
         viewport={{ once: true }}
       >
-        <img src={SusanaSantamaria} alt="imagen decorativa" />
+        <img src={Heroe2} alt="imagen decorativa" />
       </motion.div>
 
      
