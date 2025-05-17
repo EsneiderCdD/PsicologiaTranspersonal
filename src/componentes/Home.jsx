@@ -1,11 +1,8 @@
 import { useState, useEffect } from "react";
 import estilos from "./Home.module.css";
 
-import ModalDatos from "./ModalHome/ModalDatos";
 import PricingModal from "./PricingModal/PricingModal"; // ← reemplaza el import anterior
 
-
-import { obtenerLinkDePago } from "./ModalHome/helpers";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import Heroe2 from "../assets/imagenes/Heroe2.png";
@@ -14,30 +11,7 @@ export default function Home() {
 
   const [modalPricingAbierto, setModalPricingAbierto] = useState(false);
 
-  
-  const [modalDatosAbierto, setModalDatosAbierto] = useState(false);
-  const [datosSeleccionados, setDatosSeleccionados] = useState({
-    sesiones: null,
-    pais: null,
-  });
   const navigate = useNavigate();
-
-  const manejarSeleccion = ({ sesiones, pais }) => {
-    setDatosSeleccionados({ sesiones, pais });
-    setModalDatosAbierto(false);
-  };
-
-  useEffect(() => {
-    const { sesiones, pais } = datosSeleccionados;
-    if (sesiones && pais) {
-      const link = obtenerLinkDePago(sesiones, pais);
-      if (link) {
-        window.location.href = link;
-      } else {
-        alert("No se encontró un link de pago para esta combinación.");
-      }
-    }
-  }, [datosSeleccionados]);
 
   return (
     <motion.div 
@@ -70,6 +44,16 @@ export default function Home() {
         >
           Psicología Transpersonal
         </motion.h1>
+{/* 
+         <motion.p 
+          className={estilos.rol}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          Susana Santamaria 
+        </motion.p> */}
   
         <motion.p 
           className={estilos.descripcion}
@@ -101,13 +85,13 @@ export default function Home() {
         >
           <motion.button
             className={estilos.boton}
-            onClick={() => setModalDatosAbierto(true)}
+            onClick={() => setModalPricingAbierto(true)}
             initial={{ boxShadow: "none", backgroundColor: "#321033" }}
             animate={{
               boxShadow: "0 0 20px #ca66eb, 0 0 40px #ca66eb66",
               backgroundColor: "#800089",
               transition: {
-                delay: 7,
+                delay: 1,
                 duration: 2,
                 ease: "easeInOut",
               },
@@ -121,17 +105,6 @@ export default function Home() {
             Agendar
           </motion.button>
 
-          <motion.button
-              className={estilos.boton}
-              onClick={() => setModalPricingAbierto(true)}
-              whileHover={{
-                backgroundColor: "#7B3029",
-                boxShadow: "0 0 25px #7B3029, 0 0 50px #7B302977",
-                transition: { duration: 1 },
-              }}
-            >
-              Agendar 2
-            </motion.button>
 
   
           <button
@@ -152,21 +125,6 @@ export default function Home() {
       >
         <img src={Heroe2} alt="imagen decorativa" />
       </motion.div>
-
-     
-
-              
-   
-  
-      <ModalDatos
-        abierto={modalDatosAbierto}
-        cerrar={() => setModalDatosAbierto(false)}
-        onSeleccion={manejarSeleccion}
-      />
-
-
-
-
 
       {modalPricingAbierto && (
         <PricingModal isOpen={modalPricingAbierto} onClose={() => setModalPricingAbierto(false)} />

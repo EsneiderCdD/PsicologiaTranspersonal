@@ -1,15 +1,16 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;600&family=Marcellus&display=swap');
+
+* { border: 1px solid red; }
 
 .layout {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  min-height: 100vh;
+  width: auto;
+  max-height: 100vh;
   background: #FBF8EF;
-  /* background: linear-gradient(190deg, rgba(251, 248, 239, 1) 0%, rgba(251, 248, 239, 1) 40%, rgba(253, 252, 249, 1) 60%, rgba(255, 255, 255, 1) 100%); */
-  padding: 40px 60px;
+  padding: 2.5% 4%;
   flex-wrap: wrap;
 }
 
@@ -18,8 +19,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 70px;
-  margin-bottom: 100px;
+  margin-left: 2%;
+  margin-top: 2.5%;
+  margin-bottom: 4%;
 }
 
 .imagen {
@@ -27,53 +29,45 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 150px;
+  margin-top: 2.5%;
+  margin-bottom: 4%;
 }
 
 .imagenMobile {
   display: none;
 }
 
-
 .imagen img {
   width: 100%;
-  max-width: 500px;
   height: auto;
-  max-height: 600px;
   border-radius: 50%;
-  object-fit: cover;
 }
-
 
 .tituloprincipal {
   font-size: clamp(2.5rem, 4.1vw, 4.3rem);
-  font-weight: 650;
+  font-weight: 900;
   font-family: 'EB Garamond';
-  color: #7B3028; /* #4A2C2A;*/
-  line-height: 1;
+  color: #7B3028;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
 }
-
 
 .descripcion {
   font-size: clamp(1rem, 3vw, 2rem);
   font-family: 'Nunito';
   font-weight: 400;
   color: #000000;
-  line-height: 1.5;
   text-align: left;
   max-width: 98%;
-  margin-top: 20px;
-  
+  margin-top: 1.5%;
 }
 
 .botones {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  gap: 30px;
-  margin-top: 30px;
-  
-
+  gap: 2%;
+  margin-top: 2%;
 }
 
 .boton {
@@ -82,9 +76,9 @@
   font-family: 'Cairo', sans-serif;
   font-weight: 600;
   font-size: 1rem;
-  padding: 12px 24px;
+  padding: 0.75em 1.5em;
   border: none;
-  border-radius: 8px;
+  border-radius: 0.5em;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -96,12 +90,11 @@
 }
 
 .botonSecundario {
-  padding: 12px 24px;
+  padding: 0.75em 1.5em;
   background-color: transparent;
   color: #ca66eb;
   border: none;
- 
-  border-radius: 8px;
+  border-radius: 0.5em;
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -111,230 +104,132 @@
   background-color: #f7edff;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ✅ MEDIA QUERIES PARA RESPONSIVE DESIGN */
-
-@media (max-width: 1024px) {
+/* --------- RESPONSIVE CHECKPOINT 1: ≤ 1080px --------- */
+@media (max-width: 1080px) {
   .layout {
-    flex-direction: column;
-    padding: 30px;
-    
-   
-  }
-  .tituloprincipal {
-     font-size: clamp(3rem, 3vw, 4rem);
-     margin-top: 0px;
-     margin-bottom: 3%;
-     
-     
+    padding: 2% 3%;
   }
 
-  .contenedor {
-    margin-left: 0;
-    margin-bottom: 40px;
-    align-items: center;
-    text-align: center;
-    gap: 25px;
-    
-   
+  .tituloprincipal {
+    font-size: clamp(2.3rem, 3.8vw, 3.8rem);
   }
 
   .descripcion {
+    font-size: clamp(0.9rem, 2.5vw, 1.6rem);
+  }
+
+  .imagen img {
+    width: 90%;
+  }
+
+  .boton,
+  .botonSecundario {
+    font-size: 0.95rem;
+    padding: 0.6em 1.2em;
+  }
+}
+
+/* --------- RESPONSIVE CHECKPOINT 2: ≤ 930px --------- */
+@media (max-width: 930px) {
+  .layout {
+    padding: 2% 2%;
+  }
+
+  .tituloprincipal {
+    font-size: clamp(2rem, 3.5vw, 3.3rem);
+  }
+
+  .descripcion {
+    font-size: clamp(0.9rem, 2.3vw, 1.3rem);
+  }
+
+  .imagen img {
+    width: 85%;
+  }
+
+  .boton,
+  .botonSecundario {
+    font-size: 0.9rem;
+    padding: 0.6em 1.1em;
+  }
+}
+
+/* --------- RESPONSIVE CHECKPOINT 3: ≤ 780px --------- */
+@media (max-width: 780px) {
+  .layout {
+    padding: 2% 1.5%;
+  }
+
+  .tituloprincipal {
+    font-size: clamp(1.8rem, 3vw, 3rem);
+  }
+
+  .descripcion {
+    font-size: clamp(0.85rem, 2vw, 1.1rem);
+  }
+
+  .imagen img {
+    width: 80%;
+  }
+
+  .boton,
+  .botonSecundario {
+    font-size: 0.85rem;
+    padding: 0.5em 1em;
+  }
+}
+
+/* --------- RESPONSIVE CHECKPOINT FINAL (MOBILE): ≤ 600px --------- */
+@media (max-width: 600px) {
+  .layout {
+    flex-direction: column;
+    padding: 5% 4%;
+  }
+
+  .contenedor {
+    align-items: center;
     text-align: center;
-    margin-top: 0px ;
-    margin-bottom: 0%;
-    font-size: clamp(1rem, 3vw, 1.7rem);
-    width: 79%;
-
+    margin-left: 0;
+    margin-bottom: 3%;
+    gap: 15px;
   }
 
-  .botones {
-    justify-content: center;
-    margin-top: -10px;
-    
+  .tituloprincipal {
+    font-size: clamp(2rem, 6vw, 2.8rem);
   }
 
-  /* ← Oculta la imagen de escritorio y enseña la móvil */
+  .descripcion {
+    font-size: clamp(1rem, 4vw, 1.4rem);
+    line-height: 1.5;
+    max-width: 90%;
+  }
+
   .imagenDesktop {
     display: none;
   }
 
   .imagenMobile {
     display: flex;
-    margin: 20px 0; 
     justify-content: center;
-    border: 0;
-    margin-top: -6.5%;
-    
+    margin: 5% 0;
   }
 
-  /* Ajusta tamaño de la móvil a este breakpoint */
   .imagenMobile img {
-    width: 80%;
-    max-width: 400px;
+    max-width: 80%;
     border-radius: 50%;
     object-fit: cover;
   }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 900px) and (min-width: 768px) {
-  .layout {
-    padding: 25px;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-  }
-  
-  .tituloprincipal {
-    font-size: clamp(2.8rem, 5vw, 4rem);
-    /*font-size: clamp(3rem, 3vw, 4rem);*/
-    margin-top: 0px;
-    margin-bottom: 3%;
-  }
-
-  .contenedor {
-    margin-left: 0;
-    text-align: center;
-    align-items: center;
-    margin-bottom: 60px;
-  }
-  
-  .descripcion {
-    font-size: clamp(1rem, 3vw, 1.7rem);
-    max-width: 90%;
-    text-align: center;
-  }
 
   .botones {
-    flex-direction: row;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
     justify-content: center;
-    gap: 20px;
   }
 
-  .imagenDesktop {
-    display: none;
-  }
-
-  .imagenMobile {
-    display: flex;
-    justify-content: center;
-    
-    
-  }
-  .imagenMobile img {
-    max-width: 350px;
-    height: auto;
-    
-    
+  .boton,
+  .botonSecundario {
+    width: 100%;
+    text-align: center;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 600px) {
-  /* 1) ocultamos la imagen de escritorio */
-  .imagenDesktop {
-    display: none;
-    
-  
-  }
-  
-  /* 2) mostramos la imagen que está DENTRO del contenedor */
-  .imagenMobile {
-    display: flex;
-    margin: 0px ; 
-    border-radius: 50%; 
-    border: 0;
-    margin-top: -6.5%;
-    
-      /* separa un poco del título y la descripción */
-  }
-  
-  /* 3) reducimos un poco su tamaño */
-  .imagenMobile img {
-    max-width: 260px;
-    
-  }
-  
-    /* 4) ajustes generales de layout en móvil */
-    .layout {
-      flex-direction: column;
-      padding: 20px 15px;
-    }
-  
-    .contenedor {
-      align-items: center;
-      text-align: center;
-      margin-left: 0;
-      margin-bottom: 30px;
-      gap: 15px;
-    }
-  
-    .tituloprincipal {
-      font-size: 2.5rem;
-      
-      
-      
-    }
-  
-    .descripcion {
-      font-size: 1.25rem;
-      min-width: 100%;
-      line-height: 1.5;
-      
-    }
-  
-    .botones {
-      flex-direction: column;
-      width: 100%;
-      gap: 15px;
-    }
-  
-    .boton,
-    .botonSecundario {
-      width: 100%;
-      text-align: center;
-    }
-  }
-  
-
-
-  
-
-  
