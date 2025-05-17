@@ -160,29 +160,65 @@
 /* --------- RESPONSIVE CHECKPOINT 3: ≤ 780px --------- */
 @media (max-width: 780px) {
   .layout {
+    flex-direction: column;
     padding: 2% 1.5%;
   }
 
+  .contenedor {
+    align-items: center;
+    text-align: center;
+    margin-left: 0;
+    margin-bottom: 3%;
+    gap: 15px;
+  }
+
   .tituloprincipal {
-    font-size: clamp(1.8rem, 3vw, 3rem);
-     margin-bottom: 0.5rem;
-   
+    font-size: clamp(2.4rem, 7vw, 3.2rem);
+    margin-bottom: 0.5rem;
   }
 
   .descripcion {
-    font-size: clamp(1em, 2.3vw, 1.4rem);
+    font-size: clamp(1rem, 4vw, 1.4rem);
+    line-height: 1.5;
+    max-width: 90%;
+    text-align: center;
+     margin-bottom: 0%;
   }
 
-  .imagen img {
-    width: 80%;
+  .imagenDesktop {
+    display: none;
+  }
+
+  .imagenMobile {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+  }
+
+  .imagenMobile img {
+    max-width: 50%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .botones {
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
   }
 
   .boton,
   .botonSecundario {
+    height: 40px;
+    width: 90%;
+    text-align: center;
     font-size: 0.85rem;
     padding: 0.5em 1em;
   }
 }
+
 
 /* --------- RESPONSIVE CHECKPOINT FINAL (MOBILE): ≤ 600px --------- */
 @media (max-width: 600px) {
@@ -194,7 +230,6 @@
   .contenedor {
     align-items: center;
     text-align: center;
-    
     margin-left: 0;
     margin-bottom: 3%;
     gap: 15px;
@@ -223,7 +258,7 @@
   }
 
   .imagenMobile img {
-    max-width: 70%;
+    max-width: 60%;
     border-radius: 50%;
     object-fit: cover;
   }
