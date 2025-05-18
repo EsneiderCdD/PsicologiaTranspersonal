@@ -42,7 +42,7 @@
     border-radius: 1rem;
     overflow: hidden;
     max-width: 850px;
-    box-shadow: 0 4px 12px #000000;
+    box-shadow: 0 4px 12px #0000008d;
     position: relative;
   }
   
@@ -164,7 +164,7 @@
     background-color: white;
     border-radius: 1rem;
     overflow: hidden;
-    box-shadow: 0 4px 12px #000000;
+    box-shadow: 0 4px 12px #0000008f;
     align-self: flex-start;
     border: 1px solid #8D2C24;
     position: relative;
@@ -415,7 +415,7 @@
   .cardPrincipal,
   .cardSecundario {
     width: 100%;
-    box-shadow: none;
+   
     border-radius: 0.75rem;
     
   }
