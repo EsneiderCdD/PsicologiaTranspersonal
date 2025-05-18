@@ -2,23 +2,22 @@
 
 
 .tituloSeccion {
-    font-size: 2.75rem;
+    font-size: 2.75rem; 
     font-weight: 650;
     text-align: center;
     justify-content: center;
     color: #000000;
     font-family: 'EB Garamond';
     background-color: #f5edea15;
-    margin-top: 75px ;
+    margin-top: 50px ;
     margin-bottom: 40px;
     
 }
   .descripcion {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-family: 'Nunito';
     font-weight: 400;
     color: #5C3D3B;
-  
     max-width: 850px;
     line-height: 1.5;
     margin: auto;
@@ -32,18 +31,18 @@
     flex-wrap: nowrap;
     gap: 2rem;
     justify-content: center;
-    padding: 2rem;
+    padding: 1.5rem;
     background: #ffffff;
   }
   
   .cardPrincipal {
     display: flex;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0);
+    border: 1px solid #800089;
     border-radius: 1rem;
     overflow: hidden;
     max-width: 850px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px #000000;
     position: relative;
   }
   
@@ -93,6 +92,7 @@
   
   .listaBeneficios {
     display: flex;
+    
     flex-wrap: nowrap;
     gap: 1.5rem; /* Aumenté el espacio entre los íconos */
     margin-top: 1rem;
@@ -125,7 +125,7 @@
 
   
   p {
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.5;
     
   }
@@ -137,11 +137,11 @@
     background-color: #7c3aed;
     color: white;
     padding: 0.75rem 1.25rem;
-    border: none;
+    border: 1px solid #800089;
     border-radius: 0.5rem;
     font-weight: bold;
     cursor: pointer;
-    margin-top: 1rem;
+    
   }
 
 
@@ -164,9 +164,9 @@
     background-color: white;
     border-radius: 1rem;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px #000000;
     align-self: flex-start;
-    
+    border: 1px solid #8D2C24;
     position: relative;
   }
   .secundaria {
@@ -180,7 +180,7 @@
   }
   
   .etiquetaSecundaria {
-    background-color: #831a0f;
+    background-color:#8D2C24;
     color: white;
     padding: 0.25rem 0.75rem;
     border-radius: 999px;
@@ -194,10 +194,9 @@
     left: 10px; /* Ajusta según lo necesario */
     z-index: 1; /* Asegura que se muestre sobre la imagen */
 
-    
   }
   .cardSecundario h2 {
-    color: #7B3028;
+    color: #8D2C24;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -227,31 +226,24 @@
     margin-right: 0.5rem;
   }
 
-  .botonConocerMas {
+
+  .botonesCard {
     display: flex;
-    flex-direction: column; /* Alinea los íconos arriba y los textos abajo */
-    align-items: center; /* Centra el contenido */
-    font-size: 1rem; /* Aumenté un poco el tamaño del texto */
-    color: #000000;
+    
+    gap: 1rem;
+  }
+
+  .botonPrincipal,
+  .botonSecundario {
+    flex: 1;
     text-align: center;
-    background: #6b21a800;   /* Alinea el texto al centro */
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
   }
+
+
+
+
+ 
   
-  .botonConocerMas:hover {
-    background-color: #6002ad;
-    color: white;
-  }
-
-
-
- @media (max-width: 1080px) {
-  .descripcion {
-    font-size: 1.3rem;
-    max-width: 800px;
-  }
 
 
   @media (max-width: 1080px) {
@@ -260,15 +252,29 @@
     gap: 1.5rem;
   }
 
+  .descripcion {
+    font-size: 1.3rem;
+    max-width: 800px;
+  }
+
   .cardPrincipal,
   .cardSecundario {
-    max-width: 95%;
+    max-width: 90%;
     margin: 0 auto;
   }
 
   .imagePrincipal,
   .secundaria {
     height: 280px;
+
+  }
+  .secundaria {
+    background-position:  50% 49%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+
+    
   }
 
   h2 {
@@ -284,33 +290,43 @@
     font-size: 0.95rem;
   }
 
-  p {
-    font-size: 1rem;
+   p {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    
   }
 }
 
-}
 
-@media (max-width: 930px) {
-  .descripcion {
-    font-size: 1.3rem;
-    max-width: 750px;
-  }
-}
+
+
 
 @media (max-width: 930px) {
   .cardPrincipal,
   .cardSecundario {
-    max-width: 100%;
+    max-width: 90%;
   }
 
   .imagePrincipal,
   .secundaria {
     height: 250px;
   }
+   .secundaria {
+    background-position:  50% 50%;
+   }
 
   h2 {
     font-size: 1.5rem;
+    
+  }
+  .descripcion {
+    font-size: 1.3rem;
+    max-width: 90%;
+  }
+    p {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    
   }
 
   .icon {
@@ -318,8 +334,9 @@
     width: 35px;
   }
 
+
   .listaBeneficios {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 1rem;
   }
 
@@ -329,17 +346,8 @@
 
   .botonPrincipal,
   .botonSecundario {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     padding: 0.6rem 1rem;
-  }
-}
-
-
-@media (max-width: 780px) {
-  .descripcion {
-    font-size: 1.3rem;
-    max-width: 90%;
-    padding: 0 5%;
   }
 }
 
@@ -348,11 +356,14 @@
     flex-direction: column;
     align-items: center;
     padding: 1rem;
+    
+    
+    
   }
 
   .cardPrincipal,
   .cardSecundario {
-    width: 100%;
+    width: 90%;
     margin-bottom: 2rem;
   }
 
@@ -361,9 +372,17 @@
     height: 220px;
     background-position: center;
   }
+     .secundaria {
+    background-position:  50% 51%;
+   }
 
   h2 {
     font-size: 1.4rem;
+  }
+  .descripcion {
+    font-size: 1.3rem;
+    max-width: 90%;
+    padding: 0 5%;
   }
 
   .icon {
@@ -380,25 +399,25 @@
   }
 
   p {
-    font-size: 0.95rem;
+    font-size: 1.11rem;
   }
 }
 
 
-@media (max-width: 600px) {
-  .descripcion {
-    font-size: 1.2rem;
-    max-width: 95%;
-    padding: 0 4%;
-    text-align: center;
-    line-height: 1.6;
-  }
+
 
   @media (max-width: 600px) {
+    .container{
+      padding-left: 0%;
+      padding-right: 0%;
+    }
+    
   .cardPrincipal,
   .cardSecundario {
+    width: 100%;
     box-shadow: none;
     border-radius: 0.75rem;
+    
   }
 
   .imagePrincipal,
@@ -407,11 +426,22 @@
     background-size: cover;
     background-position: center;
   }
+  
+  .secundaria {
+    background-position:  50% 55%;
+   }
 
   h2 {
     font-size: 1.3rem;
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
+  }
+    .descripcion {
+    font-size: 1.2rem;
+    max-width: 95%;
+    padding: 0 4%;
+    text-align: center;
+    line-height: 1.6;
   }
 
   .icon {
@@ -420,13 +450,13 @@
   }
 
   .listaBeneficios {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    align-items:center;
     gap: 0.8rem;
   }
 
   .listaBeneficios li {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     width: 90%;
   }
 
@@ -439,9 +469,7 @@
   }
 
   p {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
-}
-
 }
 

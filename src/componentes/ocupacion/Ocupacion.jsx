@@ -8,6 +8,7 @@ import {
 } from 'react-icons/fa';
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { style } from 'framer-motion/client';
 
 const Ocupacion = () => {
   const tituloRef = useRef(null);
@@ -20,7 +21,7 @@ const Ocupacion = () => {
   const variantesServicios = {
     oculto: { color: "#000000" },
     visible: {
-      color: "#a78bfa",
+      color: "#8D2C24",
       transition: { duration: 0.5, ease: "easeInOut" }
     }
   };
@@ -78,12 +79,16 @@ const Ocupacion = () => {
           
           <li><FaRegLightbulb className={styles.iconoInline} /> Material de Apoyo Personalizado</li>
 
-          <Link to="/about" className={styles.botonConocerMas}>
-            <FaPlus className={styles.iconoInline} /> Conocer Más
-          </Link>
+          <li><FaRegLightbulb className={styles.iconoInline} /> Material de Apoyo Personalizado</li>
+
 
         </ul>
-        <button className={styles.botonPrincipal}>Reservar Sesión</button>
+        <div className={styles.botonesCard}>
+          <button className={styles.botonPrincipal}>Reservar Sesión</button>
+          <Link to="/about" >
+            <button className={styles.botonPrincipal}>Saber Más</button>
+            </Link>
+        </div>
       </div>
     </motion.div>
 
@@ -103,17 +108,22 @@ const Ocupacion = () => {
           Sesiones en grupo donde compartirás experiencias con otras personas, aprendiendo juntos
           en un espacio de apoyo mutuo y crecimiento colectivo.
         </p>
-        <div className={styles.frecuenciaBox}>
+        
           <ul className={styles.listaBeneficios}>
             
             <li><FaFemale className={styles.iconoInline} /> Círculo íntimo de mujeres</li>
             <li><FaHandsHelping className={styles.iconoInline} /> Espacio para compartir y reflexionar</li>
-            <Link to="/about" className={styles.botonConocerMas}>
-            <FaPlus className={styles.iconoInline} /> Conocer Más
-          </Link>
+             <li><FaHandsHelping className={styles.iconoInline} /> Espacio para compartir y reflexionar</li>
+            
+            
           </ul>
+        
+        <div className={styles.botonesCard}>
+          <button className={styles.botonSecundario}>Ver Próximas Fechas</button>
+          <Link to="/about" >
+            <button className={styles.botonSecundario}>Saber Más</button>
+            </Link>
         </div>
-        <button className={styles.botonSecundario}>Ver Próximas Fechas</button>
       </div>
     </motion.div>
   </div>

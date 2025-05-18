@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;600&family=Marcellus&display=swap');
 
 
-
 .layout {
   display: flex;
   flex-direction: row;
@@ -169,7 +168,7 @@
     text-align: center;
     margin-left: 0;
     margin-bottom: 3%;
-    gap: 15px;
+    gap: 7px;
   }
 
   .tituloprincipal {
@@ -192,11 +191,11 @@
   .imagenMobile {
     display: flex;
     justify-content: center;
-    margin-bottom: 5%;
+    
   }
 
   .imagenMobile img {
-    max-width: 50%;
+    max-width: 55%;
     border-radius: 50%;
     object-fit: cover;
   }
@@ -254,11 +253,11 @@
   .imagenMobile {
     display: flex;
     justify-content: center;
-    margin-bottom: 5%;
+    margin-bottom: 0px;
   }
 
   .imagenMobile img {
-    max-width: 60%;
+    max-width: 85%;
     border-radius: 50%;
     object-fit: cover;
   }
