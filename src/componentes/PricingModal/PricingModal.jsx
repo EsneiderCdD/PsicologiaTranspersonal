@@ -44,6 +44,30 @@ export default function PricingModal({ isOpen, onClose }) {
     setSelectedPlan(planName);
   };
 
+  const handlePay = (method) => {
+  if (!selectedPlan) {
+    alert("Por favor selecciona un plan antes de continuar.");
+    return;
+  }
+  
+  if (!termsAccepted) {
+    alert("Por favor acepta los términos y condiciones.");
+    return;
+  }
+
+  if (method === "payu") {
+    const url = getPayURedirectURL();
+    if (url) {
+      window.location.href = url;
+    }
+  } else if (method === "paypal") {
+    // Aquí pones la lógica para PayPal, por ejemplo:
+    alert("Redirigiendo a PayPal... (aquí va la URL real)");
+    // window.location.href = tu_url_de_paypal;
+  }
+};
+
+
   const getPayURedirectURL = () => {
   switch (selectedPlan) {
     case "Sesión única":
@@ -133,14 +157,21 @@ const handlePayUClick = () => {
           </div>
 
 
-          <div className={styles.paymentButtons}>
-            <button className={styles.payButton}>
-              Pagar con PayPal
-            </button>
-            <button className={styles.payButton} onClick={handlePayUClick}>
-              Pagar con PayU
-            </button>
-          </div>
+          <button
+            className={styles.payButton}
+            disabled={!termsAccepted}
+            onClick={() => handlePay("paypal")}
+          >
+            Pagar con PayPal
+          </button>
+          <button
+            className={styles.payButton}
+            disabled={!termsAccepted}
+            onClick={() => handlePay("payu")}
+          >
+            Pagar con PayU
+          </button>
+
 
         </div>
       </div>
