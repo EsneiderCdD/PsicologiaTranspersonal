@@ -1,28 +1,71 @@
 // PricingModal.jsx
 import styles from './PricingModal.module.css';
-import React from 'react';
+import React, { useState } from 'react';
 
-const PricingCard = ({ name, title, description, price, currency, color, label }) => {
+const PricingCard = ({ name, title, description, price, currency, color, label, isSelected, onSelect }) => {
   return (
-    <div className={`${styles.card} ${styles[color]}`}>
+    <div
+      className={`${styles.card} ${styles[color]} ${isSelected ? styles.selected : ''}`}
+      onClick={onSelect}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => { if (e.key === 'Enter') onSelect(); }}
+    >
       {label && <span className={styles.cardLabel}>{label}</span>}
       <div className={styles.cardHeader}>
         <h3>{name}</h3>
+        
+        <p className={styles.title}>{title}</p>
         <div className={styles.priceLine}>
           <span className={styles.price}>{price}</span>
           <span className={styles.currency}>{currency}</span>
         </div>
-        <p className={styles.title}>{title}</p>
       </div>
       <p className={styles.description}>{description}</p>
-      <button className={styles.button}>Comprar</button>
+      {isSelected && (
+  <div className={styles.checkIcon}>
+    ✓
+  </div>
+)}
+
     </div>
   );
 };
 
 
+
 export default function PricingModal({ isOpen, onClose }) {
+  const [selectedPlan, setSelectedPlan] = useState(null);
+  const [termsAccepted, setTermsAccepted] = useState(false);
+
   if (!isOpen) return null;
+
+  const handleSelect = (planName) => {
+    setSelectedPlan(planName);
+  };
+
+  const getPayURedirectURL = () => {
+  switch (selectedPlan) {
+    case "Sesión única":
+      return "https://biz.payulatam.com/L0f9bc3C0F28215";
+    case "Sesión estándar":
+      return "https://biz.payulatam.com/L0f9bc3390AC10A";
+    case "Premium":
+      return "https://biz.payulatam.com/L0f9bc3AF3AEF92";
+    default:
+      return null;
+  }
+};
+
+const handlePayUClick = () => {
+  const url = getPayURedirectURL();
+  if (url) {
+    window.location.href = url;
+  } else {
+    alert("Por favor selecciona un plan antes de continuar.");
+  }
+};
+
 
   return (
     <div className={styles.modalOverlay} onClick={onClose}>
@@ -30,26 +73,29 @@ export default function PricingModal({ isOpen, onClose }) {
         <button className={styles.closeButton} onClick={onClose}>×</button>
         <div className={styles.container}>
           <div className={styles.header}>
-            <h2>Elige tu plan</h2>
-            <p>Elige el número de sesiones que más se adapte a ti</p>
+            <h2>Elige las sesiones que más te gusten</h2>
           </div>
           <div className={styles.plans}>
             <PricingCard
-              name="Sesión única"
+              name="Única"
               title="1 Sesión"
               description="Un espacio puntual para abordar una necesidad inmediata o conocernos."
               price="$40"
               currency="USD"
               color="basic"
+              isSelected={selectedPlan === "Sesión única"}
+              onSelect={() => handleSelect("Sesión única")}
             />
             <PricingCard
-              name="Sesión estándar"
+              name="Estándar"
               title="4 Sesiones"
               description="Cuatro sesiones para conocerte, trabajar procesos y crear continuidad."
               price="$140"
               currency="USD"
               color="standard"
               label="Más vendido"
+              isSelected={selectedPlan === "Sesión estándar"}
+              onSelect={() => handleSelect("Sesión estándar")}
             />
             <PricingCard
               name="Premium"
@@ -59,23 +105,43 @@ export default function PricingModal({ isOpen, onClose }) {
               currency="USD"
               color="premium"
               label="Recomendado"
+              isSelected={selectedPlan === "Premium"}
+              onSelect={() => handleSelect("Premium")}
             />
-            <PricingCard
-              name="Sesión Personalizada"
-              title="Sesiones Personalizadas"
-              description="Precios especiales para quienes ya adquirieron un plan o requieren un proceso más intenso o prolongado."
-              price="Cotizar"
-              currency=""
-              color="custom"
-              label="Premium"
-            />
+            
 
           </div>
+          <div className={styles.termsNote}>
+            <input
+              type="checkbox"
+              id="termsCheckbox"
+              className={styles.termsCheckbox}
+              checked={termsAccepted}
+              onChange={() => setTermsAccepted(!termsAccepted)}
+            />
+            <label htmlFor="termsCheckbox" className={styles.warningText}>
+              Acepto todos los{' '}
+              <a
+                href="/about"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.termsLink}
+              >
+                Términos y Condiciones
+              </a>.
+            </label>
+          </div>
+
 
           <div className={styles.paymentButtons}>
-            <button className={styles.payButton}>Pagar con PayPal</button>
-            <button className={styles.payButton}>Pagar con PayU</button>
+            <button className={styles.payButton}>
+              Pagar con PayPal
+            </button>
+            <button className={styles.payButton} onClick={handlePayUClick}>
+              Pagar con PayU
+            </button>
           </div>
+
         </div>
       </div>
     </div>
