@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import estilos from "./Home2.module.css";
 import SusanaS from "../../assets/imagenes/SusanaS.png";
 import { FiCalendar, FiMessageCircle, FiUsers } from "react-icons/fi";
-import { FaInstagram } from "react-icons/fa";
-
+import { FaInstagram, FaUserGraduate } from "react-icons/fa";
+import { GiMoon, GiLotus } from "react-icons/gi";
 export default function Home2() {
   const [experiencia, setExperiencia] = useState(0);
   const [sesiones, setSesiones] = useState(0);
@@ -14,9 +14,9 @@ export default function Home2() {
   useEffect(() => {
     const intervalos = [
       setInterval(() => setExperiencia(prev => (prev < 4 ? prev + 1 : prev)), 500),
-      setInterval(() => setSesiones(prev => (prev < 500 ? prev + 50 : prev)), 100),
-      setInterval(() => setPacientes(prev => (prev < 200 ? prev + 10 : prev)), 200),
-      setInterval(() => setSeguidores(prev => (prev < 190000 ? prev + 10000 : prev)), 200),
+      setInterval(() => setSesiones(prev => (prev < 500 ? prev + 10 : prev)), 100),
+      setInterval(() => setPacientes(prev => (prev < 200 ? prev + 5 : prev)), 100),
+      setInterval(() => setSeguidores(prev => (prev < 190000 ? prev + 1250 : prev)), 50),
     ];
     return () => intervalos.forEach(clearInterval);
   }, []);
@@ -31,21 +31,35 @@ export default function Home2() {
         <div className={estilos.cardsPequenas}>
           <div className={estilos.cardPequena}>
             <FiCalendar className={estilos.iconoPequeno} />
-            <span>+{experiencia} años</span>
+            <span>+{experiencia} años de experiencia</span>
           </div>
           <div className={estilos.cardPequena}>
             <FiMessageCircle className={estilos.iconoPequeno} />
-            <span>+{sesiones} sesiones</span>
+            <span>+{sesiones} sesiones realizadas</span>
           </div>
           <div className={estilos.cardPequena}>
             <FiUsers className={estilos.iconoPequeno} />
-            <span>+{pacientes} personas</span>
+            <span>+{pacientes} personas distintas recibidas</span>
           </div>
           <div className={estilos.cardPequena}>
             <FaInstagram className={estilos.iconoPequeno} />
             <span>
-              {seguidores >= 1000 ? `${Math.round(seguidores / 1000)}K+` : seguidores} IG
+              {seguidores >= 1000 ? `${Math.round(seguidores / 1000)}K+` : seguidores} seguidores en Instagram
             </span>
+          </div>
+
+          {/* NUEVAS ETIQUETAS CUALITATIVAS */}
+          <div className={estilos.cardPequena}>
+            <GiMoon className={estilos.iconoPequeno} />
+            <span>Certificada en Terapia Menstrual</span>
+          </div>
+          <div className={estilos.cardPequena}>
+            <GiLotus className={estilos.iconoPequeno} />
+            <span>Diplomada en Psicología Transpersonal</span>
+          </div>
+          <div className={estilos.cardPequena}>
+            <FaUserGraduate className={estilos.iconoPequeno} />
+            <span>Profesional en Psicología</span>
           </div>
         </div>
       </div>

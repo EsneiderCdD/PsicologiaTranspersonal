@@ -4,8 +4,6 @@ import Footer from "../footer/Footer";
 import Terminos from "../terminos/Terminos";
 import Faqs from "./Faqs";
 import PsicologiaTranspersonal from "./PsicologiaTranspersonal";
-import styles from "./About.module.css";
-
 
 
 
@@ -16,7 +14,7 @@ const About = () => {
 
   return (
     
-    <div >
+    <div  >
       <Home2 />
       <PsicologiaTranspersonal />
       
