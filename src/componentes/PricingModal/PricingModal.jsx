@@ -2,7 +2,7 @@
 import styles from './PricingModal.module.css';
 import React, { useState } from 'react';
 
-const PricingCard = ({ name, title, description, price, currency, color, label, isSelected, onSelect }) => {
+const PricingCard = ({ name, title, description, ahorro, currency2, price, currency, color, label, isSelected, onSelect }) => {
   return (
     <div
       className={`${styles.card} ${styles[color]} ${isSelected ? styles.selected : ''}`}
@@ -19,6 +19,11 @@ const PricingCard = ({ name, title, description, price, currency, color, label, 
         <div className={styles.priceLine}>
           <span className={styles.price}>{price}</span>
           <span className={styles.currency}>{currency}</span>
+          
+        </div>
+        <div className={styles.priceLine}>
+          <span className={styles.ahorro}>{ahorro}</span>
+          <span className={styles.currency2}>{currency2}</span>
         </div>
       </div>
       <p className={styles.description}>{description}</p>
@@ -116,6 +121,8 @@ const handlePayUClick = () => {
               description="Cuatro sesiones para conocerte, trabajar procesos y crear continuidad."
               price="$140"
               currency="USD"
+              ahorro={"+$40"}
+              currency2={"USD"}
               color="standard"
               label="Más vendido"
               isSelected={selectedPlan === "Sesión estándar"}
@@ -127,6 +134,8 @@ const handlePayUClick = () => {
               description="Una experiencia profunda y sostenida para trabajar a fondo tu bienestar."
               price="$200"
               currency="USD"
+              ahorro={"+$40"}
+              currency2={"USD"}
               color="premium"
               label="Recomendado"
               isSelected={selectedPlan === "Premium"}
@@ -144,7 +153,7 @@ const handlePayUClick = () => {
               onChange={() => setTermsAccepted(!termsAccepted)}
             />
             <label htmlFor="termsCheckbox" className={styles.warningText}>
-              Acepto todos los{' '}
+              Para un servicio de calidad recuerda leer los acuerdos. Al pagar aceptas todos los{' '}
               <a
                 href="/about"
                 target="_blank"
@@ -157,20 +166,22 @@ const handlePayUClick = () => {
           </div>
 
 
-          <button
-            className={styles.payButton}
-            disabled={!termsAccepted}
-            onClick={() => handlePay("paypal")}
-          >
-            Pagar con PayPal
-          </button>
-          <button
-            className={styles.payButton}
-            disabled={!termsAccepted}
-            onClick={() => handlePay("payu")}
-          >
-            Pagar con PayU
-          </button>
+          <div className={styles.paymentButtons }>
+            <button
+              className={styles.payButton}
+              disabled={!termsAccepted}
+              onClick={() => handlePay("paypal")}
+            >
+              Pagar con PayPal
+            </button>
+            <button
+              className={styles.payButton}
+              disabled={!termsAccepted}
+              onClick={() => handlePay("payu")}
+            >
+              Pagar con PayU
+            </button>
+          </div>
 
 
         </div>

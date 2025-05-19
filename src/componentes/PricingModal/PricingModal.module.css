@@ -146,6 +146,12 @@
 .currency {
   font-size: 0.9rem;
 }
+.ahorro {
+  color: #47df4e;
+}
+.currency2 {
+  color: #47df4e;
+}
 
 .description {
  
@@ -184,7 +190,7 @@
 }
 
 .payButton {
-  background: #800089;
+  background: #3fad45e9;
   color: white;
   padding: 0.6rem 1.2rem;
   border: none;
@@ -193,10 +199,11 @@
   cursor: pointer;
   font-size: 0.9rem;
   transition: background 0.3s;
+  
 }
 
 .payButton:hover {
-  background: #9b02a0;
+  background-color: #42ef4b;
 }
 
 .cardLabel {
@@ -205,7 +212,7 @@
   right: 0.25rem;
   background-color: #47df4e;
   color: white;
-  font-size: 0.5rem;
+  font-size: 50%;
   font-weight: bold;
   padding: 0.25rem 0.5rem;
   border-radius: 1rem;
@@ -232,14 +239,15 @@
 
 .termsNote {
   display: flex;
-  align-items: flex-start;
+  justify-content: center;
   gap: 0.5rem;
   font-size: 1rem;
   color: #333;
-  margin-top: 1rem;
-  max-width: 90%;
+  margin-top: 3%;
+  max-width: 100%;
   margin-inline: auto;
   text-align: left;
+  margin-bottom: 2.5%;
 }
 
 .warningIcon {
@@ -250,7 +258,7 @@
 }
 
 .warningText {
-  line-height: 1.3;
+  line-height: 1.25;
 }
 
 
@@ -262,6 +270,7 @@
   color: #800089;
   font-weight: 600;
   cursor: pointer;
+  
 }
 
 .termsCheckbox {
@@ -286,8 +295,189 @@
   color: white;
   font-size: 0.8rem;
   position: absolute;
-  top: 0.1rem;
-  left: 0.32rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 
+
+
+
+
+/* @media max-width: 1080px */
+@media (max-width: 1080px) {
+  .modalContent {
+    max-width: 95%;
+  }
+
+  .card {
+    flex: 0 0 200px;
+  }
+
+  .cardHeader h3 {
+    font-size: 1.85rem;
+  }
+  .cardLabel {
+    font-size: 45%;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .price {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+}
+
+/* @media max-width: 930px */
+@media (max-width: 930px) {
+  .card {
+    flex: 0 0 180px;
+  }
+
+  .plans {
+    gap: 0.5rem;
+  }
+
+  .cardHeader h3 {
+    font-size: 1.6rem;
+  }
+    .cardLabel {
+    font-size: 45%;
+  }
+
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .price {
+    font-size: 1.4rem;
+  }
+
+  .button {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .payButton {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* @media max-width: 780px */
+@media (max-width: 780px) {
+  .modalContent {
+    padding: 0.8rem;
+  }
+
+  .plans {
+    gap: 0.4rem;
+  }
+
+  .card {
+    flex: 0 0 160px;
+    padding: 0.4rem;
+  }
+
+ 
+
+  .cardHeader h3 {
+    font-size: 1.5rem;
+  }
+    .cardLabel {
+    font-size: 45%;
+    top: 0.25rem;
+    right: -1rem;
+  }
+
+
+  .title {
+    font-size: 1.3rem;
+  }
+
+  .price {
+    font-size: 1.3rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .termsNote {
+    font-size: 0.9rem;
+
+  }
+}
+
+/* @media max-width: 600px */
+@media (max-width: 600px) {
+  .modalContent {
+    padding: 0.5rem;
+    max-height: 95vh;
+  }
+
+  .plans {
+    flex-wrap: nowrap;
+    
+   
+  }
+
+  .card {
+    flex: 0 0 75%;
+    max-width: 125px;
+    padding: 0.25rem;
+    
+  }
+.header h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2.5%;
+  }
+  .cardHeader h3 {
+    font-size: 1.4rem;
+  }
+  .cardLabel {
+    font-size: 40%;
+    top: -0.25rem;
+    right: -1.25rem;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .price {
+    font-size: 1.2rem;
+  }
+
+  .button {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .payButton {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .termsNote {
+    font-size: 0.85rem;
+  }
+
+  .ahorro {
+    font-size: 0.9rem;
+    color: #47df4e;
+  }
+   .currency2 {
+    font-size: 0.75rem;
+    color: #47df4e;
+  }
+ 
+}
