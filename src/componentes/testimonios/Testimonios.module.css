@@ -30,17 +30,16 @@
   text-align: center;
   margin-bottom: 30px;
 }
-
-/* ===== NUEVO Estilo para Tarjetas tipo Instagram ===== */
-
-/* ===== NUEVO Estilo para Tarjetas tipo Instagram ===== */
+/* ===== NUEVO Estilo para Tarjetas tipo Instagram ===== (con Flexbox) */
 
 .testimoniosLista {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
+  
 }
 
 .testimonioCard {
@@ -49,10 +48,13 @@
   background: #ffffff;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.484);
-  
   transition: transform 0.3s ease;
   min-height: 120px;
   border: 2px solid #800089;
+
+  /* Tamaño base para 3 por fila */
+  flex: 1 1 calc(33.33% - 30px);
+  max-width: calc(33.33% - 30px);
 }
 
 .testimonioCard:hover {
@@ -100,18 +102,44 @@
   line-height: 1.4;
   max-width: 100%;
   margin-top: 5px;
+
+
+  
 }
 
-/* ===== Responsividad para mantener estructura visual ===== */
 
-@media (max-width: 768px) {
-  .testimoniosLista {
-    grid-template-columns: repeat(2, 1fr);
+.verMasBtn {
+  background-color: transparent;
+  border: none;
+  color: #8D2C24;
+  font-size: 1.1rem;
+  font-family: 'Karla', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: auto;
+  transition: color 0.3s ease;
+}
+
+.verMasBtn:hover {
+  color: #5c1d19;
+}
+
+
+/* ===== Responsividad ===== */
+
+@media (max-width: 1024px) {
+  .testimonioCard {
+    flex: 1 1 calc(50% - 30px);
+    max-width: calc(50% - 30px);
   }
 }
 
-@media (max-width: 500px) {
-  .testimoniosLista {
-    grid-template-columns: 1fr;
+@media (max-width: 600px) {
+  .testimonioCard {
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 }

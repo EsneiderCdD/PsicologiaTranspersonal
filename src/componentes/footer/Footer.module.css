@@ -73,17 +73,31 @@
 .social {
   display: flex;
   justify-content: center;
-  gap: 5rem;
+  gap: 1rem;
   font-size:3rem;
 }
 
 .social a {
-  color: #000000;
+
   transition: color 0.3s ease;
 }
 
-.social a:hover {
-  color: #a78bfa;
+.instagram {
+  color: #D300C6;
+  
+}
+.instagram :hover {
+  color: #ff0069;
+  
+}
+
+.wpp {
+  color: #25D366;
+  
+}
+.wpp :hover {
+  color: #00ff00;
+  
 }
 
 .bottom {

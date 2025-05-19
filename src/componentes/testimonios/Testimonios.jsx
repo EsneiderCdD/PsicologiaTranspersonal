@@ -1,8 +1,10 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import styles from './Testimonios.module.css';
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa'; // Asegúrate de tener react-icons instalado
 
-const testimoniosData = [
+// Paso 1: Testimonios originales
+const testimoniosBase = [
   {
     nombre: "Laura Martínez",
     usuario: "@laura.mtz",
@@ -41,7 +43,19 @@ const testimoniosData = [
   }
 ];
 
+// Paso 2: Copiamos y modificamos ligeramente los anteriores
+const testimoniosExtras = Array.from({ length: 6 }, (_, i) => ({
+  ...testimoniosBase[i % testimoniosBase.length],
+  nombre: testimoniosBase[i % testimoniosBase.length].nombre + " (extra)",
+  usuario: testimoniosBase[i % testimoniosBase.length].usuario + ".2"
+}));
+
+// Paso 3: Unimos en una sola lista
+const testimoniosData = [...testimoniosBase, ...testimoniosExtras];
+
+
 const Testimonios = () => {
+  const [verMas, setVerMas] = useState(false);
   const tituloRef = useRef(null);
   const parrafoRef = useRef(null);
 
@@ -55,6 +69,8 @@ const Testimonios = () => {
       transition: { duration: 0.5, ease: "easeInOut" }
     }
   };
+
+  const testimoniosVisibles = verMas ? testimoniosData : testimoniosData.slice(0, 6);
 
   return (
     <div>
@@ -85,9 +101,8 @@ const Testimonios = () => {
           </motion.p>
         </div>
 
-        {/* ⬇️ Tarjetas al estilo Instagram actualizadas */}
         <div className={styles.testimoniosLista}>
-          {testimoniosData.map((testimonio, index) => (
+          {testimoniosVisibles.map((testimonio, index) => (
             <motion.div
               key={index}
               className={styles.testimonioCard}
@@ -106,6 +121,23 @@ const Testimonios = () => {
           ))}
         </div>
 
+        {/* Botón ver más/ver menos */}
+        <div style={{ textAlign: 'center', marginTop: '30px' }}>
+          <button
+            onClick={() => setVerMas(prev => !prev)}
+            className={styles.verMasBtn}
+          >
+            {verMas ? (
+              <>
+                Ver menos comentarios <FaChevronUp />
+              </>
+            ) : (
+              <>
+                Ver más comentarios <FaChevronDown />
+              </>
+            )}
+          </button>
+        </div>
       </div>
     </div>
   );

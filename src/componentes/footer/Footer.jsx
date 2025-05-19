@@ -12,10 +12,10 @@ export default function Footer() {
             y herramientas de psicología transpersonal.
           </p>
           <div className={styles.social}>
-            <a href="https://wa.me/123456789" target="_blank" rel="noopener noreferrer">
+            <a className={styles.wpp} href="https://wa.me/123456789" target="_blank" rel="noopener noreferrer">
               <FaWhatsapp />
             </a>
-            <a href="https://www.instagram.com/tuInstagram" target="_blank" rel="noopener noreferrer">
+            <a  className={styles.instagram} href="https://www.instagram.com/tuInstagram" target="_blank" rel="noopener noreferrer">
               <FaInstagram />
             </a>
           </div>
