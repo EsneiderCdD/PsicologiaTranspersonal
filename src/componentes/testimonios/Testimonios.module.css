@@ -1,163 +1,117 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;600&family=Marcellus&display=swap');
 
-  .titulo {
-    background: #fff;
-  }
+/* ===== Sección Encabezado de Opiniones (NO MODIFICAR) ===== */
 
+.servicios {
+  text-align: center;
+  background: #ffffff;
+}
 
-  
-  .titulo h2 {
-    font-size: 2.75rem;
-    font-weight: 650;
-    text-align: center;
-    justify-content: center;
-    color: #000000;
-    font-family: 'EB Garamond';
-    background-color: #fff;
-    margin-top: 75px ;
-    margin-bottom: 40px;
-    
-  }
-  
-  .titulo h2 span {
-    color: #a78bfa; /* Violeta suave */
-  }
+.tituloSeccion {
+  font-size: 2.75rem;
+  font-weight: 650;
+  text-align: center;
+  justify-content: center;
+  color: #000000;
+  font-family: 'EB Garamond';
+  background-color: #f5edea15;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
 
-  
-    .titulo p {
-      font-size: 1.4rem;
-      font-family: 'Nunito';
-      font-weight: 400;
-      color: #5C3D3B;
-      max-width: 850px;
-      line-height: 1.5;
-      margin: auto;
-      text-align: center;
-      margin-bottom: 50px;
-       
-    }
-    
-  
-    .cardsContainer {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-      background: #fff;
-      padding: 0 1rem; /* evita desbordes en móviles */
-      box-sizing: border-box; /* importante para que padding no aumente ancho total */
-    }
-    
-    .card {
-      background-color: #FBF8EF;
-      border-radius: 0.75rem;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
-      padding: 1.5rem;
-      text-align: left;
-      transition: transform 0.3s ease;
-      font-family: 'Nunito'; 
-      flex: 1 1 calc(33.333% - 1rem); /* 3 por fila en escritorio */
-      max-width: calc(33.333% - 1rem); /* fijo también el ancho máximo */
-      box-sizing: border-box;
-      margin-bottom: 10px;
-   
-    }
-    
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    
-  
-  .avatar {
-    background-color: #a78bfa;
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.25rem;
-    width: 40px;
-    height: 40px;
-    border-radius: 9999px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 0.5rem;
-  }
-  
-  .nombre {
-    margin-bottom: 0.5rem;
-    background-color: #ffffff00;
-    
-  }
-  
-  .nombre strong {
-    display: block;
-    font-size: 1.5rem;
-    color: #111827;
-    background-color: #ffffff00;
-  }
-  
-  .nombre span {
-    font-size: 0.875rem;
-    color: #6b7280;
-    background-color: #ffffff00;
-  }
-  
-  .estrellas {
-    color: #fbbf24;
-    font-size: 1.5rem;
-    margin-bottom: 0.75rem;
-    background-color: #ffffff00;
-  }
-  
-  .texto {
-    font-size: 1rem;
-    color: #000000;
-    margin-bottom: 1rem;
-    line-height: 1.7;
-    background-color: #ffffff00;
-  }
-  
-  .fecha {
-    font-size: 0.875rem;
-    color: #6b7280;
-    background-color: #ffffff00;
-  }
-  
+.descripcion {
+  font-size: 1.5rem;
+  font-family: 'Nunito';
+  font-weight: 400;
+  color: #5C3D3B;
+  max-width: 850px;
+  line-height: 1.5;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 30px;
+}
 
-  /* Responsividad para tablets */
-@media (max-width: 1024px) {
-  .cardsContainer {
-    flex-wrap: wrap;
-    gap: 2rem;
-    padding: 0 1rem;
-  }
+/* ===== NUEVO Estilo para Tarjetas tipo Instagram ===== */
 
-  .card {
-    flex: 1 1 calc(50% - 2rem);
-    max-width: 100%;
+/* ===== NUEVO Estilo para Tarjetas tipo Instagram ===== */
+
+.testimoniosLista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonioCard {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.484);
+  
+  transition: transform 0.3s ease;
+  min-height: 120px;
+  border: 2px solid #800089;
+}
+
+.testimonioCard:hover {
+  transform: translateY(-5px);
+}
+
+.avatarGrande {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 5px;
+  margin-right: 5px;
+  border: 2px solid #8D2C24;
+  flex-shrink: 0;
+}
+
+.contenidoCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nombrePersona {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #8D2C24;
+  margin-bottom: 0px;
+  font-family: 'Marcellus', serif;
+  margin-top: 0;
+}
+
+.usuarioPersona {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  font-family: 'Karla', sans-serif;
+}
+
+.textoComentario {
+  font-size: 1rem;
+  font-family: 'Karla', sans-serif;
+  color: #333;
+  line-height: 1.4;
+  max-width: 100%;
+  margin-top: 5px;
+}
+
+/* ===== Responsividad para mantener estructura visual ===== */
+
+@media (max-width: 768px) {
+  .testimoniosLista {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Responsividad para móviles */
-/* Móviles */
-@media (max-width: 600px) {
-  .card {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .titulo h2 {
-    font-size: 2rem;
-  }
-
-  .titulo p {
-    font-size: 1.1rem;
-    padding: 0 1rem;
-  }
-
-  .cardsContainer {
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    padding: 0 1rem;
+@media (max-width: 500px) {
+  .testimoniosLista {
+    grid-template-columns: 1fr;
   }
 }

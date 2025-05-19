@@ -1,92 +1,114 @@
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
+import styles from './Testimonios.module.css';
 
-import React from 'react';
-import styles from '../testimonios/Testimonios.module.css';
-
-const testimonios = [
+const testimoniosData = [
   {
-    inicial: 'L',
-    nombre: 'Laura Marúnez',
-    tipo: 'Terapia Individual Virtual',
-    estrellas: 5,
-    texto: 'Las sesiones virtuales individuales me han permitido profundizar en mi autoconocimiento de una manera que nunca imaginé posible. El enfoque transpersonal ha sido revelador para integrar aspectos de mi vida que parecían desconectados.',
-    fecha: 'Marzo 2023',
+    nombre: "Laura Martínez",
+    usuario: "@laura.mtz",
+    comentario: "Gracias a las sesiones pude reconectar conmigo misma. Fue un proceso muy amoroso.",
+    imagen: "https://images.unsplash.com/photo-1616002411355-49593fd89721?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Zm90byUyMGRlJTIwbXVqZXJ8ZW58MHx8MHx8fDA%3D"
   },
   {
-    inicial: 'G',
-    nombre: 'Gabriel Rodríguez',
-    tipo: 'Terapia Grupal Presencial',
-    estrellas: 5,
-    texto: 'Participar en la terapia grupal ha sido una de las mejores decisiones que he tomado. El poder del grupo amplifica el proceso de sanación y me ha permitido sentirme comprendido y acompañado en mi camino.',
-    fecha: 'Julio 2023',
+    nombre: "Carlos Ríos",
+    usuario: "@carlos.rios",
+    comentario: "Me sentí escuchado y contenido desde el primer momento. Recomiendo esta experiencia totalmente.",
+    imagen: "https://img.fotocommunity.com/hombre-comun-y-silvestre-1200f50b-4f3d-45a3-80f1-8b80b05cb51f.jpg?height=1080"
   },
   {
-    inicial: 'S',
-    nombre: 'Sofía Vega',
-    tipo: 'Terapia Individual Virtual',
-    estrellas: 4,
-    texto: 'Desde que comencé las sesiones virtuales, he notado un cambio profundo en mi percepción de la vida y en cómo manejo mis relaciones. Las herramientas que he aprendido me acompañan día a día.',
-    fecha: 'Diciembre 2022',
+    nombre: "Valeria Gómez",
+    usuario: "@val.gomez",
+    comentario: "Las sesiones grupales me ayudaron a entender que no estoy sola. Maravilloso espacio.",
+    imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMC5BGG7_DRcn35ArjT_jdbQzlAB_s3vKEgQ&s"
   },
   {
-    inicial: 'G',
-    nombre: 'Gabriel Rodríguez',
-    tipo: 'Terapia Grupal Presencial',
-    estrellas: 5,
-    texto: 'Participar en la terapia grupal ha sido una de las mejores decisiones que he tomado. El poder del grupo amplifica el proceso de sanación y me ha permitido sentirme comprendido y acompañado en mi camino.',
-    fecha: 'Julio 2023',
+    nombre: "Andrés López",
+    usuario: "@andres.lo",
+    comentario: "Una mirada profesional pero cercana. Las herramientas que me brindaron cambiaron mi día a día.",
+    imagen: "https://images.unsplash.com/photo-1599192111704-6cab503473ff?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG9tYnJlJTIwbGF0aW5vfGVufDB8fDB8fHww"
   },
   {
-    inicial: 'G',
-    nombre: 'Gabriel Rodríguez',
-    tipo: 'Terapia Grupal Presencial',
-    estrellas: 5,
-    texto: 'Participar en la terapia grupal ha sido una de las mejores decisiones que he tomado. El poder del grupo amplifica el proceso de sanación y me ha permitido sentirme comprendido y acompañado en mi camino.',
-    fecha: 'Julio 2023',
+    nombre: "Sofía Herrera",
+    usuario: "@sofi.herrera",
+    comentario: "Aprendí a poner límites y a valorarme más. Inmensamente agradecida.",
+    imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq94sJz7nCTqM8ijuTMH5Gn4cdSaTSyxQQ7g&s"
   },
   {
-    inicial: 'G',
-    nombre: 'Gabriel Rodríguez',
-    tipo: 'Terapia Grupal Presencial',
-    estrellas: 5,
-    texto: 'Participar en la terapia grupal ha sido una de las mejores decisiones que he tomado. El poder del grupo amplifica el proceso de sanación y me ha permitido sentirme comprendido y acompañado en mi camino.',
-    fecha: 'Julio 2023',
-  },
-
-
-
+    nombre: "Mariano Díaz",
+    usuario: "@marianodiaz",
+    comentario: "El acompañamiento emocional fue clave para atravesar un momento difícil. Excelente profesional.",
+    imagen: "https://pbs.twimg.com/profile_images/1558682051/IMG00004-20110710-1406_400x400.jpg"
+  }
 ];
 
-export default function Testimonios() {
+const Testimonios = () => {
+  const tituloRef = useRef(null);
+  const parrafoRef = useRef(null);
+
+  const tituloEnVista = useInView(tituloRef, { once: false, margin: "-100px" });
+  const parrafoEnVista = useInView(parrafoRef, { once: true, margin: "-100px" });
+
+  const variantesServicios = {
+    oculto: { color: "#000000" },
+    visible: {
+      color: "#8D2C24",
+      transition: { duration: 0.5, ease: "easeInOut" }
+    }
+  };
+
   return (
-    <section >
-      <div className={styles.titulo}>
-        <h2>Testimonios de <span>Pacientes</span></h2>
-        <p>
-          Experiencias compartidas por personas que han formado parte de mi práctica
-          terapéutica, tanto en sesiones individuales como grupales.
-        </p>
+    <div>
+      <div className={styles.Container}>
+        <div className={styles.servicios}>
+          <h2 className={styles.tituloSeccion}>
+            Opiniones de{" "}
+            <motion.span
+              ref={tituloRef}
+              variants={variantesServicios}
+              initial="oculto"
+              animate={tituloEnVista ? "visible" : "oculto"}
+            >
+              Pacientes
+            </motion.span>
+          </h2>
+          <motion.p
+            ref={parrafoRef}
+            className={styles.descripcion}
+            initial={{ opacity: 0 }}
+            animate={
+              parrafoEnVista
+                ? { opacity: 1, transition: { duration: 1.2, delay: 0.2 } }
+                : {}
+            }
+          >
+            Experiencias compartidas por personas que han formado parte de mi práctica terapéutica, tanto en sesiones individuales como grupales.
+          </motion.p>
+        </div>
+
+        {/* ⬇️ Tarjetas al estilo Instagram actualizadas */}
+        <div className={styles.testimoniosLista}>
+          {testimoniosData.map((testimonio, index) => (
+            <motion.div
+              key={index}
+              className={styles.testimonioCard}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+            >
+              <img src={testimonio.imagen} alt={testimonio.nombre} className={styles.avatarGrande} />
+              <div className={styles.contenidoCard}>
+                <h4 className={styles.nombrePersona}>{testimonio.nombre}</h4>
+                <p className={styles.usuarioPersona}>{testimonio.usuario}</p>
+                <p className={styles.textoComentario}>"{testimonio.comentario}"</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
       </div>
-
-      <div className={styles.cardsContainer}>
-        {testimonios.map((t, index) => (
-          <div key={index} className={styles.card}>
-            <div className={styles.avatar}>{t.inicial}</div>
-            <div className={styles.nombre}>
-              <strong>{t.nombre}</strong>
-              <span>{t.tipo}</span>
-            </div>
-            <div className={styles.estrellas}>
-              {'★'.repeat(t.estrellas)}
-              {'☆'.repeat(5 - t.estrellas)}
-            </div>
-            <p className={styles.texto}>"{t.texto}"</p>
-            <span className={styles.fecha}>{t.fecha}</span>
-          </div>
-        ))}
-
-        
-      </div>
-
-    </section>
+    </div>
   );
-}
+};
+
+export default Testimonios;
