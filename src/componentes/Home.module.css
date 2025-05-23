@@ -327,7 +327,7 @@
   }
 
   .tituloprincipal {
-    font-size: clamp(2.1rem, 7vw, 3.2rem);
+    font-size: clamp(2.4rem, 7vw, 3.2rem);
   }
 
   .descripcion {
