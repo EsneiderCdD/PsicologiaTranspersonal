@@ -139,7 +139,6 @@
     align-items: center;
     text-align: center;
     margin-left: 0;
-    margin-bottom: 3%;
     gap: 5px;
   }
 
@@ -163,6 +162,7 @@
   .imagenMobile {
     display: flex;
     justify-content: center;
+    margin-bottom: 3.3%;
   }
 
   .imagenMobile img {
@@ -177,6 +177,8 @@
     gap: 14px;
     justify-content: center;
     align-items: center;
+    margin-top: 0px;
+   
   }
 
   .boton,
@@ -229,7 +231,7 @@
   }
 
   .imagenMobile img {
-    max-width: 50%;
+    max-width: 57.5%;
     border-radius: 50%;
     object-fit: cover;
   }
@@ -240,6 +242,7 @@
     gap: 15px;
     justify-content: center;
     align-items: center;
+    
   }
 
   .boton,
@@ -271,14 +274,14 @@
   }
 
   .tituloprincipal {
-    font-size: clamp(2.4rem, 7vw, 3.2rem);
+    font-size: clamp(2.4rem, 8vw, 3.2rem);
   }
 
   .descripcion {
     font-size: clamp(1rem, 4vw, 1.4rem);
     line-height: 1.5;
     max-width: 95%;
-    margin-bottom: 0%;
+  
     text-align: center;
   }
 
@@ -293,17 +296,20 @@
   }
 
   .imagenMobile img {
-    max-width: 50%;
+    max-width: 70%;
+    
     border-radius: 50%;
     object-fit: cover;
   }
 
   .botones {
-    margin-top: 7.7%;
+    margin: auto;
+  
     flex-direction: column;
     width: 100%;
     gap: 10px;
     justify-content: center;
+    
     
     align-items: center;
   }
