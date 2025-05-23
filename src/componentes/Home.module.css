@@ -33,7 +33,7 @@
 }
 
 .imagen img {
-  width: 100%;
+  width: 95%;
   height: auto;
   border-radius: 50%;
 }
@@ -45,6 +45,7 @@
   color: #7B3028;
   margin-top: 0px;
   margin-bottom: 1.5rem;
+ 
 }
 
 .descripcion {
@@ -55,6 +56,7 @@
   text-align: left;
   max-width: 98%;
   margin-top: 1.5%;
+  
 }
 
 .botones {
@@ -63,6 +65,7 @@
   flex-wrap: wrap;
   gap: 2%;
   margin-top: 2%;
+  
 }
 
 .boton {
