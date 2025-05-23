@@ -9,7 +9,7 @@
   width: auto;
   max-height: 100vh;
   background: #FBF8EF;
-  padding: 2.5% 4%;
+  
   flex-wrap: wrap;
 }
 
@@ -18,9 +18,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 2%;
-  margin-top: 2.5%;
-  margin-bottom: 4%;
 }
 
 .imagen {
