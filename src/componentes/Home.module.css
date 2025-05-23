@@ -350,6 +350,7 @@
 
   .tituloprincipal {
     font-size: clamp(2.4rem, 7vw, 3.2rem);
+    margin-top: -10%;
   }
 
   .descripcion {
