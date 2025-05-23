@@ -130,10 +130,11 @@
 /* --------- RESPONSIVE CHECKPOINT 2: ≤ 930px (refinado) --------- */
 @media (max-width: 930px) {
   .layout {
-    flex-direction: column;
-    padding: 2% 2%;
-     height: 95vh;
-  }
+  flex-direction: column;
+  padding: 2% 2%;
+  min-height: 100vh;
+}
+
 
   .contenedor {
     align-items: center;
@@ -303,7 +304,7 @@
   }
 
   .botones {
- 
+    /* margin: auto;*/
   
     flex-direction: column;
     width: 100%;
@@ -323,6 +324,15 @@
   }
 }
 @media (max-width: 400px) {
+
+  .contenedor {
+    align-items: center;
+    text-align: center;
+    margin-left: 0;
+    margin-bottom: 0%;
+    padding-top: 0%;
+    gap: 15px;
+  }
   .imagenMobile img {
     max-width: 75%;
     border-radius: 50%;
