@@ -339,7 +339,7 @@
     margin: 0;
   }
   .imagenMobile img {
-    min-width: 95%;    
+    min-width: 80%;    
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: -15%;
