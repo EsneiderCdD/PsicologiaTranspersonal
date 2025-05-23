@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import estilos from "./Faqs.module.css"; // Cambia esto si tu archivo tiene otro nombre
+import Encabezado from "../global/Encabezado"; // Asegúrate de que la ruta sea correcta
 
 const PreguntasFrecuentes = () => {
   const [preguntaActiva, setPreguntaActiva] = useState(null);
@@ -32,26 +33,29 @@ const PreguntasFrecuentes = () => {
   ];
 
   return (
-    <div className={estilos.faqSection}>
-      <h2 className={estilos.faqTitulo}>Preguntas Frecuentes</h2>
-      <div className={estilos.faqContainer}>
-        {preguntas.map((item, index) => (
-          <div
-            key={index}
-            className={`${estilos.faqItem} ${
-              preguntaActiva === index ? estilos.abierta : ""
-            }`}
-            onClick={() => togglePregunta(index)}
-          >
-            <div className={estilos.faqPregunta}>
-              <span>{item.pregunta}</span>
-              <span>{preguntaActiva === index ? "▲" : "▼"}</span>
+    <div>
+      <Encabezado />
+      <div className={estilos.faqSection}>
+        <h2 className={estilos.faqTitulo}>Preguntas Frecuentes</h2>
+        <div className={estilos.faqContainer}>
+          {preguntas.map((item, index) => (
+            <div
+              key={index}
+              className={`${estilos.faqItem} ${
+                preguntaActiva === index ? estilos.abierta : ""
+              }`}
+              onClick={() => togglePregunta(index)}
+            >
+              <div className={estilos.faqPregunta}>
+                <span>{item.pregunta}</span>
+                <span>{preguntaActiva === index ? "▲" : "▼"}</span>
+              </div>
+              {preguntaActiva === index && (
+                <div className={estilos.faqRespuesta}>{item.respuesta}</div>
+              )}
             </div>
-            {preguntaActiva === index && (
-              <div className={estilos.faqRespuesta}>{item.respuesta}</div>
-            )}
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

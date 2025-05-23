@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import styles from './Terminos.module.css';
 
+import Encabezado from '../global/Encabezado'; // Asegúrate de que la ruta sea correcta
+
 
 const Terminos = () => {
   const tabs = {
@@ -47,36 +49,35 @@ const Terminos = () => {
   const [selectedTab, setSelectedTab] = useState('Pagos');
 
   return (
-    <div className={styles.container}>
-      <h2 className={styles.title}>Términos y Condiciones</h2>
-      <p className={styles.subtitle}>
-        Para asegurar una experiencia terapéutica óptima, es importante establecer algunos acuerdos claros
-      </p>
-
-      <div className={styles.tabButtons}>
-        {Object.keys(tabs).map((tab) => (
-          <button
-            key={tab}
-            className={`${styles.tabButton} ${selectedTab === tab ? styles.active : ''}`}
-            onClick={() => setSelectedTab(tab)}
-          >
-            {tab}
-          </button>
-        ))}
-      </div>
-
-      <div className={styles.contentBox}>
-        <h3 className={styles.sectionTitle}>{tabs[selectedTab].title}</h3>
-        <ul className={styles.list}>
-          {tabs[selectedTab].content.map((item, index) => (
-            <li key={index} className={styles.listItem}>• {item}</li>
+    <div>
+      <Encabezado
+      destacado='Acuerdos'
+         descripcion='Para asegurar una experiencia terapéutica óptima, es importante establecer algunos acuerdos claros'/>
+      <div className={styles.container}>
+     
+        <div className={styles.tabButtons}>
+          {Object.keys(tabs).map((tab) => (
+            <button
+              key={tab}
+              className={`${styles.tabButton} ${selectedTab === tab ? styles.active : ''}`}
+              onClick={() => setSelectedTab(tab)}
+            >
+              {tab}
+            </button>
           ))}
-        </ul>
+        </div>
+        <div className={styles.contentBox}>
+          <h3 className={styles.sectionTitle}>{tabs[selectedTab].title}</h3>
+          <ul className={styles.list}>
+            {tabs[selectedTab].content.map((item, index) => (
+              <li key={index} className={styles.listItem}>• {item}</li>
+            ))}
+          </ul>
+        </div>
+        <p className={styles.footer}>
+          Al agendar una sesión, confirmas que has leído, comprendido y aceptado estos términos y condiciones en su totalidad.
+        </p>
       </div>
-
-      <p className={styles.footer}>
-        Al agendar una sesión, confirmas que has leído, comprendido y aceptado estos términos y condiciones en su totalidad.
-      </p>
     </div>
     
   );

@@ -1,0 +1,23 @@
+.tituloSeccion {
+  font-size: 2.75rem;           /* Tamaño grande */
+  font-weight: 650;             /* Negrita intermedia */
+  text-align: center;
+  justify-content: center;
+  color: #000000;               /* Negro inicialmente */
+  font-family: 'EB Garamond';   /* Tipografía serif elegante */
+  background-color: #f5edea15;  /* Fondo claro muy sutil */
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+.descripcion {
+  font-size: 1.5rem;            /* Tamaño grande para el párrafo */
+  font-family: 'Nunito';        /* Tipografía sans serif */
+  font-weight: 400;
+  color: #5C3D3B;               /* Marrón oscuro suave */
+  max-width: 850px;
+  line-height: 1.5;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 30px;
+}
