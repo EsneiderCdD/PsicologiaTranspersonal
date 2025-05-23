@@ -342,6 +342,8 @@
     min-width: 95%;    
     border-radius: 50%;
     object-fit: cover;
+    margin-bottom: -15%;
+    margin-top: -15%;
    
   }
 
@@ -354,8 +356,9 @@
     font-size: clamp(1rem, 4vw, 1.4rem);
     line-height: 1.5;
     max-width: 95%;
-    margin-bottom: 0%;
+    
     text-align: center;
+
   }
 
 
