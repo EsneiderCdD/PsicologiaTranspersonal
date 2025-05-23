@@ -69,6 +69,33 @@ const Slider2 = () => {
             Un recorrido visual por los momentos más significativos de nuestras sesiones grupales. Cada imagen cuenta una historia de transformación, conexión y descubrimiento personal.
           </motion.p>
         </div>
+        {/* Instrucciones sutiles */}
+    {/* Instrucciones sutiles con iconos animados */}
+    <div className={styles.instrucciones}>
+      {/* Instrucción: deslizar */}
+      <div className={styles.instruccionItem}>
+        <motion.span
+          className={styles.iconoMano}
+          animate={{ x: [0, 15, -15, 0] }}
+          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+        >
+          🤚
+        </motion.span>
+        <small>Desliza para ver imágenes</small>
+      </div>
+
+      {/* Instrucción: click para ampliar */}
+      <div className={styles.instruccionItem}>
+        <motion.span
+          className={styles.iconoMano}
+          animate={{ scale: [1, 1.3, 1] }}
+          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+        >
+          👉
+        </motion.span>
+        <small>Click para ampliar imagen</small>
+      </div>
+    </div>
 
         {/* Swiper Slider */}
         <Swiper
@@ -97,33 +124,7 @@ const Slider2 = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-           {/* Instrucciones sutiles */}
-    {/* Instrucciones sutiles con iconos animados */}
-    <div className={styles.instrucciones}>
-      {/* Instrucción: deslizar */}
-      <div className={styles.instruccionItem}>
-        <motion.span
-          className={styles.iconoMano}
-          animate={{ x: [0, 15, -15, 0] }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-        >
-          🤚
-        </motion.span>
-        <small>Desliza para ver imágenes</small>
-      </div>
-
-      {/* Instrucción: click para ampliar */}
-      <div className={styles.instruccionItem}>
-        <motion.span
-          className={styles.iconoMano}
-          animate={{ scale: [1, 1.3, 1] }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-        >
-          👉
-        </motion.span>
-        <small>Click para ampliar imagen</small>
-      </div>
-    </div>
+           
       </div>
 
       {/* Modal de imagen ampliada */}
