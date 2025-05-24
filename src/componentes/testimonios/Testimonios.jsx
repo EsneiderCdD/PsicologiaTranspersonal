@@ -44,7 +44,7 @@ const Testimonios = () => {
     <div className={styles.Container}>
       <div className={styles.servicios}>
         <h2 className={styles.tituloSeccion}>
-          Mensajes de <span style={{ color: '#8D2C24' }}>Personas</span>
+           <span style={{ color: '#8D2C24' }}>Mensajes</span>
         </h2>
         <p className={styles.descripcion}>
           Experiencias compartidas por personas que han formado parte de mi práctica terapéutica, tanto en sesiones individuales como grupales.

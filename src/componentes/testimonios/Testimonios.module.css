@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;600&family=Marcellus&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Nunito:wght@400;700&family=Cairo:wght@400;600&display=swap');
+
 
 *{border: red dotted 1px};
 /* ===== Sección Encabezado de Opiniones (NO MODIFICAR) ===== */
@@ -9,7 +10,7 @@
 }
 
 .tituloSeccion {
-  font-size: 2.75rem;
+  font-size: clamp(2.3rem, 3.8vw, 3.8rem);
   font-weight: 650;
   text-align: center;
   justify-content: center;
@@ -21,7 +22,7 @@
 }
 
 .descripcion {
-  font-size: 1.5rem;
+  font-size: clamp(0.9rem, 2.5vw, 1.6rem);
   font-family: 'Nunito';
   font-weight: 400;
   color: #5C3D3B;
@@ -83,25 +84,29 @@
 
 .modalContent {
   position: relative;
-  background: #fff;
-  padding: 10px;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-  max-width: 90vw;
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+  max-width: 100vw;
   max-height: 90vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-  overflow: hidden;
+  justify-content: center;
 }
 
 .imagenModal {
-  width: 100%;
+  display: block;
+  max-width: 100vw;
+  max-height: 90vh;
+  width: auto;
   height: auto;
-  max-height: 85vh;
-  object-fit: contain; /* ✅ evita recorte, mantiene proporciones */
+  object-fit: contain;
   border-radius: 10px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
 }
+
 
 .cerrarModal {
   position: absolute;
@@ -134,3 +139,91 @@
   object-fit: cover;
   border-radius: 12px;
 }
+/* Mejoras responsivas para cartas */
+@media (max-width: 1080px) {
+  .sobreCard {
+    width: 160px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 930px) {
+    .imagenModal {
+  max-width: 80vw;
+  max-height: 90vh;
+}
+  
+  .modalOverlay {
+  padding: 0; /* Elimina el padding */
+ }
+  .sobreCard {
+    width: 140px;
+    height: 110px;
+  }
+}
+
+@media (max-width: 780px) {
+    .imagenModal {
+  max-width: 80vw;
+  max-height: 90vh;
+}
+  
+  
+  .modalOverlay {
+  padding: 0; /* Elimina el padding */
+ }
+  .sobreCard {
+    width: 130px;
+    height: 100px;
+  }
+
+  .sobreCard.abierto {
+    height: 170px;
+  }
+}
+
+@media (max-width: 600px) {
+  .modalOverlay {
+  padding: 0; /* Elimina el padding */
+ }
+
+  
+  .imagenModal {
+  max-width: 80vw;
+  max-height: 90vh;
+}
+  
+
+  .sobreCard {
+    width: 100px;
+    height: 85px;
+  }
+
+  .sobreCard.abierto {
+    height: 140px;
+  }
+}
+
+@media (max-width: 400px) {
+ .modalOverlay {
+  padding: 0; /* Elimina el padding */
+ }
+  .imagenModal {
+  max-width: 80vw;
+  max-height: 90vh;
+}
+
+
+
+  .sobreCard {
+    width: 90px;
+    height: 80px;
+  }
+
+  .sobreCard.abierto {
+    height: 130px;
+  }
+}
+
+
+
