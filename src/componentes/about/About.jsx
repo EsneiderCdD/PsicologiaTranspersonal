@@ -17,11 +17,12 @@ const About = () => {
     
     <div  >
       <Home2 />
-      <PsicologiaTranspersonal />
-      
+        
       
       <ScrollSteps />
      
+      <PsicologiaTranspersonal />
+    
 
       <Terminos />
 

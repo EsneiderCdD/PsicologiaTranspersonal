@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import Heroe2 from "../assets/imagenes/Heroe2.png";
 
-import PricingCard from "./PricingCard";
 
 export default function Home() {
 

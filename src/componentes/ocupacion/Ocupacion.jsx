@@ -6,13 +6,22 @@ import {
   FaVideo, FaUsers, FaCalendarAlt, FaUserCheck, FaHome,
   FaRegLightbulb, FaSpa, FaFemale, FaHandsHelping, FaPlus
 } from 'react-icons/fa';
-import React, { useRef } from 'react';
+import React, { useState,useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { style } from 'framer-motion/client';
 
+import PricingCard from '../Price/PricingCard';
+
+
 const Ocupacion = () => {
+
+  const [mostrarPricing, setMostrarPricing] = useState(false);
+
+
   const tituloRef = useRef(null);
   const parrafoRef = useRef(null);
+
+  
 
   const tituloEnVista = useInView(tituloRef, { once: false, margin: "-100px" });
   const parrafoEnVista = useInView(parrafoRef, { once: true, margin: "-100px" });
@@ -84,7 +93,13 @@ const Ocupacion = () => {
 
         </ul>
         <div className={styles.botonesCard}>
-          <button className={styles.botonPrincipal}>Reservar Sesión</button>
+          <button
+            className={styles.botonPrincipal}
+            onClick={() => setMostrarPricing(!mostrarPricing)}
+          >
+            Reservar Sesión
+          </button>
+
           <Link to="/about" >
             <button className={styles.botonPrincipal}>Saber Más</button>
             </Link>
@@ -126,7 +141,55 @@ const Ocupacion = () => {
         </div>
       </div>
     </motion.div>
+
+    
   </div>
+
+   {mostrarPricing && (
+
+    
+<div>
+
+      <div style={{ fontSize: "1.5rem", fontWeight: "bold", marginBottom: "20px", textAlign: "center", marginTop: "20px" }}>
+        Selecciona el plan que mas te gusta 
+      </div>
+        
+  
+        <div style={{
+        display: "flex",
+        flexWrap: "nowrap",
+        justifyContent: "center",
+        backgroundColor: "#fffff",
+        padding: "40px"
+      }}>
+        <PricingCard
+          title="1 Sesión"
+          description="Colaboración puntual e inmediata para conocernos."
+          price="$40"
+          iconAlt="Icono hoja"
+        />
+        <PricingCard
+          title="4 Sesiones"
+          description="Cuatro encuentros para conocerte, trabajar procesos y crear continuidad."
+          price="$140"
+          highlight={true}
+          iconAlt="Icono meditación"
+          footerNote="Ideal para comenzar tu camino"
+  
+        />
+        <PricingCard
+          title="6 Sesiones"
+          description="Una experiencia profunda y sostenida para trabajar a lo largo del tiempo."
+          price="$200"
+          iconAlt="Icono espiral"
+        />
+      </div>
+</div>
+    )}
+
+  
+
+   
 
     </div>
   );

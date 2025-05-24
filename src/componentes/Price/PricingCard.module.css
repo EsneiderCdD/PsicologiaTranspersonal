@@ -1,15 +1,21 @@
+*{
+  border:red 1px dotted;
+}
 .card {
-  flex: 1;
-  max-width: 300px;
+  
+  max-width: 150px;
+  min-width: 150px;
+  min-height: 300px;
   border: 1px solid #e5dfd4;
   border-radius: 16px;
   background-color: #fdfaf4;
-  padding: 24px;
+  padding: 2%;
   text-align: center;
   margin: 16px;
   position: relative;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   transition: transform 0.3s ease;
+  flex-wrap: nowrap;
 }
 
 .card:hover {
@@ -18,15 +24,16 @@
 
 .badge {
   position: absolute;
-  top: 12px;
+  top: -10px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #94af9f;
+  background-color: #7B9477;
   color: white;
   padding: 4px 12px;
-  border-radius: 8px;
+  border-radius: 25px;
   font-size: 0.75rem;
   font-weight: 600;
+  width: 56%;
 }
 
 .iconContainer {
@@ -48,7 +55,7 @@
 }
 
 .title {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 600;
   color: #3e2e25;
   margin: 10px 0 6px;
@@ -56,12 +63,13 @@
 
 .description {
   font-size: 1rem;
+  line-height: 1.25;
   color: #444;
   margin-bottom: 16px;
 }
 
 .price {
-  font-size: 1.3rem;
+  font-size: 1.7rem;
   font-weight: bold;
   color: #2d2d2d;
 }
@@ -76,6 +84,41 @@
   font-size: 0.95rem;
   color: #356b43;
 }
+
+.termsContainer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.redirectContainer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.continueButton {
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.active {
+  background-color: #356b43;
+  color: white;
+  cursor: pointer;
+}
+
+.disabled {
+  background-color: #ccc;
+  color: #666;
+  pointer-events: none;
+  cursor: default;
+}
+
 
 @media (max-width: 768px) {
   .card {
