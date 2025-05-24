@@ -16,17 +16,18 @@ const PricingCard = ({ name, title, description, ahorro, currency2, price, curre
         <h3>{name}</h3>
         
         <p className={styles.title}>{title}</p>
-        <div className={styles.priceLine}>
-          <span className={styles.price}>{price}</span>
-          <span className={styles.currency}>{currency}</span>
-          
-        </div>
+       
         <div className={styles.priceLine}>
           <span className={styles.ahorro}>{ahorro}</span>
           <span className={styles.currency2}>{currency2}</span>
         </div>
       </div>
       <p className={styles.description}>{description}</p>
+       <div className={styles.priceLine}>
+          <span className={styles.price}>{price}</span>
+          <span className={styles.currency}>{currency}</span>
+          
+        </div>
       {isSelected && (
   <div className={styles.checkIcon}>
     ✓
@@ -106,8 +107,8 @@ const handlePayUClick = () => {
           </div>
           <div className={styles.plans}>
             <PricingCard
-              name="Única"
-              title="1 Sesión"
+              name="1 Sesión"
+              
               description="Un espacio puntual para abordar una necesidad inmediata o conocernos."
               price="$40"
               currency="USD"
@@ -116,26 +117,25 @@ const handlePayUClick = () => {
               onSelect={() => handleSelect("Sesión única")}
             />
             <PricingCard
-              name="Estándar"
-              title="4 Sesiones"
+              name="4 Sesiones"
+              
               description="Cuatro sesiones para conocerte, trabajar procesos y crear continuidad."
               price="$140"
               currency="USD"
-              ahorro={"+$40"}
-              currency2={"USD"}
+              
+             
               color="standard"
               label="Más vendido"
               isSelected={selectedPlan === "Sesión estándar"}
               onSelect={() => handleSelect("Sesión estándar")}
             />
             <PricingCard
-              name="Premium"
-              title="6 Sesiones"
+              name="6 Sesiones"
+              
               description="Una experiencia profunda y sostenida para trabajar a fondo tu bienestar."
               price="$200"
               currency="USD"
-              ahorro={"+$40"}
-              currency2={"USD"}
+             
               color="premium"
               label="Recomendado"
               isSelected={selectedPlan === "Premium"}
