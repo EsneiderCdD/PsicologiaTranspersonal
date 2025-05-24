@@ -259,7 +259,7 @@
 
   .cardPrincipal,
   .cardSecundario {
-    max-width: 90%;
+    max-width: 80%;
     margin: 0 auto;
   }
 
@@ -492,4 +492,10 @@
   .descripcion {
     font-size: clamp(1rem, 4vw, 1.4rem);
   }
+   .cardPrincipal,
+  .cardSecundario {
+    max-width: 95%;
+    margin: 0 auto;
+  }
+
 }

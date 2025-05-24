@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Nunito:wght@400;700&family=Cairo:wght@400;600&display=swap');
 
 
-*{border: red dotted 1px};
-/* ===== Sección Encabezado de Opiniones (NO MODIFICAR) ===== */
-
 .servicios {
   text-align: center;
   background: #ffffff;
