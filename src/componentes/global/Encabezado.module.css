@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Nunito:wght@400;700&family=Cairo:wght@400;600&display=swap');
+
 .tituloSeccion {
-  font-size: 2.75rem;           /* Tamaño grande */
+  font-size: clamp(2.4rem, 7vw, 3.2rem);         /* Tamaño grande */
   font-weight: 650;             /* Negrita intermedia */
   text-align: center;
   justify-content: center;
@@ -11,7 +13,7 @@
 }
 
 .descripcion {
-  font-size: 1.5rem;            /* Tamaño grande para el párrafo */
+  font-size: clamp(1rem, 4vw, 1.4rem);           /* Tamaño grande para el párrafo */
   font-family: 'Nunito';        /* Tipografía sans serif */
   font-weight: 400;
   color: #5C3D3B;               /* Marrón oscuro suave */
@@ -20,4 +22,67 @@
   margin: auto;
   text-align: center;
   margin-bottom: 30px;
+}
+
+@media (max-width: 1080px) {
+
+  .tituloSeccion {
+    font-size: clamp(2.3rem, 3.8vw, 3.8rem);
+    
+  }
+
+  .descripcion {
+    font-size: clamp(0.9rem, 2.5vw, 1.6rem);
+    max-width: 800px;
+  }
+  
+}
+
+@media (max-width: 930px) {
+
+  .tituloSeccion {
+    font-size: clamp(2.2rem, 5.5vw, 3.1rem);
+    
+  }
+  .descripcion {
+    font-size: clamp(0.9rem, 3vw, 1.35rem);
+    max-width: 90%;
+  }
+  
+}
+@media (max-width: 780px) {
+
+  .tituloSeccion {
+    font-size: clamp(2.4rem, 7vw, 3.2rem);
+    
+  }
+
+  .descripcion {
+    font-size: clamp(1rem, 4vw, 1.4rem);
+   
+  }
+}
+@media (max-width: 600px) {
+
+  .tituloSeccion {
+    font-size: clamp(2.4rem, 8vw, 3.2rem);
+    
+  }
+
+  .descripcion {
+    font-size: clamp(1rem, 4vw, 1.4rem);
+   
+  }
+}
+@media (max-width: 400px) {
+ .tituloSeccion {
+    font-size: clamp(2.4rem, 7vw, 3.2rem);
+
+  }
+  .descripcion {
+    font-size: clamp(1rem, 4vw, 1.4rem);
+   
+  }
+
+
 }

@@ -51,7 +51,6 @@
 .tituloSeccion {
   font-size: clamp(2.4rem, 7vw, 3.2rem);
   font-weight: 650;
-  
   text-align: center;
   justify-content: center;
   color: #000000;

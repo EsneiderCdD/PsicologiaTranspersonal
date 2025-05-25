@@ -1,0 +1,30 @@
+.iconCounterContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.75rem;
+  max-width: 300px;
+  padding: 1rem;
+}
+
+.icon {
+  font-size: 4rem;
+  color: #6b46c1;
+}
+
+span {
+  margin-top: 0.5rem;
+ 
+  color: #333;
+}

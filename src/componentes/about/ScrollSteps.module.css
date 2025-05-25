@@ -2,7 +2,16 @@
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
+  
+  /* Oculta la barra de scroll */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
 }
+
+.container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
 
 .step {
   height: 100vh;
@@ -15,28 +24,38 @@
 }
 
 .card {
-  max-width: 700px;
+  position: relative;
+  width: 50%;
+  
   background-color: #fdfdfd;
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  overflow: hidden;
 }
 
 .itemsGroup {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .item {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 1rem;
-  font-size: 1.1rem;
+  flex-direction: column;
+  text-align: center;
+  font-size: 2rem;
+  max-width: 300px;
+  padding: 1rem;
 }
 
 .icon {
-  font-size: 1.8rem;
-  color: #6b46c1; /* puedes personalizar */
+  font-size: 5rem;
+  color: #6b46c1;
 }

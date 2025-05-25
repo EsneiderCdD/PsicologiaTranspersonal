@@ -9,7 +9,7 @@ export default function PsicologiaTranspersonal() {
       <Encabezado
         titulo="Psicología"
         destacado="Transpersonal"
-        descripcion="La psicología transpersonal es una rama de la psicología que se enfoca en los aspectos espirituales y trascendentales de la experiencia humana. A diferencia de las corrientes tradicionales, la transpersonal busca integrar la dimensión espiritual como parte esencial del desarrollo personal y emocional."
+        descripcion="Deberia de tratar sobre su conexion con @PsicologiaTranspersonal "
       />
       <section className={estilos.seccion}>
         <div className={estilos.contenido}>

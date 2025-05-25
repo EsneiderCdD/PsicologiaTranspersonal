@@ -43,17 +43,20 @@ export default function Home2() {
             Soy psicóloga con amplia experiencia en salud mental, bienestar emocional y desarrollo del potencial humano.
             Mi enfoque está basado en la psicología transpersonal, un modelo terapéutico que integra la mente, el cuerpo
             y la dimensión espiritual para generar procesos de transformación profunda.
-          </p>
-          <div className={estilos.descripcionSecundaria}>
-            <p>
-              Además de mi formación en psicología clínica, me he especializado en terapia transpersonal y terapia
+            <br /> <br />
+
+            Además de mi formación en psicología clínica, me he especializado en terapia transpersonal y terapia
               enfocada a los ciclos y necesidades femeninas, lo que me ha permitido profundizar en los procesos de
               sanación de la mujer.
-            </p>
-            <p>
-              Entender el impacto de tus vivencias y trabajarlas desde un enfoque terapéutico adecuado puede marcar la
+
+              <br /><br />
+                  Entender el impacto de tus vivencias y trabajarlas desde un enfoque terapéutico adecuado puede marcar la
               diferencia en cómo enfrentas la vida y construyes tus relaciones, especialmente contigo misma.
-            </p>
+          </p>
+         
+          <div className={estilos.descripcion}>
+            
+            
           </div>
           {/* Imagen móvil dentro de la columna de texto */}
           <div className={`${estilos.imagen} ${estilos.imagenMobile}`}>
