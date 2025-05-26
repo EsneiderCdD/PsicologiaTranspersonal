@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import styles from '../ocupacion/Ocupacion.module.css'; // Reutilizamos el CSS
 
-const SeccionEncabezado = ({ titulo , destacado = "Palabra", descripcion = "Texto descriptivo aquí." }) => {
+const SeccionEncabezado = ({ titulo , destacado = "Palabra", descripcion = "Texto descriptivo aquí."  }) => {
   const tituloRef = useRef(null);
   const descripcionRef = useRef(null);
 

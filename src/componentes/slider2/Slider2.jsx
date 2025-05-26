@@ -7,6 +7,8 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 
+import Encabezado from '../global/Encabezado';
+
 import styles from './Slider2.module.css';
 
 // Importa las imágenes locales
@@ -44,31 +46,11 @@ const Slider2 = () => {
     <div>
       {/* Sección: Mis Servicios */}
       <div className={styles.sliderContainer}>
-        <div className={styles.servicios}>
-          <h2 className={styles.tituloSeccion}>
-            Galería de{" "}
-            <motion.span
-              ref={tituloRef}
-              variants={variantesServicios}
-              initial="oculto"
-              animate={tituloEnVista ? "visible" : "oculto"}
-            >
-              Experiencias
-            </motion.span>
-          </h2>
-          <motion.p
-            ref={parrafoRef}
-            className={styles.descripcion}
-            initial={{ opacity: 0 }}
-            animate={
-              parrafoEnVista
-                ? { opacity: 1, transition: { duration: 1.2, delay: 0.2 } }
-                : {}
-            }
-          >
-            Un recorrido visual por los momentos más significativos de nuestras sesiones grupales. Cada imagen cuenta una historia de transformación, conexión y descubrimiento personal.
-          </motion.p>
-        </div>
+      <Encabezado
+        titulo="Galería de " 
+        destacado="Experiencias"
+        descripcion=" Un recorrido visual por los momentos más significativos de nuestras sesiones grupales: historias de conexión y descubrimiento."
+      />
         {/* Instrucciones sutiles */}
     {/* Instrucciones sutiles con iconos animados */}
     <div className={styles.instrucciones}>
@@ -89,7 +71,7 @@ const Slider2 = () => {
         <motion.span
           className={styles.iconoMano}
           animate={{ scale: [1, 1.3, 1] }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+          transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
         >
           👉
         </motion.span>

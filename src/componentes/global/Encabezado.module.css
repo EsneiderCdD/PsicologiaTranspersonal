@@ -11,6 +11,18 @@
   margin-top: 50px;
   margin-bottom: 40px;
 }
+.destacado {
+    font-size: clamp(2.4rem, 7vw, 3.2rem);         /* Tamaño grande */
+  font-weight: 650;             /* Negrita intermedia */
+  text-align: center;
+  justify-content: center;
+  color: #000000;               /* Negro inicialmente */
+  font-family: 'EB Garamond';   /* Tipografía serif elegante */
+  background-color: #f5edea15;  /* Fondo claro muy sutil */
+  margin-top: 50px;
+  margin-bottom: 40px;
+
+}
 
 .descripcion {
   font-size: clamp(1rem, 4vw, 1.4rem);           /* Tamaño grande para el párrafo */
@@ -44,6 +56,10 @@
     font-size: clamp(2.2rem, 5.5vw, 3.1rem);
     
   }
+  .destacado {
+    font-size: clamp(2.2rem, 5.5vw, 3.1rem);
+    
+  }
   .descripcion {
     font-size: clamp(0.9rem, 3vw, 1.35rem);
     max-width: 90%;
@@ -53,6 +69,10 @@
 @media (max-width: 780px) {
 
   .tituloSeccion {
+    font-size: clamp(2.4rem, 7vw, 3.2rem);
+    
+  }
+  .destacado {
     font-size: clamp(2.4rem, 7vw, 3.2rem);
     
   }
@@ -68,6 +88,10 @@
     font-size: clamp(2.4rem, 8vw, 3.2rem);
     
   }
+  .destacado {
+    font-size: clamp(2.4rem, 8vw, 3.2rem);
+    
+  }
 
   .descripcion {
     font-size: clamp(1rem, 4vw, 1.4rem);
@@ -76,6 +100,10 @@
 }
 @media (max-width: 400px) {
  .tituloSeccion {
+    font-size: clamp(2.4rem, 7vw, 3.2rem);
+
+  }
+  .destacado {
     font-size: clamp(2.4rem, 7vw, 3.2rem);
 
   }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Testimonios.module.css';
+import Encabezado from '../global/Encabezado';
 
 import mensajeCerrado from '../../assets/imagenes/mensajeCerrado.jpg';
 import mensajeAbierto from '../../assets/imagenes/mensajeAbierto.jpg';
@@ -42,15 +43,12 @@ const Testimonios = () => {
 
   return (
     <div className={styles.Container}>
-      <div className={styles.servicios}>
-        <h2 className={styles.tituloSeccion}>
-           <span style={{ color: '#8D2C24' }}>Mensajes</span>
-        </h2>
-        <p className={styles.descripcion}>
-          Experiencias compartidas por personas que han formado parte de mi práctica terapéutica, tanto en sesiones individuales como grupales.
-        </p>
-      </div>
+      <Encabezado
+      
+        destacado="Mensajes"
+        descripcion="Fragmentos de historias y emociones que reflejan el impacto del acompañamiento en sesiones individuales y en grupo."
 
+       />  
       <div className={styles.testimoniosLista}>
         {sobresData.map((sobre) => (
           <div

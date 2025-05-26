@@ -489,6 +489,12 @@
   }
 }
 @media (max-width: 400px) {
+    h2 {
+    font-size: 1.33rem;
+     
+
+    
+  }
   .tituloSeccion {
     font-size: clamp(2.4rem, 7vw, 3.2rem);
   }

@@ -90,11 +90,11 @@
 
 
 .instrucciones {
-  margin-top: 30px;
+ 
   text-align: center;
   display: flex;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
   gap: 10px;
 }
 
@@ -184,87 +184,25 @@
 }
 
 
-
-
-
-@media (max-width: 1080px) {
-
-  .tituloSeccion {
-    font-size: clamp(2.3rem, 3.8vw, 3.8rem);
-    
-  }
-
-  .descripcion {
-    font-size: clamp(0.9rem, 2.5vw, 1.6rem);
-    max-width: 800px;
-  }
-  
-}
-
-@media (max-width: 930px) {
-
-  .tituloSeccion {
-    font-size: clamp(2.2rem, 5.5vw, 3.1rem);
-    
-  }
-  .descripcion {
-    font-size: clamp(0.9rem, 3vw, 1.35rem);
-    max-width: 90%;
-  }
-  
-}
 @media (max-width: 780px) {
 
-  .tituloSeccion {
-    font-size: clamp(2.4rem, 7vw, 3.2rem);
-    
-  }
-
-  .descripcion {
-    font-size: clamp(1rem, 4vw, 1.4rem);
-   
-  }
+  
   .slide {
   width: 350px;
   height: 350px;
   }
 }
 
-
 @media (max-width: 600px) {
     .slide {
   width: 300px;
   height: 300px;
   }
-  .descripcion {
-    font-size: clamp(1rem, 4vw, 1.4rem);
-    max-width: 95%;
-  }
 
-  .tituloSeccion {
-    font-size: clamp(2.4rem, 8vw, 3.2rem);
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-    
-    
-  }
 
   .slide {
   width: 250px;
   height: 250px;
   }
-
-}
-@media (max-width: 400px) {
- .tituloSeccion {
-    font-size: clamp(2.4rem, 7vw, 3.2rem);
-
-  }
-  .descripcion {
-    font-size: clamp(1rem, 4vw, 1.4rem);
-   
-  }
-
 
 }
