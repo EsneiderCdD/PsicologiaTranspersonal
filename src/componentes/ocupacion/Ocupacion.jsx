@@ -10,6 +10,8 @@ import React, { useState,useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { style } from 'framer-motion/client';
 
+import Modal from '../ocupacion/Modal'; // Importa el componente Modal
+
 import PricingCard from '../Price/PricingCard';
 import Encabezado from '../global/Encabezado'; // Importa el componente Encabezado
 
@@ -135,47 +137,15 @@ const Ocupacion = () => {
     
   </div>
 
-   {mostrarPricing && (
+  <Modal
+  isOpen={mostrarPricing}
+  onClose={() => setMostrarPricing(false)}
+  showTerms={true}
+  requireTermsAcceptance={true}
+  confirmText="Reservar ahora"
+/>
 
-    
-<div>
 
-      <div style={{ fontSize: "1.5rem", fontWeight: "bold", marginBottom: "20px", textAlign: "center", marginTop: "20px" }}>
-        Selecciona el plan que mas te gusta 
-      </div>
-        
-  
-        <div style={{
-        display: "flex",
-        flexWrap: "nowrap",
-        justifyContent: "center",
-        backgroundColor: "#fffff",
-        padding: "40px"
-      }}>
-        <PricingCard
-          title="1 Sesión"
-          description="Colaboración puntual e inmediata para conocernos."
-          price="$40"
-          iconAlt="Icono hoja"
-        />
-        <PricingCard
-          title="4 Sesiones"
-          description="Cuatro encuentros para conocerte, trabajar procesos y crear continuidad."
-          price="$140"
-          highlight={true}
-          iconAlt="Icono meditación"
-          footerNote="Ideal para comenzar tu camino"
-  
-        />
-        <PricingCard
-          title="6 Sesiones"
-          description="Una experiencia profunda y sostenida para trabajar a lo largo del tiempo."
-          price="$200"
-          iconAlt="Icono espiral"
-        />
-      </div>
-</div>
-    )}
 
   
 

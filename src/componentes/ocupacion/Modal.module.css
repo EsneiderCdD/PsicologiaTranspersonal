@@ -1,0 +1,275 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal {
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 900px;
+  width: 95%;
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.title {
+    justify-content: center;
+    font-size: 1.5rem;
+  
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  
+  flex-wrap: nowrap;
+}
+
+.cardWrapper {
+  position: relative;
+  cursor: pointer;
+ 
+}
+
+
+.checkmark {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 8px;
+}
+
+.terms {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.buttonContainer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.continueButton {
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.active {
+  background-color: #356b43;
+  color: white;
+  cursor: pointer;
+}
+
+.disabled {
+  background-color: #ccc;
+  color: #666;
+  pointer-events: none;
+  cursor: default;
+}
+
+
+
+
+
+
+
+
+
+.card {
+  
+  max-width: 150px;
+  min-width: 150px;
+  min-height: 300px;
+  border: 1px solid #e5dfd4;
+  border-radius: 16px;
+  background-color: #fdfaf4;
+  padding: 2%;
+  text-align: center;
+  margin: 0px;
+ 
+  
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  flex-wrap: nowrap;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.badge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #7B9477;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 25px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  width: 56%;
+}
+
+.iconContainer {
+  margin: 20px auto;
+  height: 48px;
+}
+
+.icon {
+  height: 48px;
+  width: auto;
+}
+
+.iconPlaceholder {
+  width: 48px;
+  height: 48px;
+  background-color: #ddd;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #3e2e25;
+  margin: 10px 0 6px;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.25;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+.price {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #2d2d2d;
+}
+
+.currency {
+  font-size: 1rem;
+  color: #7c7c7c;
+}
+
+.footerNote {
+  margin-top: 16px;
+  font-size: 0.95rem;
+  color: #356b43;
+}
+
+.termsContainer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.redirectContainer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.continueButton {
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.active {
+  background-color: #356b43;
+  color: white;
+  cursor: pointer;
+}
+
+.disabled {
+  background-color: #ccc;
+  color: #666;
+  pointer-events: none;
+  cursor: default;
+}
+
+
+
+
+@media (max-width: 600px) {
+  .modal {
+
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .cardContainer {
+    gap: 0px;
+ 
+    overflow-x: hidden; /* Asegura que no haya scroll */
+    justify-content: space-evenly;
+  }
+
+  .card {
+    min-width: 100px;
+    max-width: 100px;
+    min-height: 260px;
+    padding: 1%;
+  }
+
+  .badge {
+    font-size: 0.65rem;
+    width: 70%;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .price {
+    font-size: 1.2rem;
+  }
+
+  .currency {
+    font-size: 0.9rem;
+  }
+
+  .continueButton {
+    font-size: 0.95rem;
+    
+  }
+}
+

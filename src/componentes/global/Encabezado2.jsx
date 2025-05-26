@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import styles from '../global/Encabezado.module.css'; // Reutilizamos el CSS
+import styles from '../ocupacion/Ocupacion.module.css'; // Reutilizamos el CSS
 
-const SeccionEncabezado = ({ titulo , destacado = "Palabra", descripcion = "Texto descriptivo aquí."  }) => {
+const Encabezado = ({ titulo , destacado = "Palabra", descripcion = "Texto descriptivo aquí."  }) => {
   const tituloRef = useRef(null);
   const descripcionRef = useRef(null);
 
@@ -47,4 +47,4 @@ const SeccionEncabezado = ({ titulo , destacado = "Palabra", descripcion = "Text
   );
 };
 
-export default SeccionEncabezado;
+export default Encabezado;

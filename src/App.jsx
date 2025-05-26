@@ -3,7 +3,7 @@ import Home from './componentes/Home';
 import Footer from './componentes/footer/Footer';
 import About from './componentes/about/About';
 import Ocupacion from './componentes/ocupacion/Ocupacion';
-
+import './App.css';
 import Testimonios from './componentes/testimonios/Testimonios';
 import Terminos from './componentes/terminos/Terminos'; // 👈 nuevo import
 import Slider2 from './componentes/slider2/Slider2'; // 👈 nuevo import

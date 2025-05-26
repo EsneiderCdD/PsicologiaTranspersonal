@@ -1,6 +1,4 @@
-*{
-  border:red 1px dotted;
-}
+
 .card {
   
   max-width: 150px;
@@ -120,9 +118,3 @@
 }
 
 
-@media (max-width: 768px) {
-  .card {
-    max-width: 90%;
-    margin: 12px auto;
-  }
-}

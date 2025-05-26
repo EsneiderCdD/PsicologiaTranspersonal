@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./PricingCard.module.css";
-import Encabezado from "../global/Encabezado";
+
 const PricingCard = ({
   title,
   description,

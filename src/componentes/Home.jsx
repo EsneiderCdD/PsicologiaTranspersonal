@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import estilos from "./Home.module.css";
 
-import PricingModal from "./PricingModal/PricingModal"; // ← reemplaza el import anterior
+import Modal from "../componentes/ocupacion/Modal";
+
 
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -119,9 +120,15 @@ export default function Home() {
         <img src={Heroe2} alt="imagen decorativa" />
       </motion.div>
 
-      {modalPricingAbierto && (
-        <PricingModal isOpen={modalPricingAbierto} onClose={() => setModalPricingAbierto(false)} />
-      )}
+     {modalPricingAbierto && (
+  <Modal
+    isOpen={modalPricingAbierto}
+    onClose={() => setModalPricingAbierto(false)}
+    showTerms={true}
+    requireTermsAcceptance={true}
+    confirmText="Agendar ahora"
+  />
+)}
 
       
     </motion.div>
