@@ -4,14 +4,14 @@ import styles from '../ocupacion/Ocupacion.module.css';
 import { motion, useInView } from 'framer-motion';
 import {
   FaVideo, FaUsers, FaCalendarAlt, FaUserCheck, FaHome,
-  FaRegLightbulb, FaSpa, FaFemale, FaHandsHelping, FaPlus
+  FaRegLightbulb, FaSpa, FaFemale, FaHandsHelping, FaPlus, FaDesktop, FaMapMarkerAlt
 } from 'react-icons/fa';
 import React, { useState,useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { style } from 'framer-motion/client';
 
 import PricingCard from '../Price/PricingCard';
-
+import Encabezado from '../global/Encabezado'; // Importa el componente Encabezado
 
 const Ocupacion = () => {
 
@@ -43,28 +43,15 @@ const Ocupacion = () => {
 
   return (
     <div className={styles.servicios}>
-      <h2 className={styles.tituloSeccion}>
-        Mis{" "}
-        <motion.span
-          ref={tituloRef}
-          variants={variantesServicios}
-          initial="oculto"
-          animate={tituloEnVista ? "visible" : "oculto"}
-        >
-          Servicios
-        </motion.span>
+      <Encabezado 
+        titulo="Mis"
+        destacado="Servicios"
+        descripcion="Procesos terapéuticos personalizados  pensados para ofrecerte un espacio seguro de escucha, liberación emocional y reencuentro con tu verdad interior.
+      ">
+      </Encabezado>
 
-
-      </h2>
-
-        <motion.p
-          ref={parrafoRef}
-          className={styles.descripcion}
-          initial={{ opacity: 0 }}
-          animate={parrafoEnVista ? { opacity: 1, transition: { duration: 1.2, delay: 0.2 } } : {}}
-        >
-          Acompañamientos personalizados desde la Psicología Transpersonal para ayudarte a reconectar con tu esencia, sanar y transformar tu realidad desde una mirada integradora.
-        </motion.p>
+       
+      
         <div className={styles.container}>
         <motion.div
           ref={cardPrincipalRef}
@@ -77,7 +64,7 @@ const Ocupacion = () => {
       <div className={styles.imagePrincipal}></div>
       <div className={styles.contentPrincipal}>
         <span className={styles.etiquetaPrincipal}>Servicio Principal</span>
-        <h2><FaVideo className={styles.icon} /> Terapia Personalizada Virtual</h2>
+        <h2><FaVideo className={styles.icon} /> Terapia Personalizada </h2>
         <p>
           Sesiones personalizadas en un espacio seguro y confidencial donde trabajaremos juntos
           para abordar tus desafíos emocionales, construir resiliencia y desarrollar estrategias
@@ -86,9 +73,10 @@ const Ocupacion = () => {
         <ul className={styles.listaBeneficios}>
         <li><FaSpa className={styles.iconoInline} /> Enfoque holístico y espiritual</li>
           
-          <li><FaRegLightbulb className={styles.iconoInline} /> Material de Apoyo Personalizado</li>
+          <li><FaRegLightbulb className={styles.iconoInline} /> Material de apoyo personalizado</li>
 
-          <li><FaRegLightbulb className={styles.iconoInline} /> Material de Apoyo Personalizado</li>
+            <li><FaDesktop className={styles.iconoInline} /> Virtual, desde tu comodidad</li>
+
 
 
         </ul>
@@ -118,7 +106,7 @@ const Ocupacion = () => {
       <div className={styles.secundaria}></div>
       <div className={styles.contentPrincipal}>
         <span className={styles.etiquetaSecundaria}>Servicio Eventual</span>
-        <h2><FaUsers className={styles.icon} /> Terapia Grupal Presencial</h2>
+        <h2><FaUsers className={styles.icon} /> Circulo de Mujeres</h2>
         <p>
           Sesiones en grupo donde compartirás experiencias con otras personas, aprendiendo juntos
           en un espacio de apoyo mutuo y crecimiento colectivo.
@@ -128,7 +116,9 @@ const Ocupacion = () => {
             
             <li><FaFemale className={styles.iconoInline} /> Círculo íntimo de mujeres</li>
             <li><FaHandsHelping className={styles.iconoInline} /> Espacio para compartir y reflexionar</li>
-             <li><FaHandsHelping className={styles.iconoInline} /> Espacio para compartir y reflexionar</li>
+            <li><FaMapMarkerAlt className={styles.iconoInline} /> Evento presencial</li>
+
+           
             
             
           </ul>

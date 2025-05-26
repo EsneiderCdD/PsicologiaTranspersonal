@@ -80,7 +80,7 @@ export default function Home() {
             onClick={() => setModalPricingAbierto(true)}
             initial={{ boxShadow: "none", backgroundColor: "#321033" }}
             animate={{
-              boxShadow: "0 0 20px #ca66eb, 0 0 40px #ca66eb66",
+              boxShadow: "0 0 20px #6b21a8, 0 0 40px #ca66eb66",
               backgroundColor: "#800089",
               transition: {
                 delay: 1,
@@ -89,8 +89,8 @@ export default function Home() {
               },
             }}
             whileHover={{
-              backgroundColor: "#9b02a0",
-              boxShadow: "0 0 25px #ca66eb, 0 0 50px #ca66ebaa",
+              backgroundColor: "#6b21a8",
+              boxShadow: "0 0 25px #6b21a8, 0 0 50px #ca66ebaa",
               transition: { duration: 1.5 },
             }}
           >

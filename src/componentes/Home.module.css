@@ -7,9 +7,11 @@
   align-items: center;
   justify-content: space-between;
   width: auto;
-  max-height: 100vh;
+  /* max-height: 100vh; */
   background: #FBF8EF;
-  
+  padding: 2% 5%;
+  max-height: 90vh;
+  gap: 5%;
   flex-wrap: wrap;
 }
 
@@ -69,30 +71,26 @@
 }
 
 .boton {
-  background-color: #321033;
+  background-color: #6b21a8;
   color: #fff;
   font-family: 'Cairo', sans-serif;
   font-weight: 600;
   font-size: 1rem;
   padding: 0.75em 1.5em;
   border: none;
-  border-radius: 0.5em;
+  border-radius: 1.25em;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.boton:hover {
-  background-color: #9b02a0;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
+
 
 .botonSecundario {
   padding: 0.75em 1.5em;
   background-color: transparent;
   color: #ca66eb;
   border: none;
-  border-radius: 0.5em;
+  border-radius: 1.6rem;
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
