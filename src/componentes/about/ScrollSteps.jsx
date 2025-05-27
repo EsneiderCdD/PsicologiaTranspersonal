@@ -2,6 +2,9 @@ import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import styles from "./ScrollSteps.module.css";
 import Encabezado from "../global/Encabezado";
+import gl from "../../assets/imagenes/gl.jpg"; // imagen para el círculo izquierdo
+import pc from "../../assets/imagenes/pc.jpg"; // imagen para el círculo derecho
+
 
 export default function ScrollSteps() {
 const secciones = [
@@ -44,31 +47,46 @@ const secciones = [
 
 ];
 
-  return (
-    <div>
-      <Encabezado 
-        titulo="Sobre las"
-        destacado="sesiones 1:1 "
-        descripcion="Explora las preguntas mas importantes y frecuentes sobre el proceso terapeutico  "/>
-      <div className={styles.container}>
-        {secciones.map((item, index) => {
-          const [ref, inView] = useInView({ threshold: 0.5, triggerOnce: false });
+return (
+  <div>
+    <Encabezado 
+      titulo="Preguntas"
+      destacado="Importantes"
+      descripcion="Explora las preguntas más frecuentes sobre el proceso terapéutico"
+    />
+    <div className={styles.container}>
+      {secciones.map((item, index) => {
+        const [ref, inView] = useInView({ threshold: 0.5, triggerOnce: false });
 
-          return (
-            <section ref={ref} key={index} className={styles.step}>
-              <motion.div
-                className={styles.card}
-                initial={{ opacity: 0, y: 30 }}
-                animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                transition={{ duration: 0.6 }}
-              >
-                <h2>{item.pregunta}</h2>
-                <p>{item.respuesta}</p>
-              </motion.div>
-            </section>
-          );
-        })}
-      </div>
+        return (
+          <section ref={ref} key={index} className={styles.step}>
+            <motion.div
+              className={styles.chatContainer}
+              initial={{ opacity: 0, y: 30 }}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+              transition={{ duration: 0.6 }}
+            >
+              {/* Pregunta */}
+              <div className={styles.preguntaWrapper}>
+                
+                <div className={styles.burbujaPregunta}>
+                  <p>{item.pregunta}</p>
+                </div>
+                <img src={gl} alt="pregunta" className={styles.avatar} />
+              </div>
+
+              {/* Respuesta */}
+              <div className={styles.respuestaWrapper}>
+                <div className={styles.burbujaRespuesta}>
+                  <p>{item.respuesta}</p>
+                </div>
+                <img src={pc} alt="respuesta" className={styles.avatar} />
+              </div>
+            </motion.div>
+          </section>
+        );
+      })}
     </div>
-  );
+  </div>
+);
 }
