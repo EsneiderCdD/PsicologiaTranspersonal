@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Nunito:wght@400;700&family=Cairo:wght@400;600&display=swap');
 
-
-
-
-  
 .layout {
   display: flex;
   flex-wrap: wrap;
@@ -19,6 +15,15 @@
   align-items: center;
 }
 
+.columnaIzquierda h1 {
+  font-family: 'EB Garamond', sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: #000000;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
 .contenedor {
   flex: 1;
   display: flex;
@@ -26,7 +31,7 @@
 }
 
 .imagen {
-  width:70%;
+  width: 70%;
   display: flex;
   justify-content: center;
 }
@@ -44,23 +49,60 @@
   font-size: 1.5rem;
   font-family: 'Nunito';
   color: #000000;
-  line-height: 1.5;
-    line-height: 1.5;
-  
+  line-height: 1.25;
 }
 
 .columnaIzquierda h2 {
-
   font-family: 'EB Garamond', sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
   color: #87109c;
   margin-bottom: 1rem;
-  
-  
   text-align: center;
-}   
+}
 
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+    padding: 20px;
+    gap: 1rem;
+  }
 
-  
+  .columnaIzquierda {
+    flex: 1;
+    width: 100%;
+  }
 
+  .contenedor {
+    width: 100%;
+  }
+
+  .imagen {
+    display: none;
+  }
+
+  .imagenMobile {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .imagenMobile img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .columnaIzquierda h1 {
+    font-size: 2rem;
+  }
+
+  .columnaIzquierda h2 {
+    font-size: 1.25rem;
+  }
+
+  .descripcion {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}
