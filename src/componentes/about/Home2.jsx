@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import estilos from "./Home2.module.css";
 import SusanaS from "../../assets/imagenes/SusanaS.png";
+import aaa from "../../assets/imagenes/aaa.jpg";
 
 import Encabezado2 from "../global/Encabezado2";
 
@@ -33,7 +34,7 @@ export default function Home2() {
         {/* Columna izquierda: imagen + métricas compactas */}
         <div className={estilos.columnaIzquierda}>
           <div className={`${estilos.imagen} ${estilos.imagenDesktop}`}>
-            <img src={SusanaS} alt="Susana Santamaria" />
+            <img src={aaa} alt="Susana Santamaria" />
           </div>
           <h1 className={estilos.tituloprincipal}>Susana Santamaria</h1>
           <h2>Psicóloga Profesional en Terapia Transpersonal y Acompañamiento Femenino</h2>
@@ -64,7 +65,7 @@ export default function Home2() {
           </div>
           {/* Imagen móvil dentro de la columna de texto */}
           <div className={`${estilos.imagen} ${estilos.imagenMobile}`}>
-            <img src={SusanaS} alt="Susana Santamaria" />
+            <img src={aaa} alt="Susana Santamaria" />
           </div>
         </div>
       </div>

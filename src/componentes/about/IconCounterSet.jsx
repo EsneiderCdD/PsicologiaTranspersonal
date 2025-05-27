@@ -25,38 +25,65 @@ export default function IconCounterSet() {
 
   return (
     <div className={styles.container}>
-      <div style={{ display: "flex", flexDirection: "row" }}>
-        <div className={styles.item}>
-          <div className={styles.icon}><FiCalendar /></div>
-          <span>   +{experiencia} Años de experiencia </span>
-        </div>
-        <div className={styles.item}>
-          <div className={styles.icon}><FaInstagram /></div>
-          <span>+{seguidores >= 1000 ? `${Math.round(seguidores / 1000)}K` : seguidores} Seguidores en Instagram</span>
-        </div>
-        <div className={styles.item}>
-          <div className={styles.icon}><FiMessageCircle /></div>
-          <span>+{sesiones} Sesiones realizadas</span>
-        </div>
-        <div className={styles.item}>
-          <div className={styles.icon}><FiUsers /></div>
-          <span>+{pacientes} Personas atendidas</span>
-        </div>
-      </div>
-      <div style={{display: "flex",  flexDirection: "row"}} >
-        <div className={styles.item}>
-          <div className={styles.icon}><GiMoon /></div>
-          <span>Certificada en Terapia Menstrual</span>
-        </div>
-        <div className={styles.item}>
-          <div className={styles.icon}><GiLotus /></div>
-          <span>Diplomada en Psicología Transpersonal</span>
-        </div>
-        <div className={styles.item}>
-          <div className={styles.icon}><FaUserGraduate /></div>
-          <span>Psicologa Profesional</span>
-        </div>
-      </div >
+    
+       <div style={{ display: "flex", flexDirection: "column" }}>
+         <div style= {{ display: "flex", flexDirection: "row" }}>
+           <div className={styles.item}>
+             <div className={styles.icon} style={{ backgroundColor: '#FFD6D6' }}>
+               <FiCalendar />
+             </div>
+             <span>+{experiencia} Años de experiencia </span>
+           </div>
+           
+           <div className={styles.item}>
+             <div className={styles.icon} style={{ backgroundColor: '#D0E8F2' }}>
+               <FaInstagram />
+             </div>
+             <span>+{seguidores >= 1000 ? `${Math.round(seguidores / 1000)}K` : seguidores} Seguidores en Instagram</span>
+           </div>
+           
+           <div className={styles.item}>
+             <div className={styles.icon} style={{ backgroundColor: '#C6F1D6' }}>
+               <FiMessageCircle />
+             </div>
+             <span>+{sesiones} Sesiones realizadas</span>
+           </div>
+           
+           <div className={styles.item}>
+             <div className={styles.icon} style={{ backgroundColor: '#FFF5BA' }}>
+               <FiUsers />
+             </div>
+             <span>+{pacientes} Personas atendidas</span>
+           </div>
+           </div>
+           
+           {/* Segunda fila */}
+           <div style={{display: "flex", flexDirection: "row", justifyContent: "center"  }} >
+             <div className={styles.item}>
+               <div className={styles.icon} style={{ backgroundColor: '#F3D1F4' }}>
+                 <GiMoon />
+               </div>
+               <span>Certificada en Terapia Menstrual</span>
+             </div>
+             
+             <div className={styles.item}>
+               <div className={styles.icon} style={{ backgroundColor: '#C5FAD5' }}>
+                 <GiLotus />
+               </div>
+               <span>Diplomada en Psicología Transpersonal</span>
+             </div>
+             
+             <div className={styles.item}>
+               <div className={styles.icon} style={{ backgroundColor: '#E5E0FF' }}>
+                 <FaUserGraduate />
+               </div>
+               <span>Psicóloga Profesional</span>
+             </div>
+           </div>
+         
+         
+         </div >
+       
     </div>
   );
 }

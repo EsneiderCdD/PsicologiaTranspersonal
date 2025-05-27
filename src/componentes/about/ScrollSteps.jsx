@@ -14,9 +14,9 @@ const secciones = [
       "Si sientes que tu proceso personal va más allá de lo racional y deseas integrar cuerpo, mente y espíritu, la psicología transpersonal puede ofrecerte un espacio de transformación profunda.",
   },
   {
-    pregunta: "¿Qué diferencia a esta terapia de otras?",
+    pregunta: " ¿Qué diferencia a la psicología transpersonal de otras psicologías?",
     respuesta:
-      "Integra herramientas como meditación, visualización, respiración y símbolos, para acompañarte no solo desde lo mental, sino desde lo espiritual, emocional y corporal.",
+      "La psicología transpersonal no se enfoca solo en resolver un problema, sino en comprender qué parte de ti está pidiendo ser escuchada. No es misticismo: es una invitación a reconectar con tu esencia y mirar tu proceso desde una perspectiva más profunda y transformadora.",
   },
   {
     pregunta: "¿Es posible profundizar en mí misma a través de sesiones online?",
@@ -34,9 +34,9 @@ const secciones = [
       "Desde procesos de autoconocimiento, heridas de la infancia, patrones repetitivos, hasta preguntas existenciales y conexión espiritual.",
   },
   {
-    pregunta: "¿att neider -> que te diferencia de otros psicolog@s?",
+    pregunta: "¿Qué te diferencia de otros psicólogos transpersonales?",
     respuesta:
-      "Desde procesos de autoconocimiento, heridas de la infancia, patrones repetitivos, hasta preguntas existenciales y conexión espiritual.",
+      "La confianza que mis pacientes sienten no nace solo de mi formación, sino de cómo sostengo el espacio terapéutico: un lugar donde pueden ser completamente ellas mismas, sin máscaras. Cada historia la recibo con escucha profunda y presencia real. No me detengo en el síntoma, sino que acompaño a la persona a verse de forma más completa y conectada. Cada detalle está pensado con alma y profesionalismo, porque sanar también necesita un entorno que se sienta seguro.",
   },
   {
     pregunta: "¿att neider -> que incluye la terapia?",
