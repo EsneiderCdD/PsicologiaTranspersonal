@@ -14,18 +14,12 @@
   padding: 40px;
 }
 .imagen {
-  flex: 1;
-  min-width: 280px;
-  max-width: 480px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.imagen img {
-  width: 100%;
-  height: auto; /* ✅ muy importante */
-  object-fit: contain;
+  width: 60%;
+  height: 400px;
+  background-image: url("../../assets/imagenes/3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* 🎯 parallax */
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }

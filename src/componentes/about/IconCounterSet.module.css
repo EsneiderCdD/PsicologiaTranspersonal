@@ -1,3 +1,13 @@
+.container {
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 2rem; 
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column;
+  background: #FBF8EF
+}   
+
 .iconCounterContainer {
   display: flex;
   flex-wrap: wrap;
@@ -5,6 +15,7 @@
   justify-content: center;
   align-items: center;
   margin: 3rem 0;
+  
 }
 
 .item {

@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import estilos from "./Home2.module.css";
 import SusanaS from "../../assets/imagenes/SusanaS.png";
-import { FiCalendar, FiMessageCircle, FiUsers } from "react-icons/fi";
-import { FaInstagram, FaUserGraduate } from "react-icons/fa";
-import { GiMoon, GiLotus } from "react-icons/gi";
-import Encabezado from "../global/Encabezado";
+
+import Encabezado2 from "../global/Encabezado2";
+
 export default function Home2() {
   const [experiencia, setExperiencia] = useState(0);
   const [sesiones, setSesiones] = useState(0);
@@ -24,8 +23,12 @@ export default function Home2() {
 
   return (
     <div>
-      <Encabezado
-      destacado="Conóceme" />
+      
+      <Encabezado2 
+       titulo="Conóceme" 
+        tonoClaro={true}
+        />
+      
       <div className={estilos.layout}>
         {/* Columna izquierda: imagen + métricas compactas */}
         <div className={estilos.columnaIzquierda}>
@@ -36,6 +39,7 @@ export default function Home2() {
           <h2>Psicóloga Profesional en Terapia Transpersonal y Acompañamiento Femenino</h2>
           
         </div>
+        
         {/* Columna derecha: texto */}
         <div className={estilos.contenedor}>
           

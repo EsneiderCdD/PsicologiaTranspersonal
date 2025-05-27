@@ -24,7 +24,7 @@ export default function IconCounterSet() {
   }, []);
 
   return (
-    <div style={{ display: "flex", flexWrap: "wrap", gap: "2rem", justifyContent: "center", alignItems: "center", flexDirection: "column" }}>
+    <div className={styles.container}>
       <div style={{ display: "flex", flexDirection: "row" }}>
         <div className={styles.item}>
           <div className={styles.icon}><FiCalendar /></div>

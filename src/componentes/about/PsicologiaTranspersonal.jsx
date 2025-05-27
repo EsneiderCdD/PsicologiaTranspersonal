@@ -1,6 +1,6 @@
 import React from "react";
 import estilos from "./PsicologiaTranspersonal.module.css";
-import meditacion from "../../assets/imagenes/meditacion.png";
+import mariposa from "../../assets/imagenes/mariposa.jpg";
 import Encabezado from "../global/Encabezado";
 
 export default function PsicologiaTranspersonal() {
@@ -26,9 +26,11 @@ export default function PsicologiaTranspersonal() {
             </p>
           </div>
           <div className={estilos.imagen}>
-            <img src={meditacion} alt="Meditación" />
+            <img src={mariposa} alt="Meditación" />
           </div>
+          
         </div>
+        
       </section>
     </div>
   );
