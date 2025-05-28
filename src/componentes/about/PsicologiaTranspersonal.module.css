@@ -1,31 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600&family=Nunito:wght@400&display=swap');
 .seccion {
   background-color: #ffffff;
-
   
 }
-.contenido {
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.ts1 {
+  
+  font-family: 'EB Garamond', serif;
+  font-size: 1.5rem;
+  color: #000000;
+  text-align: center;
+  justify-content: center;
+  margin-top: 2rem;
+  max-width: 900px;
+}
+.cn {
+  width: 100%;
+  height: auto;
+  max-width: 900px;
+  margin-top: 2rem;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap; /* ✅ esto es clave */
-  gap: 40px; /* espaciado más controlado */
-  align-items: center;
-  justify-content: center; /* o space-between si quieres separación */
-  padding: 40px;
+  gap: 2rem;
 }
-.imagen {
-  flex: 1;
-  min-width: 280px;
-  max-width: 480px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+.cn img{
+  height: 500px;
+  
 
-.imagen img {
-  width: 100%;
-  height: auto; /* ✅ muy importante */
-  object-fit: contain;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }

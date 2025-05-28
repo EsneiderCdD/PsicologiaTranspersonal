@@ -65,6 +65,13 @@ export default function IconCounterSet() {
                </div>
                <span>Certificada en Terapia Menstrual</span>
              </div>
+             <div className={styles.item}>
+               <div className={styles.icon} style={{ backgroundColor: '#E5E0FF' }}>
+                 <FaUserGraduate />
+               </div>
+               <span>Profesional en Psicología</span>
+             </div>
+
              
              <div className={styles.item}>
                <div className={styles.icon} style={{ backgroundColor: '#C5FAD5' }}>
@@ -73,12 +80,7 @@ export default function IconCounterSet() {
                <span>Diplomada en Psicología Transpersonal</span>
              </div>
              
-             <div className={styles.item}>
-               <div className={styles.icon} style={{ backgroundColor: '#E5E0FF' }}>
-                 <FaUserGraduate />
-               </div>
-               <span>Psicóloga Profesional</span>
-             </div>
+             
            </div>
          
          

@@ -7,31 +7,49 @@ export default function PsicologiaTranspersonal() {
   return (
     <div>
       <Encabezado
-        titulo="Psicología"
-        destacado="Transpersonal"
+        titulo="Proyecto "
+        destacado="@Psicotranspersonal"
         descripcion="Deberia de tratar sobre su conexion con @PsicologiaTranspersonal "
       />
       <section className={estilos.seccion}>
-        <div className={estilos.contenido}>
-          <div className={estilos.texto}>
-            <h2 className={estilos.titulo}>Psicología Transpersonal</h2>
-            <p className={estilos.parrafo}>
-              La psicología transpersonal es una rama de la psicología que se enfoca en los aspectos espirituales y trascendentales de la experiencia humana. A diferencia de las corrientes tradicionales, la transpersonal busca integrar la dimensión espiritual como parte esencial del desarrollo personal y emocional.
-            </p>
-            <p className={estilos.parrafo}>
-              Este enfoque reconoce que la salud mental no solo depende de sanar heridas emocionales, sino también de conectar con un sentido profundo de propósito y con lo que nos trasciende como seres humanos. A través de técnicas como la meditación, la visualización, el trabajo con sueños y el acompañamiento consciente, se promueve la expansión de la conciencia y la integración del ser en todas sus dimensiones.
-            </p>
-            <p className={estilos.parrafo}>
-              En terapia, se crea un espacio seguro y sagrado para explorar heridas profundas, patrones inconscientes y dimensiones espirituales. Esto facilita procesos de transformación interior que conducen a mayor autenticidad, paz y conexión consigo misma y con la vida.
-            </p>
+        
+
+        <div className={estilos.contenedor}>
+          <div className={estilos.ts1}>
+            <h2>¿Qué es la Psicología Transpersonal?</h2>
+            <p>ipsu Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, dolorum explicabo perspiciatis veniam cupiditate architecto tempore ratione aliquam obcaecati corrupti libero facilis molestiae natus voluptatibus ducimus aut nisi. Recusandae, ipsum. </p>
+
+            <p>ipsu Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, dolorum explicabo perspiciatis veniam cupiditate architecto tempore ratione aliquam obcaecati corrupti libero facilis molestiae natus voluptatibus ducimus aut nisi. Recusandae, ipsum. </p>
           </div>
-          <div className={estilos.imagen}>
-            <img src={mariposa} alt="Meditación" />
+
+          <div className={estilos.ts2}>
+              <div className={estilos.cn}>
+                
+                  <div className={estilos.texto}>
+                    <p>ipsu Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non soluta officia possimus aut, fugiat nulla minima eius nemo, magnam quod ex vel atque enim excepturi magni perferendis distinctio ut iure. </p>
+                    <p>ipsu Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non soluta officia possimus aut, fugiat nulla minima eius nemo, magnam quod ex vel atque enim excepturi magni perferendis distinctio ut iure.</p>
+                  </div>
+                  <img src={mariposa} alt="SUSANASIMBOLO" />
+
+              </div>  
+            
+          </div>
+            <div className={estilos.ts1}>
+           
+            <p>ipsu Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, dolorum explicabo perspiciatis veniam cupiditate architecto tempore ratione aliquam obcaecati corrupti libero facilis molestiae natus voluptatibus ducimus aut nisi. Recusandae, ipsum. </p>
+
+            <p>ipsu Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, dolorum explicabo perspiciatis veniam cupiditate architecto tempore ratione aliquam obcaecati corrupti libero facilis molestiae natus voluptatibus ducimus aut nisi. Recusandae, ipsum. </p>
           </div>
           
+            
+
         </div>
+       
+        
+
         
       </section>
     </div>
   );
 }
+       
