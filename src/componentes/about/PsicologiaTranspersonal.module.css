@@ -1,53 +1,129 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600&family=Nunito:wght@400&display=swap');
+
 .seccion {
   background-color: #ffffff;
-  
 }
+
 .contenedor {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
 }
+
 .ts1 {
-  
   font-family: 'EB Garamond', serif;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   color: #000000;
-  text-align: center;
+  text-align: justify;
   justify-content: center;
-  margin-top: 2rem;
   max-width: 900px;
 }
+
+.ts1 p {
+  margin: 0;
+}
+
 .cn {
   width: 100%;
   height: auto;
   max-width: 900px;
-  margin-top: 2rem;
   display: flex;
   flex-direction: row;
   gap: 2rem;
 }
-.cn img{
-  height: 500px;
-  
 
+.cn img {
+  height: 500px;
 }
 
 .ts3 {
-  
   font-family: 'EB Garamond', serif;
   font-size: 1.5rem;
   color: #000000;
   text-align: center;
   justify-content: center;
-  
   max-width: 900px;
 }
+
 .cn2 {
   max-width: 900px;
 }
+
 .cn2 img {
   width: 750px;
+  display: flex;
+  margin: 0 auto;
 }
+
+.texto p {
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: #000000;
+  text-align: justify;
+  margin-top: 1rem;
+}
+
+/* NUEVOS ESTILOS PARA CÍRCULO DE MUJERES */
+.cn2 p {
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: #000000;
+  text-align: justify;
+  margin-top: 1rem;
+  
+}
+
+.actividades {
+  font-family: 'Nunito', sans-serif;
+  margin-top: 2rem;
+}
+
+.actividades h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.tarjetas {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 900px;
+  box-sizing: border-box;
+}
+
+.tarjeta {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  flex: 1 1 45%;
+  min-width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+}
+
+
+
+.tarjeta p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #000000;
+  
+  text-align: center;
+  
+}
+
+.infoCita p {
+  margin: 0.4rem 0;
+  font-size: 1rem;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
