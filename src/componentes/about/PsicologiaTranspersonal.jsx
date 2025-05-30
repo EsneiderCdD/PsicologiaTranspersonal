@@ -38,12 +38,7 @@ export default function PsicologiaTranspersonal() {
               </div>  
             
           </div>
-            <div className={estilos.ts3}>
            
-            <p>Este espacio tiene raíces profundas: propósito, autenticidad, presencia y acompaña desde la experiencia, no desde la perfección.</p>
-
-            <p>Une lo espiritual y lo humano, integrando la psicología, la energía, el cuerpo y el alma. </p>
-          </div>
 
 
           <div className={estilos.ts4}>

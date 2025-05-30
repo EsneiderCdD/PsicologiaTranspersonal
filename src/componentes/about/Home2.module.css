@@ -1,108 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Nunito:wght@400;700&family=Cairo:wght@400;600&display=swap');
-
-.layout {
-  display: flex;
-  flex-wrap: wrap;
-  background: #FBF8EF;
-  padding: 40px 60px;
-  gap: 2rem;
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600&family=Nunito:wght@400&display=swap');
+.seccion {
+  background-color: #FBF8EF;
+  
 }
-
-.columnaIzquierda {
-  flex: 0.75;
+.contenedor {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.columnaIzquierda h1 {
-  font-family: 'EB Garamond', sans-serif;
-  font-weight: 600;
-  font-size: 2.5rem;
-  color: #000000;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.contenedor {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.imagen {
-  width: 70%;
-  display: flex;
   justify-content: center;
+
+  
+
 }
 
-.imagen img {
+.cn {
   width: 100%;
-  object-fit: cover;
+  height: auto;
+  max-width: 1000px;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
 }
 
-.imagenMobile {
-  display: none;
-}
 
-.descripcion {
+.cn img{
+  height: 500px;
+  border-radius: 15%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.501);
+
+}
+.cn h2 {
+  font-family: 'EB Garamond', serif;
   font-size: 1.5rem;
-  font-family: 'Nunito';
-  color: #000000;
-  line-height: 1.25;
-}
-
-.columnaIzquierda h2 {
-  font-family: 'EB Garamond', sans-serif;
-  font-weight: 600;
-  font-size: 1.5rem;
-  color: #87109c;
-  margin-bottom: 1rem;
+  color: #6B21A8;
   text-align: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+  max-width: 900px;
 }
-
-/* === RESPONSIVE DESIGN === */
-@media (max-width: 768px) {
-  .layout {
-    flex-direction: column;
-    padding: 20px;
-    gap: 1rem;
-  }
-
-  .columnaIzquierda {
-    flex: 1;
-    width: 100%;
-  }
-
-  .contenedor {
-    width: 100%;
-  }
-
-  .imagen {
-    display: none;
-  }
-
-  .imagenMobile {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-  }
-
-  .imagenMobile img {
-    width: 100%;
-    object-fit: cover;
-  }
-
-  .columnaIzquierda h1 {
-    font-size: 2rem;
-  }
-
-  .columnaIzquierda h2 {
-    font-size: 1.25rem;
-  }
-
-  .descripcion {
-    font-size: 1.2rem;
-    text-align: center;
-  }
+.cn h3 {
+  font-family: 'EB Garamond', serif;
+  font-size: 2rem;
+  color: #000000;
+  text-align: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+ 
 }
