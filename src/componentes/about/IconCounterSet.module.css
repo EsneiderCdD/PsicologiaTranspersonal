@@ -15,7 +15,7 @@
   justify-content: center;
   text-align: center;
   font-size: 1.25rem;
-  max-width: 220px;
+  max-width: 200px;
   padding: 1rem;
   gap: 0.5rem;
 }
@@ -49,13 +49,40 @@ span {
  
   color: #333;
 }
-@media (max-width: 400px) {
-  
 
+@media (max-width: 1080px) {
+  
+  .item {
+    max-width: 100%;
+    padding: 1rem;
+    font-size: 1.25rem;
+  }
+    .icon {
+    width: 55px;
+    height: 55px;
+    font-size: 2rem;
+  }
+
+
+}
+@media (max-width: 800px) {
+  .item {
+    max-width: 100%;
+    padding: 0.75rem;
+    font-size: 1.25rem;
+  }
+
+  .icon {
+    width: 55px;
+    height: 55px;
+    font-size: 2rem;
+  }
+}
+@media (max-width: 600px) {
   .item {
     max-width: 100%;
     padding: 0.5rem;
-    font-size: 1rem;
+    font-size: 1.11rem;
   }
 
   .icon {
@@ -64,8 +91,26 @@ span {
     font-size: 2rem;
   }
 
-  span {
-    font-size: 0.95rem;
+
+
+}
+
+@media (max-width: 400px) {
+  
+
+  .item {
+    max-width: 100%;
+    padding: 0.25rem;
+    font-size: 1rem;
+  }
+  .item span {
+    font-size: 1rem;
+  }
+
+  .icon {
+    width: 45px;
+    height: 45px;
+    font-size: 2rem;
   }
 
   .iconCounterContainer {
