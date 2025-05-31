@@ -2,6 +2,7 @@
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
+  background-color: #FBF8EF;
   
   /* Oculta la barra de scroll */
   scrollbar-width: none; /* Firefox */

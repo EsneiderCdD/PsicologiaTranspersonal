@@ -22,9 +22,9 @@ const About = () => {
       <PsicologiaTranspersonal />
  
     
-        
+         <ScrollSteps />
       <Terminos />
-      <ScrollSteps />
+     
      
 
 
