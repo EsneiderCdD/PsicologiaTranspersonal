@@ -61,8 +61,78 @@
   font-size: clamp(1rem, 2vw, 1.2rem);
   color: #000000;
   text-align: justify;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
+
+
+
+
+
+
+@media (max-width: 800px) {
+  
+  .cn img {
+    width: 33%;
+    height: auto;
+    
+  }
+
+ 
+}
+
+@media (max-width: 550px) {
+  .ts1 p {
+
+  font-size: clamp(0.95rem, 2vw, 1rem);
+ 
+}
+  .cn {
+    gap: 0.5rem;
+    
+    align-items: center;
+  }
+
+
+  .cn img {
+    width: 40%;
+    height: 375px;
+
+  }
+
+  .texto p {
+    font-size: clamp(0.95rem, 1.5vw, 1rem);
+    margin-top: 0.5rem;
+  }
+
+    .parrafoFinal {
+    font-size: clamp(0.95rem, 1.5vw, 1rem);
+    margin-top: 0rem;
+  }
+
+
+}
+
+@media (max-width: 350px) {
+    .cn img {
+    width: 33%;
+    height: 325px;
+
+  }
+    .texto p {
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
+    
+  }
+
+
+}
+
+
+
+
+
+
+
+
 
 /* NUEVOS ESTILOS PARA CÍRCULO DE MUJERES */
 .cn2 p {
@@ -94,7 +164,7 @@
   margin-bottom: 2rem;
   width: 100%;
   max-width: 900px;
-  box-sizing: border-box;
+ 
 }
 
 .tarjeta {
@@ -103,7 +173,7 @@
   border-radius: 1rem;
   text-align: center;
   flex: 1 1 45%;
-  min-width: 200px;
+  min-width: 25%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   box-sizing: border-box;
 }
@@ -125,5 +195,75 @@
   color: #000000;
   text-align: center;
   margin-bottom: 1.5rem;
+}
+
+
+
+
+
+
+/* RESPONSIVE CÍRCULO DE MUJERES */
+
+@media (max-width: 800px) {
+  .cn2 img {
+    width: 100%;
+    height: auto;
+  }
+
+  .tarjetas {
+    
+    
+    justify-content: center;
+    min-width: none;
+  }
+
+  .tarjeta {
+    flex: 1 1 100%;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 550px) {
+  .cn2 p {
+    font-size: clamp(0.95rem, 2vw, 1rem);
+    margin-top: 0.5rem;
+  }
+
+  .tarjeta p {
+    font-size: 0.95rem;
+  }
+
+  .infoCita p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+  .tarjetas {
+    
+    align-items: center;
+    padding: 0;
+  }
+
+
+  .tarjeta {
+    width: 90%;
+    padding: 0rem;
+  }
+  .tarjeta p {
+    
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .cn2 p {
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
+  }
+
+  .tarjeta p,
+  .infoCita p {
+    font-size: 0.85rem;
+  }
+
+
 }
 
