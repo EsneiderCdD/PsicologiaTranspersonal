@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import styles from "./Modal.module.css";
 import { FaCheckCircle } from "react-icons/fa";
+import icn1 from "../../assets/imagenes/icn1.jpg";
+import icn2 from "../../assets/imagenes/icn2.jpg";
+import icn3 from "../../assets/imagenes/icn3.jpg";
 
 const Modal = ({
   isOpen,
@@ -13,9 +16,9 @@ const Modal = ({
   const [termsAccepted, setTermsAccepted] = useState(false);
 
   const externalLinks = {
-    "1 Sesión": "https://www.google.com/",
-    "4 Sesiones": "https://www.instagram.com/",
-    "6 Sesiones": "https://platzi.com/",
+    "1 Sesión": "https://biz.payulatam.com/L0f9bc36813670A",
+    "4 Sesiones": "https://biz.payulatam.com/L0f9bc35454875C",
+    "6 Sesiones": "https://biz.payulatam.com/L0f9bc3B6BDDFD6",
   };
 
   const handleContinue = () => {
@@ -68,7 +71,14 @@ const Modal = ({
               <div className={`${styles.card} ${plan.highlight ? styles.highlighted : ""}`}>
                 {plan.highlight && <div className={styles.badge}>MÁS ELEGIDO</div>}
                 <div className={styles.iconContainer}>
-                  <div className={styles.iconPlaceholder}></div>
+               
+                  <div className={styles.iconPlaceholder}>
+                       {plan.title === "1 Sesión" && <img src={icn1} alt="Icono 1 Sesión" className={styles.icon} />}
+                  {plan.title === "4 Sesiones" && <img src={icn2} alt="Icono 4 Sesiones" className={styles.icon} />}
+                  {plan.title === "6 Sesiones" && <img src={icn3} alt="Icono 6 Sesiones" className={styles.icon} />}
+
+                   
+                  </div>
                 </div>
                 <h3 className={styles.title}>{plan.title}</h3>
                 <p className={styles.description}>{plan.description}</p>
@@ -79,7 +89,8 @@ const Modal = ({
 
               {selectedPlan === plan.title && (
                 <div className={styles.checkmark}>
-                  <FaCheckCircle color="#356b43" size={20} />
+                  <span className={styles.checkmarkIcon}> <FaCheckCircle  /></span>
+                 
                 </div>
               )}
             </div>

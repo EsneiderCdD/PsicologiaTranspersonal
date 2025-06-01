@@ -9,7 +9,7 @@
   color: #000000;
   padding: 3rem 2rem 2rem;
   font-family: 'Nunito', sans-serif;
-  background: #f5f2fc;
+  background: #ffffff;
 }
 
 .content {
@@ -33,14 +33,15 @@
   justify-content: center;
   color: #000000;
   font-family: 'EB Garamond';
-  background-color: #f5edea15;
+  background-color: #ffffff;
   margin-top: 75px ;
   margin-bottom: 40px;
 }
 
 .title span {
-  color: #a78bfa; /* lila suave */
+  color: #8D2C24; /* lila suave */
 }
+
 
 .subtitle {
   font-size: 1.1rem;

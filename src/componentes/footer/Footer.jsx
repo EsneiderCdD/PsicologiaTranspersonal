@@ -12,10 +12,10 @@ export default function Footer() {
             y herramientas de psicología transpersonal.
           </p>
           <div className={styles.social}>
-            <a className={styles.wpp} href="https://wa.me/123456789" target="_blank" rel="noopener noreferrer">
+            <a className={styles.wpp} href="https://wa.me/+573052298710" target="_blank" rel="noopener noreferrer">
               <FaWhatsapp />
             </a>
-            <a  className={styles.instagram} href="https://www.instagram.com/tuInstagram" target="_blank" rel="noopener noreferrer">
+            <a  className={styles.instagram} href="https://www.instagram.com/psicotranspersonal?igsh=MXZ3ZTIxeXh3MGI5Nw==" target="_blank" rel="noopener noreferrer">
               <FaInstagram />
             </a>
           </div>
@@ -24,7 +24,7 @@ export default function Footer() {
       </div>
 
       <div className={styles.bottom}>
-      <small>&copy; {new Date().getFullYear()} PsycheTrans. Todos los derechos reservados.</small>
+      <small>&copy; {new Date().getFullYear()} @psicologiatranspersonal. Todos los derechos reservados.</small>
         <small>Hecho con 💜 </small>
       </div>
     </footer>

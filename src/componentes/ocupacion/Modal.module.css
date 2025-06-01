@@ -12,7 +12,7 @@
 }
 
 .modal {
-  background-color: white;
+  background-color: #fbf8ef;
   padding: 40px;
   border-radius: 12px;
   max-width: 900px;
@@ -33,6 +33,7 @@
 .title {
     justify-content: center;
     font-size: 1.5rem;
+    
   
   font-weight: bold;
   margin-bottom: 20px;
@@ -41,6 +42,8 @@
 .cardContainer {
   display: flex;
   justify-content: center;
+  gap: 20px;
+  margin-top: 25px;
   
   flex-wrap: nowrap;
 }
@@ -54,10 +57,17 @@
 
 .checkmark {
   position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 8px;
+  
+  left: 90%;
+  
+  transform: translateY(-75%);
+  
+}
+.checkmarkIcon {
+  font-size: 25px;
+  color: #356b43;
+  
+  
 }
 
 .terms {
@@ -104,12 +114,12 @@
 
 .card {
   
-  max-width: 150px;
-  min-width: 150px;
-  min-height: 300px;
-  border: 1px solid #e5dfd4;
+  max-width: 175px;
+  min-width: 175px;
+  min-height: 265px;
+  border: 1px solid #00000087;
   border-radius: 16px;
-  background-color: #fdfaf4;
+  background-color: #FBF8EF;
   padding: 2%;
   text-align: center;
   margin: 0px;
@@ -137,6 +147,8 @@
   font-size: 0.75rem;
   font-weight: 600;
   width: 56%;
+  
+  
 }
 
 .iconContainer {
@@ -149,13 +161,6 @@
   width: auto;
 }
 
-.iconPlaceholder {
-  width: 48px;
-  height: 48px;
-  background-color: #ddd;
-  border-radius: 50%;
-  margin: 0 auto;
-}
 
 .title {
   font-size: 1.7rem;
@@ -165,7 +170,7 @@
 }
 
 .description {
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.25;
   color: #444;
   margin-bottom: 16px;
@@ -222,37 +227,32 @@
   cursor: default;
 }
 
-
-
-
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .modal {
-
-    max-width: 100%;
+    max-width: 95%;
     width: 100%;
+    padding: 20px;
   }
 
   .cardContainer {
-    gap: 0px;
- 
-    overflow-x: hidden; /* Asegura que no haya scroll */
-    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    justify-content: center;
   }
 
   .card {
-    min-width: 100px;
-    max-width: 100px;
+    min-width: 150px;
+    max-width: 150px;
     min-height: 260px;
     padding: 1%;
   }
 
   .badge {
-    font-size: 0.65rem;
+    font-size: 0.8rem;
     width: 70%;
   }
 
   .title {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   .description {
@@ -260,7 +260,7 @@
   }
 
   .price {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 
   .currency {
@@ -268,8 +268,66 @@
   }
 
   .continueButton {
-    font-size: 0.95rem;
+    font-size: 1rem;
+  }
+  .checkmark {
+    
+    left: 85%;
+    transform: translateY(-75%);
+  }
+}
+
+@media (max-width: 550px) {
+  .cardContainer{
+    gap: 10px;
+  }
+  .card {
+    min-width: 115px;
+    max-width: 115px;
+    min-height: 240px;
+    padding: 1%;
+  }
+  .description {
+    font-size: 0.75rem;
+  }
+  .badge {
+    font-size: 0.7rem;
+    width: 70%;
+  }
+
+  @media (max-width: 450px) {
+    .cardContainer{
+      gap: 7.5px;
+    }
+    .card {
+      min-width: 110px;
+      max-width: 110px;
+      min-height: 240px;
+      padding: 1%;
+      
+
+    }
+    .description {
+      font-size: 0.65rem;
+      
+    }
+
+    .badge {
+      font-size: 0.6rem;
+      width: 70%;
+    }
+    
+    
+  }
+  .checkmark {
+   
+    left: 85%;
+    transform: translateY(-50%);
+  }
+  .checkmarkIcon {
+    font-size: 20px;
     
   }
 }
+
 
