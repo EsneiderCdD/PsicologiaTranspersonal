@@ -4,6 +4,7 @@
   scroll-snap-type: y mandatory;
   background-color: #FBF8EF;
   
+  
   /* Oculta la barra de scroll */
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE/Edge */
@@ -67,11 +68,17 @@
   flex-direction: column;
   gap: 2rem;
 }
+.preguntaWrapper {
+  display: flex;
+  
+  justify-content: flex-end;
+ 
+}
 
 .preguntaWrapper,
 .respuestaWrapper {
   display: flex;
-  align-items: flex-start;
+  
   gap: 1rem;
 }
 
@@ -118,3 +125,235 @@
   right: -20px;
   border-left-color: #fff;
 }
+
+
+
+
+
+
+
+
+
+
+.botonesWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.botonPrimario,
+.botonSecundario {
+  padding: 0.8rem 2rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  border: none;
+}
+
+.botonPrimario {
+  background-color: #6b46c1;
+  color: white;
+}
+
+.botonPrimario:hover {
+  background-color: #553c9a;
+}
+
+.botonSecundario {
+  background-color: transparent;
+  color: #6b46c1;
+  border: 2px solid #6b46c1;
+}
+
+.botonSecundario:hover {
+  background-color: #f1e9ff;
+}
+
+/* NUEVA: Contenedor para la pregunta final */
+.finalWrapper {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+/* NUEVA: Burbuja igual a .burbujaPregunta */
+.burbujaFinal {
+  position: relative;
+  padding: 1rem 1.5rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 70%;
+  font-weight: 500;
+}
+
+.burbujaFinal::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: -20px;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-right-color: #fff;
+}
+
+/* NUEVO: Wrapper para botones tipo burbuja respuesta */
+.botonesFinalWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Responsive igual a los otros */
+
+@media (max-width: 800px) {
+  .burbujaFinal {
+    max-width: 85%;
+    font-size: 0.95rem;
+  }
+
+  .burbujaFinal::before {
+    left: -16px;
+  }
+
+  .botonesFinalWrapper {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 550px) {
+  .burbujaFinal {
+    font-size: 0.85rem;
+    padding: 0.75rem 1rem;
+    max-width: 90%;
+  }
+
+  .burbujaFinal::before {
+    top: 16px;
+    border-width: 8px;
+    left: -14px;
+  }
+
+  .botonesFinalWrapper {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .burbujaFinal {
+    font-size: 0.7rem;
+    padding: 0.5rem 0.25rem;
+    max-width: 95%;
+  }
+
+  .burbujaFinal p {
+    margin: 0px;
+  }
+
+  .botonesFinalWrapper {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Responsive styles for chat container and bubbles */
+
+
+
+@media (max-width: 800px) {
+  .chatContainer {
+    gap: 1.5rem;
+  }
+
+  .avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .burbujaPregunta,
+  .burbujaRespuesta {
+    max-width: 85%;
+    font-size: 0.95rem;
+  }
+
+  .burbujaPregunta::before {
+    left: -16px;
+  }
+
+  .burbujaRespuesta::before {
+    right: -16px;
+  }
+}
+
+@media (max-width: 550px) {
+  .chatContainer {
+    gap: 1.2rem;
+  }
+
+  .avatar {
+    width: 65px;
+    height: 65px;
+  }
+
+  .burbujaPregunta,
+  .burbujaRespuesta {
+    font-size: 0.85rem;
+    padding: 0.75rem 1rem;
+    max-width: 90%;
+  }
+
+  .burbujaPregunta::before,
+  .burbujaRespuesta::before {
+    top: 16px;
+    border-width: 8px;
+  }
+
+  .burbujaPregunta::before {
+    left: -14px;
+  }
+
+  .burbujaRespuesta::before {
+    right: -14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .avatar {
+    width: 55px;
+    height: 55px;
+  }
+
+  .burbujaPregunta,
+  .burbujaRespuesta {
+    font-size: 0.7rem;
+    padding: 0.5rem 0.25rem;
+    max-width: 95%;
+ 
+  }
+    .burbujaPregunta p,
+  .burbujaRespuesta p{
+    margin: 0px;
+  }
+
+  .chatContainer {
+    gap: 1rem;
+  }
+}
+
