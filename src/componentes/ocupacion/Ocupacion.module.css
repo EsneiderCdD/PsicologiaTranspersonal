@@ -507,5 +507,13 @@
     max-width: 95%;
     margin: 0 auto;
   }
+    p {
+    text-align: justify;
+    hyphens: auto;
+    word-spacing: -0.1rem;
+
+
+
+}
 
 }

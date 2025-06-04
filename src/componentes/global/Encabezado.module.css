@@ -8,8 +8,11 @@
   color: #000000;               /* Negro inicialmente */
   font-family: 'EB Garamond';   /* Tipografía serif elegante */
   background-color: #f5edea15;  /* Fondo claro muy sutil */
-  margin-top: 50px;
+  margin-top: 40px;
   margin-bottom: 40px;
+}
+.tituloSeccion span {
+  margin: 0;
 }
 .destacado {
     font-size: clamp(2.4rem, 7vw, 3.2rem);         /* Tamaño grande */
@@ -21,6 +24,7 @@
   background-color: #f5edea15;  /* Fondo claro muy sutil */
   margin-top: 50px;
   margin-bottom: 40px;
+  
 
 }
 
@@ -35,6 +39,7 @@
   text-align: center;
   margin-bottom: 30px;
 }
+
 
 @media (max-width: 1080px) {
 

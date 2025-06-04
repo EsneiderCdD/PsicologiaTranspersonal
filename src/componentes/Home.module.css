@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: space-between;
   width: auto;
-  /* max-height: 100vh; */
+  max-height: 100vh;
   background: #FBF8EF;
   padding: 2% 5%;
   max-height: 90vh;
@@ -197,14 +197,14 @@
 @media (max-width: 780px) {
   .layout {
     flex-direction: column;
-    padding: 2% 1.5%;
+  
   }
 
   .contenedor {
     align-items: center;
     text-align: center;
     margin-left: 0;
-    margin-bottom: 3%;
+  
     gap: 7px;
   }
 
@@ -261,8 +261,7 @@
 @media (max-width: 600px) {
   .layout {
     flex-direction: column;
-    padding: 1% 1%;
-   
+    
   }
 
   .contenedor {
@@ -297,7 +296,7 @@
   }
 
   .imagenMobile img {
-    max-width: 70%;
+    max-width: 80%;
     
     border-radius: 50%;
     object-fit: cover;
@@ -324,46 +323,53 @@
   }
 }
 @media (max-width: 400px) {
+  .layout {
+    max-height: vh;
+    padding: 0;
+  }
+
+
+
+
 
   .contenedor {
-    align-items: center;
-    text-align: center;
+    
     margin-left: 0;
-    margin-bottom: 0%;
-    padding-top: 0%;
+    margin-bottom: 0;
+    padding-top: 0;
     height: 100vh;
-    gap: 15px;
+    gap: 0px;
+
   }
 
-  .img{
-    padding: 0;
-    margin: 0;
-  }
-  .imagenMobile img {
-    min-width: 80%;    
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: -15%;
-    margin-top: -15%;
-   
-  }
+    .tituloprincipal {
+    font-size: clamp(2.75rem, 7vw, 3.2rem);
+    line-height: 1; 
+    margin-top: 0%;
 
-
-  .tituloprincipal {
-    font-size: clamp(2.4rem, 7vw, 3.2rem);
-    margin-top: -10%;
   }
-
-  .descripcion {
+    .descripcion {
     font-size: clamp(1rem, 4vw, 1.4rem);
-    line-height: 1.5;
+    line-height: 1.75;
     max-width: 95%;
+    margin-top: 5%;
     
     text-align: center;
 
   }
 
 
+  .imagenMobile img {
+    max-width: 90%;    
+    
+    
+    margin-bottom: 0%;
+    margin-top: 0%;
+   
+  }
+
+ 
+  
 
 
   
