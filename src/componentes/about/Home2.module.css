@@ -2,179 +2,144 @@
 
 .seccion {
   background-color: #FBF8EF;
+ 
 }
 .contenedor {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+   max-width: 900px;
+  margin: 0 auto;
 }
-
-/* VERSIÓN ROW (>1080px) */
-.rowVersion {
-  display: block;
-}
-.cn {
-  width: 100%;
-  max-width: 1000px;
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-}
-.columnaIzquierda {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1;
-}
-.img {
-  height: 575px;
-  border-radius: 15%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-  width: 100%;
-  object-fit: cover;
-}
-.columnaIzquierda h3 {
-  font-family: 'EB Garamond', serif;
-  font-size: 2rem;
-  color: #000000;
-  margin-top: 0.5rem;
-  margin-bottom: 0;
-  text-align: center;
-}
-.columnaIzquierda h2 {
-  font-family: 'EB Garamond', serif;
-  font-size: 1.5rem;
-  color: #6B21A8;
-  text-align: center;
-  margin-top: 0.5rem;
+.contenedor h2 {
+    font-size: clamp(2.5rem, 4.1vw, 4.3rem);
+    font-weight: 900;
+    font-family: 'EB Garamond';
+    color: #7B3028;
+    margin-top: 0px;
+    margin-bottom: 1.5rem;
+  }
+  .contenedor h3 {
+       font-size: clamp(2.5rem, 4.1vw, 4.3rem);
+    font-weight: 900;
+    font-family: 'EB Garamond';
+    color: #7B3028;
+    margin-top: 0px;
+    margin-bottom: 1.5rem;
+  }
+.imagen img {
+  border-radius: 50%;
+  
+  width: 250px;
+  height: 250px;
 }
 .texto {
-  flex: 1;
-  font-family: 'Nunito', sans-serif;
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  padding: 5%;
+  font-size: clamp(1rem, 3vw, 2rem);
+  font-family: 'Nunito';
+  font-weight: 400;
   color: #000000;
-  line-height: 1.5;
-  text-align: left;
-  margin-top: -20px;
-}
-
-/* VERSIÓN COLUMN (≤1080px) */
-.colVersion {
-  display: none;
-}
-.cnColumn {
-  width: 100%;
-  max-width: 1000px;
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  align-items: center;
-}
-
-.cnColumn h3,
-.cnColumn h2 {
-  text-align: center;
-  margin: 0;
-}
-.cnColumn h3 {
-  font-family: 'EB Garamond', serif;
-  font-size: 2rem;
-  color: #000000;
-}
-.cnColumn h2 {
-  font-family: 'EB Garamond', serif;
-  font-size: 1.75rem;
-  color: #6B21A8;
-  margin-top: 1rem;
-}
-
-.textoColumn {
-  font-family: 'Nunito', sans-serif;
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  color: #000000;
-  line-height: 1.5;
-  text-align: justify;
-  margin-top: 0;
-  
-}
-.imagenColumn .imgColumn {
-  width: 100%;
-  height: auto;
-  border-radius: 15%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-  
-}
-
-/* Alterna versiones */
-@media (max-width: 1080px) {
-  .rowVersion {
-    display: none;
-  }
-  .colVersion {
-    display: block;
-  }
-  .cnColumn {
-  width: 750px;
-  max-width: 1000px;
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-
-
-
  
-  align-items: center;
 }
-.imagenColumn {
+
+
+.item {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  text-align: center;
+  font-size: 1.25rem;
+  max-width: 200px;
+  padding: 1rem;
+  gap: 0.5rem;
+}
+
+/* Círculo general para íconos */
+.icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 2.5rem;
+  display: flex;
   align-items: center;
-  width: 100%;
-}
-.imagenColumn .imgColumn {
-  width: 75%;
- 
-
+  justify-content: center;
+  background-color: #E0BBE4; /* color pastel por defecto */
+  color: #fff; /* o un gris suave si quieres menos contraste */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
+
+
+
+
+
+@media (max-width: 1080px) {
+  
+  .item {
+    max-width: 100%;
+    padding: 1rem;
+    font-size: 1.25rem;
+  }
+    .icon {
+    width: 55px;
+    height: 55px;
+    font-size: 2rem;
+  }
 
 
 }
 @media (max-width: 800px) {
-  .rowVersion {
-    display: none;
+  .item {
+    max-width: 100%;
+    padding: 0.75rem;
+    font-size: 1.25rem;
   }
-  .colVersion {
-    display: block;
+
+  .icon {
+    width: 55px;
+    height: 55px;
+    font-size: 2rem;
   }
-    .cnColumn {
-  width: 100%;
-  
-
-      
 }
-.imagenColumn .imgColumn {
-  width: 75%;
- 
+@media (max-width: 600px) {
+  .item {
+    max-width: 100%;
+    padding: 0.5rem;
+    font-size: 1.11rem;
+  }
 
-}
+  .icon {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+  }
+
+
+
 }
 
 @media (max-width: 400px) {
+  
 
-  .cnColumn {
-    width: 100%;
-   
+  .item {
+    max-width: 100%;
+    padding: 0.25rem;
+    font-size: 1rem;
   }
-  .imagenColumn .imgColumn {
-    width: 85%;
-    
+  .item span {
+    font-size: 1rem;
+  }
 
+  .icon {
+    width: 45px;
+    height: 45px;
+    font-size: 2rem;
+  }
+
+  .iconCounterContainer {
+    flex-direction: column;
+    gap: 1rem;
   }
 }
-
-
-
