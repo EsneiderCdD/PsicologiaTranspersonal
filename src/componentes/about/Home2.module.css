@@ -2,53 +2,75 @@
 
 .seccion {
   background-color: #FBF8EF;
- 
 }
+
 .contenedor {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-   max-width: 900px;
+  max-width: 900px;
   margin: 0 auto;
 }
-.contenedor h2 {
-    font-size: clamp(2.5rem, 4.1vw, 4.3rem);
-    font-weight: 900;
-    font-family: 'EB Garamond';
-    color: #7B3028;
-    margin-top: 0px;
-    margin-bottom: 1.5rem;
-  }
-  .contenedor h3 {
-       font-size: clamp(2.5rem, 4.1vw, 4.3rem);
-    font-weight: 900;
-    font-family: 'EB Garamond';
-    color: #7B3028;
-    margin-top: 0px;
-    margin-bottom: 1.5rem;
-  }
+
+.banner {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Imagen superpuesta sobre el banner */
+.imagen {
+  position: absolute;
+  bottom: 300px; /* la mitad del alto de la imagen (250px / 2) */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
 .imagen img {
-  border-radius: 50%;
-  
   width: 250px;
   height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #FBF8EF;
 }
+.titulo {
+   margin-top: 7.5%;
+}
+
+.titulo h3 {
+  margin: 0 0 1%;
+ 
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-family: 'EB Garamond', serif;
+  font-weight: 600;
+  color: #000000;
+  text-align: center;
+}
+
 .texto {
   padding: 5%;
   font-size: clamp(1rem, 3vw, 2rem);
   font-family: 'Nunito';
   font-weight: 400;
   color: #000000;
- 
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
 }
-
 
 .item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
   font-size: 1.25rem;
   max-width: 200px;
@@ -56,7 +78,6 @@
   gap: 0.5rem;
 }
 
-/* Círculo general para íconos */
 .icon {
   width: 60px;
   height: 60px;
@@ -65,49 +86,40 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #E0BBE4; /* color pastel por defecto */
-  color: #fff; /* o un gris suave si quieres menos contraste */
+  color: #fff;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-
-
-
-
-
-@media (max-width: 1080px) {
+@media (max-width:1000px) {
+  .imagen {
+    bottom: 325px; /* la mitad del alto de la imagen (250px / 2) */
+  }
   
-  .item {
-    max-width: 100%;
-    padding: 1rem;
-    font-size: 1.25rem;
-  }
-    .icon {
-    width: 55px;
-    height: 55px;
-    font-size: 2rem;
-  }
-
-
 }
-@media (max-width: 800px) {
-  .item {
-    max-width: 100%;
-    padding: 0.75rem;
-    font-size: 1.25rem;
+
+/* 🌐 Media queries */
+@media (max-width: 768px) {
+  .banner {
+    height: 220px;
   }
 
-  .icon {
-    width: 55px;
-    height: 55px;
-    font-size: 2rem;
+  .imagen {
+    bottom: 425px; 
   }
-}
-@media (max-width: 600px) {
+
+  .imagen img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .titulo h3 {
+    font-size: 1.5rem;
+  }
+
   .item {
-    max-width: 100%;
+    font-size: 1rem;
+    max-width: 150px;
     padding: 0.5rem;
-    font-size: 1.11rem;
   }
 
   .icon {
@@ -115,31 +127,60 @@
     height: 50px;
     font-size: 2rem;
   }
-
-
-
 }
 
-@media (max-width: 400px) {
-  
+@media (max-width: 600px) {
+  .banner {
+    height: 220px;
+  }
+  .imagen {
+    bottom: 400px; /* la mitad del alto de la imagen (250px / 2) */
+  }
+
+  .imagen img {
+    width: 175px;
+    height: 175px;
+  }
+
+  .titulo {
+    margin-top: 15%;
+  }
+
+  .titulo h3 {
+    font-size: 1.25rem;
+  }
 
   .item {
-    max-width: 100%;
-    padding: 0.25rem;
-    font-size: 1rem;
-  }
-  .item span {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    max-width: 120px;
+    padding: 0.5rem;
   }
 
   .icon {
-    width: 45px;
-    height: 45px;
-    font-size: 2rem;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .banner {
+    height: 180px;
   }
 
-  .iconCounterContainer {
-    flex-direction: column;
-    gap: 1rem;
+  .imagen {
+    bottom: 460px; /* mitad de 140px */
+  }
+
+  .imagen img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .texto {
+    padding: 5%;
+  }
+
+  .item {
+    font-size: 0.95rem;
   }
 }

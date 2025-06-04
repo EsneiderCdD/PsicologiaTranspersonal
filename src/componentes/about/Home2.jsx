@@ -8,6 +8,7 @@ import { GiMoon, GiLotus } from "react-icons/gi";
 
 import estilos from "./Home2.module.css";
 import Img4 from "../../assets/imagenes/Img4.jpeg";
+import banner from "../../assets/imagenes/banner.png";
 
 
 
@@ -36,13 +37,27 @@ export default function Home2() {
     <div>
       <section className={estilos.seccion}>
         <div className={estilos.contenedor}> 
-          <h2>Terapeuta Transpersonal</h2>
+          
+          <div className={estilos.banner}>
+            <img src={banner} alt="benner" />
+          </div>
+        
+          
           <div className={estilos.imagen}>
             <img src={Img4} alt="imagen" />
           </div>
-          <h3>Susana Santamaria</h3>
-
+          
+          
            <div className={estilos.texto}>
+
+            <div className={estilos.titulo}>
+               <h3>Susana Santamaria</h3>
+                <h3>Terapeuta Transpersonal</h3>
+
+            </div>
+
+            
+           
           
              <p>
               Soy psicóloga con amplia experiencia en salud mental, bienestar emocional y desarrollo del potencial humano.
@@ -50,7 +65,7 @@ export default function Home2() {
               y la dimensión espiritual para generar procesos de transformación profunda.
             </p>
 
-             <div style={{ display: "flex", flexDirection: "row" }}>
+             <div style={{ display: "flex", flexDirection: "row" , justifyContent: "center" }}>
             <div className={estilos.item}>
               <div className={estilos.icon} style={{ backgroundColor: '#FFD6D6' }}>
                 <FiCalendar />
@@ -68,7 +83,7 @@ export default function Home2() {
             <p>El propósito no se trata solo de “tener clientes”, sino de crear vínculos conscientes, de sostener espacios seguros, sagrados y humanos donde las personas pueden mirar adentro, sanar heridas, recordar quiénes son y conectar con su alma.</p>
 
 
-             <div style={{ display: "flex", flexDirection: "row" }}>
+             <div style={{ display: "flex", flexDirection: "row", justifyContent: "center" }}>
             <div className={estilos.item}>
               <div className={estilos.icon} style={{ backgroundColor: '#FFF5BA' }}>
                 <FiUsers />
@@ -112,26 +127,11 @@ export default function Home2() {
                          
                          
                        </div>
-                     
-
-
-            
 
             <p>Entender el impacto de tus vivencias y trabajarlas desde un enfoque terapéutico adecuado puede marcar la
             diferencia en cómo enfrentas la vida y construyes tus relaciones, especialmente contigo misma.
             </p>
           </div>
-             
-          
-
-           
-
-         
-
-
-         
-          
-          
 
         </div>
           
