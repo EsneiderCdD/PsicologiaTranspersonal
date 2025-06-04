@@ -40,12 +40,13 @@ export default function Home2() {
           
           <div className={estilos.banner}>
             <img src={banner} alt="benner" />
+            <div className={estilos.imagen}>
+            <img src={Img4} alt="imagen" />
+          </div>
+          
           </div>
         
           
-          <div className={estilos.imagen}>
-            <img src={Img4} alt="imagen" />
-          </div>
           
           
            <div className={estilos.texto}>
