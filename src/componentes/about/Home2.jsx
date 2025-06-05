@@ -8,7 +8,7 @@ import { GiMoon, GiLotus } from "react-icons/gi";
 
 import estilos from "./Home2.module.css";
 import Img4 from "../../assets/imagenes/Img4.jpeg";
-import banner from "../../assets/imagenes/banner.png";
+import banner from "../../assets/imagenes/banner.jpeg";
 
 
 
@@ -81,7 +81,7 @@ export default function Home2() {
             </div>
           </div>
 
-            <p>El propósito no se trata solo de “tener clientes”, sino de crear vínculos conscientes, de sostener espacios seguros, sagrados y humanos donde las personas pueden mirar adentro, sanar heridas, recordar quiénes son y conectar con su alma.</p>
+            <p>@Psicotranspersonal es un proyecto profesional, consciente y profundamente comprometido con el bienestar integral del ser humano. Hoy, Psicotranspersonal también es un espacio digital vivo: he cultivado una comunidad que crece día a día, no solo en número, sino en profundidad.  </p>
 
 
              <div style={{ display: "flex", flexDirection: "row", justifyContent: "center" }}>

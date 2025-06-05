@@ -27,11 +27,6 @@ export default function ScrollSteps() {
       respuesta:
         "Si sientes que tu proceso personal va más allá de lo racional y deseas integrar cuerpo, mente y espíritu, la psicología transpersonal puede ofrecerte un espacio de transformación profunda.",
     },
-    
-    {
-      pregunta: "¿Tienes más preguntas?",
-      respuesta: "", // Aquí no usaremos respuesta como tal
-    },
   ];
 
   return (
@@ -44,7 +39,6 @@ export default function ScrollSteps() {
       <div className={styles.container}>
         {secciones.map((item, index) => {
           const [ref, inView] = useInView({ threshold: 0.5, triggerOnce: false });
-          const esUltima = index === secciones.length - 1;
 
           return (
             <section ref={ref} key={index} className={styles.step}>
@@ -62,20 +56,13 @@ export default function ScrollSteps() {
                   <img src={gl} alt="pregunta" className={styles.avatar} />
                 </div>
 
-                {/* Condicional: mostrar respuesta o botones */}
-                {!esUltima ? (
-                  <div className={styles.respuestaWrapper}>
-                    <div className={styles.burbujaRespuesta}>
-                      <p>{item.respuesta}</p>
-                    </div>
-                    <img src={pc} alt="respuesta" className={styles.avatar} />
+                {/* Respuesta */}
+                <div className={styles.respuestaWrapper}>
+                  <div className={styles.burbujaRespuesta}>
+                    <p>{item.respuesta}</p>
                   </div>
-                ) : (
-                  <div className={styles.botonesWrapper}>
-                    <button className={styles.botonPrimario}>Agendar</button>
-                    <button className={styles.botonSecundario}>Contáctame</button>
-                  </div>
-                )}
+                  <img src={pc} alt="respuesta" className={styles.avatar} />
+                </div>
               </motion.div>
             </section>
           );

@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600&family=Nunito:wght@400&display=swap');
+
+.seccion {
+  background-color: #ffffff;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.contenido {
+  max-width: 900px;
+  font-family: 'Nunito', sans-serif;
+  color: #000000;
+}
+
+.contenido p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  text-align: justify;
+  margin-top: 1rem;
+}
+
+.imagen {
+  width: 100%;
+  max-width: 750px;
+  display: block;
+  margin: 1.5rem auto;
+}
+
+
+
+.actividades h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.tarjetas {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.tarjeta {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  flex: 1 1 45%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.tarjeta p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+.infoCita {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.infoCita p {
+  font-size: 1rem;
+  text-align: center;
+  margin: 0.5rem 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  
+}
+.texto {
+  padding: 5%;
+  font-size: clamp(1rem, 3vw, 2rem);
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  color: #000000;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.parallax {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+  margin: 2rem 0;
+}
+
+.parallaxImagen {
+  background-image: url("../../assets/imagenes/ft0.jpeg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  height: 120%;
+  width: 100%;
+  position: absolute;
+  top: -10%;
+  left: 0;
+  z-index: 1;
+}
+
+
+
+@media (max-width: 800px) {
+  .tarjetas {
+    justify-content: center;
+  }
+
+  .tarjeta {
+    flex: 1 1 100%;
+    max-width: 350px;
+  }
+
+  .imagen {
+    width: 100%;
+  }
+}
+
+@media (max-width: 550px) {
+  .contenido p,
+  .tarjeta p,
+  .infoCita p {
+    font-size: 0.95rem;
+  }
+
+  .tarjeta {
+    width: 90%;
+  }
+}
+
+@media (max-width: 350px) {
+  .contenido p,
+  .tarjeta p,
+  .infoCita p {
+    font-size: 0.85rem;
+  }
+}

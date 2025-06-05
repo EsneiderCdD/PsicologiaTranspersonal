@@ -4,8 +4,10 @@ import Footer from "../footer/Footer";
 import Terminos from "../terminos/Terminos";
 
 
-import PsicologiaTranspersonal from "./PsicologiaTranspersonal";
 import ScrollSteps from "./ScrollSteps";
+
+import Servicios from "./Servicios";
+import CirculoMujeres from "./CirculoMujeres";
 
 
 
@@ -18,8 +20,10 @@ const About = () => {
     
     <div  >
       <Home2 />
+      <Servicios />
+      <CirculoMujeres />
   
-      <PsicologiaTranspersonal />
+
       <ScrollSteps />
       <Terminos />
      
