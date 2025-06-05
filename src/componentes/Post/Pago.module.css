@@ -1,0 +1,135 @@
+:root {
+  --bg-main: #FBF8EF;
+  --text-dark: #7B3028;
+  --accent: #6B21A8;
+  --white: #ffffff;
+}
+
+.container {
+  background-color: var(--bg-main);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 3rem;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  color: var(--text-dark);
+}
+
+.iconWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.checkIcon {
+  width: 60px;
+  height: 60px;
+  color: var(--accent);
+}
+
+/* Typography */
+.title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.message {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.note {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.primary {
+  background-color: var(--accent);
+  color: white;
+}
+
+.primary:hover {
+  background-color: #581c87;
+}
+
+.secondary {
+  background-color: transparent;
+  color: var(--text-dark);
+  border: 2px solid var(--text-dark);
+}
+
+.secondary:hover {
+  background-color: var(--text-dark);
+  color: white;
+}
+/* Responsive Design */
+@media (max-width: 480px) {
+  .card {
+    padding: 1.75rem 1.25rem;
+    border-radius: 1rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .message {
+    font-size: 1rem;
+  }
+
+  .note {
+    font-size: 0.95rem;
+  }
+
+  .checkIcon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .button {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.75rem;
+    padding: 0.75rem 1rem;
+    box-sizing: border-box;
+  }
+
+  .button:last-child {
+    margin-bottom: 0;
+  }
+}

@@ -7,7 +7,7 @@ import './App.css';
 import Testimonios from './componentes/testimonios/Testimonios';
 import Terminos from './componentes/terminos/Terminos'; // 👈 nuevo import
 import Slider2 from './componentes/slider2/Slider2'; // 👈 nuevo import
-
+import Post from './componentes/Post/Pago';
 function App() {
   return (
     <Router>
@@ -20,10 +20,13 @@ function App() {
             <Testimonios />
             <Footer />
             
+            
           </>
         } />
         <Route path="/about" element={<About />} />
-        <Route path="/tyc" element={<Terminos />} /> {/* 👈 nueva ruta */}
+        <Route path="/tyc" element={<Terminos />} /> 
+        <Route path="/post" element={<Post />} />
+        
       </Routes>
     </Router>
   );
