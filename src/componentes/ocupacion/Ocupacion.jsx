@@ -46,7 +46,7 @@ const Ocupacion = () => {
   return (
     <div className={styles.servicios}>
       <Encabezado 
-        titulo="Mis"
+        titulo=""
         destacado="Servicios"
         descripcion="Procesos terapéuticos personalizados  pensados para ofrecerte un espacio seguro de escucha, liberación emocional y reencuentro con tu verdad interior.
       ">
