@@ -89,26 +89,20 @@
 }
 
 .parallax {
-  position: relative;
-  height: 300px;
+  height: auto;
   width: 100%;
-  overflow: hidden;
   margin: 2rem 0;
 }
 
 .parallaxImagen {
   background-image: url("../../assets/imagenes/ft0.jpeg");
-  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 90%;
-  height: 120%;
+  background-size: cover;
   width: 100%;
-  position: absolute;
-  top: -10%;
-  left: 0;
-  z-index: 1;
+  height: 400px; /* ajusta a tu preferencia */
 }
+
 
 
 
