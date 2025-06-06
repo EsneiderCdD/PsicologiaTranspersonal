@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: space-between;
   width: auto;
-  max-height: 100vh;
+  
   background: #FBF8EF;
   padding: 2% 5%;
   max-height: 90vh;
@@ -154,10 +154,6 @@
     max-width: 92%;
     text-align: center;
     margin-bottom: 0%;
-  }
-
-  .imagenDesktop {
-    display: none;
   }
 
   .imagenMobile {
@@ -324,7 +320,7 @@
 }
 @media (max-width: 400px) {
   .layout {
-    max-height: vh;
+    
     padding: 0;
   }
 

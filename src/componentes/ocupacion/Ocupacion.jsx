@@ -66,14 +66,12 @@ const Ocupacion = () => {
       <div className={styles.imagePrincipal}></div>
       <div className={styles.contentPrincipal}>
         <span className={styles.etiquetaPrincipal}>Servicio Principal</span>
-        <h2><FaVideo className={styles.icon} /> Terapia Personalizada </h2>
+        <h2><FaVideo className={styles.icon} /> Acompañamiento Terapéutico  </h2>
         <p>
-          Sesiones personalizadas en un espacio seguro y confidencial donde trabajaremos juntos
-          para abordar tus desafíos emocionales, construir resiliencia y desarrollar estrategias
-          efectivas para mejorar tu bienestar.
+          Sesiones personalizadas en un espacio seguro y confidencial donde trabajaremos juntas para abordar tus desafíos emocionales, conectar con tu esencia mas profunda, trascender limitaciones y crear nuevas estrategias para mejorar todas tus áreas vitales.
         </p>
         <ul className={styles.listaBeneficios}>
-        <li><FaSpa className={styles.iconoInline} /> Enfoque holístico y espiritual</li>
+        <li><FaSpa className={styles.iconoInline} /> Enfoque holístico y consciente</li>
           
           <li><FaRegLightbulb className={styles.iconoInline} /> Material de apoyo personalizado</li>
 
