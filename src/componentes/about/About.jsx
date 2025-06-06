@@ -24,16 +24,20 @@ const About = () => {
     }
   }, [location]);
 
-  return (
-    <div>
-      <Home2 />
-      <Servicios />
-      <CirculoMujeres />
-      <ScrollSteps />
-      <Terminos />
-      <Footer />
-    </div>
-  );
+return (
+  <div>
+    <Home2 />
+    <Servicios />
+    <CirculoMujeres />
+    <ScrollSteps />
+    <Terminos />
+
+
+
+    <Footer />
+  </div>
+);
+
 };
 
 export default About;

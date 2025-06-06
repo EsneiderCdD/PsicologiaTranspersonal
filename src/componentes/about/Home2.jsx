@@ -43,7 +43,20 @@ export default function Home2() {
     const contadorEnVista = useInView(contadorRef, { once: true, margin: "0px 0px -100px 0px" });
 
 
+const titulooRef = useRef(null);
+const profesionRef = useRef(null);
 
+const nombreRef = useRef(null); // renombrado para claridad
+const nombreEnVista = useInView(nombreRef, { once: true, margin: "-100px" });
+const profesionEnVista = useInView(profesionRef, { once: true, margin: "0px 0px -100px 0px" });
+
+const underlineVariants = {
+  hidden: { backgroundSize: "0% 2px" },
+  visible: {
+    backgroundSize: "100% 2px",
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
 
 useEffect(() => {
   if (!contadorEnVista) return; // no hacer nada si no está visible
@@ -69,35 +82,35 @@ useEffect(() => {
           
           <div className={estilos.banner}>
             <img src={banner} alt="benner" />
-            <div className={estilos.imagen} ref={imagenRef}>
-              <motion.img
+            <div className={estilos.imagen} >
+              <img
                 src={Img4}
                 alt="imagen"
-                initial={{ opacity: 0, y: 50 }}
-                animate={imagenEnVista ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
+
               />
             </div>
           </div>
         
           <div className={estilos.texto}>
 
-            <div className={estilos.titulo} ref={tituloRef}>
-              <motion.h3
-                initial={{ opacity: 0, y: 30 }}
-                animate={tituloEnVista ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.8, delay: 0.3 }}
-              >
-                Susana Santamaria
-              </motion.h3>
+            <div className={estilos.titulo}>
+  {/* Nombre con subrayado animado */}
+<motion.h3
+  ref={nombreRef}
+  initial="hidden"
+  animate={nombreEnVista ? "visible" : "hidden"}
+  variants={underlineVariants}
+  className={estilos.underlineEffect}
+>
+  Susana Santamaria
+</motion.h3>
 
-              <motion.h3
-                initial={{ opacity: 0, y: 30 }}
-                animate={tituloEnVista ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.8, delay: 0.5 }}
-              >
-                Terapeuta Transpersonal
-              </motion.h3>
+
+  {/* Profesión con letra por letra */}
+  <h3 ref={profesionRef} >
+  Terapeuta Transpersonal
+</h3>
+
             </div>
 
             {/* Aquí se agregó el div con ref={textoRef} que engloba todos los textos animados */}

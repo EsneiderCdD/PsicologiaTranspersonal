@@ -44,6 +44,11 @@
 }
 .titulo {
    margin-top: 11%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
 }
 
 .titulo h3 {
@@ -89,6 +94,17 @@
   color: #fff;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
+
+.underlineEffect {
+  display: inline-block;
+  background-image: linear-gradient(to right, #8D2C24, #8D2C24);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 0% 2px;
+  transition: background-size 0.3s ease;
+}
+
+
 
 @media (max-width: 900px) {
  
