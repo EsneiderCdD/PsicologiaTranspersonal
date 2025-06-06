@@ -27,15 +27,20 @@ export default function CirculoMujeres() {
   return (
     <section className={estilos.seccion}>
       <div className={estilos.contenedor}>
-        <Encabezado
-          destacado="Círculo de Mujeres"
-          descripcion="Del uno al nosotros: tejemos en círculo la piel viva de un sueño que quiso volverse abrazo."
-        />
+  
 
         <div className={estilos.contenido}>
           <div className={estilos.parallax}>
             <div className={estilos.parallaxImagen}></div>
           </div>
+
+          <h2>
+            Circulo de Mujeres
+          </h2>
+          <h2>
+            Del uno al nosotros: tejemos en círculo la piel viva de un sueño que quiso volverse abrazo.
+            
+            </h2>          
 
           <motion.div
             className={estilos.texto}
@@ -103,13 +108,25 @@ export default function CirculoMujeres() {
             </motion.div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={estaEnVista ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.6 }}
+         <div className={estilos.botonesContenedor}>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.97 }}
+            className={estilos.botonReservar}
           >
-            <button>Reservar</button>
-          </motion.div>
+            Reserva tu espacio ✨
+          </motion.button>
+
+          <motion.button
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
+            className={estilos.botonSecundario}
+          >
+            Ver imágenes
+          </motion.button>
+        </div>
+
+
         </div>
       </div>
     </section>

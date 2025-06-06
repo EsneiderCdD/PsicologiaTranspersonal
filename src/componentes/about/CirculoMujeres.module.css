@@ -41,25 +41,33 @@
 
 .tarjetas {
   display: flex;
-  flex-wrap: nowrap;
-  gap: 1rem;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  gap: 1rem;
+  margin: 2rem 0;
 }
 
 .tarjeta {
-  background-color: #ffffff;
-  padding: 1rem;
-  border-radius: 1rem;
+  background-color: transparent; /* eliminamos fondo blanco */
+  padding: 0.5rem 0.5rem; /* menos padding */
+  border-radius: 0.5rem;
   text-align: center;
-  flex: 1 1 45%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  flex: 1;
+  box-shadow: none; /* quitamos la sombra */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tarjeta svg {
+  font-size: 40px; /* íconos más grandes */
 }
 
 .tarjeta p {
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
   font-size: 1rem;
 }
+
 .infoCita {
   display: flex;
   flex-direction: row;
@@ -103,6 +111,57 @@
   height: 400px; /* ajusta a tu preferencia */
 }
 
+.botonReservar {
+  background: linear-gradient(135deg, #D16BA5, #FF9A8B, #FBC2EB);
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.9rem 2.5rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  margin: 2rem auto 0;
+  display: block;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+}
+
+.botonReservar:hover {
+  background: linear-gradient(135deg, #c94baf, #ff7a7a, #f8a8db);
+}
+
+.botonesContenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.botonSecundario {
+  background-color: transparent;
+  color: #444; /* color neutro y legible */
+  border: 2px solid #ccc;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.9rem 2.5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  margin: 2rem auto 0;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.botonSecundario:hover {
+  background-color: #f5f5f5;
+  border-color: #bbb;
+  color: #222;
+}
+
+
+
+
 
 
 
@@ -132,11 +191,35 @@
     width: 90%;
   }
 }
+@media (max-width: 450px) {
+  .tarjeta {
+    padding: 0;
+  }
+  .infoCita {
+    gap: 0.1rem;
+  }
+  .tarjetas {
+    gap: 0.1rem;
+  }
+  .botonReservar {
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+  }
+
+
+
+
+}
+
 
 @media (max-width: 350px) {
   .contenido p,
   .tarjeta p,
   .infoCita p {
     font-size: 0.85rem;
+  }
+   .botonReservar {
+    font-size: 0.95rem;
+    padding: 0.7rem 1.6rem;
   }
 }

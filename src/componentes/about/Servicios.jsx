@@ -1,9 +1,8 @@
 import React, { useRef } from "react";
 import estilos from "./Servicios.module.css";
-import Img4 from "../../assets/imagenes/Img4.jpeg";
-import banner from "../../assets/imagenes/banner.png";
+
 import Ps from "../../assets/imagenes/Ps.jpeg";
-import Encabezado from "../global/Encabezado";
+
 import { motion, useInView } from "framer-motion";
 
 export default function Servicios() {
@@ -17,12 +16,7 @@ export default function Servicios() {
   return (
     <div>
       <section className={estilos.seccion}>
-        <Encabezado
-          titulo="@"
-          destacado="Psicotranspersonal"
-          descripcion="La semilla que floreció en comunidad."
-          imagen={banner}
-        />
+       
 
         <div className={estilos.contenedor}>
           <motion.div
@@ -34,6 +28,8 @@ export default function Servicios() {
           >
             <img src={Ps} alt="benner" />
           </motion.div>
+          <h2>@Psicotranspersonal</h2>
+          <h2>La semilla que floreció en comunidad</h2>
 
           <motion.div
             className={estilos.texto}
@@ -66,8 +62,18 @@ export default function Servicios() {
                 {text}
               </motion.p>
             ))}
+                    <motion.button
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.97 }}
+  className={estilos.botonReservar}
+>
+  Reserva tu espacio ✨
+</motion.button>
+
           </motion.div>
+          
         </div>
+
       </section>
     </div>
   );

@@ -85,6 +85,39 @@
   display: flex;
   flex-direction: column;
 }
+.botonReservar {
+  background: linear-gradient(135deg, #9BA88D, #EBD9A2, #F7F4ED);
+  color: #3B3B3B;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.9rem 2.5rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  margin: 2rem auto 0;
+  display: block;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: background 0.3s ease;
+}
+
+.botonReservar:hover {
+  background: linear-gradient(135deg, #6D8C64, #D4B679, #F1ECE6);
+}
+
+@media (max-width: 450px) {
+  .botonReservar {
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .botonReservar {
+    font-size: 0.95rem;
+    padding: 0.7rem 1.6rem;
+  }
+}
 
 /* 🌐 Media queries */
 @media (max-width: 768px) {
