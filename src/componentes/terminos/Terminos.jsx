@@ -49,7 +49,7 @@ const Terminos = () => {
   const [selectedTab, setSelectedTab] = useState('Pagos');
 
   return (
-    <div>
+    <div id="terminos">
       <Encabezado
       destacado='Acuerdos'
          descripcion='Para asegurar una experiencia terapéutica óptima, es importante establecer algunos acuerdos claros'/>
