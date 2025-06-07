@@ -19,6 +19,18 @@ export default function CirculoMujeres() {
       transition: { duration: 0.6, delay: i * 0.2 }
     })
   };
+    const nombreRef = useRef(null);
+    const nombreEnVista = useInView(nombreRef, { once: true });
+  
+
+    
+  const underlineVariants = {
+  hidden: { backgroundSize: '0% 2px' },
+  visible: {
+    backgroundSize: '100% 2px',
+    transition: { duration: 0.6, ease: 'easeOut' }
+  }
+};
 
   // Ref para el contenedor que engloba los textos e íconos animados
   const animacionRef = useRef(null);
@@ -33,14 +45,22 @@ export default function CirculoMujeres() {
           <div className={estilos.parallax}>
             <div className={estilos.parallaxImagen}></div>
           </div>
-
-          <h2>
-            Circulo de Mujeres
-          </h2>
-          <h2>
-            Del uno al nosotros: tejemos en círculo la piel viva de un sueño que quiso volverse abrazo.
-            
-            </h2>          
+<div className={estilos.titulo}>
+  
+            <motion.h3
+              ref={nombreRef}
+              initial="hidden"
+              animate={nombreEnVista ? "visible" : "hidden"}
+              variants={underlineVariants}
+              className={estilos.underlineEffect}
+            >
+              Circulo de Mujeres
+            </motion.h3>
+            <h3>
+              Del uno al nosotros: tejemos en círculo la piel viva de un sueño que quiso volverse abrazo.
+  
+              </h3>
+</div>       
 
           <motion.div
             className={estilos.texto}

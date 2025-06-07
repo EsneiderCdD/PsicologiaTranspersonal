@@ -13,6 +13,18 @@ export default function Servicios() {
   const imagenRef = useRef(null);
   const imagenEnVista = useInView(imagenRef, { once: true, margin: "0px 0px -100px 0px" });
 
+  const nombreRef = useRef(null);
+  const nombreEnVista = useInView(nombreRef, { once: true });
+
+  const underlineVariants = {
+  hidden: { backgroundSize: '0% 2px' },
+  visible: {
+    backgroundSize: '100% 2px',
+    transition: { duration: 0.6, ease: 'easeOut' }
+  }
+};
+
+
   return (
     <div>
       <section className={estilos.seccion}>
@@ -28,8 +40,18 @@ export default function Servicios() {
           >
             <img src={Ps} alt="benner" />
           </motion.div>
-          <h2>@Psicotranspersonal</h2>
-          <h2>La semilla que floreció en comunidad</h2>
+          <div className={estilos.titulo}>
+             <motion.h3
+              ref={nombreRef}
+              initial="hidden"
+              animate={nombreEnVista ? 'visible' : 'hidden'}
+              variants={underlineVariants}
+              className={estilos.underlineEffect}
+            >
+              @psicotranspersonal
+            </motion.h3>
+            <h3>La semilla que floreció en comunidad</h3>
+          </div>
 
           <motion.div
             className={estilos.texto}
@@ -63,12 +85,12 @@ export default function Servicios() {
               </motion.p>
             ))}
                     <motion.button
-  whileHover={{ scale: 1.05 }}
-  whileTap={{ scale: 0.97 }}
-  className={estilos.botonReservar}
->
-  Reserva tu espacio ✨
-</motion.button>
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.97 }}
+                      className={estilos.botonReservar}
+                    >
+                      Reserva tu espacio ✨
+                    </motion.button>
 
           </motion.div>
           

@@ -94,7 +94,7 @@ useEffect(() => {
           <div className={estilos.texto}>
 
             <div className={estilos.titulo}>
-  {/* Nombre con subrayado animado */}
+
 <motion.h3
   ref={nombreRef}
   initial="hidden"
@@ -106,7 +106,6 @@ useEffect(() => {
 </motion.h3>
 
 
-  {/* Profesión con letra por letra */}
   <h3 ref={profesionRef} >
   Terapeuta Transpersonal
 </h3>
