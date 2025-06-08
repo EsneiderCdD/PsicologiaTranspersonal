@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import styles from './Testimonios.module.css';
 import Encabezado from '../global/Encabezado';
+import { motion } from 'framer-motion';
+
+
 
 import mensajeCerrado from '../../assets/imagenes/mensajeCerrado.jpg';
 import mensajeAbierto from '../../assets/imagenes/mensajeAbierto.jpg';
@@ -14,6 +17,20 @@ import t7 from '../../assets/imagenes/t7.jpeg';
 import t8 from '../../assets/imagenes/t8.jpeg';
 import t9 from '../../assets/imagenes/t9.jpeg';
 import t10 from '../../assets/imagenes/t10.jpeg';
+
+const cartaAnimacion = {
+  hidden: { opacity: 0, y: -50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: 'spring',
+      stiffness: 100,
+      damping: 10,
+      delay: 0.1
+    }
+  }
+};
 
 const sobresData = [
   { id: 1, imagenAbierta: t1 },
@@ -50,19 +67,25 @@ const Testimonios = () => {
 
        />  
       <div className={styles.testimoniosLista}>
-        {sobresData.map((sobre) => (
-          <div
-            key={sobre.id}
-            className={`${styles.sobreCard} ${abiertoId === sobre.id ? styles.abierto : ''}`}
-            onClick={() => abrirSobre(sobre.id)}
-          >
-            <img
-              src={abiertoId === sobre.id ? mensajeAbierto : mensajeCerrado}
-              alt="Mensaje"
-              className={styles.sobreImagen}
-            />
-          </div>
-        ))}
+        {sobresData.map((sobre, index) => (
+  <motion.div
+    key={sobre.id}
+    className={`${styles.sobreCard} ${abiertoId === sobre.id ? styles.abierto : ''}`}
+    onClick={() => abrirSobre(sobre.id)}
+    variants={cartaAnimacion}
+    initial="hidden"
+    animate="visible"
+    whileHover={{ scale: 1.05 }}
+    transition={{ delay: index * 0.05 }} // entrada en cascada opcional
+  >
+    <img
+      src={abiertoId === sobre.id ? mensajeAbierto : mensajeCerrado}
+      alt="Mensaje"
+      className={styles.sobreImagen}
+    />
+  </motion.div>
+))}
+
       </div>
 
       {modalAbierto && (

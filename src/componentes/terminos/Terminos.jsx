@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import styles from './Terminos.module.css';
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 import Encabezado from '../global/Encabezado'; // Asegúrate de que la ruta sea correcta
 
@@ -47,12 +49,35 @@ const Terminos = () => {
   };
 
   const [selectedTab, setSelectedTab] = useState('Pagos');
+   const [nombreRef, nombreEnVista] = useInView({ threshold: 0.5, triggerOnce: true });
+
+    
+    const underlineVariants = {
+    hidden: { backgroundSize: '0% 2px' },
+    visible: {
+      backgroundSize: '100% 2px',
+      transition: { duration: 0.6, ease: 'easeOut' }
+    }
+  };
+
 
   return (
     <div id="terminos">
-      <Encabezado
-      destacado='Acuerdos'
-         descripcion='Para asegurar una experiencia terapéutica óptima, es importante establecer algunos acuerdos claros'/>
+       <div className={styles.titulo}>
+         <motion.h3
+                      ref={nombreRef}
+                      initial="hidden"
+                      animate={nombreEnVista ? "visible" : "hidden"}
+                      variants={underlineVariants}
+                      className={styles.underlineEffect}
+                    >
+                      Acuerdos
+                    </motion.h3>
+                    <h3>
+                      Para asegurar una experiencia terapéutica óptima, es importante establecer algunos acuerdos claro
+         
+                      </h3>
+       </div>
       <div className={styles.container}>
      
         <div className={styles.tabButtons}>
