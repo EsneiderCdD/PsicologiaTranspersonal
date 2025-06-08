@@ -46,6 +46,9 @@ export default function CirculoMujeres() {
   
 
         <div className={estilos.contenido}>
+          <div className={estilos.verticalLineLeft}></div>
+            <div className={estilos.verticalLineRight}></div>
+
           <div className={estilos.parallax}>
             <div className={estilos.parallaxImagen}></div>
           </div>
@@ -64,8 +67,7 @@ export default function CirculoMujeres() {
               }
             }}
           >
-            <div className={estilos.verticalLineLeft}></div>
-            <div className={estilos.verticalLineRight}></div>
+            
             <div className={estilos.titulo}>
   
             <motion.h3

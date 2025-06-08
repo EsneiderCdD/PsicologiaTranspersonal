@@ -44,7 +44,11 @@ export default function Servicios() {
             animate={imagenEnVista ? { opacity: 1, scale: 1 } : {}}  // Solo anima si está en vista
             transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
           >
-            <img src={Ps} alt="benner" />
+            
+            <div className={estilos.bannerLineLeft}></div>
+            <div className={estilos.bannerLineRight}></div>
+            <img src={Ps} alt="banner" />
+
           </motion.div>
 
           <motion.div

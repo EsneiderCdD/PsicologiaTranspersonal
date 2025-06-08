@@ -9,13 +9,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .contenido {
   max-width: 900px;
   font-family: 'Nunito', sans-serif;
   color: #000000;
+  position: relative;
 }
 
 .contenido p {
@@ -100,16 +102,19 @@
 .parallax {
   height: auto;
   width: 100%;
-  margin: 2rem 0;
+  margin:0;
+  
+  
 }
 
 .parallaxImagen {
   background-image: url("../../assets/imagenes/ft0.jpeg");
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: repeat;
+  background-size: contain; /* CAMBIO CLAVE */
   width: 100%;
-  height: 400px; /* ajusta a tu preferencia */
+  height: 500px;
+  
 }
 
 .botonReservar {
@@ -189,14 +194,13 @@
   color: #000000;
   text-align: center;
 }
-
 .verticalLineLeft,
 .verticalLineRight {
   position: absolute;
-  width: 1px;
-  background-color: #8D2C24;
   top: 0;
+  width: 2px;
   height: 0;
+  background-color: #8D2C24;
   z-index: 2;
   animation: expandLine 1s ease-out forwards;
   animation-delay: 0.5s;
