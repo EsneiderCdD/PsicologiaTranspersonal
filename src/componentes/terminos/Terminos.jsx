@@ -85,16 +85,36 @@ const Terminos = () => {
       <div className={styles.container}>
      
         <div className={styles.tabButtons}>
-          {Object.keys(tabs).map((tab) => (
-            <button
-              key={tab}
-              className={`${styles.tabButton} ${selectedTab === tab ? styles.active : ''}`}
-              onClick={() => setSelectedTab(tab)}
-            >
-              {tab}
-            </button>
-          ))}
-        </div>
+  <div className={styles.buttonGroup1}>
+    <button
+      className={`${styles.tabButton} ${selectedTab === 'Horarios' ? styles.active : ''}`}
+      onClick={() => setSelectedTab('Horarios')}
+    >
+      Horarios
+    </button>
+    <button
+      className={`${styles.tabButton} ${selectedTab === 'Cancelaciones' ? styles.active : ''}`}
+      onClick={() => setSelectedTab('Cancelaciones')}
+    >
+      Cancelaciones
+    </button>
+  </div>
+  <div className={styles.buttonGroup2}>
+    <button
+      className={`${styles.tabButton} ${selectedTab === 'Pagos' ? styles.active : ''}`}
+      onClick={() => setSelectedTab('Pagos')}
+    >
+      Pagos
+    </button>
+    <button
+      className={`${styles.tabButton} ${selectedTab === 'Confidencialidad' ? styles.active : ''}`}
+      onClick={() => setSelectedTab('Confidencialidad')}
+    >
+      Confidencialidad
+    </button>
+  </div>
+</div>
+
         <div className={styles.contentBox}>
           <h3 className={styles.sectionTitle}>{tabs[selectedTab].title}</h3>
           <ul className={styles.list}>

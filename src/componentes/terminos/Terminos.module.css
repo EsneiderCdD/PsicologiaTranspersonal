@@ -24,9 +24,29 @@
     display: flex;
     justify-content: center;
     gap: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .buttonGroup1 {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
     margin-bottom: 1.5rem;
     flex-wrap: nowrap;
   }
+  
+  .buttonGroup2 {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: nowrap;
+  }
+
+
+
   
   .tabButton {
     background-color: #f3f4f6;
@@ -69,6 +89,7 @@
   }
   
   .listItem {
+    
     margin-bottom: 0.75rem;
   }
   
@@ -135,6 +156,12 @@ h4 {
   text-align: center;
 }
 
+
+
+
+
+
+
   @media (max-width: 768px) {
     .titulo h3 {
       font-size: 2rem;
@@ -173,6 +200,7 @@ h4 {
   .tabButtons {
     flex-direction: column;
     align-items: stretch;
+    gap: 0;
   }
 
   .tabButton {
@@ -188,7 +216,7 @@ h4 {
   }
 
   .listItem {
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 1.4;
   }
 
@@ -212,7 +240,7 @@ h4 {
   }
 
   .listItem {
-    font-size: 0.85rem;
+    font-size: 1rem;
   }
 
   .footer {
