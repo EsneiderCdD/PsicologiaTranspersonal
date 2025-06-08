@@ -61,6 +61,7 @@
   text-align: center;
 }
 
+
 .texto {
   padding: 5%;
   font-size: clamp(1rem, 3vw, 2rem);
@@ -108,7 +109,7 @@
 .verticalLineLeft,
 .verticalLineRight {
   position: absolute;
-  width: 1.1px;
+  width: 2px;
   background-color: #8D2C24; /* mismo vinotinto que el subrayado */
   top: 0;
   height: 0;
@@ -139,10 +140,7 @@
 
 
 
-@media (max-width: 900px) {
- 
 
-}
 
 
 /* 🌐 Media queries */
@@ -186,11 +184,11 @@
   }
 
   .titulo {
-    margin-top: 15%;
+    margin-top: 17.5%;
   }
 
   .titulo h3 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 
   .item {
@@ -217,10 +215,19 @@
   }
 
   .texto {
-    padding: 5%;
+    padding: 4%;
   }
 
   .item {
     font-size: 0.95rem;
+  }
+  @media (max-width: 400px) {
+    .imagen img {
+      width: 145px;
+      height: 145px;
+    }
+    .titulo {
+      margin-top: 20%;
+    }
   }
 }

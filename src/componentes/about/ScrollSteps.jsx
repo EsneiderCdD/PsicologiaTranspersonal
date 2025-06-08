@@ -40,54 +40,56 @@ export default function ScrollSteps() {
   };
 
   return (
-    <div>
-      <div className={styles.titulo}>
-        
-                  <motion.h3
-                    ref={nombreRef}
-                    initial="hidden"
-                    animate={nombreEnVista ? "visible" : "hidden"}
-                    variants={underlineVariants}
-                    className={styles.underlineEffect}
-                  >
-                    Preguntas Importantes
-                  </motion.h3>
-                  <h3>
-                    Explora las preguntas más frecuentes sobre el proceso terapéutico
-        
-                    </h3>
-      </div> 
-      <div className={styles.container}>
-        {secciones.map((item, index) => {
-          const [ref, inView] = useInView({ threshold: 0.5, triggerOnce: false });
-
-          return (
-            <section ref={ref} key={index} className={styles.step}>
-              <motion.div
-                className={styles.chatContainer}
-                initial={{ opacity: 0, y: 30 }}
-                animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                transition={{ duration: 0.6 }}
-              >
-                {/* Pregunta */}
-                <div className={styles.preguntaWrapper}>
-                  <div className={styles.burbujaPregunta}>
-                    <p>{item.pregunta}</p>
+    <div style={{backgroundColor: "#FBF8EF"}}>
+      <div className={styles.contenedor}>
+        <div className={styles.texto}>
+          <div className={styles.titulo}>
+      
+                      <motion.h3
+                        ref={nombreRef}
+                        initial="hidden"
+                        animate={nombreEnVista ? "visible" : "hidden"}
+                        variants={underlineVariants}
+                        className={styles.underlineEffect}
+                      >
+                        Preguntas Importantes
+                      </motion.h3>
+                      <h4>
+                        Explora las preguntas más frecuentes sobre el proceso terapéutico
+      
+                        </h4>
+          </div>
+        </div>
+        <div className={styles.container}>
+          {secciones.map((item, index) => {
+            const [ref, inView] = useInView({ threshold: 0.5, triggerOnce: false });
+            return (
+              <section ref={ref} key={index} className={styles.step}>
+                <motion.div
+                  className={styles.chatContainer}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                  transition={{ duration: 0.6 }}
+                >
+                  {/* Pregunta */}
+                  <div className={styles.preguntaWrapper}>
+                    <div className={styles.burbujaPregunta}>
+                      <p>{item.pregunta}</p>
+                    </div>
+                    <img src={gl} alt="pregunta" className={styles.avatar} />
                   </div>
-                  <img src={gl} alt="pregunta" className={styles.avatar} />
-                </div>
-
-                {/* Respuesta */}
-                <div className={styles.respuestaWrapper}>
-                  <div className={styles.burbujaRespuesta}>
-                    <p>{item.respuesta}</p>
+                  {/* Respuesta */}
+                  <div className={styles.respuestaWrapper}>
+                    <div className={styles.burbujaRespuesta}>
+                      <p>{item.respuesta}</p>
+                    </div>
+                    <img src={pc} alt="respuesta" className={styles.avatar} />
                   </div>
-                  <img src={pc} alt="respuesta" className={styles.avatar} />
-                </div>
-              </motion.div>
-            </section>
-          );
-        })}
+                </motion.div>
+              </section>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

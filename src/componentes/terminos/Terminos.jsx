@@ -62,22 +62,26 @@ const Terminos = () => {
 
 
   return (
-    <div id="terminos">
-       <div className={styles.titulo}>
-         <motion.h3
-                      ref={nombreRef}
-                      initial="hidden"
-                      animate={nombreEnVista ? "visible" : "hidden"}
-                      variants={underlineVariants}
-                      className={styles.underlineEffect}
-                    >
-                      Acuerdos
-                    </motion.h3>
-                    <h3>
-                      Para asegurar una experiencia terapéutica óptima, es importante establecer algunos acuerdos claro
+    <div id="terminos" className={styles.contenedor}>
+       
+         <div className={styles.texto}> 
+           <div className={styles.titulo}>
+             <motion.h3
+                          ref={nombreRef}
+                          initial="hidden"
+                          animate={nombreEnVista ? "visible" : "hidden"}
+                          variants={underlineVariants}
+                          className={styles.underlineEffect}
+                        >
+                          Acuerdos
+                        </motion.h3>
+                        <h4>
+                          Para asegurar una experiencia terapéutica óptima, es importante establecer algunos acuerdos claro
          
-                      </h3>
-       </div>
+                          </h4>
+           </div>
+         
+       
       <div className={styles.container}>
      
         <div className={styles.tabButtons}>
@@ -103,6 +107,7 @@ const Terminos = () => {
           Al agendar una sesión, confirmas que has leído, comprendido y aceptado estos términos y condiciones en su totalidad.
         </p>
       </div>
+    </div>
     </div>
     
   );

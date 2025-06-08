@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600&family=Nunito:wght@400&display=swap');
 
 .seccion {
-  background-color: #FBF8EF;
+  background-color: #ffffff;
 }
 
 .contenedor {
@@ -11,6 +11,7 @@
   justify-content: center;
   max-width: 900px;
   margin: 0 auto;
+  position: relative;
 }
 
 .banner {
@@ -70,8 +71,17 @@
 }
 
 .titulo h3 {
-    margin: 0 0 1%;
+  margin: 0 0 1%;
  
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-family: 'EB Garamond', serif;
+  font-weight: 600;
+  color: #000000;
+  text-align: center;
+}
+h4 {
+  margin: 1%;
+  margin-top: 4%;
   font-size: clamp(1.5rem, 3vw, 2rem);
   font-family: 'EB Garamond', serif;
   font-weight: 600;
@@ -83,6 +93,7 @@
 
 .texto {
   padding: 5%;
+  padding-top: 2.5%;
   font-size: clamp(1rem, 3vw, 2rem);
   font-family: 'Nunito';
   font-weight: 400;
@@ -123,7 +134,7 @@
 .verticalLineLeft,
 .verticalLineRight {
   position: absolute;
-  width: 1px; /* puedes ajustar a 0.5px si quieres más delgado */
+  width: 2px; /* puedes ajustar a 0.5px si quieres más delgado */
   background-color: #8D2C24;
   top: 0;
   height: 0;
@@ -142,7 +153,7 @@
 .bannerLineLeft,
 .bannerLineRight {
   position: absolute;
-  width: 1px;
+  width: 2px;
   background-color: #8D2C24;
   top: 0;
   height: 0;
@@ -195,7 +206,7 @@
   }
 
   .titulo h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
 
@@ -209,12 +220,9 @@
     height: 175px;
   }
 
-  .titulo {
-    margin-top: 15%;
-  }
 
   .titulo h3 {
-    font-size: 1.25rem;
+    font-size: 2rem;
   }
 }
 
@@ -229,6 +237,17 @@
   }
 
   .texto {
-    padding: 5%;
+    padding: 4%;
+    
+  }
+
+  .titulo h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+      margin: 1%;
+  margin-top: 6.5%;
+  font-size: clamp(1.25rem, 3vw, 2rem);
+
   }
 }

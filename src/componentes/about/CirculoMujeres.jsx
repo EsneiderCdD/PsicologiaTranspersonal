@@ -79,10 +79,10 @@ export default function CirculoMujeres() {
             >
               Circulo de Mujeres
             </motion.h3>
-            <h3>
+            <h4>
               Del uno al nosotros: tejemos en círculo la piel viva de un sueño que quiso volverse abrazo.
   
-              </h3>
+              </h4>
 </div>       
             {[
               "Este espacio nació de forma orgánica, como un susurro del corazón. Al principio fue una simple invitación a compartir entre amigas, y con el tiempo, se fue tejiendo algo más profundo. Lo que comenzó como un encuentro casual se transformó en un lugar sagrado, donde las mujeres pueden ser, sentir y expresarse sin miedo ni juicio.",
@@ -95,13 +95,13 @@ export default function CirculoMujeres() {
           </motion.div>
 
           <div className={estilos.actividades}>
-            <motion.h4
+            <motion.h5
               initial={{ opacity: 0, y: 20 }}
               animate={estaEnVista ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8 }}
             >
               En los círculos de mujeres vivimos:
-            </motion.h4>
+            </motion.h5>
 
             <div className={estilos.tarjetas}>
               {[ 

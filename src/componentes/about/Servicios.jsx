@@ -37,6 +37,8 @@ export default function Servicios() {
        
 
         <div className={estilos.contenedor}>
+          <div className={estilos.bannerLineLeft}></div>
+            <div className={estilos.bannerLineRight}></div>
           <motion.div
             className={estilos.banner}
             ref={imagenRef}  // Asigno el ref a este div que contiene la imagen
@@ -45,8 +47,7 @@ export default function Servicios() {
             transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
           >
             
-            <div className={estilos.bannerLineLeft}></div>
-            <div className={estilos.bannerLineRight}></div>
+            
             <img src={Ps} alt="banner" />
 
           </motion.div>
@@ -77,7 +78,7 @@ export default function Servicios() {
             >
               @psicotranspersonal
             </motion.h3>
-            <h3>La semilla que floreció en comunidad</h3>
+            <h4>La semilla que floreció en comunidad</h4>
           </div>
 
             {[
