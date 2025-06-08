@@ -4,8 +4,12 @@ import ft0 from "../../assets/imagenes/ft0.jpeg";
 import { FaLeaf, FaHeart, FaHandsHelping, FaStar } from 'react-icons/fa';
 import Encabezado from "../global/Encabezado";
 import { motion, useInView } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 export default function CirculoMujeres() {
+
+  const navigate = useNavigate();
+
   const textoVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.9, ease: "easeOut" } }
@@ -129,21 +133,31 @@ export default function CirculoMujeres() {
           </div>
 
          <div className={estilos.botonesContenedor}>
-          <motion.button
+         <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
             className={estilos.botonReservar}
+            onClick={() => {
+              window.open("https://wa.me/+573052298710", "_blank");
+            }}
           >
             Reserva tu espacio ✨
           </motion.button>
 
-          <motion.button
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.97 }}
-            className={estilos.botonSecundario}
-          >
-            Ver imágenes
-          </motion.button>
+
+         <motion.button
+  whileHover={{ scale: 1.03 }}
+  whileTap={{ scale: 0.97 }}
+  className={estilos.botonSecundario}
+  onClick={() => {
+  navigate("/", { state: { scrollTo: "galeria" } });
+}}
+
+>
+  Ver imágenes
+</motion.button>
+
+
         </div>
 
 

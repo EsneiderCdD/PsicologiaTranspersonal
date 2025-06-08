@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import styles from '../global/Encabezado.module.css'; // Reutilizamos el CSS
 
-const SeccionEncabezado = ({ titulo , destacado = "Palabra", descripcion = "Texto descriptivo aquí."  }) => {
+const SeccionEncabezado = ({ titulo , destacado = "Palabra", descripcion = "Texto descriptivo aquí.", fondo= {}, margen = {}  }) => {
   const tituloRef = useRef(null);
   const descripcionRef = useRef(null);
 
@@ -18,7 +18,7 @@ const SeccionEncabezado = ({ titulo , destacado = "Palabra", descripcion = "Text
   };
 
   return (
-    <div className={styles.servicios}>
+    <div className={styles.servicios} style={fondo}>
       <h2 className={styles.tituloSeccion}>
         {titulo}{" "}
         <motion.span
@@ -33,7 +33,7 @@ const SeccionEncabezado = ({ titulo , destacado = "Palabra", descripcion = "Text
 
       <motion.p
         ref={descripcionRef}
-        className={styles.descripcion}
+        className={styles.descripcion} style={margen}
         initial={{ opacity: 0 }}
         animate={
           descripcionEnVista

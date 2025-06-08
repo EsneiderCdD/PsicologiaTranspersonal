@@ -4,7 +4,7 @@ import styles from "./ScrollSteps.module.css";
 import Encabezado from "../global/Encabezado";
 import gl from "../../assets/imagenes/gl.jpg"; // imagen para el círculo izquierdo
 import pc from "../../assets/imagenes/pc.jpg"; // imagen para el círculo derecho
-
+import { useRef } from "react";
 export default function ScrollSteps() {
   const secciones = [
     {
@@ -28,14 +28,35 @@ export default function ScrollSteps() {
         "Si sientes que tu proceso personal va más allá de lo racional y deseas integrar cuerpo, mente y espíritu, la psicología transpersonal puede ofrecerte un espacio de transformación profunda.",
     },
   ];
+ const [nombreRef, nombreEnVista] = useInView({ threshold: 0.5, triggerOnce: true });
+
+    
+    const underlineVariants = {
+    hidden: { backgroundSize: '0% 2px' },
+    visible: {
+      backgroundSize: '100% 2px',
+      transition: { duration: 0.6, ease: 'easeOut' }
+    }
+  };
 
   return (
     <div>
-      <Encabezado
-        titulo="Preguntas"
-        destacado="Importantes"
-        descripcion="Explora las preguntas más frecuentes sobre el proceso terapéutico"
-      />
+      <div className={styles.titulo}>
+        
+                  <motion.h3
+                    ref={nombreRef}
+                    initial="hidden"
+                    animate={nombreEnVista ? "visible" : "hidden"}
+                    variants={underlineVariants}
+                    className={styles.underlineEffect}
+                  >
+                    Preguntas Importantes
+                  </motion.h3>
+                  <h3>
+                    Explora las preguntas más frecuentes sobre el proceso terapéutico
+        
+                    </h3>
+      </div> 
       <div className={styles.container}>
         {secciones.map((item, index) => {
           const [ref, inView] = useInView({ threshold: 0.5, triggerOnce: false });

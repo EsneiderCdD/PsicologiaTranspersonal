@@ -24,7 +24,7 @@
     justify-content: center;
     gap: 1rem;
     margin-bottom: 1.5rem;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
   
   .tabButton {
@@ -42,22 +42,24 @@
   }
   
   .active {
-    background-color: #e9dff9;
-    border-bottom: 2px solid #7d5ba6;
+    background-color: #8d2d2471;
+    border-bottom: 2px solid #000000;
     font-weight: bold;
   }
   
   .contentBox {
-    background-color: #f8f5fd;
+    background-color: #ffffff;
     padding: 1.5rem;
     border-radius: 12px;
     margin-bottom: 2rem;
+    border: #4a4a4a 1px solid;
   }
   
   .sectionTitle {
-    color: #7d5ba6;
+    color: #8D2C24;
     font-size: 1.25rem;
     margin-bottom: 1rem;
+    
   }
   
   .list {

@@ -1,11 +1,17 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react"; // agrega useState
+import Modal from "../ocupacion/Modal"; // ajusta la ruta si es diferente
+
 import estilos from "./Servicios.module.css";
 
 import Ps from "../../assets/imagenes/Ps.jpeg";
 
 import { motion, useInView } from "framer-motion";
 
+
 export default function Servicios() {
+
+  const [modalAbierto, setModalAbierto] = useState(false);
+
   const textoRef = useRef(null);
   const textoEnVista = useInView(textoRef, { once: true, margin: "0px 0px -100px 0px" });
 
@@ -84,17 +90,30 @@ export default function Servicios() {
                 {text}
               </motion.p>
             ))}
+
+
+            
                     <motion.button
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.97 }}
-                      className={estilos.botonReservar}
-                    >
-                      Reserva tu espacio ✨
-                    </motion.button>
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.97 }}
+          className={estilos.botonReservar}
+          onClick={() => setModalAbierto(true)} // abre el modal
+        >
+          Reserva tu espacio ✨
+        </motion.button>
+
 
           </motion.div>
           
         </div>
+
+        <Modal
+  isOpen={modalAbierto}
+  onClose={() => setModalAbierto(false)}
+  showTerms={true} // puedes ponerlo en false si no quieres términos
+  requireTermsAcceptance={true}
+/>
+
 
       </section>
     </div>

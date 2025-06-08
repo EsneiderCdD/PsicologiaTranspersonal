@@ -2,6 +2,8 @@ import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 import { motion, useInView } from 'framer-motion';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -24,9 +26,24 @@ import ft7 from '../../assets/imagenes/ft7.jpeg';
 const images = [ft0, ft3, ft5, ft1, ft7, ft4, ft2, ft6];
 
 const Slider2 = () => {
+
+  const location = useLocation();
+
+useEffect(() => {
+  if (location.state?.scrollTo === "galeria") {
+    const el = document.getElementById("galeria");
+    if (el) {
+      setTimeout(() => {
+        el.scrollIntoView({ behavior: "smooth" });
+      }, 300); // espera a que todo se monte
+    }
+  }
+}, [location]);
+
   const tituloRef = useRef(null);
   const parrafoRef = useRef(null);
   const [imagenAmpliada, setImagenAmpliada] = useState(null);
+  
 
   const tituloEnVista = useInView(tituloRef, { once: false, margin: "-100px" });
   const parrafoEnVista = useInView(parrafoRef, { once: true, margin: "-100px" });
@@ -45,7 +62,7 @@ const Slider2 = () => {
   return (
     <div>
       {/* Sección: Mis Servicios */}
-      <div className={styles.sliderContainer}>
+      <div id="galeria" className={styles.sliderContainer}>
       <Encabezado
         titulo="Galería de " 
         destacado="Experiencias"

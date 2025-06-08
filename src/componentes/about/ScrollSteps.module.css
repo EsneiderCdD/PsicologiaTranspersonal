@@ -213,6 +213,39 @@
   flex-wrap: wrap;
 }
 
+
+
+
+.underlineEffect {
+  display: inline-block;
+  background-image: linear-gradient(to right, #8D2C24, #8D2C24);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 0% 2px;
+  transition: background-size 0.3s ease;
+}
+
+.titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #FBF8EF;
+
+}
+
+
+
+.titulo h3 {
+  margin: 0 0 1%;
+ 
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-family: 'EB Garamond', serif;
+  font-weight: 600;
+  color: #000000;
+  text-align: center;
+}
+
+
 /* Responsive igual a los otros */
 
 @media (max-width: 800px) {
