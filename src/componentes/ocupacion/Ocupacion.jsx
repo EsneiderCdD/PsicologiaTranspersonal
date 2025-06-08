@@ -88,9 +88,10 @@ const Ocupacion = () => {
             Reservar Sesión
           </button>
 
-          <Link to="/about" >
+          <Link to="/about#servicios">
             <button className={styles.botonPrincipal}>Saber Más</button>
-            </Link>
+          </Link>
+
         </div>
       </div>
     </motion.div>
@@ -124,11 +125,20 @@ const Ocupacion = () => {
           </ul>
         
         <div className={styles.botonesCard}>
-          <button className={styles.botonSecundario}>Ver Próximas Fechas</button>
-          <Link to="/about" >
-            <button className={styles.botonSecundario}>Saber Más</button>
-            </Link>
-        </div>
+  <a 
+    href="https://wa.me/+573052298710" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className={styles.botonSecundario}
+  >
+    Ver Próximas Fechas
+  </a>
+
+  <Link to="/about#circulo">
+    <button className={styles.botonSecundario}>Saber Más</button>
+  </Link>
+</div>
+
       </div>
     </motion.div>
 

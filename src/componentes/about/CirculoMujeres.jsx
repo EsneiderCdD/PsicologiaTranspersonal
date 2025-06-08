@@ -71,6 +71,7 @@ export default function CirculoMujeres() {
             <div className={estilos.titulo}>
   
             <motion.h3
+              id="circulo"
               ref={nombreRef}
               initial="hidden"
               animate={nombreEnVista ? "visible" : "hidden"}

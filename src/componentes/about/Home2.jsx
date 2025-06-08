@@ -77,7 +77,7 @@ useEffect(() => {
 
   return (
     <div>
-      <section className={estilos.seccion}>
+      <section id="home" className={estilos.seccion}>
         <div className={estilos.contenedor}> 
           
           <div className={estilos.banner}>

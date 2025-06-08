@@ -36,7 +36,7 @@ export default function Servicios() {
       <section className={estilos.seccion}>
        
 
-        <div className={estilos.contenedor}>
+        <div  className={estilos.contenedor}>
           <div className={estilos.bannerLineLeft}></div>
             <div className={estilos.bannerLineRight}></div>
           <motion.div
@@ -53,6 +53,7 @@ export default function Servicios() {
           </motion.div>
 
           <motion.div
+            id ="servicios"
             className={estilos.texto}
             ref={textoRef}
             initial="hidden"
