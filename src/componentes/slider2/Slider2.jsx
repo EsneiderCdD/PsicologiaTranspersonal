@@ -67,7 +67,9 @@ const Slider2 = () => {
       {/* Sección: Mis Servicios */}
       <div id="galeria" className={styles.sliderContainer}>
       <Encabezado
-        titulo="Galería de " 
+
+        margen={{marginTop:"5%"}}
+        ajuste={{marginTop:"0%"}}
         destacado="Experiencias"
         descripcion=" Un recorrido visual por los momentos más significativos de nuestras sesiones grupales: historias de conexión y descubrimiento."
       />
