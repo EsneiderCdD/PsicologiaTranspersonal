@@ -94,6 +94,7 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  position: relative;
 }
 
 .parallax {
@@ -187,6 +188,35 @@
   font-weight: 600;
   color: #000000;
   text-align: center;
+}
+
+.verticalLineLeft,
+.verticalLineRight {
+  position: absolute;
+  width: 1px;
+  background-color: #8D2C24;
+  top: 0;
+  height: 0;
+  z-index: 2;
+  animation: expandLine 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.verticalLineLeft {
+  left: 0;
+}
+
+.verticalLineRight {
+  right: 0;
+}
+
+@keyframes expandLine {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
 }
 
 

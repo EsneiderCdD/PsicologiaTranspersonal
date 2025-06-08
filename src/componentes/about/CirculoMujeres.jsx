@@ -49,7 +49,24 @@ export default function CirculoMujeres() {
           <div className={estilos.parallax}>
             <div className={estilos.parallaxImagen}></div>
           </div>
-<div className={estilos.titulo}>
+     
+
+          <motion.div
+            className={estilos.texto}
+            ref={animacionRef}
+            initial="hidden"
+            animate={estaEnVista ? "visible" : "hidden"}
+            variants={{
+              visible: {
+                transition: {
+                  staggerChildren: 0.4
+                }
+              }
+            }}
+          >
+            <div className={estilos.verticalLineLeft}></div>
+            <div className={estilos.verticalLineRight}></div>
+            <div className={estilos.titulo}>
   
             <motion.h3
               ref={nombreRef}
@@ -65,20 +82,6 @@ export default function CirculoMujeres() {
   
               </h3>
 </div>       
-
-          <motion.div
-            className={estilos.texto}
-            ref={animacionRef}
-            initial="hidden"
-            animate={estaEnVista ? "visible" : "hidden"}
-            variants={{
-              visible: {
-                transition: {
-                  staggerChildren: 0.4
-                }
-              }
-            }}
-          >
             {[
               "Este espacio nació de forma orgánica, como un susurro del corazón. Al principio fue una simple invitación a compartir entre amigas, y con el tiempo, se fue tejiendo algo más profundo. Lo que comenzó como un encuentro casual se transformó en un lugar sagrado, donde las mujeres pueden ser, sentir y expresarse sin miedo ni juicio.",
               "El círculo es un reflejo de lo que anhelo ver más en el mundo: espacios seguros, libres, humanos. Ahí se comparten emociones, pensamientos, silencios y memorias. Es un espacio de entrega, de aprendizaje y de liberación, donde cada mujer suelta lo que ya no le pertenece y recibe aquello que nutre su camino."

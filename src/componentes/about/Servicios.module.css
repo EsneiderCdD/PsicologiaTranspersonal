@@ -90,6 +90,7 @@
   text-align: justify;
   display: flex;
   flex-direction: column;
+  position: relative; /* 🔥 ESTO es lo que falta */
 }
 .botonReservar {
   background: #6d8c64d5;
@@ -119,7 +120,34 @@
   background-size: 0% 2px;
   transition: background-size 0.3s ease;
 }
+.verticalLineLeft,
+.verticalLineRight {
+  position: absolute;
+  width: 1px; /* puedes ajustar a 0.5px si quieres más delgado */
+  background-color: #8D2C24;
+  top: 0;
+  height: 0;
+  z-index: 1;
+  animation: expandLine 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
 
+.verticalLineLeft {
+  left: 0;
+}
+
+.verticalLineRight {
+  right: 0;
+}
+
+@keyframes expandLine {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
 
 @media (max-width: 450px) {
   .botonReservar {

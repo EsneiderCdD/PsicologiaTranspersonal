@@ -92,6 +92,18 @@ useEffect(() => {
           </div>
         
           <div className={estilos.texto}>
+          <motion.div
+    className={estilos.verticalLineLeft}
+    initial={{ height: 0 }}
+    animate={textoEnVista ? { height: "100%" } : {}}
+    transition={{ duration: 1.2, ease: "easeOut" }}
+  />
+  <motion.div
+    className={estilos.verticalLineRight}
+    initial={{ height: 0 }}
+    animate={textoEnVista ? { height: "100%" } : {}}
+    transition={{ duration: 1.2, ease: "easeOut" }}
+  />
 
             <div className={estilos.titulo}>
 

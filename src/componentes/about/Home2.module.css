@@ -105,6 +105,39 @@
 }
 
 
+.verticalLineLeft,
+.verticalLineRight {
+  position: absolute;
+  width: 1.1px;
+  background-color: #8D2C24; /* mismo vinotinto que el subrayado */
+  top: 0;
+  height: 0;
+  z-index: 1;
+}
+
+.verticalLineLeft {
+  left: 0;
+}
+
+.verticalLineRight {
+  right: 0;
+}
+
+/* Necesitas asegurarte de que el contenedor `.texto` tenga posición relativa para posicionar correctamente las líneas */
+.texto {
+  position: relative;
+  padding: 5%;
+  font-size: clamp(1rem, 3vw, 2rem);
+  font-family: 'Nunito';
+  font-weight: 400;
+  color: #000000;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
 
 @media (max-width: 900px) {
  

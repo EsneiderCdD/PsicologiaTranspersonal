@@ -46,18 +46,6 @@ export default function Servicios() {
           >
             <img src={Ps} alt="benner" />
           </motion.div>
-          <div className={estilos.titulo}>
-             <motion.h3
-              ref={nombreRef}
-              initial="hidden"
-              animate={nombreEnVista ? 'visible' : 'hidden'}
-              variants={underlineVariants}
-              className={estilos.underlineEffect}
-            >
-              @psicotranspersonal
-            </motion.h3>
-            <h3>La semilla que floreció en comunidad</h3>
-          </div>
 
           <motion.div
             className={estilos.texto}
@@ -73,6 +61,21 @@ export default function Servicios() {
               },
             }}
           >
+            <div className={estilos.verticalLineLeft}></div>
+            <div className={estilos.verticalLineRight}></div>
+            <div className={estilos.titulo}>
+             <motion.h3
+              ref={nombreRef}
+              initial="hidden"
+              animate={nombreEnVista ? 'visible' : 'hidden'}
+              variants={underlineVariants}
+              className={estilos.underlineEffect}
+            >
+              @psicotranspersonal
+            </motion.h3>
+            <h3>La semilla que floreció en comunidad</h3>
+          </div>
+
             {[
               "Psicotranspersonal nace de mi pasión por la profundidad, por el misterio, por los escritos que nutren la visión y la mirada, por mi deseo de compartir lo que habita dentro de mi corazón, se gesta hace 6 años en un anhelo de darle voz a procesos y vivencias que giran en torno a la sanación, la transformación humana y la evolución del ser.",
               "Nace y se desarrolla desde la coherencia interna, desde el deseo genuino de acompañar a otros en su despertar, en su transformación, en su reconexión con su verdad más esencial.",
