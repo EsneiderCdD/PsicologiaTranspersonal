@@ -148,7 +148,7 @@
   align-items: center;
   gap: 1rem;
   margin-top: 3%;
-  margin-bottom: 3.25%;
+  margin-bottom: 4%;
   flex-wrap: wrap;
 }
 .botonSecundario {
@@ -257,6 +257,17 @@ h5 {
 
 
 @media (max-width: 800px) {
+  
+.parallaxImagen {
+  background-image: url("../../assets/imagenes/ft0.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain; /* CAMBIO CLAVE */
+  width: 100%;
+   height: auto; /* 🔑 Esta línea permite que la imagen se ajuste sin dejar márgenes */
+    aspect-ratio: 3 / 2; /* Opcional: para mantener una proporción visible y controlada */
+  
+}
   .tarjetas {
     justify-content: center;
   }
@@ -283,8 +294,18 @@ h5 {
   .tarjeta {
     width: 90%;
   }
+  .botonesContenedor
+  {
+    margin-bottom: 5%;
+  }
 }
 @media (max-width: 450px) {
+
+    .botonReservar,
+  .botonSecundario {
+    font-size: 0.95rem;
+    padding: 0.65rem 1.4rem;
+  }
 
   .texto {
     padding: 4%;
@@ -312,6 +333,11 @@ h5 {
 
   }
 
+  .botonesContenedor
+  {
+    margin-bottom: 7%;
+  }
+
 
 
 
@@ -319,6 +345,11 @@ h5 {
 
 
 @media (max-width: 350px) {
+
+   .botonReservar,
+  .botonSecundario {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;}
   .contenido p,
   .tarjeta p,
   .infoCita p {
@@ -327,5 +358,9 @@ h5 {
    .botonReservar {
     font-size: 0.95rem;
     padding: 0.7rem 1.6rem;
+  }
+  .botonesContenedor
+  {
+    margin-bottom: 7%;
   }
 }

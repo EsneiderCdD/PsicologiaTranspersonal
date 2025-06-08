@@ -164,8 +164,6 @@ export default function CirculoMujeres() {
 >
   Ver imágenes
 </motion.button>
-
-
         </div>
 
 

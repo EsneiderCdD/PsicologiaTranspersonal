@@ -144,7 +144,7 @@
   font-weight: 600;
   color: #000000;
   text-align: center;
-  margin-top: 2.5%;
+  margin-top: 5%;
 }
 h4 {
   margin: 1%;
@@ -245,5 +245,8 @@ h4 {
 
   .footer {
     font-size: 0.75rem;
+  }
+  .titulo h3 {
+    margin-top:10%;
   }
 }

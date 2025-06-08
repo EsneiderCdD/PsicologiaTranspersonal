@@ -113,7 +113,7 @@ h4 {
   border: none;
   border-radius: 2rem;
   cursor: pointer;
-  margin: 2rem auto 0;
+  margin: 0;
   display: block;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   transition: background 0.3s ease;
@@ -196,6 +196,13 @@ h4 {
 
 /* 🌐 Media queries */
 @media (max-width: 768px) {
+
+ 
+  .botonReservar {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+
   .banner {
     height: 500px;
   }
@@ -227,6 +234,14 @@ h4 {
 }
 
 @media (max-width: 480px) {
+   .botonReservar {
+    width: 100%;
+    padding: 14px 0;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+    margin-top: 16px;
+  }
   .banner {
     height: 350px;
   }
