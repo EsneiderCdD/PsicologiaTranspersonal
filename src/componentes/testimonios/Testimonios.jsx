@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import styles from './Testimonios.module.css';
 import Encabezado from '../global/Encabezado';
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
 
 
 
@@ -58,8 +59,13 @@ const Testimonios = () => {
     setModalAbierto(false);
   };
 
+  const containerRef = useRef(null);
+const estaEnVista = useInView(containerRef, { once: true, margin: '-100px' });
+
+
   return (
-    <div className={styles.Container}>
+   <div className={styles.Container} ref={containerRef}>
+
       <Encabezado
       
         destacado="Mensajes"
@@ -68,16 +74,17 @@ const Testimonios = () => {
        />  
       <div className={styles.testimoniosLista}>
         {sobresData.map((sobre, index) => (
-  <motion.div
-    key={sobre.id}
-    className={`${styles.sobreCard} ${abiertoId === sobre.id ? styles.abierto : ''}`}
-    onClick={() => abrirSobre(sobre.id)}
-    variants={cartaAnimacion}
-    initial="hidden"
-    animate="visible"
-    whileHover={{ scale: 1.05 }}
-    transition={{ delay: index * 0.05 }} // entrada en cascada opcional
-  >
+<motion.div
+  key={sobre.id}
+  className={`${styles.sobreCard} ${abiertoId === sobre.id ? styles.abierto : ''}`}
+  onClick={() => abrirSobre(sobre.id)}
+  variants={cartaAnimacion}
+  initial="hidden"
+  animate={estaEnVista ? "visible" : "hidden"}
+  whileHover={{ scale: 1.05 }}
+  transition={{ delay: index * 0.05 }}
+>
+
     <img
       src={abiertoId === sobre.id ? mensajeAbierto : mensajeCerrado}
       alt="Mensaje"
