@@ -5,7 +5,7 @@ import { FaLeaf, FaHeart, FaHandsHelping, FaStar } from 'react-icons/fa';
 import Encabezado from "../global/Encabezado";
 import { motion, useInView } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-
+import SwiperCard from "./SwiperCard";
 export default function CirculoMujeres() {
 
   const navigate = useNavigate();
@@ -94,6 +94,8 @@ export default function CirculoMujeres() {
               </motion.p>
             ))}
           </motion.div>
+
+          <SwiperCard></SwiperCard>
 
           <div className={estilos.actividades}>
             <motion.h5
