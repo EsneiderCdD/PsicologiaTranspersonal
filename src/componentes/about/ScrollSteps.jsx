@@ -41,7 +41,16 @@ export default function ScrollSteps() {
 
   return (
     <div style={{backgroundColor: "#FBF8EF"}}>
+        <motion.div
+    className={styles.borderLine}
+    initial={{ width: 0 }}
+    animate={{ width: "100%" }}
+    transition={{ duration: 1.2, ease: "easeOut" }}
+  />
+
       <div className={styles.contenedor}>
+
+        
         <div className={styles.texto}>
           <div className={styles.titulo}>
       
@@ -91,6 +100,14 @@ export default function ScrollSteps() {
           })}
         </div>
       </div>
-    </div>
+        <motion.div
+    className={styles.borderLine}
+    initial={{ width: 0 }}
+    animate={{ width: "100%" }}
+    transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
+  />
+</div>
+
+   
   );
 }
