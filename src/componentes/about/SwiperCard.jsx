@@ -3,10 +3,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCards } from "swiper/modules";
 
 // Imágenes locales
-import Post1 from "../../assets/imagenes/Post1.png";
-import Post2 from "../../assets/imagenes/Post2.png";
-import Post3 from "../../assets/imagenes/Post3.png";
-import Post4 from "../../assets/imagenes/Post4.png";
+
+import c1 from "../../assets/imagenes/c1.jpeg";
+import c2 from "../../assets/imagenes/c2.jpeg";
+import c3 from "../../assets/imagenes/c3.jpeg";
+
+import c5 from "../../assets/imagenes/c5.jpeg";
+import c6 from "../../assets/imagenes/c6.jpeg";
+import c7 from "../../assets/imagenes/c7.jpeg";
 
 // Estilos y Swiper CSS
 import "swiper/css";
@@ -17,7 +21,7 @@ import styles from "./SwiperCard.module.css";
 const NEXT_EVENT_DATE = "2025-07-01T00:00:00"; // Formato ISO (cámbialo o pon null)
 
 export default function SwiperCards() {
-  const images = [Post1, Post2, Post3, Post4];
+  const images = [c1, c2, c3, c5, c6, c7];
 
   const [timeLeft, setTimeLeft] = useState(null);
 
