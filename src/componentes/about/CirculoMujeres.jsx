@@ -95,7 +95,6 @@ export default function CirculoMujeres() {
             ))}
           </motion.div>
 
-          <SwiperCard></SwiperCard>
 
           <div className={estilos.actividades}>
             <motion.h5
