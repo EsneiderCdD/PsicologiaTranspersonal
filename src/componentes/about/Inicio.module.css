@@ -209,7 +209,9 @@
   .item {
     font-size: 0.95rem;
   }
-  @media (max-width: 400px) {
+  
+}
+@media (max-width: 400px) {
     .imagen img {
       width: 145px;
       height: 145px;
@@ -217,5 +219,5 @@
     .titulo {
       margin-top: 20%;
     }
+   
   }
-}
