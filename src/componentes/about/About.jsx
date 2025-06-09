@@ -1,12 +1,13 @@
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-import Home2 from "./Home2";
+
 import Footer from "../footer/Footer";
 import Terminos from "../terminos/Terminos";
 import ScrollSteps from "./ScrollSteps";
 import Servicios from "./Servicios";
 import CirculoMujeres from "./CirculoMujeres";
+import Inicio from "./Inicio";
 
 const About = () => {
   const location = useLocation();
@@ -26,7 +27,7 @@ const About = () => {
 
 return (
   <div>
-    <Home2 />
+    <Inicio />
     <Servicios />
     <CirculoMujeres />
     <ScrollSteps />
