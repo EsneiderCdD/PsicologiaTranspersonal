@@ -3,7 +3,6 @@ import styles from './Terminos.module.css';
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-import Encabezado from '../global/Encabezado'; // Asegúrate de que la ruta sea correcta
 
 
 const Terminos = () => {

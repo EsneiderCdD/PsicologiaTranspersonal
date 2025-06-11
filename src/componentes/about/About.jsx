@@ -21,7 +21,7 @@ const About = () => {
         if (element) {
           element.scrollIntoView({ behavior: "smooth" });
         }
-      }, 300); // Puedes ajustar el tiempo si es necesario
+      }, 300); // ajustar el tiempo si es necesario
     }
   }, [location]);
 
@@ -32,10 +32,6 @@ return (
     <CirculoMujeres />
     <ScrollSteps />
     <Terminos />
- 
-
-
-
     <Footer />
   </div>
 );
