@@ -131,7 +131,7 @@ const Ocupacion = () => {
     rel="noopener noreferrer"
     className={styles.botonSecundario}
   >
-    Ver Próximas Fechas
+    Reservar un cupo
   </a>
 
   <Link to="/about#circulo">

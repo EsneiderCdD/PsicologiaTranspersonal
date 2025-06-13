@@ -43,7 +43,7 @@
 
 .tarjetas {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   gap: 1rem;
   margin: 2rem 0;
 }
@@ -68,13 +68,18 @@
 .tarjeta p {
   margin-top: 0.25rem;
   font-size: 1rem;
+  text-align: center;
 }
+
 
 .infoCita {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   gap: 1rem;
+  top: -1rem;
+  position: relative;
+  
 }
 
 .infoCita p {
@@ -250,6 +255,12 @@ h5 {
 
 }
 
+p {
+  margin: 0;
+}
+.infoCita .tarjeta p {
+  margin: 0;
+}
 
 
 

@@ -18,7 +18,7 @@ import "swiper/css/effect-cards";
 import styles from "./SwiperCard.module.css";
 
 // Fecha del próximo evento (puedes cambiar o dejar como null si no hay evento)
-const NEXT_EVENT_DATE = "2025-07-01T00:00:00"; // Formato ISO (cámbialo o pon null)
+const NEXT_EVENT_DATE = null; //"2025-07-01T00:00:00" Formato ISO (cámbialo o pon null)
 
 export default function SwiperCards() {
   const images = [c1, c2, c3, c5, c6, c7];

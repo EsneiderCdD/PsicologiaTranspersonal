@@ -9,9 +9,10 @@ import About from './componentes/about/About';
 import Ocupacion from './componentes/ocupacion/Ocupacion';
 import './App.css';
 import Testimonios from './componentes/testimonios/Testimonios';
-import Terminos from './componentes/terminos/Terminos';
+
 import Slider2 from './componentes/slider2/Slider2';
 import Post from './componentes/Post/Pago';
+
 
 function AppRoutes() {
   const location = useLocation();
@@ -32,7 +33,7 @@ function AppRoutes() {
         </>
       } />
       <Route path="/about" element={<About />} />
-      <Route path="/tyc" element={<Terminos />} />
+      {/* <Route path="/tyc" element={<Terminos />} /> */}
       <Route path="/post" element={<Post />} />
     </Routes>
   );
