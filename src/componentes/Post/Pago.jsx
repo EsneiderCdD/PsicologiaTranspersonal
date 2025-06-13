@@ -29,8 +29,11 @@ return (
         </p>
 
         <div className={styles.buttons}>
+       
           <a href="/" className={`${styles.button} ${styles.secondary}`}>Volver al inicio</a>
-          <a href="/contacto" className={`${styles.button} ${styles.primary}`}>Contactarme</a>
+          <a  href="https://wa.me/+573052298710" 
+              target="_blank" 
+              rel="noopener noreferrer" className={`${styles.button} ${styles.primary}`}>Contactarme</a>
         </div>
       </div>
     </div>
