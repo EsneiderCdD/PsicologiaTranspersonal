@@ -1,4 +1,4 @@
-// PricingModal.jsx
+// !!! CODIGO OBSOLETO (?) !!! 
 import styles from './PricingModal.module.css';
 import React, { useState } from 'react';
 

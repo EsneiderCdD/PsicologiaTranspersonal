@@ -8,11 +8,7 @@ import {
 } from 'react-icons/fa';
 import React, { useState,useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { style } from 'framer-motion/client';
-
 import Modal from '../ocupacion/Modal'; // Importa el componente Modal
-
-import PricingCard from '../Price/PricingCard';
 import Encabezado from '../global/Encabezado'; // Importa el componente Encabezado
 
 const Ocupacion = () => {
@@ -25,17 +21,17 @@ const Ocupacion = () => {
 
   
 
-  const tituloEnVista = useInView(tituloRef, { once: false, margin: "-100px" });
-  const parrafoEnVista = useInView(parrafoRef, { once: true, margin: "-100px" });
+  // const tituloEnVista = useInView(tituloRef, { once: false, margin: "-100px" });
+  // const parrafoEnVista = useInView(parrafoRef, { once: true, margin: "-100px" });
 
 
-  const variantesServicios = {
-    oculto: { color: "#000000" },
-    visible: {
-      color: "#8D2C24",
-      transition: { duration: 0.5, ease: "easeInOut" }
-    }
-  };
+  // const variantesServicios = {
+  //   oculto: { color: "#000000" },
+  //   visible: {
+  //     color: "#8D2C24",
+  //     transition: { duration: 0.5, ease: "easeInOut" }
+  //   }
+  // };
   const cardPrincipalRef = useRef(null);
   const cardSecundarioRef = useRef(null);
 
