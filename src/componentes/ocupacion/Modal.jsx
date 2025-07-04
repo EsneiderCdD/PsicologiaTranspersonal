@@ -17,7 +17,7 @@ const Modal = ({
 
   const externalLinks = {
     "1 Sesión": "https://biz.payulatam.com/L0f9bc36813670A",
-    "4 Sesiones": "https://biz.payulatam.com/L0f9bc376663FC4",
+    "4 Sesiones": "https://biz.payulatam.com/L0f9bc32484A754",
     "6 Sesiones": "https://biz.payulatam.com/L0f9bc3B6BDDFD6",
   };
 
