@@ -118,7 +118,7 @@ const Modal = ({
               />
               &nbsp; Acepto{" "}
               <a
-                href="http://localhost:5173/about#terminos"
+                href="https://psicologiatranspersonal.vercel.app/about#terminos"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.termsLink}
