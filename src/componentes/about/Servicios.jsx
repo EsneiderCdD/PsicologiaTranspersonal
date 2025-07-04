@@ -93,10 +93,12 @@ export default function Servicios() {
                 variants={{
                   hidden: { opacity: 0, x: 30 },
                   visible: { opacity: 1, x: 0 },
+                  className: estilos.textoAnimado,
+                  
                 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
               >
-                {text}
+                {text} 
               </motion.p>
             ))}
 

@@ -4,15 +4,21 @@
   background-color: #ffffff;
 }
 
-.contenedor {
+.texto {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 900px;
-  margin: 0 auto;
+  gap: 2rem; /* Espacio entre párrafos y botón */
+  padding: 5%;
+  padding-top: 2.5%;
+  font-size: clamp(1rem, 3vw, 2rem);
+  font-family: 'Nunito';
+  font-weight: 400;
+  color: #000000;
+  text-align: justify;
   position: relative;
 }
+
+
 
 .banner {
   width: 100%;
@@ -113,6 +119,7 @@ h4 {
   border: none;
   border-radius: 2rem;
   cursor: pointer;
+  
   margin: 0;
   display: block;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);

@@ -33,7 +33,7 @@ const Terminos = () => {
         'Aceptamos transferencias bancarias, PayPal y tarjetas de crédito/débito.',
         'Los paquetes de sesiones tienen una validez de 3 meses desde la fecha de compra.',
         'Las tarifas se revisan anualmente y pueden estar sujetas a ajustes, los cuales serán notificados con al menos 30 días de anticipación.',
-        'Se emiten facturas electrónicas para todos los servicios prestados.**',
+       
       ],
     },
     Confidencialidad: {
