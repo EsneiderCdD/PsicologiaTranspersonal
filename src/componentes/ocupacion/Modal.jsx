@@ -58,7 +58,7 @@ const Modal = ({
           {[
             {
               title: "1 Sesión",
-              description: "Colaboración puntual e inmediata para conocernos.",
+              description: "Tu primera sesión de terapia para tratar un tema puntual.",
               price: "$40",
               highlight: false,
             },
