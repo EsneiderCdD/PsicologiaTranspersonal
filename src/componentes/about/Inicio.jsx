@@ -207,7 +207,7 @@ useEffect(() => {
                 animate={texto2EnVista ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: 1 }}
               >
-                @Psicotranspersonal es un proyecto profesional, consciente y profundamente comprometido con el bienestar integral del ser humano. Hoy, Psicotranspersonal también es un espacio digital vivo: he cultivado una comunidad que crece día a día, no solo en número, sino en profundidad. Este proceso formativo y vivencial ha fortalecido en mí habilidades esenciales como la escucha activa, la intuición clínica, la comunicación 
+                @Psicotranspersonal es un proyecto profesional, consciente y profundamente comprometido con el bienestar integral del ser humano. Hoy, Psicotranspersonal también es un espacio digital vivo: he cultivado una comunidad que crece día a día, no solo en número, sino en profundidad. 
               </motion.p>
 
               {/* Contador - Segundo bloque de íconos */}
