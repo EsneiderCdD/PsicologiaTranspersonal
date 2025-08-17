@@ -101,7 +101,7 @@ useEffect(() => {
 
     let paso = 0;
     const valorFinalPac = 200;
-    const valorFinalSeg = 195000;
+    const valorFinalSeg = 190000;
     const incrementoPac = valorFinalPac / pasos;
     const incrementoSeg = valorFinalSeg / pasos;
 
