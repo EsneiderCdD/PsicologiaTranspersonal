@@ -7,7 +7,7 @@ import { HiUsers } from "react-icons/hi";
 
 import estilos from "./Inicio.module.css";
 import foto from "../../assets/imagenes/foto.webp";
-import banner from "../../assets/imagenes/banner.jpeg";
+import banner from "../../assets/imagenes/banner.webp";
 
 export default function Inicio() {
   const [experiencia, setExperiencia] = useState(0);
