@@ -100,8 +100,8 @@ export default function CirculoMujeres() {
             </motion.h5>
 
             <div className={estilos.tarjetas}>
-              <div style={{ display: "flex", flexDirection: "column", alignItems: "center",marginBottom:"0.5rem" }}>
-          
+              <div style={{ display: "flex", flexDirection: "column", alignItems: "center", marginBottom: "0.5rem" }}>
+
               </div>
 
               <div style={{ display: "flex", flexDirection: "row" }}>
@@ -150,19 +150,19 @@ export default function CirculoMujeres() {
                 <div className={estilos.tarjeta}>
                   <p><strong>📍 Lugar:</strong> Barrio Mesa, Envigado</p>
                 </div>
-                
-                 <div className={estilos.tarjeta}>
-                   <p><strong>📅 Fecha:</strong> sábados o domingos</p>
-                 </div>
+
+                <div className={estilos.tarjeta}>
+                  <p><strong>📅 Fecha:</strong> sábados o domingos</p>
+                </div>
               </div>
-               <div style={{ display: "flex", justifyContent: "center" }}>
+              <div style={{ display: "flex", justifyContent: "center" }}>
                 <div >
                   <p><strong>❣️ Aporte:</strong> $88.000 COP</p>
                 </div>
-               
+
               </div>
-             
-              
+
+
             </motion.div>
           </div>
 
