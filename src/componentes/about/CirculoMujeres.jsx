@@ -101,16 +101,7 @@ export default function CirculoMujeres() {
 
             <div className={estilos.tarjetas}>
               <div style={{ display: "flex", flexDirection: "column", alignItems: "center",marginBottom:"0.5rem" }}>
-                <motion.div
-                  className={estilos.tarjeta}
-                  custom={0}
-                  initial="hidden"
-                  animate={estaEnVista ? "visible" : "hidden"}
-                  variants={tarjetaVariants}
-                >
-                  <FaHeart size={30} color="#D16BA5" />
-                  <p>Círculo de Palabra</p>
-                </motion.div>
+          
               </div>
 
               <div style={{ display: "flex", flexDirection: "row" }}>
@@ -141,12 +132,11 @@ export default function CirculoMujeres() {
                   animate={estaEnVista ? "visible" : "hidden"}
                   variants={tarjetaVariants}
                 >
-                  <FaStar size={30} color="#FFD166" />
-                  <p>Rituales de Conexión</p>
+                  <FaHeart size={30} color="#D16BA5" />
+                  <p>Círculo de Palabra</p>
                 </motion.div>
               </div>
             </div>
-
             <motion.div
               className={estilos.infoCita}
               initial={{ opacity: 0, y: 30 }}

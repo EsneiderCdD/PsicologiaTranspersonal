@@ -79,7 +79,7 @@ El enfoque transpersonal combina herramientas de la psicología tradicional con 
           </motion.div>
 
           <motion.div
-            id="servicios"
+            
             className={estilos.texto}
             ref={textoRef}
             initial="hidden"
@@ -128,12 +128,14 @@ El enfoque transpersonal combina herramientas de la psicología tradicional con 
             {/* NUEVO BLOQUE */}
             <div className={estilos.nuevoBloque}>
               <motion.h4
+              id="servicios"
                 variants={{
                   hidden: { opacity: 0, y: 20 },
                   visible: { opacity: 1, y: 0 },
                 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className={estilos.subtitulo}
+                
               >
                 Acompañamiento Terapéutico Transpersonal
               </motion.h4>
