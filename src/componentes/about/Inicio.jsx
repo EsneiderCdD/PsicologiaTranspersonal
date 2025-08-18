@@ -6,7 +6,7 @@ import { motion, useInView } from "framer-motion";
 import { HiUsers } from "react-icons/hi";
 
 import estilos from "./Inicio.module.css";
-import Img4 from "../../assets/imagenes/Img4.jpeg";
+import foto from "../../assets/imagenes/foto.webp";
 import banner from "../../assets/imagenes/banner.jpeg";
 
 export default function Inicio() {
@@ -133,7 +133,7 @@ useEffect(() => {
           <div className={estilos.banner}>
             <img src={banner} alt="banner" />
             <div className={estilos.imagen}>
-              <img src={Img4} alt="imagen" />
+              <img src={foto} alt="imagen" />
             </div>
           </div>
 
