@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600&family=Nunito:wght@400&display=swap');
-
+*{
+  border: dotted 1px red;
+}
 .seccion {
   background-color: #FBF8EF;
 }
@@ -78,13 +80,13 @@
 
 
 .item {
-  height: 45%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   font-size: 1.25rem;
-  max-width: 200px;
+ 
   padding: 1rem;
   gap: 0.5rem;
   
@@ -136,6 +138,17 @@
 
 
 
+.iconGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 4 cols en desktop */
+
+  justify-items: center;
+  align-items: stretch;
+  margin-top: 0.5rem;
+}
+
+
+
 
 /* 🌐 Media queries */
 @media (max-width: 768px) {
@@ -160,7 +173,7 @@
   }
 
   .icon {
-    width: 50px;
+    width: 70px;
     height: 50px;
     font-size: 2rem;
   }

@@ -32,14 +32,10 @@ export default function Inicio() {
   const texto1Ref = useRef(null);
   const texto1EnVista = useInView(texto1Ref, { once: true, margin: "0px 0px -100px 0px" });
 
-  const contador1Ref = useRef(null);
-  const contador1EnVista = useInView(contador1Ref, { once: true, margin: "0px 0px -100px 0px" });
 
   const texto2Ref = useRef(null);
   const texto2EnVista = useInView(texto2Ref, { once: true, margin: "0px 0px -100px 0px" });
 
-  const contador2Ref = useRef(null);
-  const contador2EnVista = useInView(contador2Ref, { once: true, margin: "0px 0px -100px 0px" });
 
   const texto3Ref = useRef(null);
   const texto3EnVista = useInView(texto3Ref, { once: true, margin: "0px 0px -100px 0px" });
@@ -59,9 +55,8 @@ export default function Inicio() {
     },
   };
 
- // Primer bloque: experiencia y sesiones
-useEffect(() => {
-  if (contador1EnVista) {
+  useEffect(() => {
+  if (iconosEnVista) {
     const duracionAnimacion = 2000;
     const pasos = 60;
     const intervalo = duracionAnimacion / pasos;
@@ -85,16 +80,16 @@ useEffect(() => {
 
       if (paso >= pasos) {
         clearInterval(intervalId);
-        setExperiencia(valorFinalExp); // asegúrate que llegue exacto
+        setExperiencia(valorFinalExp);
         setSesiones(valorFinalSes);
       }
     }, intervalo);
   }
-}, [contador1EnVista]);
+}, [iconosEnVista]);
 
-// Segundo bloque: personas y seguidores
-useEffect(() => {
-  if (contador2EnVista) {
+
+  useEffect(() => {
+  if (iconosEnVista) {
     const duracionAnimacion = 2000;
     const pasos = 60;
     const intervalo = duracionAnimacion / pasos;
@@ -118,12 +113,13 @@ useEffect(() => {
 
       if (paso >= pasos) {
         clearInterval(intervalId);
-        setPacientes(valorFinalPac); // asegurar que llega a 200 exacto
-        setSeguidores(valorFinalSeg); // asegurar que llega a 195000
+        setPacientes(valorFinalPac);
+        setSeguidores(valorFinalSeg);
       }
     }, intervalo);
   }
-}, [contador2EnVista]);
+}, [iconosEnVista]);
+
 
 
   return (
@@ -139,17 +135,17 @@ useEffect(() => {
 
           <div className={estilos.texto}>
             <motion.div
-                className={estilos.verticalLineLeft}
-                initial={{ height: 0 }}
-                animate={{ height: "100%" }}
-                transition={{ duration: 1.5, ease: "easeInOut" }}
-                />
-                <motion.div
-                className={estilos.verticalLineRight}
-                initial={{ height: 0 }}
-                animate={{ height: "100%" }}
-                transition={{ duration: 1.5, ease: "easeInOut" }}
-                />
+              className={estilos.verticalLineLeft}
+              initial={{ height: 0 }}
+              animate={{ height: "100%" }}
+              transition={{ duration: 1.5, ease: "easeInOut" }}
+            />
+            <motion.div
+              className={estilos.verticalLineRight}
+              initial={{ height: 0 }}
+              animate={{ height: "100%" }}
+              transition={{ duration: 1.5, ease: "easeInOut" }}
+            />
 
             <div className={estilos.titulo}>
               <motion.h3
@@ -163,6 +159,7 @@ useEffect(() => {
               </motion.h3>
 
               <h3 ref={profesionRef}>Terapeuta Transpersonal</h3>
+              <br />
             </div>
 
             <div>
@@ -177,28 +174,8 @@ useEffect(() => {
                 Mi enfoque está basado en la psicología transpersonal, un modelo terapéutico que integra la mente, el cuerpo
                 y la dimensión espiritual para generar procesos de transformación profunda.
               </motion.p>
+              <br />
 
-              {/* Contador - Primer bloque de íconos */}
-              <motion.div
-                ref={contador1Ref}
-                initial={{ opacity: 0, y: 20 }}
-                animate={contador1EnVista ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.8, delay: 0.3 }}
-                style={{ display: "flex", flexDirection: "row", justifyContent: "center" }}
-              >
-                <div className={estilos.item}>
-                  <div className={estilos.icon} style={{ backgroundColor: '#FFD6D6' }}>
-                    <FiCalendar />
-                  </div>
-                  <span>+{experiencia} Años de experiencia </span>
-                </div>
-                <div className={estilos.item}>
-                  <div className={estilos.icon} style={{ backgroundColor: '#C6F1D6' }}>
-                    <FiMessageCircle />
-                  </div>
-                  <span>+{sesiones} Sesiones realizadas</span>
-                </div>
-              </motion.div>
 
               {/* Párrafo 2 */}
               <motion.p
@@ -207,84 +184,89 @@ useEffect(() => {
                 animate={texto2EnVista ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.3 }}
               >
-                @Psicotranspersonal es un proyecto profesional, consciente y profundamente comprometido con el bienestar integral del ser humano. Hoy, Psicotranspersonal también es un espacio digital vivo: he cultivado una comunidad que crece día a día, no solo en número, sino en profundidad. 
+                @Psicotranspersonal es un proyecto profesional, consciente y profundamente comprometido con el bienestar integral del ser humano. Hoy, Psicotranspersonal también es un espacio digital vivo: he cultivado una comunidad que crece día a día, no solo en número, sino en profundidad.
               </motion.p>
-
-              {/* Contador - Segundo bloque de íconos */}
-              <motion.div
-                ref={contador2Ref}
-                initial={{ opacity: 0, y: 20 }}
-                animate={contador2EnVista ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.8, delay: 0.3 }}
-                style={{ display: "flex", flexDirection: "row", justifyContent: "center" }}
-              >
-                <div className={estilos.item}>
-                  <div className={estilos.icon} style={{ backgroundColor: '#FFF5BA' }}>
-                    <FiUsers />
-                  </div>
-                  <span>+{pacientes} Personas atendidas </span>
-                </div>
-                <div className={estilos.item}>
-                  <div className={estilos.icon} style={{ backgroundColor: '#D0E8F2' }}>
-                    <FaInstagram />
-                  </div>
-                <span>
-                    +{seguidores >= 1000 ? `${Math.round(seguidores / 1000)}K` : seguidores} Seguidores en Instagram
-                    </span>
-
-                </div>
-              </motion.div>
+              <br />
 
               {/* Párrafo 3 */}
               <motion.p
                 ref={texto3Ref}
                 initial={{ opacity: 0, y: 20 }}
                 animate={texto3EnVista ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: 0.3}}
+                transition={{ duration: 0.5, delay: 0.3 }}
               >
                 Además de mi formación en psicología clínica, me he especializado en terapia transpersonal y terapia
                 enfocada a los ciclos y necesidades femeninas, lo que me ha permitido profundizar en los procesos de
                 sanación de la mujer. Este trabajo, especialmente en espacios grupales, ha cultivado en mí habilidades como la comunicación asertiva, la coordinación empática, la gestión de dinámicas colectivas y la capacidad de sostener procesos compartidos con escucha activa y liderazgo sensible.
               </motion.p>
 
-              {/* Tercer bloque de íconos sin contador */}
+              <br />
+
+
+              {/* BLOQUE UNIFICADO: contadores + íconos */}
               <motion.div
                 ref={iconosRef}
                 initial={{ opacity: 0, y: 20 }}
                 animate={iconosEnVista ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.8, delay: 0.3}}
-                style={{ display: "flex", flexDirection: "row", justifyContent: "center" }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className={estilos.iconGrid}
               >
-
-                 
-
-                <div>
-                  <div className={estilos.item}>
-                    <div className={estilos.icon} style={{ backgroundColor: '#F3D1F4' }}>
-                      <GiMoon />
-                    </div>
-                    <span>Certificada en sanación femenina</span>
+                <div className={estilos.item}>
+                  <div className={estilos.icon} style={{ backgroundColor: '#FFD6D6' }}>
+                    <FiCalendar />
                   </div>
-                  <div className={estilos.item}>
-                    <div className={estilos.icon} style={{ backgroundColor: '#E5E0FF' }}>
-                      <FaUserGraduate />
-                    </div>
-                    <span>Profesional en Psicología</span>
-                  </div>
+                  <span>+{experiencia} Años de experiencia </span>
                 </div>
-                <div >
-                  <div className={estilos.item}>
-                    <div className={estilos.icon} style={{ backgroundColor: '#C5FAD5' }}>
-                      <GiLotus />
-                    </div>
-                    <span>Diplomada en Psicología Transpersonal</span>
+
+                <div className={estilos.item}>
+                  <div className={estilos.icon} style={{ backgroundColor: '#C6F1D6' }}>
+                    <FiMessageCircle />
                   </div>
-                   <div className={estilos.item}>
-                      <div className={estilos.icon} style={{ backgroundColor: '#FFE4D6' }}>
-                      <HiUsers />
-                      </div>
-                      <span>Guía en círculos de mujeres</span>
+                  <span>+{sesiones} Sesiones realizadas</span>
+                </div>
+
+                <div className={estilos.item}>
+                  <div className={estilos.icon} style={{ backgroundColor: '#FFF5BA' }}>
+                    <FiUsers />
                   </div>
+                  <span>+{pacientes} Personas atendidas </span>
+                </div>
+
+                <div className={estilos.item}>
+                  <div className={estilos.icon} style={{ backgroundColor: '#D0E8F2' }}>
+                    <FaInstagram />
+                  </div>
+                  <span>
+                    +{seguidores >= 1000 ? `${Math.round(seguidores / 1000)}K` : seguidores} Seguidores en Instagram
+                  </span>
+                </div>
+
+                <div className={estilos.item}>
+                  <div className={estilos.icon} style={{ backgroundColor: '#F3D1F4' }}>
+                    <GiMoon />
+                  </div>
+                  <span>Certificada en sanación femenina</span>
+                </div>
+
+                <div className={estilos.item}>
+                  <div className={estilos.icon} style={{ backgroundColor: '#E5E0FF' }}>
+                    <FaUserGraduate />
+                  </div>
+                  <span>Profesional en Psicología</span>
+                </div>
+
+                <div className={estilos.item}>
+                  <div className={estilos.icon} style={{ backgroundColor: '#C5FAD5' }}>
+                    <GiLotus />
+                  </div>
+                  <span>Diplomada en Psicología Transpersonal</span>
+                </div>
+
+                <div className={estilos.item}>
+                  <div className={estilos.icon} style={{ backgroundColor: '#FFE4D6' }}>
+                    <HiUsers />
+                  </div>
+                  <span>Guía en círculos de mujeres</span>
                 </div>
               </motion.div>
 
