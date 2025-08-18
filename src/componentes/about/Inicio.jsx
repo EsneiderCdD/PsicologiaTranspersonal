@@ -209,64 +209,62 @@ export default function Inicio() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={iconosEnVista ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className={estilos.iconGrid}
+                className={estilos.iconContainer}
               >
-                <div className={estilos.item}>
-                  <div className={estilos.icon} style={{ backgroundColor: '#FFD6D6' }}>
-                    <FiCalendar />
+                <div className={estilos.iconN}>
+                  <div className={estilos.item}>
+                    <div className={estilos.icon} style={{ backgroundColor: '#FFD6D6' }}>
+                      <FiCalendar />
+                    </div>
+                    <span>+{experiencia} Años de experiencia </span>
                   </div>
-                  <span>+{experiencia} Años de experiencia </span>
+                  <div className={estilos.item}>
+                    <div className={estilos.icon} style={{ backgroundColor: '#C6F1D6' }}>
+                      <FiMessageCircle />
+                    </div>
+                    <span>+{sesiones} Sesiones realizadas</span>
+                  </div>
+                  <div className={estilos.item}>
+                    <div className={estilos.icon} style={{ backgroundColor: '#FFF5BA' }}>
+                      <FiUsers />
+                    </div>
+                    <span>+{pacientes} Personas atendidas </span>
+                  </div>
+                  <div className={estilos.item}>
+                    <div className={estilos.icon} style={{ backgroundColor: '#D0E8F2' }}>
+                      <FaInstagram />
+                    </div>
+                    <span>
+                      +{seguidores >= 1000 ? `${Math.round(seguidores / 1000)}K` : seguidores} Seguidores en Instagram
+                    </span>
+                  </div>
                 </div>
 
-                <div className={estilos.item}>
-                  <div className={estilos.icon} style={{ backgroundColor: '#C6F1D6' }}>
-                    <FiMessageCircle />
+                <div className={estilos.iconC}>
+                  <div className={estilos.item}>
+                    <div className={estilos.icon} style={{ backgroundColor: '#F3D1F4' }}>
+                      <GiMoon />
+                    </div>
+                    <span>Certificada en sanación femenina</span>
                   </div>
-                  <span>+{sesiones} Sesiones realizadas</span>
-                </div>
-
-                <div className={estilos.item}>
-                  <div className={estilos.icon} style={{ backgroundColor: '#FFF5BA' }}>
-                    <FiUsers />
+                  <div className={estilos.item}>
+                    <div className={estilos.icon} style={{ backgroundColor: '#E5E0FF' }}>
+                      <FaUserGraduate />
+                    </div>
+                    <span>Profesional en Psicología</span>
                   </div>
-                  <span>+{pacientes} Personas atendidas </span>
-                </div>
-
-                <div className={estilos.item}>
-                  <div className={estilos.icon} style={{ backgroundColor: '#D0E8F2' }}>
-                    <FaInstagram />
+                  <div className={estilos.item}>
+                    <div className={estilos.icon} style={{ backgroundColor: '#C5FAD5' }}>
+                      <GiLotus />
+                    </div>
+                    <span>Diplomada en Psicología Transpersonal</span>
                   </div>
-                  <span>
-                    +{seguidores >= 1000 ? `${Math.round(seguidores / 1000)}K` : seguidores} Seguidores en Instagram
-                  </span>
-                </div>
-
-                <div className={estilos.item}>
-                  <div className={estilos.icon} style={{ backgroundColor: '#F3D1F4' }}>
-                    <GiMoon />
+                  <div className={estilos.item}>
+                    <div className={estilos.icon} style={{ backgroundColor: '#FFE4D6' }}>
+                      <HiUsers />
+                    </div>
+                    <span>Guía en círculos de mujeres</span>
                   </div>
-                  <span>Certificada en sanación femenina</span>
-                </div>
-
-                <div className={estilos.item}>
-                  <div className={estilos.icon} style={{ backgroundColor: '#E5E0FF' }}>
-                    <FaUserGraduate />
-                  </div>
-                  <span>Profesional en Psicología</span>
-                </div>
-
-                <div className={estilos.item}>
-                  <div className={estilos.icon} style={{ backgroundColor: '#C5FAD5' }}>
-                    <GiLotus />
-                  </div>
-                  <span>Diplomada en Psicología Transpersonal</span>
-                </div>
-
-                <div className={estilos.item}>
-                  <div className={estilos.icon} style={{ backgroundColor: '#FFE4D6' }}>
-                    <HiUsers />
-                  </div>
-                  <span>Guía en círculos de mujeres</span>
                 </div>
               </motion.div>
 
