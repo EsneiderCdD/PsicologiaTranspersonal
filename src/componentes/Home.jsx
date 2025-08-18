@@ -104,7 +104,7 @@ export default function Home() {
             className={estilos.botonSecundario}
             onClick={() => navigate("/about")}
           >
-            Sobre Mí
+            Sobre mí
           </button>
         </motion.div>
       </motion.div>
