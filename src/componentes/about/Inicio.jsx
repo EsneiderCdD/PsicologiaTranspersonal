@@ -171,7 +171,7 @@ useEffect(() => {
                 ref={texto1Ref}
                 initial={{ opacity: 0, y: 20 }}
                 animate={texto1EnVista ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.8, delay: 0.7 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
               >
                 Soy psicóloga con amplia experiencia en salud mental, bienestar emocional y desarrollo del potencial humano.
                 Mi enfoque está basado en la psicología transpersonal, un modelo terapéutico que integra la mente, el cuerpo
@@ -205,7 +205,7 @@ useEffect(() => {
                 ref={texto2Ref}
                 initial={{ opacity: 0, y: 20 }}
                 animate={texto2EnVista ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.8, delay: 1 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
               >
                 @Psicotranspersonal es un proyecto profesional, consciente y profundamente comprometido con el bienestar integral del ser humano. Hoy, Psicotranspersonal también es un espacio digital vivo: he cultivado una comunidad que crece día a día, no solo en número, sino en profundidad. 
               </motion.p>
@@ -240,7 +240,7 @@ useEffect(() => {
                 ref={texto3Ref}
                 initial={{ opacity: 0, y: 20 }}
                 animate={texto3EnVista ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.8, delay: 1.3 }}
+                transition={{ duration: 0.5, delay: 0.3}}
               >
                 Además de mi formación en psicología clínica, me he especializado en terapia transpersonal y terapia
                 enfocada a los ciclos y necesidades femeninas, lo que me ha permitido profundizar en los procesos de
@@ -252,7 +252,7 @@ useEffect(() => {
                 ref={iconosRef}
                 initial={{ opacity: 0, y: 20 }}
                 animate={iconosEnVista ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.8, delay: 0.6 }}
+                transition={{ duration: 0.8, delay: 0.3}}
                 style={{ display: "flex", flexDirection: "row", justifyContent: "center" }}
               >
 
