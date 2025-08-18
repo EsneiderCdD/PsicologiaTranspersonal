@@ -71,9 +71,7 @@ El enfoque transpersonal combina herramientas de la psicología tradicional con 
           <motion.div
             className={estilos.banner}
             ref={imagenRef}
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={imagenEnVista ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
+        
           >
             <img src={Ps} alt="banner" />
           </motion.div>
