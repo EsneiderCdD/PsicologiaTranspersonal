@@ -1,59 +1,85 @@
-import React, { useRef, useState } from "react"; // agrega useState
-import Modal from "../ocupacion/Modal"; // ajusta la ruta si es diferente
+import React, { useRef, useState } from "react";
+import Modal from "../ocupacion/Modal";
 
 import estilos from "./Servicios.module.css";
-
 import Ps from "../../assets/imagenes/Ps.jpeg";
 
 import { motion, useInView } from "framer-motion";
 
-
 export default function Servicios() {
-
   const [modalAbierto, setModalAbierto] = useState(false);
 
   const textoRef = useRef(null);
-  const textoEnVista = useInView(textoRef, { once: true, margin: "0px 0px -100px 0px" });
+  const textoEnVista = useInView(textoRef, {
+    once: true,
+    margin: "0px 0px -100px 0px",
+  });
 
-  // Paso extra: ref para la imagen
   const imagenRef = useRef(null);
-  const imagenEnVista = useInView(imagenRef, { once: true, margin: "0px 0px -100px 0px" });
+  const imagenEnVista = useInView(imagenRef, {
+    once: true,
+    margin: "0px 0px -100px 0px",
+  });
 
   const nombreRef = useRef(null);
   const nombreEnVista = useInView(nombreRef, { once: true });
 
   const underlineVariants = {
-  hidden: { backgroundSize: '0% 2px' },
-  visible: {
-    backgroundSize: '100% 2px',
-    transition: { duration: 0.6, ease: 'easeOut' }
-  }
-};
+    hidden: { backgroundSize: "0% 2px" },
+    visible: {
+      backgroundSize: "100% 2px",
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
 
+  // Texto nuevo con saltos de línea
+  const textoAcomp = `El acompañamiento terapéutico transpersonal es un espacio seguro y profundo para sanar, conocerte y reconectar con tu esencia. A través de esta mirada, no solo atendemos lo que ocurre en tu mente o tus emociones, sino que integramos todas las dimensiones de tu ser: cuerpo, mente, emociones, alma y propósito.
+
+En este proceso, te acompaño a:
+- Explorar las causas profundas de lo que hoy te bloquea o duele.
+- Liberar creencias y patrones heredados que ya no sirven a tu vida.
+- Integrar experiencias pasadas para vivir en mayor paz y plenitud.
+- Despertar tu conexión interior y tu confianza en ti misma.
+
+El enfoque transpersonal combina herramientas de la psicología tradicional con técnicas de expansión de consciencia, como visualizaciones, meditación guiada, trabajo con la respiración, exploración de la niña interior, trabajo con símbolos y arquetipos, metáforas y analogías, y dinámicas creativas que facilitan la transformación.
+
+🌿 Temas que puedes trabajar en este espacio:
+- Heridas de la infancia y su impacto en tu vida actual.
+- Autoestima y autoconfianza para elegirte y priorizarte.
+- Sanar la niña interior y reconectar con tu espontaneidad y alegría.
+- Dependencia emocional y vínculos poco saludables.
+- Manejo de la ansiedad y estrés desde la conexión interior.
+- Pérdida, duelos y cierres de ciclo.
+- Conexión con tu propósito y sentido de vida.
+- Crecimiento espiritual desde tu propia visión de la fe.
+- Liberación de creencias limitantes y patrones repetitivos.
+- Equilibrio entre energía femenina y masculina.
+
+💫 Qué puedes esperar de este proceso:
+- Escucha profunda y sin juicios.
+- Un acompañamiento adaptado a tus tiempos y necesidades.
+- Herramientas prácticas para aplicar en tu vida diaria.
+- Mayor claridad, calma y empoderamiento para tomar decisiones.
+- Una conexión más auténtica contigo misma y con la vida.`;
 
   return (
     <div>
       <section className={estilos.seccion}>
-       
-
-        <div  className={estilos.contenedor}>
+        <div className={estilos.contenedor}>
           <div className={estilos.bannerLineLeft}></div>
-            <div className={estilos.bannerLineRight}></div>
+          <div className={estilos.bannerLineRight}></div>
           <motion.div
             className={estilos.banner}
-            ref={imagenRef}  // Asigno el ref a este div que contiene la imagen
+            ref={imagenRef}
             initial={{ opacity: 0, scale: 0.95 }}
-            animate={imagenEnVista ? { opacity: 1, scale: 1 } : {}}  // Solo anima si está en vista
+            animate={imagenEnVista ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
           >
-            
-            
             <img src={Ps} alt="banner" />
-
           </motion.div>
 
           <motion.div
-            id ="servicios"
+            id="servicios"
             className={estilos.texto}
             ref={textoRef}
             initial="hidden"
@@ -61,26 +87,24 @@ export default function Servicios() {
             variants={{
               hidden: {},
               visible: {
-                transition: {
-                  staggerChildren: 0.3,
-                },
+                transition: { staggerChildren: 0.3 },
               },
             }}
           >
             <div className={estilos.verticalLineLeft}></div>
             <div className={estilos.verticalLineRight}></div>
             <div className={estilos.titulo}>
-             <motion.h3
-              ref={nombreRef}
-              initial="hidden"
-              animate={nombreEnVista ? 'visible' : 'hidden'}
-              variants={underlineVariants}
-              className={estilos.underlineEffect}
-            >
-              @psicotranspersonal
-            </motion.h3>
-            <h4>La semilla que floreció en comunidad</h4>
-          </div>
+              <motion.h3
+                ref={nombreRef}
+                initial="hidden"
+                animate={nombreEnVista ? "visible" : "hidden"}
+                variants={underlineVariants}
+                className={estilos.underlineEffect}
+              >
+                @psicotranspersonal
+              </motion.h3>
+              <h4>La semilla que floreció en comunidad</h4>
+            </div>
 
             {[
               "Psicotranspersonal nace de mi pasión por la profundidad, por el misterio, por los escritos que nutren la visión y la mirada, por mi deseo de compartir lo que habita dentro de mi corazón, se gesta hace 6 años en un anhelo de darle voz a procesos y vivencias que giran en torno a la sanación, la transformación humana y la evolución del ser.",
@@ -93,39 +117,57 @@ export default function Servicios() {
                 variants={{
                   hidden: { opacity: 0, x: 30 },
                   visible: { opacity: 1, x: 0 },
-                  className: estilos.textoAnimado,
-                  
                 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
+                className={estilos.textoAnimado}
               >
-                {text} 
+                {text}
               </motion.p>
             ))}
 
+            {/* NUEVO BLOQUE */}
+            <div className={estilos.nuevoBloque}>
+              <motion.h4
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className={estilos.subtitulo}
+              >
+                Acompañamiento Terapéutico Transpersonal
+              </motion.h4>
+              <br />
 
-            
-                    <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.97 }}
-          className={estilos.botonReservar}
-          onClick={() => setModalAbierto(true)} // abre el modal
-        >
-          Reserva tu espacio ✨
-        </motion.button>
+              <motion.p
+                variants={{
+                  hidden: { opacity: 0, x: 30 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className={`${estilos.textoAnimado} ${estilos.preserveLines}`}
+              >
+                {textoAcomp}
+              </motion.p>
+            </div>
 
-
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.97 }}
+              className={estilos.botonReservar}
+              onClick={() => setModalAbierto(true)}
+            >
+              Reserva tu espacio ✨
+            </motion.button>
           </motion.div>
-          
         </div>
 
         <Modal
-  isOpen={modalAbierto}
-  onClose={() => setModalAbierto(false)}
-  showTerms={true} // puedes ponerlo en false si no quieres términos
-  requireTermsAcceptance={true}
-/>
-
-
+          isOpen={modalAbierto}
+          onClose={() => setModalAbierto(false)}
+          showTerms={true}
+          requireTermsAcceptance={true}
+        />
       </section>
     </div>
   );
