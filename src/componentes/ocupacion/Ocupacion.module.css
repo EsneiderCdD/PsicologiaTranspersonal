@@ -179,9 +179,9 @@
   }
   .secundaria {
     height: 300px;
-    background-image: url('../../assets/imagenes/Img3.jpeg');
+    background-image: url('../../assets/imagenes/ft3.webp');
     background-size: 100%;
-    background-position: 50% 65%;
+    background-position: 50% 90%;
     padding: 0;
     margin: 0;
     
@@ -275,7 +275,7 @@
 
   }
   .secundaria {
-    background-position:  50% 49%;
+    background-position:  50% 70%;
     background-size: cover;
     background-repeat: no-repeat;
     
@@ -325,7 +325,7 @@
     height: 250px;
   }
    .secundaria {
-    background-position:  50% 50%;
+    background-position:  50% 70%;
    }
 
   h2 {
@@ -390,10 +390,10 @@
   .imagePrincipal,
   .secundaria {
     height: 220px;
-    background-position: center;
+   
   }
      .secundaria {
-    background-position:  50% 51%;
+    background-position:  50% 70%;
    }
 
   h2 {
@@ -450,7 +450,7 @@
   }
   
   .secundaria {
-    background-position:  50% 55%;
+    background-position:  50% 75%;
    }
 
   h2 {
@@ -494,10 +494,11 @@
 @media (max-width: 400px) {
     h2 {
     font-size: 1.33rem;
-     
-
     
   }
+  .secundaria {
+    background-position:  50% 90%;
+   }
   .tituloSeccion {
     font-size: clamp(2.4rem, 7vw, 3.2rem);
   }
