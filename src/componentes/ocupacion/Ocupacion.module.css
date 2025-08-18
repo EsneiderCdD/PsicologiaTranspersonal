@@ -49,11 +49,12 @@
   
   .imagePrincipal {
     height: 300px;
-    background-image: url('../../assets/imagenes/banner2.jpeg');
+    background-image: url('../../assets/imagenes/banner.webp');
     background-size: cover; /* Hace que la imagen cubra todo el contenedor */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-position: 50% 77%; /* Centra la imagen dentro del contenedor */
+    background-position: 50%; /* Centra la imagen dentro del contenedor */
 }
+
 
   .contentPrincipal {
     padding: 1.5rem;
