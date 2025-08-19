@@ -6,7 +6,7 @@ import Encabezado from "../global/Encabezado";
 import { motion, useInView } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import SwiperCard from "./SwiperCard";
-import { circuloMujeresData } from "../../data/data";
+import { circuloMujeresData } from "../../ss/data";
 
 export default function CirculoMujeres() {
 
