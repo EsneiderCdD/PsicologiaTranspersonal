@@ -3,6 +3,7 @@ import styles from './Testimonios.module.css';
 import Encabezado from '../global/Encabezado';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
+import { mensajeData } from '../../data/data';
 
 
 
@@ -10,7 +11,7 @@ import mensajeCerrado from '../../assets/imagenes/mensajeCerrado.jpg';
 import mensajeAbierto from '../../assets/imagenes/mensajeAbierto.jpg';
 import t1 from '../../assets/imagenes/t1.jpeg';
 import t2 from '../../assets/imagenes/t2.jpeg';
-import t3 from '../../assets/imagenes/t3.jpeg';   
+import t3 from '../../assets/imagenes/t3.jpeg';
 import t4 from '../../assets/imagenes/t4.jpeg';
 import t5 from '../../assets/imagenes/t5.jpeg';
 import t6 from '../../assets/imagenes/t6.jpeg';
@@ -60,38 +61,38 @@ const Testimonios = () => {
   };
 
   const containerRef = useRef(null);
-const estaEnVista = useInView(containerRef, { once: true, margin: '-100px' });
+  const estaEnVista = useInView(containerRef, { once: true, margin: '-100px' });
 
 
   return (
-   <div className={styles.Container} ref={containerRef}>
+    <div className={styles.Container} ref={containerRef}>
 
       <Encabezado
-      
-        destacado="Mensajes"
-        descripcion="Fragmentos de historias y emociones que reflejan el impacto del acompañamiento en sesiones individuales y en grupo."
 
-       />  
+        destacado="Mensajes"
+        descripcion={mensajeData.mensajes}
+
+      />
       <div className={styles.testimoniosLista}>
         {sobresData.map((sobre, index) => (
-<motion.div
-  key={sobre.id}
-  className={`${styles.sobreCard} ${abiertoId === sobre.id ? styles.abierto : ''}`}
-  onClick={() => abrirSobre(sobre.id)}
-  variants={cartaAnimacion}
-  initial="hidden"
-  animate={estaEnVista ? "visible" : "hidden"}
-  whileHover={{ scale: 1.05 }}
-  transition={{ delay: index * 0.05 }}
->
+          <motion.div
+            key={sobre.id}
+            className={`${styles.sobreCard} ${abiertoId === sobre.id ? styles.abierto : ''}`}
+            onClick={() => abrirSobre(sobre.id)}
+            variants={cartaAnimacion}
+            initial="hidden"
+            animate={estaEnVista ? "visible" : "hidden"}
+            whileHover={{ scale: 1.05 }}
+            transition={{ delay: index * 0.05 }}
+          >
 
-    <img
-      src={abiertoId === sobre.id ? mensajeAbierto : mensajeCerrado}
-      alt="Mensaje"
-      className={styles.sobreImagen}
-    />
-  </motion.div>
-))}
+            <img
+              src={abiertoId === sobre.id ? mensajeAbierto : mensajeCerrado}
+              alt="Mensaje"
+              className={styles.sobreImagen}
+            />
+          </motion.div>
+        ))}
 
       </div>
 

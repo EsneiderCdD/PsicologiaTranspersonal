@@ -6,6 +6,7 @@ import Encabezado from "../global/Encabezado";
 import { motion, useInView } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import SwiperCard from "./SwiperCard";
+import { circuloMujeresData } from "../../data/data";
 
 export default function CirculoMujeres() {
 
@@ -81,10 +82,10 @@ export default function CirculoMujeres() {
             </div>
 
             <motion.p variants={textoVariants}>
-              Este espacio nació de forma orgánica, como un susurro del corazón. Al principio fue una simple invitación a compartir entre amigas, y con el tiempo, se fue tejiendo algo más profundo. Lo que comenzó como un encuentro casual se transformó en un lugar sagrado, donde las mujeres pueden ser, sentir y expresarse sin miedo ni juicio.
+              {circuloMujeresData.parrafo1}
             </motion.p>
             <motion.p variants={textoVariants}>
-              El círculo es un reflejo de lo que anhelo ver más en el mundo: espacios seguros, libres, humanos. Ahí se comparten emociones, pensamientos, silencios y memorias. Es un espacio de entrega, de aprendizaje y de liberación, donde cada mujer suelta lo que ya no le pertenece y recibe aquello que nutre su camino.
+              {circuloMujeresData.parrafo2}
             </motion.p>
           </motion.div>
 

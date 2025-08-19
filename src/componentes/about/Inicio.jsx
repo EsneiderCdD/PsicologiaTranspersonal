@@ -4,6 +4,7 @@ import { FaInstagram, FaUserGraduate } from "react-icons/fa";
 import { GiMoon, GiLotus } from "react-icons/gi";
 import { motion, useInView } from "framer-motion";
 import { HiUsers } from "react-icons/hi";
+import { aboutData } from "../../data/data";
 
 import estilos from "./Inicio.module.css";
 import foto from "../../assets/imagenes/foto.webp";
@@ -167,9 +168,7 @@ export default function Inicio() {
                   animate={texto1EnVista ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                  Soy psicóloga con amplia experiencia en salud mental, bienestar emocional y desarrollo del potencial humano.
-                  Mi enfoque está basado en la psicología transpersonal, un modelo terapéutico que integra la mente, el cuerpo
-                  y la dimensión espiritual para generar procesos de transformación profunda.
+                  {aboutData.parrafo1} 
                 </motion.p>
                 <br />
                 {/* Párrafo 2 */}
@@ -179,7 +178,7 @@ export default function Inicio() {
                   animate={texto2EnVista ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                  @Psicotranspersonal es un proyecto profesional, consciente y profundamente comprometido con el bienestar integral del ser humano. Hoy, Psicotranspersonal también es un espacio digital vivo: he cultivado una comunidad que crece día a día, no solo en número, sino en profundidad.
+                  {aboutData.parrafo2}
                 </motion.p>
                 <br />
                 {/* Párrafo 3 */}
@@ -189,9 +188,7 @@ export default function Inicio() {
                   animate={texto3EnVista ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                  Además de mi formación en psicología clínica, me he especializado en terapia transpersonal y terapia
-                  enfocada a los ciclos y necesidades femeninas, lo que me ha permitido profundizar en los procesos de
-                  sanación de la mujer. Este trabajo, especialmente en espacios grupales, ha cultivado en mí habilidades como la comunicación asertiva, la coordinación empática, la gestión de dinámicas colectivas y la capacidad de sostener procesos compartidos con escucha activa y liderazgo sensible.
+                  {aboutData.parrafo3}
                 </motion.p>
                 <br />
                 {/* BLOQUE UNIFICADO: contadores + íconos */}
