@@ -1,8 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation, BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { initGA, sendPageView } from './analytics';
-
-// Importación de componentes
 import Home from './componentes/Home';
 import Footer from './componentes/footer/Footer';
 import About from './componentes/about/About';
@@ -16,7 +14,6 @@ import './App.css';
 function AppRoutes() {
   const location = useLocation();
 
-  // 👉 Google Analytics: Trackea cambios de ruta
   useEffect(() => {
     sendPageView(location.pathname);
   }, [location]);
@@ -45,7 +42,7 @@ function AppRoutes() {
 }
 
 function App() {
-  // 👉 Inicializa Google Analytics solo una vez
+ 
   useEffect(() => {
     initGA();
   }, []);

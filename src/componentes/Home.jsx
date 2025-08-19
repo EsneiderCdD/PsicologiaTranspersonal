@@ -1,12 +1,10 @@
 import { useState, useEffect } from "react";
 import estilos from "./Home.module.css";
-
 import Modal from "../componentes/ocupacion/Modal";
-
-
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import Heroe2 from "../assets/imagenes/Heroe2.png";
+import { homeData } from "../data/data";
 
 
 export default function Home() {
@@ -16,7 +14,7 @@ export default function Home() {
   const navigate = useNavigate();
 
   return (
-    <motion.div 
+    <motion.div
       className={estilos.layout}
       initial="hidden"
       animate="visible"
@@ -29,15 +27,15 @@ export default function Home() {
         },
       }}
     >
-  
-      <motion.div 
+
+      <motion.div
         className={estilos.contenedor}
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true }}
       >
-        <motion.h1 
+        <motion.h1
           className={estilos.tituloprincipal}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -46,20 +44,19 @@ export default function Home() {
         >
           Psicología Transpersonal
         </motion.h1>
- 
-  
-        <motion.p 
+
+
+        <motion.p
           className={estilos.descripcion}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true }}
         >
-          Espacio de crecimiento y acompañamiento terapéutico. Empieza
-          una transformación de la mano de un enfoque que equilibra, ciencia, humanidad y espiritualidad.
+          {homeData.home}
         </motion.p>
-  
-        <motion.div 
+
+        <motion.div
           className={`${estilos.imagen} ${estilos.imagenMobile}`}
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -68,8 +65,8 @@ export default function Home() {
         >
           <img src={Heroe2} alt="imagen decorativa" />
         </motion.div>
-  
-        <motion.div 
+
+        <motion.div
           className={estilos.botones}
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -97,9 +94,6 @@ export default function Home() {
           >
             Agendar
           </motion.button>
-
-
-  
           <button
             className={estilos.botonSecundario}
             onClick={() => navigate("/about")}
@@ -108,9 +102,7 @@ export default function Home() {
           </button>
         </motion.div>
       </motion.div>
-      
-  
-      <motion.div 
+      <motion.div
         className={`${estilos.imagen} ${estilos.imagenDesktop}`}
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -120,23 +112,17 @@ export default function Home() {
         <img src={Heroe2} alt="imagen decorativa" />
       </motion.div>
 
-     {modalPricingAbierto && (
-  <Modal
-    isOpen={modalPricingAbierto}
-    onClose={() => setModalPricingAbierto(false)}
-    showTerms={true}
-    requireTermsAcceptance={true}
-    confirmText="Agendar ahora"
-  />
-)}
+      {modalPricingAbierto && (
+        <Modal
+          isOpen={modalPricingAbierto}
+          onClose={() => setModalPricingAbierto(false)}
+          showTerms={true}
+          requireTermsAcceptance={true}
+          confirmText="Agendar ahora"
+        />
+      )}
 
-      
     </motion.div>
-
-
-
-
-
 
   );
 }  
