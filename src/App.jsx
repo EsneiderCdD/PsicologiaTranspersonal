@@ -4,12 +4,16 @@ import { initGA, sendPageView } from './analytics';
 import Home from './componentes/Home';
 import Footer from './componentes/footer/Footer';
 import About from './componentes/about/About';
+import SobrePsicotransp from './componentes/psicotranspersonal/sobrePsicotransp';
+import SobreCirculoMujeres from './componentes/circuloMujeres/sobreCirculoMujeres';
+import SobreTyC from './componentes/tyc/tyc';
 import Ocupacion from './componentes/ocupacion/Ocupacion';
 import Testimonios from './componentes/testimonios/Testimonios';
 import Slider2 from './componentes/slider2/Slider2';
 import Post from './componentes/Post/Pago';
 
 import './App.css';
+
 
 function AppRoutes() {
   const location = useLocation();
@@ -32,17 +36,18 @@ function AppRoutes() {
           </>
         }
       />
-      <Route path="/about" element={<About />} />
-      <Route path="/post" element={<Post />} />
 
-      {/* 👉 Redireccionar de /terminos a /about#terminos */}
-      <Route path="/terminos" element={<Navigate to="/about#terminos" replace />} />
+      <Route path="/sobremi" element={<About />} />
+      <Route path="/psicotranspersonal" element={<SobrePsicotransp />} />
+      <Route path="/circulomujeres" element={<SobreCirculoMujeres />} />
+      <Route path="/tyc" element={ <SobreTyC />} />
+      
+      <Route path="/post" element={<Post />} />
     </Routes>
   );
 }
 
 function App() {
- 
   useEffect(() => {
     initGA();
   }, []);
