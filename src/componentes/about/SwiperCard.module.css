@@ -1,10 +1,11 @@
+
 .wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 40px 0;
-  background-color: #ffffff;
+  background-color: #FBF8EF;
   max-width: 900px;
   margin: 0 auto;
 }

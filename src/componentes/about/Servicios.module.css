@@ -57,10 +57,7 @@
   z-index: 5; /* por encima de la imagen */
 }
 
-.banner::before {
-  top: 0;
-  background: linear-gradient(to bottom, rgba(251, 248, 239, 1), rgba(251, 248, 239, 0));
-}
+
 
 .banner::after {
   bottom: 0;
@@ -103,7 +100,6 @@
 h4 {
   margin: 1%;
   margin-top: 4%;
-  
   font-size: clamp(1.5rem, 3vw, 2rem);
   font-family: 'EB Garamond', serif;
   font-weight: 600;
@@ -123,27 +119,20 @@ h4 {
   text-align: justify;
   display: flex;
   flex-direction: column;
-  position: relative; /* 🔥 ESTO es lo que falta */
-}
-.botonReservar {
-  background: #6d8c64d5;
-  color: #3B3B3B;
-  font-family: 'Nunito', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 600;
-  padding: 0.9rem 2.5rem;
-  border: none;
-  border-radius: 2rem;
-  cursor: pointer;
-  
-  margin: 0;
-  display: block;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  transition: background 0.3s ease;
+  position: relative; 
 }
 
-.botonReservar:hover {
-  background: linear-gradient(135deg, #6D8C64, #D4B679, #F1ECE6);
+.boton {
+  margin-bottom: 2%;
+  background-color: #6b21a8;
+  color: #fff;
+  font-family: 'Cairo', sans-serif;
+  font-weight: 900;
+  font-size: 1rem;
+  padding: 0.44em 1.11em;
+  border: none;
+  border-radius: 1.25em;
+  cursor: pointer;
 }
 
 .underlineEffect {

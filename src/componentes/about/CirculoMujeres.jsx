@@ -90,105 +90,126 @@ export default function CirculoMujeres() {
 
           <SwiperCard></SwiperCard>
 
-          <div className={estilos.actividades}>
-            <motion.h5
-              initial={{ opacity: 0, y: 20 }}
-              animate={estaEnVista ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8 }}
-            >
-              En los círculos de mujeres vivimos:
-            </motion.h5>
+          <motion.h5
+            initial={{ opacity: 0, y: 20 }}
+            animate={estaEnVista ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8 }}
+          >
+            En los círculos de mujeres vivimos:
+          </motion.h5>
 
-            <div className={estilos.tarjetas}>
-              <div style={{ display: "flex", flexDirection: "column", alignItems: "center", marginBottom: "0.5rem" }}>
+          <div className={estilos.tarjetas}>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", marginBottom: "0.5rem" }}>
 
+            </div>
+
+            <div style={{ display: "flex", flexDirection: "row" }}>
+              <motion.div
+                className={estilos.tarjeta}
+                custom={1}
+                initial="hidden"
+                animate={estaEnVista ? "visible" : "hidden"}
+                variants={tarjetaVariants}
+              >
+                <FaLeaf size={30} color="#6CB28E" />
+                <p>Meditaciones Profundas</p>
+              </motion.div>
+              <motion.div
+                className={estilos.tarjeta}
+                custom={2}
+                initial="hidden"
+                animate={estaEnVista ? "visible" : "hidden"}
+                variants={tarjetaVariants}
+              >
+                <FaHandsHelping size={30} color="#FF9A8B" />
+                <p>Actividades Experienciales</p>
+              </motion.div>
+              <motion.div
+                className={estilos.tarjeta}
+                custom={3}
+                initial="hidden"
+                animate={estaEnVista ? "visible" : "hidden"}
+                variants={tarjetaVariants}
+              >
+                <FaHeart size={30} color="#D16BA5" />
+                <p>Círculo de Palabra</p>
+              </motion.div>
+            </div>
+          </div>
+          <motion.div
+            className={estilos.infoCita}
+            initial={{ opacity: 0, y: 30 }}
+            animate={estaEnVista ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 1, delay: 0.2 }}
+          >
+            <div style={{ display: "flex", flexDirection: "row", justifyContent: "center", marginBottom: "0.5rem" }}>
+              <div className={estilos.tarjeta}>
+                <p><strong>🕒 Hora:</strong> de 3:00 a 7:00 pm</p>
+              </div>
+              <div className={estilos.tarjeta}>
+                <p><strong>📍 Lugar:</strong> Barrio Mesa, Envigado</p>
               </div>
 
-              <div style={{ display: "flex", flexDirection: "row" }}>
-                <motion.div
-                  className={estilos.tarjeta}
-                  custom={1}
-                  initial="hidden"
-                  animate={estaEnVista ? "visible" : "hidden"}
-                  variants={tarjetaVariants}
-                >
-                  <FaLeaf size={30} color="#6CB28E" />
-                  <p>Meditaciones Profundas</p>
-                </motion.div>
-                <motion.div
-                  className={estilos.tarjeta}
-                  custom={2}
-                  initial="hidden"
-                  animate={estaEnVista ? "visible" : "hidden"}
-                  variants={tarjetaVariants}
-                >
-                  <FaHandsHelping size={30} color="#FF9A8B" />
-                  <p>Actividades Experienciales</p>
-                </motion.div>
-                <motion.div
-                  className={estilos.tarjeta}
-                  custom={3}
-                  initial="hidden"
-                  animate={estaEnVista ? "visible" : "hidden"}
-                  variants={tarjetaVariants}
-                >
-                  <FaHeart size={30} color="#D16BA5" />
-                  <p>Círculo de Palabra</p>
-                </motion.div>
+              <div className={estilos.tarjeta}>
+                <p><strong>📅 Fecha:</strong> sábados o domingos</p>
               </div>
             </div>
-            <motion.div
-              className={estilos.infoCita}
-              initial={{ opacity: 0, y: 30 }}
-              animate={estaEnVista ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 1, delay: 0.2 }}
-            >
-              <div style={{ display: "flex", flexDirection: "row", justifyContent: "center", marginBottom: "0.5rem" }}>
-                <div className={estilos.tarjeta}>
-                  <p><strong>🕒 Hora:</strong> de 3:00 a 7:00 pm</p>
-                </div>
-                <div className={estilos.tarjeta}>
-                  <p><strong>📍 Lugar:</strong> Barrio Mesa, Envigado</p>
-                </div>
-
-                <div className={estilos.tarjeta}>
-                  <p><strong>📅 Fecha:</strong> sábados o domingos</p>
-                </div>
-              </div>
-              <div style={{ display: "flex", justifyContent: "center" }}>
-                <div >
-                  <p><strong>❣️ Aporte:</strong> $88.000 COP</p>
-                </div>
-
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <div >
+                <p><strong>❣️ Aporte:</strong> $88.000 COP</p>
               </div>
 
+            </div>
 
-            </motion.div>
-          </div>
+
+          </motion.div>
 
 
           <div className={estilos.botonesContenedor}>
+            {/* Botón principal animado */}
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.97 }}
-              className={estilos.botonReservar}
+              className={estilos.boton}
               onClick={() => {
                 window.open("https://wa.me/+573052298710", "_blank");
               }}
+              initial={{ boxShadow: "none", backgroundColor: "#321033" }}
+              animate={{
+                boxShadow: "0 0 20px #a52b1e, 0 0 40px #a52b1e",
+                backgroundColor: "#a52b1e",
+                transition: {
+                  delay: 1,
+                  duration: 2,
+                  ease: "easeInOut",
+                },
+              }}
+
             >
               Reserva tu espacio ✨
             </motion.button>
-
             <motion.button
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.97 }}
-              className={estilos.botonSecundario}
+              className={estilos.boton}
               onClick={() => {
                 navigate("/", { state: { scrollTo: "galeria" } });
               }}
+              initial={{ boxShadow: "none", backgroundColor: "#321033" }}
+              animate={{
+                boxShadow: "0 0 20px #a52b1e, 0 0 40px #a52b1e",
+                backgroundColor: "#a52b1e",
+                transition: {
+                  delay: 1,
+                  duration: 2,
+                  ease: "easeInOut",
+                },
+              }}
+              whileHover={{
+                backgroundColor: "#6b21a8",
+                boxShadow: "0 0 25px #6b21a8, 0 0 50px #ca66ebaa",
+                transition: { duration: 1.5 },
+              }}
             >
-              Ver imágenes
+              Ver imagenes
             </motion.button>
+
           </div>
 
         </div>

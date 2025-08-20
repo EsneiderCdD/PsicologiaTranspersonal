@@ -12,6 +12,8 @@ import { acompañamientoTerapeuticoData } from "../../ss/data";
 export default function Servicios() {
   const [modalAbierto, setModalAbierto] = useState(false);
 
+  const [modalPricingAbierto, setModalPricingAbierto] = useState(false);
+
   const textoRef = useRef(null);
   const textoEnVista = useInView(textoRef, {
     once: true,
@@ -125,23 +127,40 @@ export default function Servicios() {
               ))}
             </div>
 
+            {/* Botón principal animado */}
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.97 }}
-              className={estilos.botonReservar}
-              onClick={() => setModalAbierto(true)}
+              className={estilos.boton}
+              onClick={() => setModalPricingAbierto(true)}
+              initial={{ boxShadow: "none", backgroundColor: "#321033" }}
+              animate={{
+                boxShadow: "0 0 20px #6b21a8, 0 0 40px #ca66eb66",
+                backgroundColor: "#800089",
+                transition: {
+                  delay: 1,
+                  duration: 2,
+                  ease: "easeInOut",
+                },
+              }}
+              whileHover={{
+                backgroundColor: "#6b21a8",
+                boxShadow: "0 0 25px #6b21a8, 0 0 50px #ca66ebaa",
+                transition: { duration: 1.5 },
+              }}
             >
-              Reserva tu espacio ✨
+              Reserva tu espacio
             </motion.button>
           </motion.div>
         </div>
 
-        <Modal
-          isOpen={modalAbierto}
-          onClose={() => setModalAbierto(false)}
-          showTerms={true}
-          requireTermsAcceptance={true}
-        />
+        {modalPricingAbierto && (
+          <Modal
+            isOpen={modalPricingAbierto}
+            onClose={() => setModalPricingAbierto(false)}
+            showTerms={true}
+            requireTermsAcceptance={true}
+            confirmText="Agendar ahora"
+          />
+        )}
       </section>
     </div>
   );
