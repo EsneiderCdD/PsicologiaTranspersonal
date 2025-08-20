@@ -1,21 +1,21 @@
 
-import c1 from "../assets/imagenes/c1.jpeg";
-import c2 from "../assets/imagenes/c2.jpeg";
-import c3 from "../assets/imagenes/c3.jpeg";
-import c5 from "../assets/imagenes/c5.jpeg";
-import c6 from "../assets/imagenes/c6.jpeg";
-import c7 from "../assets/imagenes/c7.jpeg";
+import card1 from "../assets/imagenes/card1.webp";
+import card2 from "../assets/imagenes/card2.webp";
+import card3 from "../assets/imagenes/card3.webp";
+import card5 from "../assets/imagenes/card5.webp";
+import card6 from "../assets/imagenes/card6.webp";
+
 
 export const eventoConfig = {
 
   fechaEvento: null, 
 
   cards: [
-    { id: 1, imagen: c1 },
-    { id: 2, imagen: c2 },
-    { id: 3, imagen: c3 },
-    { id: 4, imagen: c5 },
-    { id: 5, imagen: c6 },
-    { id: 6, imagen: c7 },
+    { id: 1, imagen: card1 },
+    { id: 2, imagen: card2 },
+    { id: 3, imagen: card3 },
+    { id: 4, imagen: card5 },
+    { id: 5, imagen: card6 },
+   
   ],
 };

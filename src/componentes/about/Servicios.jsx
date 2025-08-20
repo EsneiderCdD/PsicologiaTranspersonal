@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import Modal from "../ocupacion/Modal";
 
 import estilos from "./Servicios.module.css";
-import Ps from "../../assets/imagenes/Ps.jpeg";
+import psicotranspersonal from "../../assets/imagenes/psicotranspersonal.webp";
 
 import { motion, useInView } from "framer-motion";
 
@@ -56,7 +56,7 @@ export default function Servicios() {
             ref={imagenRef}
 
           >
-            <img src={Ps} alt="banner" />
+            <img src={psicotranspersonal} alt="banner2" />
           </motion.div>
 
           <motion.div
