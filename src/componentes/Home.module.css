@@ -7,7 +7,6 @@
   align-items: center;
   justify-content: space-between;
   width: auto;
-  
   background: #FBF8EF;
   padding: 2% 5%;
   max-height: 90vh;
@@ -47,7 +46,7 @@
   color: #7B3028;
   margin-top: 0px;
   margin-bottom: 1.5rem;
- 
+
 }
 
 .descripcion {
@@ -58,7 +57,7 @@
   text-align: left;
   max-width: 98%;
   margin-top: 1.5%;
-  
+
 }
 
 .botones {
@@ -66,39 +65,39 @@
   justify-content: flex-start;
   flex-wrap: wrap;
   gap: 2%;
-  margin-top: 2%;
+  margin-top: 3%;
   
+
 }
 
 .boton {
+  margin-bottom: 2%;
   background-color: #6b21a8;
   color: #fff;
   font-family: 'Cairo', sans-serif;
-  font-weight: 600;
+  font-weight: 900;
   font-size: 1rem;
-  padding: 0.75em 1.5em;
+  padding: 0.44em 1.11em;
   border: none;
   border-radius: 1.25em;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 
 
 .botonSecundario {
+  font-weight: 700;
+  margin-bottom: 2%;
   padding: 0.75em 1.5em;
   background-color: transparent;
+  padding: 0.44em 1.11em;
   color: #ca66eb;
-  border: none;
   border-radius: 1.6rem;
-  font-size: 1rem;
+  font-size: 0.75rem;
   cursor: pointer;
-  transition: all 0.3s ease;
 }
 
-.botonSecundario:hover {
-  background-color: #f7edff;
-}
+
 
 /* --------- RESPONSIVE CHECKPOINT 1: ≤ 1080px --------- */
 @media (max-width: 1080px) {
@@ -108,7 +107,7 @@
 
   .tituloprincipal {
     font-size: clamp(2.3rem, 3.8vw, 3.8rem);
-    
+
   }
 
   .descripcion {
@@ -121,8 +120,8 @@
 
   .boton,
   .botonSecundario {
-    font-size: 0.95rem;
-    padding: 0.6em 1.2em;
+    font-size: 0.89rem;
+    padding: 0.44em 1.11em;
   }
 }
 
@@ -130,10 +129,14 @@
 /* --------- RESPONSIVE CHECKPOINT 2: ≤ 930px (refinado) --------- */
 @media (max-width: 930px) {
   .layout {
-  flex-direction: column;
-  padding: 2% 2%;
-  min-height: 100vh;
-}
+    flex-direction: column;
+    padding: 2% 2%;
+    min-height: 100vh;
+  }
+
+  .imagenDesktop {
+    display: none;
+  }
 
 
   .contenedor {
@@ -159,7 +162,7 @@
   .imagenMobile {
     display: flex;
     justify-content: center;
-    margin-bottom: 3.3%;
+
   }
 
   .imagenMobile img {
@@ -169,38 +172,34 @@
   }
 
   .botones {
-    flex-direction: column;
     width: 100%;
-    gap: 14px;
     justify-content: center;
-    align-items: center;
-    margin-top: 0px;
-   
+
   }
 
   .boton,
   .botonSecundario {
-    font-size: 0.88rem;
-    padding: 0.55em 1em;
-    width: 90%;
-    height: 42px;
-    text-align: center;
-  }
-}
+    font-weight: 900;
+    font-size: 1rem;
+    padding: 0.44em 1.11em;
 
+  }
+
+
+}
 
 /* --------- RESPONSIVE CHECKPOINT 3: ≤ 780px --------- */
 @media (max-width: 780px) {
   .layout {
     flex-direction: column;
-  
+
   }
 
   .contenedor {
     align-items: center;
     text-align: center;
     margin-left: 0;
-  
+
     gap: 7px;
   }
 
@@ -214,42 +213,23 @@
     line-height: 1.5;
     max-width: 90%;
     text-align: center;
-     margin-bottom: 0%;
+    margin-bottom: 0%;
   }
 
-  .imagenDesktop {
-    display: none;
-  }
 
   .imagenMobile {
     display: flex;
     justify-content: center;
-    
+
   }
 
   .imagenMobile img {
-    max-width: 57.5%;
+    max-width: 55.5%;
     border-radius: 50%;
     object-fit: cover;
   }
 
-  .botones {
-    flex-direction: column;
-    width: 100%;
-    gap: 15px;
-    justify-content: center;
-    align-items: center;
-    
-  }
 
-  .boton,
-  .botonSecundario {
-    height: 40px;
-    width: 90%;
-    text-align: center;
-    font-size: 0.85rem;
-    padding: 0.5em 1em;
-  }
 }
 
 
@@ -257,7 +237,7 @@
 @media (max-width: 600px) {
   .layout {
     flex-direction: column;
-    
+
   }
 
   .contenedor {
@@ -277,8 +257,11 @@
     font-size: clamp(1rem, 4vw, 1.4rem);
     line-height: 1.5;
     max-width: 95%;
-  
+    margin: 0;
     text-align: center;
+  }
+  .tituloprincipal{
+    margin: 0;
   }
 
   .imagenDesktop {
@@ -292,44 +275,66 @@
   }
 
   .imagenMobile img {
-    max-width: 80%;
-    
+    max-width: 70%;
+
     border-radius: 50%;
     object-fit: cover;
   }
+  .boton,
+  .botonSecundario {
+    font-weight: 800;
+    font-size: 0.9rem;
+    padding: 0.33em 1em;
 
+  }
+
+
+
+}
+
+@media (max-width: 500px) {
   .botones {
-    /* margin: auto;*/
-  
-    flex-direction: column;
-    width: 100%;
-    gap: 10px;
-    justify-content: center;
-    
-    
-    align-items: center;
+    margin-top: 0;
+
+  }
+
+  .descripcion{
+    margin-top: 0%;
+  }
+
+  .imagen {
+     flex: 0.70;
+  }
+
+  .imagenMobile img {
+    max-width: 80%;
+  }
+  .imagenDesktop {
+    display: none;
   }
 
   .boton,
   .botonSecundario {
-    height: 40px ;
-    width: 90%;
-    text-align: center;
-    
+    font-weight: 800;
+    font-size: 0.9rem;
+    padding: 0.33em 1em;
+
   }
+
+
+
+
+
 }
+
 @media (max-width: 400px) {
   .layout {
-    
+
     padding: 0;
   }
 
-
-
-
-
   .contenedor {
-    
+
     margin-left: 0;
     margin-bottom: 0;
     padding-top: 0;
@@ -337,39 +342,35 @@
     gap: 0px;
 
   }
-
-    .tituloprincipal {
-    font-size: clamp(2.75rem, 7vw, 3.2rem);
-    line-height: 1; 
-    margin-top: 0%;
-
+  .imagen {
+    flex: 0.65;
   }
-    .descripcion {
-    font-size: clamp(1rem, 4vw, 1.4rem);
-    line-height: 1.75;
-    max-width: 95%;
-    margin-top: 5%;
-    
-    text-align: center;
-
-  }
-
 
   .imagenMobile img {
-    max-width: 90%;    
-    
-    
+    max-width: 80%;
     margin-bottom: 0%;
     margin-top: 0%;
-   
+
+  }
+  
+  .boton,
+  .botonSecundario {
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 0.33em 0.5em;
+
+  }
+    .descripcion{
+    margin-top: 10%;
   }
 
- 
-  
 
 
-  
+
+
+
+
+
+
+
 }
-
-
-

@@ -99,11 +99,11 @@ export default function Home() {
           <motion.button
             className={estilos.botonSecundario}
             onClick={() => navigate("/sobremi")}
-            initial={{ backgroundColor: "transparent", color: "#999" }}
+            initial={{ backgroundColor: "transparent", color: "#000000ff" }}
             animate={{
               backgroundColor: "#f7edff",
               color: "#ca66eb",
-              boxShadow: "0 0 50px #6b21a889 ",
+              boxShadow: "0 0 50px #8c00ff70 ",
               transition: { delay: 0.6, duration: 1.5, ease: "easeInOut" },
             }}
           >
