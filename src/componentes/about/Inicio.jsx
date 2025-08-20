@@ -4,7 +4,7 @@ import { FaInstagram, FaUserGraduate } from "react-icons/fa";
 import { GiMoon, GiLotus } from "react-icons/gi";
 import { motion, useInView } from "framer-motion";
 import { HiUsers } from "react-icons/hi";
-import { aboutData } from "../../data/data";
+import { aboutData } from "../../ss/data";
 
 import estilos from "./Inicio.module.css";
 import foto from "../../assets/imagenes/foto.webp";

@@ -4,7 +4,7 @@ import Modal from "../componentes/ocupacion/Modal";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import Heroe2 from "../assets/imagenes/Heroe2.png";
-import { homeData } from "../data/data";
+import { homeData } from "../ss/data";
 
 
 export default function Home() {

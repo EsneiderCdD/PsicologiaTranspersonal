@@ -6,8 +6,8 @@ import Ps from "../../assets/imagenes/Ps.jpeg";
 
 import { motion, useInView } from "framer-motion";
 
-import { psicotranspersonalData } from "../../data/data";
-import { acompañamientoTerapeuticoData } from "../../data/data";
+import { psicotranspersonalData } from "../../ss/data";
+import { acompañamientoTerapeuticoData } from "../../ss/data";
 
 export default function Servicios() {
   const [modalAbierto, setModalAbierto] = useState(false);

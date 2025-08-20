@@ -7,6 +7,8 @@ import { motion, useInView } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import SwiperCard from "./SwiperCard";
 import { circuloMujeresData } from "../../ss/data";
+// import { eventoConfig } from '../../ss/evento';
+
 
 export default function CirculoMujeres() {
 

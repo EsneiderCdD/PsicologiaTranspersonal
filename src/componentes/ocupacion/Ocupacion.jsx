@@ -9,7 +9,7 @@ import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Modal from '../ocupacion/Modal';
 import Encabezado from '../global/Encabezado';
-import { ocupacionData } from '../../data/data';
+import { ocupacionData } from '../../ss/data';
 
 const Ocupacion = () => {
 

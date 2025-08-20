@@ -1,7 +1,7 @@
 export const homeData = {
   home: `Espacio de crecimiento y acompañamiento terapéutico. 
   Empieza una transformación de la mano de un enfoque que equilibra, 
-  ciencia, humanidad y espiritualidad.`,
+  ciencia, humanidad y espiritualidad y trascendencia.`,
 };
 
 export const ocupacionData = {

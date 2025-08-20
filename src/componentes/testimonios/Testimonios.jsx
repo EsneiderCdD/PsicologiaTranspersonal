@@ -1,25 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import styles from './Testimonios.module.css';
 import Encabezado from '../global/Encabezado';
 import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
-import { mensajeData } from '../../data/data';
-
-
-
-import mensajeCerrado from '../../assets/imagenes/mensajeCerrado.jpg';
-import mensajeAbierto from '../../assets/imagenes/mensajeAbierto.jpg';
-import t1 from '../../assets/imagenes/t1.jpeg';
-import t2 from '../../assets/imagenes/t2.jpeg';
-import t3 from '../../assets/imagenes/t3.jpeg';
-import t4 from '../../assets/imagenes/t4.jpeg';
-import t5 from '../../assets/imagenes/t5.jpeg';
-import t6 from '../../assets/imagenes/t6.jpeg';
-import t7 from '../../assets/imagenes/t7.jpeg';
-import t8 from '../../assets/imagenes/t8.jpeg';
-import t9 from '../../assets/imagenes/t9.jpeg';
-import t10 from '../../assets/imagenes/t10.jpeg';
-
+import { mensajeData } from '../../ss/data.js';
+import { mensajesConfig } from '../../ss/mensajes';
 const cartaAnimacion = {
   hidden: { opacity: 0, y: -50 },
   visible: {
@@ -33,19 +17,6 @@ const cartaAnimacion = {
     }
   }
 };
-
-const sobresData = [
-  { id: 1, imagenAbierta: t1 },
-  { id: 2, imagenAbierta: t2 },
-  { id: 3, imagenAbierta: t3 },
-  { id: 4, imagenAbierta: t4 },
-  { id: 5, imagenAbierta: t5 },
-  { id: 6, imagenAbierta: t6 },
-  { id: 7, imagenAbierta: t7 },
-  { id: 8, imagenAbierta: t8 },
-  { id: 9, imagenAbierta: t9 },
-  { id: 10, imagenAbierta: t10 },
-];
 
 const Testimonios = () => {
   const [abiertoId, setAbiertoId] = useState(null);
@@ -63,18 +34,15 @@ const Testimonios = () => {
   const containerRef = useRef(null);
   const estaEnVista = useInView(containerRef, { once: true, margin: '-100px' });
 
-
   return (
     <div className={styles.Container} ref={containerRef}>
-
       <Encabezado
-
         destacado="Mensajes"
         descripcion={mensajeData.mensajes}
-
       />
+
       <div className={styles.testimoniosLista}>
-        {sobresData.map((sobre, index) => (
+        {mensajesConfig.sobres.map((sobre, index) => (
           <motion.div
             key={sobre.id}
             className={`${styles.sobreCard} ${abiertoId === sobre.id ? styles.abierto : ''}`}
@@ -85,15 +53,13 @@ const Testimonios = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ delay: index * 0.05 }}
           >
-
             <img
-              src={abiertoId === sobre.id ? mensajeAbierto : mensajeCerrado}
+              src={abiertoId === sobre.id ? mensajesConfig.sobreAbierto : mensajesConfig.sobreCerrado}
               alt="Mensaje"
               className={styles.sobreImagen}
             />
           </motion.div>
         ))}
-
       </div>
 
       {modalAbierto && (
@@ -103,7 +69,7 @@ const Testimonios = () => {
               ×
             </button>
             <img
-              src={sobresData.find(s => s.id === abiertoId).imagenAbierta}
+              src={mensajesConfig.sobres.find(s => s.id === abiertoId).imagenAbierta}
               alt="Mensaje abierto"
               className={styles.imagenModal}
             />

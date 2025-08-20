@@ -7,7 +7,9 @@ import ft5 from '../assets/imagenes/ft5.jpeg';
 import ft6 from '../assets/imagenes/ft6.jpeg';
 import ft7 from '../assets/imagenes/ft7.jpeg';
 
+
 export const experienciasImages = [
+ 
   ft0,
   Img3,
   ft5,
