@@ -47,6 +47,7 @@ const Ocupacion = () => {
           <div className={styles.contentPrincipal}>
             <span className={styles.etiquetaPrincipal}>Servicio Principal</span>
             <h2><FaVideo className={styles.icon} /> Acompañamiento Terapéutico  </h2>
+            <br />
             <p>
               {ocupacionData.servicioPrincipal}
             </p>
@@ -85,6 +86,7 @@ const Ocupacion = () => {
           <div className={styles.contentPrincipal}>
             <span className={styles.etiquetaSecundaria}>Servicio Eventual</span>
             <h2><FaUsers className={styles.icon} /> Circulo de Mujeres</h2>
+            <br />
             <p>
               {ocupacionData.servicioSecundario}
             </p>
