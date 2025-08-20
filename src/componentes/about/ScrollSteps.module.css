@@ -117,13 +117,13 @@
 }
 
 .burbujaPregunta::before {
-  left: -20px;
-  border-right-color: #fff;
+  right: -20px;
+  border-left-color: #fff;   /* 👈 antes tenías border-right-color */
 }
 
 .burbujaRespuesta::before {
-  right: -20px;
-  border-left-color: #fff;
+  left: -20px;
+  border-right-color: #fff;  /* 👈 antes tenías border-left-color */
 }
 
 
