@@ -3,9 +3,8 @@ import estilos from "./Home.module.css";
 import Modal from "../componentes/ocupacion/Modal";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import Heroe2 from "../assets/imagenes/Heroe2.png";
+import imagenHome from "../assets/imagenes/imagenHome.webp";
 import { homeData } from "../ss/data";
-
 
 export default function Home() {
 
@@ -63,7 +62,7 @@ export default function Home() {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
           viewport={{ once: true }}
         >
-          <img src={Heroe2} alt="imagen decorativa" />
+          <img src={imagenHome} alt="imagen decorativa" />
         </motion.div>
 
         <motion.div
@@ -109,7 +108,7 @@ export default function Home() {
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
         viewport={{ once: true }}
       >
-        <img src={Heroe2} alt="imagen decorativa" />
+        <img src={imagenHome} alt="imagen decorativa" />
       </motion.div>
 
       {modalPricingAbierto && (
