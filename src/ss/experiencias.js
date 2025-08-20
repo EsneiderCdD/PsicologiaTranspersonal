@@ -1,21 +1,21 @@
-import ft0 from '../assets/imagenes/ft0.jpeg';
-import ft1 from '../assets/imagenes/ft1.jpeg';
-import ft2 from '../assets/imagenes/ft2.jpeg';
-import Img3 from '../assets/imagenes/Img3.webp';
-import ft4 from '../assets/imagenes/ft4.jpeg';
-import ft5 from '../assets/imagenes/ft5.jpeg';
-import ft6 from '../assets/imagenes/ft6.jpeg';
-import ft7 from '../assets/imagenes/ft7.jpeg';
+import circulo from '../assets/imagenes/circulo.webp';
+import circulo3 from '../assets/imagenes/circulo3.webp';
+import circulo6 from '../assets/imagenes/circulo6.webp';
+import circulo1 from '../assets/imagenes/circulo1.webp';
+import circulo5 from '../assets/imagenes/circulo5.webp';
+import circulo2 from '../assets/imagenes/circulo2.webp';
+import circulo7 from '../assets/imagenes/circulo7.webp';
+import circulo4 from '../assets/imagenes/circulo4.webp';
 
 
 export const experienciasImages = [
- 
-  ft0,
-  Img3,
-  ft5,
-  ft1,
-  ft7,
-  ft4,
-  ft2,
-  ft6,
+  circulo1,  
+  circulo,
+  circulo7,
+  circulo4,
+  circulo6,
+  circulo2,
+  circulo3,
+  circulo5,
+
 ];

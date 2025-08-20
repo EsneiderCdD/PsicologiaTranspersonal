@@ -1,8 +1,6 @@
 import React, { useRef } from "react";
 import estilos from "./CirculoMujeres.module.css";
-import ft0 from "../../assets/imagenes/ft0.jpeg";
 import { FaLeaf, FaHeart, FaHandsHelping, FaStar } from 'react-icons/fa';
-import Encabezado from "../global/Encabezado";
 import { motion, useInView } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import SwiperCard from "./SwiperCard";
