@@ -201,11 +201,7 @@ export default function CirculoMujeres() {
                   ease: "easeInOut",
                 },
               }}
-              whileHover={{
-                backgroundColor: "#6b21a8",
-                boxShadow: "0 0 25px #6b21a8, 0 0 50px #ca66ebaa",
-                transition: { duration: 1.5 },
-              }}
+
             >
               Ver imagenes
             </motion.button>
