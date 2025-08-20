@@ -72,6 +72,7 @@ export default function Home() {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
           viewport={{ once: true }}
         >
+          {/* Botón principal animado */}
           <motion.button
             className={estilos.boton}
             onClick={() => setModalPricingAbierto(true)}
@@ -93,13 +94,66 @@ export default function Home() {
           >
             Agendar
           </motion.button>
-          <button
+
+          {/* Botones secundarios */}
+          <motion.button
             className={estilos.botonSecundario}
-            onClick={() => navigate("/about")}
+            onClick={() => navigate("/sobremi")}
+            initial={{ backgroundColor: "transparent", color: "#999" }}
+            animate={{
+              backgroundColor: "#f7edff",
+              color: "#ca66eb",
+              boxShadow: "0 0 50px #6b21a889 ",
+              transition: { delay: 0.6, duration: 1.5, ease: "easeInOut" },
+            }}
           >
             Sobre mí
-          </button>
+          </motion.button>
+
+          <motion.button
+            className={estilos.botonSecundario}
+            onClick={() => navigate("/psicotranspersonal")}
+             initial={{ backgroundColor: "transparent", color: "#999" }}
+            animate={{
+              backgroundColor: "#f7edff",
+              color: "#ca66eb",
+              boxShadow: "0 0 70px #6b21a87f ",
+              transition: { delay: 0.6, duration: 1.5, ease: "easeInOut" },
+            }}
+            
+          >
+            Psicotranspersonal
+          </motion.button>
+
+          <motion.button
+            className={estilos.botonSecundario}
+            onClick={() => navigate("/circulomujeres")}
+              initial={{ backgroundColor: "transparent", color: "#999" }}
+            animate={{
+              backgroundColor: "#f7edff",
+              color: "#ca66eb",
+              boxShadow: "0 0 90px #6b21a88d ",
+              transition: { delay: 0.6, duration: 1.5, ease: "easeInOut" },
+            }}
+          >
+            Círculo de Mujeres
+          </motion.button>
+
+          <motion.button
+            className={estilos.botonSecundario}
+            onClick={() => navigate("/tyc")}
+              initial={{ backgroundColor: "transparent", color: "#999" }}
+            animate={{
+              backgroundColor: "#f7edff",
+              color: "#ca66eb",
+              boxShadow: "0 0 90px #6b21a82e ",
+              transition: { delay: 0.6, duration: 1.5, ease: "easeInOut" },
+            }}
+          >
+            +
+          </motion.button>
         </motion.div>
+
       </motion.div>
       <motion.div
         className={`${estilos.imagen} ${estilos.imagenDesktop}`}
