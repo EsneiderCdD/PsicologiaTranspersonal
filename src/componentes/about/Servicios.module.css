@@ -4,8 +4,12 @@
 }
 
 .seccion {
-  background-color: #ffffff;
+  background-color: #8d2d2416;
 }
+.texto{
+   background-color: #FBF8EF;
+}
+
 .contenedor {
   display: flex;
   flex-direction: column;

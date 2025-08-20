@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600&family=Nunito:wght@400&display=swap');
 
 .seccion {
-  background-color: #ffffff;
+  background-color: #8d2d2416;
 }
+.texto{
+   background-color: #FBF8EF;
+}
+
 
 .contenedor {
   display: flex;

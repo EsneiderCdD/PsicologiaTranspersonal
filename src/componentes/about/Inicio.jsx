@@ -157,6 +157,7 @@ export default function Inicio() {
                 >
                   Susana Santamaria
                 </motion.h3>
+
                 <h3 ref={profesionRef}>Terapeuta Transpersonal</h3>
                 <br />
               </div>
@@ -168,7 +169,7 @@ export default function Inicio() {
                   animate={texto1EnVista ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                  {aboutData.parrafo1} 
+                  {aboutData.parrafo1}
                 </motion.p>
                 <br />
                 {/* Párrafo 2 */}

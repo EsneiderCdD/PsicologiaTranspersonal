@@ -35,15 +35,7 @@ export default function Servicios() {
     },
   };
 
-  // Texto nuevo con saltos de línea
-  const textoAcomp = `
 
-
-
-
-
-
-`;
 
   return (
     <div>
