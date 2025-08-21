@@ -245,7 +245,7 @@ p {
 @media (max-width: 800px) {
   
 .parallaxImagen {
-  background-image: url("../../assets/imagenes/ft0.jpeg");
+  background-image: url("../../assets/imagenes/circulo1.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain; /* CAMBIO CLAVE */

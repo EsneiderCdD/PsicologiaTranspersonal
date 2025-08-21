@@ -189,7 +189,7 @@ export default function CirculoMujeres() {
               initial={{ boxShadow: "none", backgroundColor: "#321033" }}
               animate={{
                 boxShadow: "0 0 20px #a52b1e, 0 0 40px #a52b1e",
-                backgroundColor: "#a52b1e",
+                backgroundColor: "#8D2C24",
                 transition: {
                   delay: 1,
                   duration: 2,
@@ -208,7 +208,7 @@ export default function CirculoMujeres() {
               initial={{ boxShadow: "none", backgroundColor: "#321033" }}
               animate={{
                 boxShadow: "0 0 20px #a52b1e, 0 0 40px #a52b1e",
-                backgroundColor: "#a52b1e",
+                backgroundColor: "#8D2C24",
                 transition: {
                   delay: 1,
                   duration: 2,
