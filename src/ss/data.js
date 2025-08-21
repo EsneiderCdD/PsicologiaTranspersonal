@@ -40,12 +40,12 @@ export const psicotranspersonalData = {
 
 export const acompañamientoTerapeuticoData = {
   parrafo1: `El acompañamiento terapéutico transpersonal es un espacio seguro y profundo para sanar, conocerte y reconectar con tu esencia. A través de esta mirada, no solo atendemos lo que ocurre en tu mente o tus emociones, sino que integramos todas las dimensiones de tu ser: cuerpo, mente, emociones, alma y propósito. \n\n`,
-  parrafo2: `En este proceso, te acompaño a: \n
-  - Explorar las causas profundas de lo que hoy te bloquea o duele.
-  - Liberar creencias y patrones heredados que ya no sirven a tu vida.
-  - Integrar experiencias pasadas para vivir en mayor paz y plenitud.
-  - Despertar tu conexión interior y tu confianza en ti misma. \n\n`,
+  
+  // antes aquí estaban los 4 bullets, ahora lo dejamos vacío o con intro:
+  parrafo2: `En este proceso, te acompaño a:`, 
+  
   parrafo3: `El enfoque transpersonal combina herramientas de la psicología tradicional con técnicas de expansión de consciencia, como visualizaciones, meditación guiada, trabajo con la respiración, exploración de la niña interior, trabajo con símbolos y arquetipos, metáforas y analogías, y dinámicas creativas que facilitan la transformación. \n\n`,
+  
   parrafo4: `🌿 Temas que puedes trabajar en este espacio: \n
   - Heridas de la infancia y su impacto en tu vida actual.
   - Autoestima y autoconfianza para elegirte y priorizarte.
@@ -57,6 +57,7 @@ export const acompañamientoTerapeuticoData = {
   - Crecimiento espiritual desde tu propia visión de la fe.
   - Liberación de creencias limitantes y patrones repetitivos.
   - Equilibrio entre energía femenina y masculina. \n\n`,
+  
   parrafo5: `💫 Qué puedes esperar de este proceso:\n
   - Escucha profunda y sin juicios.
   - Un acompañamiento adaptado a tus tiempos y necesidades.
@@ -65,9 +66,9 @@ export const acompañamientoTerapeuticoData = {
   - Una conexión más auténtica contigo misma y con la vida.`,
 };
 
+
 export const circuloMujeresData = {
   parrafo1: `Este espacio nació de forma orgánica, como un susurro del corazón. Al principio fue una simple invitación a compartir entre amigas, y con el tiempo, se fue tejiendo algo más profundo. Lo que comenzó como un encuentro casual se transformó en un lugar sagrado, donde las mujeres pueden ser, sentir y expresarse sin miedo ni juicio.`,
 
   parrafo2: `El círculo es un reflejo de lo que anhelo ver más en el mundo: espacios seguros, libres, humanos. Ahí se comparten emociones, pensamientos, silencios y memorias. Es un espacio de entrega, de aprendizaje y de liberación, donde cada mujer suelta lo que ya no le pertenece y recibe aquello que nutre su camino.`
-
 };

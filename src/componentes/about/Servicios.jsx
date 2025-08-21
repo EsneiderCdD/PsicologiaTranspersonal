@@ -6,6 +6,22 @@ import { motion, useInView } from "framer-motion";
 import { psicotranspersonalData } from "../../ss/data";
 import { acompañamientoTerapeuticoData } from "../../ss/data";
 import { useLocation } from "react-router-dom";
+import {
+  FaSearch,
+  FaUnlock,
+  FaLeaf,
+  FaHeart,
+  FaBaby,
+  FaUserShield,
+  FaChild,
+  FaLink,
+  FaBrain,
+  FaSadTear,
+  FaCompass,
+  FaSeedling,
+  FaFeather,
+  FaBalanceScale
+} from "react-icons/fa";
 
 export default function Servicios() {
   const location = useLocation();
@@ -36,16 +52,16 @@ export default function Servicios() {
       transition: { duration: 0.6, ease: "easeOut" },
     },
   };
-  
+
   useEffect(() => {
-  if (location.hash === "#psicotranspersonal") {
-    const t = setTimeout(() => {
-      const el = document.getElementById("psicotranspersonal");
-      if (el) el.scrollIntoView({ behavior: "smooth" });
-    }, 150); // pequeño delay para que monte el DOM
-    return () => clearTimeout(t);
-  }
-}, [location.hash]);
+    if (location.hash === "#psicotranspersonal") {
+      const t = setTimeout(() => {
+        const el = document.getElementById("psicotranspersonal");
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      }, 150); // pequeño delay para que monte el DOM
+      return () => clearTimeout(t);
+    }
+  }, [location.hash]);
 
 
 
@@ -106,35 +122,85 @@ export default function Servicios() {
             ))}
 
 
-            {/* NUEVO BLOQUE */}
-            <div className={estilos.nuevoBloque}>
-              <motion.h4
-                id="servicios"
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-                className={estilos.subtitulo}
+       <div className={estilos.nuevoBloque}>
+  <motion.h4
+    id="servicios"
+    variants={{
+      hidden: { opacity: 0, y: 20 },
+      visible: { opacity: 1, y: 0 },
+    }}
+    transition={{ duration: 0.5, ease: "easeOut" }}
+    className={estilos.subtitulo}
+  >
+    Acompañamiento Terapéutico Transpersonal
+  </motion.h4>
+  <br />
 
-              >
-                Acompañamiento Terapéutico Transpersonal
-              </motion.h4>
-              <br />
+  {/* Párrafo 1 */}
+  <motion.p
+    variants={{ hidden: { opacity: 0, x: 30 }, visible: { opacity: 1, x: 0 } }}
+    transition={{ duration: 0.5, ease: "easeOut" }}
+    className={`${estilos.textoAnimado} ${estilos.preserveLines}`}
+  >
+    {acompañamientoTerapeuticoData.parrafo1}
+  </motion.p>
 
-              {Object.values(acompañamientoTerapeuticoData).map((text, index) => (
-                <motion.p
-                  key={index}
-                  variants={{
-                    hidden: { opacity: 0, x: 30 },
-                    visible: { opacity: 1, x: 0 },
-                  }}
-                  transition={{ duration: 0.5, ease: "easeOut" }}
-                  className={`${estilos.textoAnimado} ${estilos.preserveLines}`}
-                >
-                  {text}
-                </motion.p>
-              ))}
+  {/* Párrafo 2 */}
+  <motion.p
+    variants={{ hidden: { opacity: 0, x: 30 }, visible: { opacity: 1, x: 0 } }}
+    transition={{ duration: 0.5, ease: "easeOut" }}
+    className={`${estilos.textoAnimado} ${estilos.preserveLines}`}
+  >
+    {acompañamientoTerapeuticoData.parrafo2}
+  </motion.p>
+
+  {/* 👇 BLOQUE DE ICONOS AQUÍ */}
+  <div className={estilos.iconContainer}>
+    <div className={estilos.iconRow}>
+      <div className={estilos.item} style={{ "--item-color": "#FFD6D6" }}>
+        <div className={estilos.icon}><FaSearch /></div>
+        <span className={estilos.iconText}>
+          Explorar las causas profundas de lo que hoy te bloquea o duele.
+        </span>
+      </div>
+
+      <div className={estilos.item} style={{ "--item-color": "#C6F1D6" }}>
+        <div className={estilos.icon}><FaUnlock /></div>
+        <span className={estilos.iconText}>
+          Liberar creencias y patrones heredados que ya no sirven a tu vida.
+        </span>
+      </div>
+    </div>
+
+    <div className={estilos.iconRow}>
+      <div className={estilos.item} style={{ "--item-color": "#FFF5BA" }}>
+        <div className={estilos.icon}><FaLeaf /></div>
+        <span className={estilos.iconText}>
+          Integrar experiencias pasadas para vivir en mayor paz y plenitud.
+        </span>
+      </div>
+
+      <div className={estilos.item} style={{ "--item-color": "#D0E8F2" }}>
+        <div className={estilos.icon}><FaHeart /></div>
+        <span className={estilos.iconText}>
+          Despertar tu conexión interior y tu confianza en ti misma.
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+              {/* Resto de párrafos */}
+              <motion.p className={`${estilos.textoAnimado} ${estilos.preserveLines}`}>
+                {acompañamientoTerapeuticoData.parrafo3}
+              </motion.p>
+              <motion.p className={`${estilos.textoAnimado} ${estilos.preserveLines}`}>
+                {acompañamientoTerapeuticoData.parrafo4}
+              </motion.p>
+              <motion.p className={`${estilos.textoAnimado} ${estilos.preserveLines}`}>
+                {acompañamientoTerapeuticoData.parrafo5}
+              </motion.p>
             </div>
 
             {/* Botón principal animado */}
