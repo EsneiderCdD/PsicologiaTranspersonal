@@ -151,14 +151,14 @@
 .iconN {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: space-between;
   gap: 1rem;
 }
 
 .iconC {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: space-between;
   margin-top: 1.25rem;
   gap: 1rem;
 }
@@ -242,14 +242,14 @@
 
 .iconC {
   flex-wrap: wrap;
-  justify-content: center;
+
   gap: 0.11rem;
 }
 }
-/* 🔑 Ajuste intermedio para 460px */
+
 @media (max-width: 460px) {
   .texto {
-    padding: 1.25rem; /* fijo en rem, más respiración */
+    padding: 1.25rem;
   }
   .titulo {
     margin-top: 20%;
@@ -267,7 +267,7 @@
     margin-top: 20%;
   }
   .texto {
-    padding: 1rem; /* más controlado que % */
+    padding: 1rem; 
   }
     .item {
     font-size: 0.70rem;
