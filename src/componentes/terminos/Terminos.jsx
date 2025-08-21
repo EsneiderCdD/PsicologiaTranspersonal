@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './Terminos.module.css';
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-
-// Importamos la data externa
+import { useLocation } from "react-router-dom";
 import tyc from "../../ss/tyc";
 
 const Terminos = () => {
   const [selectedTab, setSelectedTab] = useState('Pagos');
   const [nombreRef, nombreEnVista] = useInView({ threshold: 0.5, triggerOnce: true });
+
+  const location = useLocation();
 
   const underlineVariants = {
     hidden: { backgroundSize: '0% 2px' },
@@ -17,9 +18,19 @@ const Terminos = () => {
       transition: { duration: 0.6, ease: 'easeOut' }
     }
   };
+  
+    useEffect(() => {
+      if (location.hash === "#tyc") {
+        const t = setTimeout(() => {
+          const el = document.getElementById("tyc");
+          if (el) el.scrollIntoView({ behavior: "smooth" });
+        }, 150); 
+        return () => clearTimeout(t);
+      }
+    }, [location.hash]);
 
   return (
-    <div id="terminos" className={styles.contenedor}>
+    <div id="tyc" className={styles.contenedor}>
       <div className={styles.texto}>
         <div className={styles.titulo}>
           <motion.h3

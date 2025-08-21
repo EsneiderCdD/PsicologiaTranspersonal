@@ -1,13 +1,16 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import estilos from "./CirculoMujeres.module.css";
 import { FaLeaf, FaHeart, FaHandsHelping, FaStar } from 'react-icons/fa';
 import { motion, useInView } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import SwiperCard from "./SwiperCard";
 import { circuloMujeresData } from "../../ss/data";
+import { useLocation } from "react-router-dom";
 
 
 export default function CirculoMujeres() {
+
+  const location = useLocation();
 
   const navigate = useNavigate();
 
@@ -39,8 +42,19 @@ export default function CirculoMujeres() {
   const animacionRef = useRef(null);
   const estaEnVista = useInView(animacionRef, { once: true, margin: "0px 0px -100px 0px" });
 
+
+  useEffect(() => {
+    if (location.hash === "#circulomujeres") {
+      const t = setTimeout(() => {
+        const el = document.getElementById("circulomujeres");
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      }, 150); 
+      return () => clearTimeout(t);
+    }
+  }, [location.hash]);
+
   return (
-    <section className={estilos.seccion}>
+    <section id="circulomujeres" className={estilos.seccion}>
       <div className={estilos.contenedor}>
 
         <div className={estilos.contenido}>

@@ -5,7 +5,7 @@ import { GiMoon, GiLotus } from "react-icons/gi";
 import { motion, useInView } from "framer-motion";
 import { HiUsers } from "react-icons/hi";
 import { aboutData } from "../../ss/data";
-
+import { useLocation } from "react-router-dom";
 import estilos from "./Inicio.module.css";
 import foto from "../../assets/imagenes/foto.webp";
 import banner from "../../assets/imagenes/banner.webp";
@@ -15,6 +15,8 @@ export default function Inicio() {
   const [sesiones, setSesiones] = useState(0);
   const [seguidores, setSeguidores] = useState(0);
   const [pacientes, setPacientes] = useState(0);
+
+  const location = useLocation();
 
   // Refs y estados para useInView
   const textoRef = useRef(null);
@@ -121,11 +123,22 @@ export default function Inicio() {
     }
   }, [iconosEnVista]);
 
+  
+    useEffect(() => {
+    if (location.hash === "#sobremi") {
+      const el = document.getElementById("sobremi");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
+
+
 
 
   return (
     <div >
-      <section id="home" className={estilos.seccion}>
+      <section id="sobremi" className={estilos.seccion}>
         <div className={estilos.contenedor}>
           <div className={estilos.contenido}>
             <div className={estilos.banner}>

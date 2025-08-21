@@ -1,15 +1,15 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Modal from "../ocupacion/Modal";
-
 import estilos from "./Servicios.module.css";
 import psicotranspersonal from "../../assets/imagenes/psicotranspersonal.webp";
-
 import { motion, useInView } from "framer-motion";
-
 import { psicotranspersonalData } from "../../ss/data";
 import { acompañamientoTerapeuticoData } from "../../ss/data";
+import { useLocation } from "react-router-dom";
 
 export default function Servicios() {
+  const location = useLocation();
+
   const [modalAbierto, setModalAbierto] = useState(false);
 
   const [modalPricingAbierto, setModalPricingAbierto] = useState(false);
@@ -36,12 +36,22 @@ export default function Servicios() {
       transition: { duration: 0.6, ease: "easeOut" },
     },
   };
+  
+  useEffect(() => {
+  if (location.hash === "#psicotranspersonal") {
+    const t = setTimeout(() => {
+      const el = document.getElementById("psicotranspersonal");
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }, 150); // pequeño delay para que monte el DOM
+    return () => clearTimeout(t);
+  }
+}, [location.hash]);
 
 
 
   return (
     <div>
-      <section className={estilos.seccion}>
+      <section id="psicotranspersonal" className={estilos.seccion}>
         <div className={estilos.contenedor}>
           <div className={estilos.bannerLineLeft}></div>
           <div className={estilos.bannerLineRight}></div>

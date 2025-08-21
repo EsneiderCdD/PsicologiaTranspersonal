@@ -1,13 +1,26 @@
-import { useNavigate } from "react-router-dom";
+import { s } from "framer-motion/client";
+import { useNavigate, useLocation } from "react-router-dom";
 
-export function getConfigBotones() {
+export function useConfigBotones() {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const scrollOrNavigate = (pathname, hashId) => {
+    const hash = `#${hashId}`;
+    if (location.pathname === pathname) {
+      const el = document.getElementById(hashId);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+      else window.location.hash = hash; 
+    } else {
+      navigate({ pathname, hash });
+    }
+  };
 
   return [
     {
       label: "Inicio",
       variant: "principal",
-      onClick: () => navigate("/"),
+      onClick: () => scrollOrNavigate("/", "inicio"),
       initial: { boxShadow: "none", backgroundColor: "#321033" },
       animate: {
         boxShadow: "0 0 20px #6b21a8, 0 0 40px #ca66eb66",
@@ -22,7 +35,7 @@ export function getConfigBotones() {
     },
     {
       label: "Sobre mí",
-      onClick: () => navigate("/sobremi"),
+      onClick: () => scrollOrNavigate("/sobremi", "sobremi"),
       initial: { backgroundColor: "transparent", color: "#000" },
       animate: {
         backgroundColor: "#f7edff",
@@ -33,7 +46,7 @@ export function getConfigBotones() {
     },
     {
       label: "Psicotranspersonal",
-      onClick: () => navigate("/psicotranspersonal"),
+      onClick: () => scrollOrNavigate("/psicotranspersonal", "psicotranspersonal"),
       initial: { backgroundColor: "transparent", color: "#999" },
       animate: {
         backgroundColor: "#f7edff",
@@ -44,7 +57,7 @@ export function getConfigBotones() {
     },
     {
       label: "Círculo de Mujeres",
-      onClick: () => navigate("/circulomujeres"),
+      onClick: () => scrollOrNavigate("/circulomujeres", "circulomujeres"),
       initial: { backgroundColor: "transparent", color: "#999" },
       animate: {
         backgroundColor: "#f7edff",
@@ -55,7 +68,7 @@ export function getConfigBotones() {
     },
     {
       label: "+",
-      onClick: () => navigate("/tyc"),
+      onClick: () => scrollOrNavigate("/tyc", "tyc"),
       initial: { backgroundColor: "transparent", color: "#999" },
       animate: {
         backgroundColor: "#f7edff",

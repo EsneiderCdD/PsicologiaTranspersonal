@@ -66,7 +66,7 @@ const Ocupacion = () => {
                 Reservar Sesión
               </button>
 
-              <Link to="/about#servicios">
+              <Link to="/Psicotranspersonal">
                 <button className={styles.botonPrincipal}>Saber Más</button>
               </Link>
 
@@ -109,7 +109,7 @@ const Ocupacion = () => {
                 Reservar un cupo
               </a>
 
-              <Link to="/about#circulo">
+              <Link to="/circuloMujeres">
                 <button className={styles.botonSecundario}>Saber Más</button>
               </Link>
             </div>

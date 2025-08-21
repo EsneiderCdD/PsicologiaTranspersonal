@@ -6,14 +6,25 @@ import { motion } from "framer-motion";
 import imagenHome from "../assets/imagenes/imagenHome.webp";
 import { homeData } from "../ss/data";
 
+
 export default function Home() {
 
   const [modalPricingAbierto, setModalPricingAbierto] = useState(false);
 
   const navigate = useNavigate();
 
+    useEffect(() => {
+    if (location.hash === "#inicio") {
+      const el = document.getElementById("inicio");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
+
   return (
     <motion.div
+      id="inicio"
       className={estilos.layout}
       initial="hidden"
       animate="visible"
