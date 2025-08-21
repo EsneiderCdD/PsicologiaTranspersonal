@@ -1,11 +1,22 @@
 import React, { useRef, useEffect } from "react";
 import estilos from "./CirculoMujeres.module.css";
-import { FaLeaf, FaHeart, FaHandsHelping, FaStar } from 'react-icons/fa';
+
 import { motion, useInView } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import SwiperCard from "./SwiperCard";
 import { circuloMujeresData } from "../../ss/data";
 import { useLocation } from "react-router-dom";
+import { 
+  FaLeaf, 
+  FaHeart, 
+  FaHandsHelping, 
+  FaStar, 
+  FaClock, 
+  FaMapMarkerAlt, 
+  FaCalendarAlt 
+} from "react-icons/fa";
+
+
 
 
 export default function CirculoMujeres() {
@@ -48,7 +59,7 @@ export default function CirculoMujeres() {
       const t = setTimeout(() => {
         const el = document.getElementById("circulomujeres");
         if (el) el.scrollIntoView({ behavior: "smooth" });
-      }, 150); 
+      }, 150);
       return () => clearTimeout(t);
     }
   }, [location.hash]);
@@ -112,71 +123,47 @@ export default function CirculoMujeres() {
             En los círculos de mujeres vivimos:
           </motion.h5>
 
-          <div className={estilos.tarjetas}>
-            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", marginBottom: "0.5rem" }}>
+          <div className={estilos.iconContainer}>
+  <div className={estilos.iconRow}>
+    <div className={estilos.item} style={{ "--item-color": "#6CB28E" }}>
+      <div className={estilos.icon}><FaLeaf /></div>
+      <span className={estilos.iconText}>Meditaciones Profundas</span>
+    </div>
 
-            </div>
+    <div className={estilos.item} style={{ "--item-color": "#FF9A8B" }}>
+      <div className={estilos.icon}><FaHandsHelping /></div>
+      <span className={estilos.iconText}>Actividades Experienciales</span>
+    </div>
 
-            <div style={{ display: "flex", flexDirection: "row" }}>
-              <motion.div
-                className={estilos.tarjeta}
-                custom={1}
-                initial="hidden"
-                animate={estaEnVista ? "visible" : "hidden"}
-                variants={tarjetaVariants}
-              >
-                <FaLeaf size={30} color="#6CB28E" />
-                <p>Meditaciones Profundas</p>
-              </motion.div>
-              <motion.div
-                className={estilos.tarjeta}
-                custom={2}
-                initial="hidden"
-                animate={estaEnVista ? "visible" : "hidden"}
-                variants={tarjetaVariants}
-              >
-                <FaHandsHelping size={30} color="#FF9A8B" />
-                <p>Actividades Experienciales</p>
-              </motion.div>
-              <motion.div
-                className={estilos.tarjeta}
-                custom={3}
-                initial="hidden"
-                animate={estaEnVista ? "visible" : "hidden"}
-                variants={tarjetaVariants}
-              >
-                <FaHeart size={30} color="#D16BA5" />
-                <p>Círculo de Palabra</p>
-              </motion.div>
-            </div>
-          </div>
-          <motion.div
-            className={estilos.infoCita}
-            initial={{ opacity: 0, y: 30 }}
-            animate={estaEnVista ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1, delay: 0.2 }}
-          >
-            <div style={{ display: "flex", flexDirection: "row", justifyContent: "center", marginBottom: "0.5rem" }}>
-              <div className={estilos.tarjeta}>
-                <p><strong>🕒 Hora:</strong> de 3:00 a 7:00 pm</p>
-              </div>
-              <div className={estilos.tarjeta}>
-                <p><strong>📍 Lugar:</strong> Barrio Mesa, Envigado</p>
-              </div>
+    <div className={estilos.item} style={{ "--item-color": "#D16BA5" }}>
+      <div className={estilos.icon}><FaHeart /></div>
+      <span className={estilos.iconText}>Círculo de Palabra</span>
+    </div>
+  </div>
 
-              <div className={estilos.tarjeta}>
-                <p><strong>📅 Fecha:</strong> sábados o domingos</p>
-              </div>
-            </div>
-            <div style={{ display: "flex", justifyContent: "center" }}>
-              <div >
-                <p><strong>❣️ Aporte:</strong> $88.000 COP</p>
-              </div>
+  <div className={estilos.iconRow}>
+    <div className={estilos.item} style={{ "--item-color": "#FFD6D6" }}>
+      <div className={estilos.icon}><FaClock /></div>
+      <span className={estilos.iconText}>Hora: de 3:00 a 7:00 pm</span>
+    </div>
 
-            </div>
+    <div className={estilos.item} style={{ "--item-color": "#FEE8C6" }}>
+      <div className={estilos.icon}><FaMapMarkerAlt /></div>
+      <span className={estilos.iconText}>Lugar: Barrio Mesa, Envigado</span>
+    </div>
 
+    <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
+      <div className={estilos.icon}><FaCalendarAlt /></div>
+      <span className={estilos.iconText}>Fecha: sábados o domingos</span>
+    </div>
 
-          </motion.div>
+    <div className={estilos.item} style={{ "--item-color": "#D0E8F2" }}>
+      <div className={estilos.icon}><FaHeart /></div>
+      <span className={estilos.iconText}>Aporte: $88.000 COP</span>
+    </div>
+  </div>
+</div>
+
 
 
           <div className={estilos.botonesContenedor}>
