@@ -46,24 +46,9 @@ export const acompañamientoTerapeuticoData = {
   
   parrafo3: `El enfoque transpersonal combina herramientas de la psicología tradicional con técnicas de expansión de consciencia, como visualizaciones, meditación guiada, trabajo con la respiración, exploración de la niña interior, trabajo con símbolos y arquetipos, metáforas y analogías, y dinámicas creativas que facilitan la transformación. \n\n`,
   
-  parrafo4: `🌿 Temas que puedes trabajar en este espacio: \n
-  - Heridas de la infancia y su impacto en tu vida actual.
-  - Autoestima y autoconfianza para elegirte y priorizarte.
-  - Sanar la niña interior y reconectar con tu espontaneidad y alegría.
-  - Dependencia emocional y vínculos poco saludables.
-  - Manejo de la ansiedad y estrés desde la conexión interior.
-  - Pérdida, duelos y cierres de ciclo.
-  - Conexión con tu propósito y sentido de vida.
-  - Crecimiento espiritual desde tu propia visión de la fe.
-  - Liberación de creencias limitantes y patrones repetitivos.
-  - Equilibrio entre energía femenina y masculina. \n\n`,
+  parrafo4: `🌿 Temas que puedes trabajar en este espacio: \n`,
   
-  parrafo5: `💫 Qué puedes esperar de este proceso:\n
-  - Escucha profunda y sin juicios.
-  - Un acompañamiento adaptado a tus tiempos y necesidades.
-  - Herramientas prácticas para aplicar en tu vida diaria.
-  - Mayor claridad, calma y empoderamiento para tomar decisiones.
-  - Una conexión más auténtica contigo misma y con la vida.`,
+  parrafo5: `💫 Qué puedes esperar de este proceso:\n`,
 };
 
 
