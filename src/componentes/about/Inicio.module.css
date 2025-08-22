@@ -99,8 +99,11 @@
   padding: 1.5rem;
   gap: 1rem;
 
-  /* gradiente dinámico según la variable */
-  background: radial-gradient(circle at center, var(--item-color, #eee) 0%, transparent 70%);
+  background: radial-gradient(
+    circle closest-side at center,
+    var(--item-color, #eee) 0%,
+    transparent 100%
+  );
   border-radius: 1rem;
   position: relative;
   z-index: 0;
@@ -114,9 +117,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #000; /* o #fff según contraste */
+  color: #000; 
   
-  /* usa el mismo color que el gradiente, si lo quieres sólido */
+
   background-color: var(--item-color, #ccc);
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   z-index: 1;
@@ -195,6 +198,7 @@
   }
 }
 
+
 @media (max-width: 600px) {
   .banner {
     height: 220px;
@@ -222,6 +226,22 @@
   .contenido p {
     font-size: 0.95rem;
   }
+  .item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%; 
+  background: radial-gradient(
+    circle at center,
+    var(--item-color, #eee) 0%,
+    transparent 80%
+  );
+  z-index: -1; 
+}
 }
 
 
@@ -238,6 +258,7 @@
     max-width: 70px;
     padding: 0rem;
   }
+  
   .iconContainer {
   flex-direction: column;
   flex-wrap: nowrap;
@@ -283,6 +304,7 @@
     max-width: 65px;
  
   }
+  
   .iconContainer {
   width: 100;
 }
