@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600&family=Nunito:wght@400&display=swap');
 
+html, body {
+  overflow-x: hidden;
+}
+
 .seccion {
   background-color: #8d2d2416;
 }
@@ -391,8 +395,8 @@ p {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 135%;
-    height: 135%;
+    width: 100%;
+    height: 100%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
     background: radial-gradient(circle at center,
@@ -400,9 +404,13 @@ p {
         transparent 50%);
     z-index: -1;
   }
-    .item span {
-    font-size: 0.8rem;
+
+  .item span {
+    font-size: 0.85rem;
   }
+
+
+
 }
 
 @media (max-width: 450px) {
@@ -443,7 +451,8 @@ p {
   .botonesContenedor {
     margin-bottom: 7%;
   }
-    .icon  {
+
+  .icon {
     width: 40px;
     height: 40px;
     font-size: 1.75rem;
@@ -464,18 +473,19 @@ p {
   }
 
   .iconContainer {
-    width: 100;
+    width: 100%;
   }
-  
+
   .iconC {
     flex-wrap: wrap;
 
     gap: 0.11rem;
   }
-  
+
   .item span {
     font-size: 0.75rem;
   }
+
 
 }
 
@@ -497,6 +507,7 @@ p {
   .iconContainer {
     width: 100;
   }
+
 }
 
 
