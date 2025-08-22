@@ -112,19 +112,57 @@ export default function Servicios() {
               <h4>La semilla que floreció en comunidad</h4>
             </div>
 
-            {Object.values(psicotranspersonalData).map((text, index) => (
-              <motion.p
-                key={index}
-                variants={{
-                  hidden: { opacity: 0, x: 30 },
-                  visible: { opacity: 1, x: 0 },
-                }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                className={estilos.textoAnimado}
-              >
-                {text}
-              </motion.p>
-            ))}
+            <motion.p
+              variants={{ hidden: { opacity: 0, x: 30 }, visible: { opacity: 1, x: 0 } }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className={`${estilos.textoAnimado} ${estilos.preserveLines}`}
+            >
+              {psicotranspersonalData.parrafo1}
+            </motion.p>
+            <motion.p
+              variants={{ hidden: { opacity: 0, x: 30 }, visible: { opacity: 1, x: 0 } }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className={`${estilos.textoAnimado} ${estilos.preserveLines}`}
+            >
+              {psicotranspersonalData.parrafo2}
+            </motion.p>
+            <motion.p
+              variants={{ hidden: { opacity: 0, x: 30 }, visible: { opacity: 1, x: 0 } }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className={`${estilos.textoAnimado} ${estilos.preserveLines}`}
+            >
+              {acompañamientoTerapeuticoData.parrafo2}
+            </motion.p>
+
+            <div className={estilos.iconContainer}>
+              <div className={estilos.iconC}>
+                <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
+                  <div className={estilos.icon}><FaSearch /></div>
+                  <span className={estilos.iconText}>
+                    Explorar las causas profundas de lo que hoy te bloquea o duele.
+                  </span>
+                </div>
+                <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
+                  <div className={estilos.icon}><FaUnlock /></div>
+                  <span className={estilos.iconText}>
+                    Liberar creencias y patrones heredados que ya no sirven a tu vida.
+                  </span>
+                </div>
+                <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
+                  <div className={estilos.icon}><FaLeaf /></div>
+                  <span className={estilos.iconText}>
+                    Integrar experiencias pasadas para vivir en mayor paz y plenitud.
+                  </span>
+                </div>
+                <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
+                  <div className={estilos.icon}><FaHeart /></div>
+                  <span className={estilos.iconText}>
+                    Despertar tu conexión interior y tu confianza en ti misma.
+                  </span>
+                </div>
+              </div>
+            </div>
+
 
 
             <div className={estilos.nuevoBloque}>
@@ -142,9 +180,6 @@ export default function Servicios() {
               <br />
 
               {/* BLOQUE ICONOS - NUEVOS TEMAS */}
-              <div className={estilos.iconContainer}>
-
-              </div>
               {/* Párrafo 1 */}
               <motion.p
                 variants={{ hidden: { opacity: 0, x: 30 }, visible: { opacity: 1, x: 0 } }}
@@ -154,53 +189,6 @@ export default function Servicios() {
                 {acompañamientoTerapeuticoData.parrafo1}
               </motion.p>
 
-              {/* Párrafo 2 */}
-              <motion.p
-                variants={{ hidden: { opacity: 0, x: 30 }, visible: { opacity: 1, x: 0 } }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-                className={`${estilos.textoAnimado} ${estilos.preserveLines}`}
-              >
-                {acompañamientoTerapeuticoData.parrafo2}
-              </motion.p>
-
-              {/* 👇 BLOQUE DE ICONOS AQUÍ */}
-              <div className={estilos.iconContainer}>
-                <div className={estilos.iconC}>
-                  <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
-                    <div className={estilos.icon}><FaSearch /></div>
-                    <span className={estilos.iconText}>
-                      Explorar las causas profundas de lo que hoy te bloquea o duele.
-                    </span>
-                  </div>
-
-                  <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
-                    <div className={estilos.icon}><FaUnlock /></div>
-                    <span className={estilos.iconText}>
-                      Liberar creencias y patrones heredados que ya no sirven a tu vida.
-                    </span>
-                  </div>
-                
-
-                
-                  <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
-                    <div className={estilos.icon}><FaLeaf /></div>
-                    <span className={estilos.iconText}>
-                      Integrar experiencias pasadas para vivir en mayor paz y plenitud.
-                    </span>
-                  </div>
-
-                  <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
-                    <div className={estilos.icon}><FaHeart /></div>
-                    <span className={estilos.iconText}>
-                      Despertar tu conexión interior y tu confianza en ti misma.
-                    </span>
-                  </div>
-                </div>
-                <motion.p className={`${estilos.textoAnimado} ${estilos.preserveLines}`}>
-                  {acompañamientoTerapeuticoData.parrafo3}
-                </motion.p>
-              </div>
-              
               <motion.h5
                 variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
@@ -212,7 +200,7 @@ export default function Servicios() {
               {/* BLOQUE DE ICONOS REPETIDO */}
               <div className={estilos.iconContainer}>
                 <div className={estilos.iconC}>
-                
+
 
                   <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
                     <div className={estilos.icon}><FaHourglassHalf /></div>
@@ -221,7 +209,7 @@ export default function Servicios() {
                     </span>
                   </div>
 
-                  <div className={estilos.item} style={{ "--item-color":"#F0E8FF" }}>
+                  <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
                     <div className={estilos.icon}><FaWrench /></div>
                     <span className={estilos.iconText}>
                       Herramientas prácticas para aplicar en tu vida diaria.
@@ -235,7 +223,7 @@ export default function Servicios() {
                     </span>
                   </div>
 
-                  <div className={estilos.item} style={{ "--item-color":"#F0E8FF" }}>
+                  <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
                     <div className={estilos.icon}><FaHandshake /></div>
                     <span className={estilos.iconText}>
                       Una conexión más auténtica contigo misma y con la vida.
@@ -243,6 +231,14 @@ export default function Servicios() {
                   </div>
                 </div>
               </div>
+
+              <div className={estilos.iconContainer}>
+
+                <motion.p className={`${estilos.textoAnimado} ${estilos.preserveLines}`}>
+                  {acompañamientoTerapeuticoData.parrafo3}
+                </motion.p>
+              </div>
+
 
 
 
@@ -255,6 +251,7 @@ export default function Servicios() {
               >
                 🌿 Temas que puedes trabajar en este espacio:
               </motion.h5>
+
 
               <div className={estilos.iconContainer}>
                 <div className={estilos.iconC}>
@@ -272,14 +269,14 @@ export default function Servicios() {
                     </span>
                   </div>
 
-                 <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
+                  <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
                     <div className={estilos.icon}><FaBalanceScale /></div>
                     <span className={estilos.iconText}>
                       Equilibrio entre energía femenina y masculina.
                     </span>
                   </div>
 
-                  <div className={estilos.item} style={{ "--item-color": "#F0E8FF"}}>
+                  <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
                     <div className={estilos.icon}><FaLink /></div>
                     <span className={estilos.iconText}>
                       Dependencia emocional y vínculos poco saludables.
@@ -288,14 +285,14 @@ export default function Servicios() {
                 </div>
 
                 <div className={estilos.iconC}>
-                  <div className={estilos.item} style={{ "--item-color": "#F0E8FF"}}>
+                  <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
                     <div className={estilos.icon}><FaBrain /></div>
                     <span className={estilos.iconText}>
                       Manejo de la ansiedad y estrés desde la conexión interior.
                     </span>
                   </div>
 
-                  <div className={estilos.item} style={{ "--item-color": "#F0E8FF"}}>
+                  <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
                     <div className={estilos.icon}><FaSadTear /></div>
                     <span className={estilos.iconText}>
                       Pérdida, duelos y cierres de ciclo.
@@ -309,7 +306,7 @@ export default function Servicios() {
                     </span>
                   </div>
 
-                  <div className={estilos.item} style={{ "--item-color":"#F0E8FF" }}>
+                  <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
                     <div className={estilos.icon}><FaSeedling /></div>
                     <span className={estilos.iconText}>
                       Crecimiento espiritual desde tu propia visión de la fe.
@@ -317,7 +314,7 @@ export default function Servicios() {
                   </div>
                 </div>
 
-                
+
               </div>
               <br />
 

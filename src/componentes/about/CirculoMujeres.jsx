@@ -6,14 +6,14 @@ import { useNavigate } from "react-router-dom";
 import SwiperCard from "./SwiperCard";
 import { circuloMujeresData } from "../../ss/data";
 import { useLocation } from "react-router-dom";
-import { 
-  FaLeaf, 
-  FaHeart, 
-  FaHandsHelping, 
-  FaStar, 
-  FaClock, 
-  FaMapMarkerAlt, 
-  FaCalendarAlt 
+import {
+  FaLeaf,
+  FaHeart,
+  FaHandsHelping,
+  FaStar,
+  FaClock,
+  FaMapMarkerAlt,
+  FaCalendarAlt
 } from "react-icons/fa";
 
 
@@ -124,45 +124,45 @@ export default function CirculoMujeres() {
           </motion.h5>
 
           <div className={estilos.iconContainer}>
-  <div className={estilos.iconRow}>
-    <div className={estilos.item} style={{ "--item-color": "#6CB28E" }}>
-      <div className={estilos.icon}><FaLeaf /></div>
-      <span className={estilos.iconText}>Meditaciones Profundas</span>
-    </div>
+            <div className={estilos.iconC}>
+              <div className={estilos.item} style={{ "--item-color": "#FFD6D6" }}>
+                <div className={estilos.icon}><FaLeaf /></div>
+                <span className={estilos.iconText}>Meditaciones Profundas</span>
+              </div>
 
-    <div className={estilos.item} style={{ "--item-color": "#FF9A8B" }}>
-      <div className={estilos.icon}><FaHandsHelping /></div>
-      <span className={estilos.iconText}>Actividades Experienciales</span>
-    </div>
+              <div className={estilos.item} style={{ "--item-color": "#FFD6D6" }}>
+                <div className={estilos.icon}><FaHandsHelping /></div>
+                <span className={estilos.iconText}>Actividades Experienciales</span>
+              </div>
 
-    <div className={estilos.item} style={{ "--item-color": "#D16BA5" }}>
-      <div className={estilos.icon}><FaHeart /></div>
-      <span className={estilos.iconText}>Círculo de Palabra</span>
-    </div>
-  </div>
+              <div className={estilos.item} style={{ "--item-color": "#FFD6D6" }}>
+                <div className={estilos.icon}><FaHeart /></div>
+                <span className={estilos.iconText}>Círculo de Palabra</span>
+              </div>
+            </div>
 
-  <div className={estilos.iconRow}>
-    <div className={estilos.item} style={{ "--item-color": "#FFD6D6" }}>
-      <div className={estilos.icon}><FaClock /></div>
-      <span className={estilos.iconText}>Hora: de 3:00 a 7:00 pm</span>
-    </div>
+            <div className={estilos.iconC}>
+              <div className={estilos.item} style={{ "--item-color": "#FFD6D6" }}>
+                <div className={estilos.icon}><FaClock /></div>
+                <span className={estilos.iconText}>Hora: de 3:00 a 7:00 pm</span>
+              </div>
 
-    <div className={estilos.item} style={{ "--item-color": "#FEE8C6" }}>
-      <div className={estilos.icon}><FaMapMarkerAlt /></div>
-      <span className={estilos.iconText}>Lugar: Barrio Mesa, Envigado</span>
-    </div>
+              <div className={estilos.item} style={{ "--item-color": "#FFD6D6" }}>
+                <div className={estilos.icon}><FaMapMarkerAlt /></div>
+                <span className={estilos.iconText}>Lugar: Barrio Mesa, Envigado</span>
+              </div>
 
-    <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
-      <div className={estilos.icon}><FaCalendarAlt /></div>
-      <span className={estilos.iconText}>Fecha: sábados o domingos</span>
-    </div>
+              <div className={estilos.item} style={{ "--item-color": "#FFD6D6" }}>
+                <div className={estilos.icon}><FaCalendarAlt /></div>
+                <span className={estilos.iconText}>Fecha: sábados o domingos</span>
+              </div>
 
-    <div className={estilos.item} style={{ "--item-color": "#D0E8F2" }}>
-      <div className={estilos.icon}><FaHeart /></div>
-      <span className={estilos.iconText}>Aporte: $88.000 COP</span>
-    </div>
-  </div>
-</div>
+              <div className={estilos.item} style={{ "--item-color": "#FFD6D6" }}>
+                <div className={estilos.icon}><FaHeart /></div>
+                <span className={estilos.iconText}>Aporte: $88.000 COP</span>
+              </div>
+            </div>
+          </div>
 
 
 
