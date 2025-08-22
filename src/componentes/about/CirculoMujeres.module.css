@@ -297,7 +297,7 @@ p {
 .iconC {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-top: 1.25rem;
   gap: 1rem;
 }
