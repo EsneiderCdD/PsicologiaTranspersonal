@@ -330,18 +330,14 @@ export default function Servicios() {
                 initial={{ boxShadow: "none", backgroundColor: "#321033" }}
                 animate={{
                   boxShadow: "0 0 20px #6b21a8, 0 0 40px #ca66eb66",
-                  backgroundColor: "#800089",
+                  backgroundColor: "#6b21a8",
                   transition: {
                     delay: 1,
                     duration: 2,
                     ease: "easeInOut",
                   },
                 }}
-                whileHover={{
-                  backgroundColor: "#6b21a8",
-                  boxShadow: "0 0 25px #6b21a8, 0 0 50px #ca66ebaa",
-                  transition: { duration: 1.5 },
-                }}
+   
               >
                 Reserva tu espacio
               </motion.button>

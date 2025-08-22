@@ -73,7 +73,7 @@ export default function CirculoMujeres() {
           <div className={estilos.verticalLineRight}></div>
 
           <div className={estilos.parallax}>
-            <div className={estilos.parallaxImagen}></div>
+            <div className={estilos.banner}></div>
           </div>
 
           <motion.div
@@ -125,39 +125,40 @@ export default function CirculoMujeres() {
 
           <div className={estilos.iconContainer}>
             <div className={estilos.iconC}>
-              <div className={estilos.item} style={{ "--item-color": "#FFD6D6" }}>
+              <div className={estilos.item} style={{ "--item-color": "#E5E0FF" }}>
                 <div className={estilos.icon}><FaLeaf /></div>
                 <span className={estilos.iconText}>Meditaciones Profundas</span>
               </div>
 
-              <div className={estilos.item} style={{ "--item-color": "#FFD6D6" }}>
+
+              <div className={estilos.item} style={{ "--item-color": "#E5E0FF" }}>
                 <div className={estilos.icon}><FaHandsHelping /></div>
                 <span className={estilos.iconText}>Actividades Experienciales</span>
               </div>
 
-              <div className={estilos.item} style={{ "--item-color": "#FFD6D6" }}>
+              <div className={estilos.item} style={{ "--item-color": "#E5E0FF" }}>
                 <div className={estilos.icon}><FaHeart /></div>
                 <span className={estilos.iconText}>Círculo de Palabra</span>
               </div>
             </div>
 
             <div className={estilos.iconC}>
-              <div className={estilos.item} style={{ "--item-color": "#FFD6D6" }}>
+              <div className={estilos.item} style={{ "--item-color": "#E5E0FF" }}>
                 <div className={estilos.icon}><FaClock /></div>
                 <span className={estilos.iconText}>Hora: de 3:00 a 7:00 pm</span>
               </div>
 
-              <div className={estilos.item} style={{ "--item-color": "#FFD6D6" }}>
+              <div className={estilos.item} style={{ "--item-color": "#E5E0FF" }}>
                 <div className={estilos.icon}><FaMapMarkerAlt /></div>
                 <span className={estilos.iconText}>Lugar: Barrio Mesa, Envigado</span>
               </div>
 
-              <div className={estilos.item} style={{ "--item-color": "#FFD6D6" }}>
+              <div className={estilos.item} style={{ "--item-color": "#E5E0FF" }}>
                 <div className={estilos.icon}><FaCalendarAlt /></div>
                 <span className={estilos.iconText}>Fecha: sábados o domingos</span>
               </div>
 
-              <div className={estilos.item} style={{ "--item-color": "#FFD6D6" }}>
+              <div className={estilos.item} style={{ "--item-color": "#E5E0FF" }}>
                 <div className={estilos.icon}><FaHeart /></div>
                 <span className={estilos.iconText}>Aporte: $88.000 COP</span>
               </div>
@@ -175,36 +176,33 @@ export default function CirculoMujeres() {
               }}
               initial={{ boxShadow: "none", backgroundColor: "#321033" }}
               animate={{
-                boxShadow: "0 0 20px #a52b1e, 0 0 40px #a52b1e",
-                backgroundColor: "#8D2C24",
+               backgroundColor: "#6b21a8",
+                boxShadow: "0 0 25px #6b21a8, 0 0 50px #ca66ebaa",
                 transition: {
                   delay: 1,
                   duration: 2,
                   ease: "easeInOut",
                 },
               }}
+        
 
             >
               Reserva tu espacio ✨
             </motion.button>
             <motion.button
-              className={estilos.boton}
+              className={`${estilos.boton} ${estilos.botonSecundario}`}
               onClick={() => {
                 navigate("/", { state: { scrollTo: "galeria" } });
               }}
-              initial={{ boxShadow: "none", backgroundColor: "#321033" }}
+              initial={{ border: "1px solid #000000ff" }}
               animate={{
-                boxShadow: "0 0 20px #a52b1e, 0 0 40px #a52b1e",
-                backgroundColor: "#8D2C24",
-                transition: {
-                  delay: 1,
-                  duration: 2,
-                  ease: "easeInOut",
-                },
+                backgroundColor: "#f7edff",
+                color: "#ca66eb",
+                boxShadow: "0 0 70px #6b21a87f ",
+                transition: { delay: 0.6, duration: 1.5, ease: "easeInOut" },
               }}
-
             >
-              Ver imagenes
+              Ver imágenes
             </motion.button>
 
           </div>
