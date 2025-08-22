@@ -165,7 +165,7 @@ export default function Servicios() {
 
 
 
-            <div className={estilos.nuevoBloque}>
+            <div className={estilos.titulo}>
               <motion.h4
                 id="servicios"
                 variants={{
@@ -173,7 +173,6 @@ export default function Servicios() {
                   visible: { opacity: 1, y: 0 },
                 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
-                className={estilos.subtitulo}
               >
                 Acompañamiento Terapéutico Transpersonal
               </motion.h4>
@@ -196,6 +195,7 @@ export default function Servicios() {
               >
                 💫 Qué puedes esperar de este proceso:
               </motion.h5>
+              <br />
 
               {/* BLOQUE DE ICONOS REPETIDO */}
               <div className={estilos.iconContainer}>
@@ -231,6 +231,7 @@ export default function Servicios() {
                   </div>
                 </div>
               </div>
+              <br />
 
               <div className={estilos.iconContainer}>
 
@@ -251,6 +252,7 @@ export default function Servicios() {
               >
                 🌿 Temas que puedes trabajar en este espacio:
               </motion.h5>
+              <br />
 
 
               <div className={estilos.iconContainer}>
@@ -321,27 +323,29 @@ export default function Servicios() {
             </div>
 
             {/* Botón principal animado */}
-            <motion.button
-              className={estilos.boton}
-              onClick={() => setModalPricingAbierto(true)}
-              initial={{ boxShadow: "none", backgroundColor: "#321033" }}
-              animate={{
-                boxShadow: "0 0 20px #6b21a8, 0 0 40px #ca66eb66",
-                backgroundColor: "#800089",
-                transition: {
-                  delay: 1,
-                  duration: 2,
-                  ease: "easeInOut",
-                },
-              }}
-              whileHover={{
-                backgroundColor: "#6b21a8",
-                boxShadow: "0 0 25px #6b21a8, 0 0 50px #ca66ebaa",
-                transition: { duration: 1.5 },
-              }}
-            >
-              Reserva tu espacio
-            </motion.button>
+            <div className={estilos.botones}>
+              <motion.button
+                className={estilos.boton}
+                onClick={() => setModalPricingAbierto(true)}
+                initial={{ boxShadow: "none", backgroundColor: "#321033" }}
+                animate={{
+                  boxShadow: "0 0 20px #6b21a8, 0 0 40px #ca66eb66",
+                  backgroundColor: "#800089",
+                  transition: {
+                    delay: 1,
+                    duration: 2,
+                    ease: "easeInOut",
+                  },
+                }}
+                whileHover={{
+                  backgroundColor: "#6b21a8",
+                  boxShadow: "0 0 25px #6b21a8, 0 0 50px #ca66ebaa",
+                  transition: { duration: 1.5 },
+                }}
+              >
+                Reserva tu espacio
+              </motion.button>
+            </div>
           </motion.div>
         </div>
 

@@ -115,13 +115,13 @@ export default function CirculoMujeres() {
 
           <SwiperCard></SwiperCard>
 
-          <motion.h5
+          <motion.h4
             initial={{ opacity: 0, y: 20 }}
             animate={estaEnVista ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
             En los círculos de mujeres vivimos:
-          </motion.h5>
+          </motion.h4>
 
           <div className={estilos.iconContainer}>
             <div className={estilos.iconC}>
@@ -166,7 +166,7 @@ export default function CirculoMujeres() {
 
 
 
-          <div className={estilos.botonesContenedor}>
+          <div className={estilos.botones}>
             {/* Botón principal animado */}
             <motion.button
               className={estilos.boton}
