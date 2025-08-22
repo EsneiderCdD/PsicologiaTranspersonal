@@ -147,28 +147,13 @@
     color: white;
     padding: 0.75rem 1.25rem;
     border: 1px solid #800089;
-    border-radius: 0.5rem;
+    border-radius: 1.25em;
     font-weight: bold;
     cursor: pointer;
     
     
   }
 
-
-  .botonPrincipal:hover {
-    transform: scale(1.05);
-    background-color: #6b21a8;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-  }
-  
-  .botonSecundario:hover {
-    transform: scale(1.05);
-    background-color: #a52b1e;
-    color: white;
-    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  
   .cardSecundario {
     max-width: 500px;
     background-color: white;
@@ -219,13 +204,14 @@
   
   .botonSecundario {
     background-color: white;
-    color: #7B3028;
-    border: 2px solid #7B3028;
-    padding: 0.5rem 1rem;
+    color: white;
+    border: 2px solid #b12f20;
+    padding: 0.70rem 1.11rem;
     border-radius: 0.5rem;
-    font-weight: bold;
+    font-weight: 750;
     cursor: pointer;
     text-decoration: none;
+    border-radius: 1.25em;
   }
   
   .icon {

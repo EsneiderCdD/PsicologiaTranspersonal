@@ -59,15 +59,40 @@ const Ocupacion = () => {
               <li><FaDesktop className={styles.iconoInline} /> Virtual, desde tu comodidad</li>
             </ul>
             <div className={styles.botonesCard}>
-              <button
+              <motion.button
                 className={styles.botonPrincipal}
                 onClick={() => setMostrarPricing(!mostrarPricing)}
+                initial={{ boxShadow: "none", backgroundColor: "#321033" }}
+                animate={{
+                  boxShadow: "0 0 20px #6b21a8, 0 0 40px #ca66eb66",
+                  backgroundColor: "#800089",
+                  transition: {
+                    delay: 1,
+                    duration: 2,
+                    ease: "easeInOut",
+                  },
+                }}
+                whileHover={{
+                  backgroundColor: "#6b21a8",
+                  boxShadow: "0 0 25px #6b21a8, 0 0 50px #ca66ebaa",
+                  transition: { duration: 1.5 },
+                }}
+
               >
                 Reservar Sesión
-              </button>
+              </motion.button>
 
               <Link to="/Psicotranspersonal">
-                <button className={styles.botonPrincipal}>Saber Más</button>
+                <motion.button className={styles.botonPrincipal}
+                  initial={{ backgroundColor: "transparent", color: "#999" }}
+                  animate={{
+                    backgroundColor: "#f7edff",
+                    color: "#ca66eb",
+                    boxShadow: "0 0 70px #6b21a87f ",
+                    transition: { delay: 0.6, duration: 1.5, ease: "easeInOut" },
+                  }}
+                >
+                  Saber Más</motion.button>
               </Link>
 
             </div>
@@ -100,17 +125,41 @@ const Ocupacion = () => {
             </ul>
 
             <div className={styles.botonesCard}>
-              <a
-                href="https://wa.me/+573052298710"
-                target="_blank"
-                rel="noopener noreferrer"
+              <motion.button
+                onClick={() => window.open("https://wa.me/+573052298710", "_blank", "noopener,noreferrer")}
                 className={styles.botonSecundario}
+                initial={{ boxShadow: "none", backgroundColor: "#7c261eff" }}
+                animate={{
+                  boxShadow: "0 0 20px #b91c1c, 0 0 40px #ef444466",
+                  backgroundColor: "#ab1f1fe3",
+                  transition: {
+                    delay: 1,
+                    duration: 2,
+                    ease: "easeInOut",
+                  },
+                }}
+                whileHover={{
+                  backgroundColor: "#b91c1c",
+                  boxShadow: "0 0 25px #b91c1c, 0 0 50px #ef4444aa",
+                  transition: { duration: 1.5 },
+                }}
               >
                 Reservar un cupo
-              </a>
+              </motion.button>
+
+
 
               <Link to="/circuloMujeres">
-                <button className={styles.botonSecundario}>Saber Más</button>
+                <motion.button className={styles.botonSecundario}
+                  initial={{ backgroundColor: "transparent", color: "#000000ff" }}
+                  animate={{
+                    backgroundColor: "#ffedf4ff",
+                    color: "#8d2d24e5",
+                    boxShadow: "0 0 35px #b91c1c92 ",
+                    transition: { delay: 0.6, duration: 1.5, ease: "easeInOut" },
+                  }}
+                >
+                  Saber Más</motion.button>
               </Link>
             </div>
 

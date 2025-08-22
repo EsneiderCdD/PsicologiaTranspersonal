@@ -74,8 +74,7 @@
   margin-bottom: 2%;
   background-color: #6b21a8;
   color: #fff;
-  font-family: 'Cairo', sans-serif;
-  font-weight: 900;
+  font-weight: 750;
   font-size: 1rem;
   padding: 0.44em 1.11em;
   border: none;
@@ -86,7 +85,7 @@
 
 
 .botonSecundario {
-  font-weight: 700;
+  font-weight: 750;
   margin-bottom: 2%;
   padding: 0.75em 1.5em;
   background-color: transparent;
