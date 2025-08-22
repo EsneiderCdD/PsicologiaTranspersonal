@@ -1,4 +1,3 @@
-
 .preserveLines {
   white-space: pre-line;
 }
@@ -6,8 +5,9 @@
 .seccion {
   background-color: #8d2d2416;
 }
-.texto{
-   background-color: #FBF8EF;
+
+.texto {
+  background-color: #FBF8EF;
 }
 
 .contenedor {
@@ -22,7 +22,8 @@
 .texto {
   display: flex;
   flex-direction: column;
-  gap: 2rem; /* Espacio entre párrafos y botón */
+  gap: 2rem;
+  /* Espacio entre párrafos y botón */
   padding: 5%;
   padding-top: 2.5%;
   font-size: clamp(1rem, 3vw, 2rem);
@@ -47,14 +48,17 @@
   object-fit: cover;
   object-position: center;
 }
+
 .banner::before,
 .banner::after {
   content: "";
   position: absolute;
   left: 0;
   width: 100%;
-  height: 10%; /* puedes ajustar este valor después */
-  z-index: 5; /* por encima de la imagen */
+  height: 10%;
+  /* puedes ajustar este valor después */
+  z-index: 5;
+  /* por encima de la imagen */
 }
 
 
@@ -80,8 +84,9 @@
   object-fit: cover;
   border: 5px solid #FBF8EF;
 }
+
 .titulo {
-  display: flex;  
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -90,13 +95,14 @@
 
 .titulo h3 {
   margin: 0 0 1%;
- 
+
   font-size: clamp(1.5rem, 3vw, 2.5rem);
   font-family: 'EB Garamond', serif;
   font-weight: 600;
   color: #000000;
   text-align: center;
 }
+
 h4 {
   margin: 1%;
   margin-top: 4%;
@@ -119,7 +125,7 @@ h4 {
   text-align: justify;
   display: flex;
   flex-direction: column;
-  position: relative; 
+  position: relative;
 }
 
 .boton {
@@ -143,10 +149,12 @@ h4 {
   background-size: 0% 2px;
   transition: background-size 0.3s ease;
 }
+
 .verticalLineLeft,
 .verticalLineRight {
   position: absolute;
-  width: 2px; /* puedes ajustar a 0.5px si quieres más delgado */
+  width: 2px;
+  /* puedes ajustar a 0.5px si quieres más delgado */
   background-color: #8D2C24;
   top: 0;
   height: 0;
@@ -175,28 +183,23 @@ h4 {
 .iconContainer {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  margin-top: 2rem;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
 
-.iconRow {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  gap: 1rem;
-}
 
 .item {
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  font-size: 1rem;
-  padding: 1rem;
-  gap: 0.75rem;
+  font-size: 1.25rem;
+  padding: 1.5rem;
+  gap: 1rem;
 
-  background: radial-gradient(circle at center, var(--item-color, #eee) 0%, transparent 70%);
+  background: radial-gradient(circle closest-side at center,
+      var(--item-color, #eee) 0%,
+      transparent 100%);
   border-radius: 1rem;
   position: relative;
   z-index: 0;
@@ -206,19 +209,28 @@ h4 {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  font-size: 2rem;
+  font-size: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #000;
   background-color: var(--item-color, #ccc);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   z-index: 1;
 }
 
 .item span {
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
+
+.iconC {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-top: 1.25rem;
+  gap: 1rem;
+}
+
 
 
 
@@ -226,36 +238,17 @@ h4 {
   from {
     height: 0;
   }
+
   to {
     height: 100%;
   }
 }
 
-@media (max-width: 450px) {
-  .botonReservar {
-    font-size: 1rem;
-    padding: 0.8rem 2rem;
-  }
-}
-
-@media (max-width: 350px) {
-  .botonReservar {
-    font-size: 0.95rem;
-    padding: 0.7rem 1.6rem;
-  }
-}
 
 /* 🌐 Media queries */
 @media (max-width: 768px) {
-
- 
-  .botonReservar {
-    padding: 10px 20px;
-    font-size: 15px;
-  }
-
   .banner {
-    height: 500px;
+    height: 220px;
   }
 
   .imagen img {
@@ -264,13 +257,33 @@ h4 {
   }
 
   .titulo h3 {
+    font-size: 1.5rem;
+  }
+
+  .item {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  .icon {
+    width: 60px;
+    height: 60px;
     font-size: 2rem;
+  }
+
+  .item span {
+    font-size: 0.9rem;
   }
 }
 
+
 @media (max-width: 600px) {
   .banner {
-    height: 500px;
+    height: 220px;
+  }
+
+  .item span {
+    font-size: 0.8rem;
   }
 
   .imagen img {
@@ -278,23 +291,50 @@ h4 {
     height: 175px;
   }
 
+  .titulo {
+    margin-top: 17.5%;
+  }
 
   .titulo h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .item {
+    font-size: 0.9rem;
+
+    padding: 0.5rem;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.75rem;
+  }
+
+  .contenido p {
+    font-size: 0.95rem;
+  }
+
+  .item::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 135%;
+    height: 135%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: radial-gradient(circle at center,
+        var(--item-color, #eee) 0%,
+        transparent 65%);
+    z-index: -1;
   }
 }
 
+
 @media (max-width: 480px) {
-   .botonReservar {
-    width: 100%;
-    padding: 14px 0;
-    font-size: 16px;
-    text-align: center;
-    display: block;
-    margin-top: 16px;
-  }
   .banner {
-    height: 350px;
+    height: 180px;
   }
 
   .imagen img {
@@ -302,18 +342,79 @@ h4 {
     height: 140px;
   }
 
-  .texto {
-    padding: 4%;
-    
+  .item {
+    font-size: 0.75rem;
+    max-width: 70px;
+    padding: 0rem;
   }
 
-  .titulo h3 {
-    font-size: 1.75rem;
+  .iconContainer {
+    flex-direction: column;
+    flex-wrap: nowrap;
   }
-  h4 {
-      margin: 1%;
-  margin-top: 6.5%;
-  font-size: clamp(1.25rem, 3vw, 2rem);
 
+  .iconN {
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+
+  .iconC {
+    flex-wrap: wrap;
+
+    gap: 0.11rem;
+  }
+
+  .item span {
+    font-size: 0.70rem;
   }
 }
+
+@media (max-width: 460px) {
+  .texto {
+    padding: 1.25rem;
+  }
+
+  .titulo {
+    margin-top: 20%;
+  }
+}
+
+
+
+@media (max-width: 400px) {
+  .imagen img {
+    width: 145px;
+    height: 145px;
+  }
+
+  .titulo {
+    margin-top: 20%;
+  }
+
+  .texto {
+    padding: 1rem;
+  }
+
+  .item {
+    font-size: 0.70rem;
+    max-width: 65px;
+
+  }
+
+  .item::before {
+    top: 50%;
+    left: 50%;
+    width: 155%;
+    height: 155%;
+
+  }
+
+  .iconContainer {
+    width: 100;
+  }
+    .item span {
+    font-size: 0.60rem;
+  }
+}
+
