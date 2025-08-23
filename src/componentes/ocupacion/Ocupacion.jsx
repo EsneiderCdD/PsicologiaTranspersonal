@@ -80,7 +80,7 @@ const Ocupacion = () => {
 
               <Link to="/Psicotranspersonal">
                 <motion.button className={styles.botonPrincipal}
-                  initial={{ backgroundColor: "transparent", color: "#999" }}
+                  initial={{  backgroundColor: "transparent", border: "1px solid #000000ff" }}
                   animate={{
                     backgroundColor: "#f7edff",
                     color: "#ca66eb",
