@@ -119,7 +119,7 @@
 }
 
 .boton {
-  margin-bottom: 2%;
+ 
   background-color: #6b21a8;
   color: #fff;
   font-weight: 900;
@@ -237,6 +237,7 @@
   color: #8D2C24;
   margin: 0;
   margin-bottom: 1%;
+  text-align: center;
 }
 
 

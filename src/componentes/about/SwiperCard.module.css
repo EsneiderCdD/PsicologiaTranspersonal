@@ -4,10 +4,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px 0;
+  padding: 10px 0;
   background-color: #FBF8EF;
   max-width: 900px;
   margin: 0 auto;
+  margin-top: 2%;
 }
 
 .header {
@@ -16,7 +17,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-top: 5%;
+  margin-top: 2%;
   padding: 2.5%;
 }
 
@@ -29,8 +30,8 @@
 
 .countdown {
   font-weight: bold;
-  font-size: 1.2rem;
-  color: #d32f2f;
+  font-size: 2rem;
+  color: #8c4747;
   margin-top: 8px;
 }
 
