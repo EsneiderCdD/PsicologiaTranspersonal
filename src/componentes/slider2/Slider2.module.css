@@ -16,11 +16,16 @@
   justify-content: center;
   background: #f2f2f2;
 }
+.sliderSection {
+  background-color: #FBF8EF;
+  padding-bottom: 20px;
+}
 
 .sliderWrapper {
   width: 100%;
   max-width: 1200px;
   padding: 40px 0;
+  padding-top: 0;
 }
 
 .slide {
@@ -86,39 +91,6 @@
   background: #7C3AED !important;
   opacity: 1;
 }
-
-
-
-.instrucciones {
- 
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.instruccionItem {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  font-size: 0.85rem;
-  color: #5C3D3B;
-  font-family: 'Nunito', sans-serif;
-  opacity: 0.9;
-}
-
-.iconoMano {
-  font-size: 1.2rem;
-  display: inline-block;
-  transform-origin: center;
-}
-
-
-
-/*Modal*/
-/* ===== Modal de Imagen Ampliada ===== */
 
 .modalOverlay {
   position: fixed;

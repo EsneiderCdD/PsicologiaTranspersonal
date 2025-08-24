@@ -34,7 +34,7 @@ const Slider2 = () => {
   const cerrarModal = () => setImagenAmpliada(null);
 
   return (
-    <div>
+    <div className={styles.sliderSection}>
       <div id="galeria" className={styles.sliderContainer}>
         <Encabezado
           margen={{ marginTop: "2.5%" }}
@@ -43,29 +43,7 @@ const Slider2 = () => {
           descripcion={experienciasData.experiencias}
         />
 
-        <div className={styles.instrucciones}>
-          <div className={styles.instruccionItem}>
-            <motion.span
-              className={styles.iconoMano}
-              animate={{ x: [0, 15, -15, 0] }}
-              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-            >
-              🤚
-            </motion.span>
-            <small>Desliza para ver imágenes</small>
-          </div>
-
-          <div className={styles.instruccionItem}>
-            <motion.span
-              className={styles.iconoMano}
-              animate={{ scale: [1, 1.3, 1] }}
-              transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-            >
-              👉
-            </motion.span>
-            <small>Click para ampliar imagen</small>
-          </div>
-        </div>
+        
 
         {/* Swiper Slider */}
         <Swiper
