@@ -34,8 +34,10 @@
   color: #000000;
   font-family: 'EB Garamond';
   background-color: #ffffff;
-  margin-top: 75px ;
-  margin-bottom: 40px;
+  margin: 0;
+  margin-bottom: 1rem;
+
+
 }
 
 .title span {

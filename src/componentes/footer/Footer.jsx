@@ -8,7 +8,6 @@ export default function Footer({ botones = [] }) {
       <div className={styles.content}>
         <div className={styles.column}>
 
-          {/* 👇 Bloque opcional de botones */}
           {botones.length > 0 && <BotonesGrupo botones={botones} />}
 
           <h3 className={styles.title}>
