@@ -187,7 +187,7 @@ export default function CirculoMujeres() {
         
 
             >
-              Reserva tu espacio ✨
+              Reserva tu espacio
             </motion.button>
             <motion.button
               className={`${estilos.boton} ${estilos.botonSecundario}`}

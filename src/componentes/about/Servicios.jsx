@@ -166,159 +166,135 @@ export default function Servicios() {
 
 
             <div className={estilos.titulo}>
-              <motion.h4
-                id="servicios"
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-              >
-                Acompañamiento Terapéutico Transpersonal
-              </motion.h4>
-              <br />
-
-              {/* BLOQUE ICONOS - NUEVOS TEMAS */}
-              {/* Párrafo 1 */}
-              <motion.p
-                variants={{ hidden: { opacity: 0, x: 30 }, visible: { opacity: 1, x: 0 } }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-                className={`${estilos.textoAnimado} ${estilos.preserveLines}`}
-              >
-                {acompañamientoTerapeuticoData.parrafo1}
-              </motion.p>
-
-              <motion.h5
-                variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-                className={`${estilos.textoAnimado} ${estilos.preserveLines}`}
-              >
-                💫 Qué puedes esperar de este proceso:
-              </motion.h5>
-              <br />
-
-              {/* BLOQUE DE ICONOS REPETIDO */}
-              <div className={estilos.iconContainer}>
-                <div className={estilos.iconC}>
-
-
-                  <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
-                    <div className={estilos.icon}><FaHourglassHalf /></div>
-                    <span className={estilos.iconText}>
-                      Un acompañamiento adaptado a tus tiempos y necesidades.
-                    </span>
-                  </div>
-
-                  <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
-                    <div className={estilos.icon}><FaWrench /></div>
-                    <span className={estilos.iconText}>
-                      Herramientas prácticas para aplicar en tu vida diaria.
-                    </span>
-                  </div>
-
-                  <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
-                    <div className={estilos.icon}><FaLightbulb /></div>
-                    <span className={estilos.iconText}>
-                      Mayor claridad, calma y empoderamiento para tomar decisiones.
-                    </span>
-                  </div>
-
-                  <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
-                    <div className={estilos.icon}><FaHandshake /></div>
-                    <span className={estilos.iconText}>
-                      Una conexión más auténtica contigo misma y con la vida.
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <br />
-
-              <div className={estilos.iconContainer}>
-
-                <motion.p className={`${estilos.textoAnimado} ${estilos.preserveLines}`}>
-                  {acompañamientoTerapeuticoData.parrafo3}
+              <div>
+                <motion.h4
+                  id="servicios"
+                  variants={{
+                    hidden: { opacity: 0, y: 20 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
+                >
+                  Acompañamiento Terapéutico Transpersonal
+                </motion.h4>
+                <br />
+                {/* BLOQUE ICONOS - NUEVOS TEMAS */}
+                {/* Párrafo 1 */}
+                <motion.p
+                  variants={{ hidden: { opacity: 0, x: 30 }, visible: { opacity: 1, x: 0 } }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
+                  className={`${estilos.textoAnimado} ${estilos.preserveLines}`}
+                >
+                  {acompañamientoTerapeuticoData.parrafo1}
                 </motion.p>
-              </div>
-
-
-
-
-
-              {/* 🌿 Temas que puedes trabajar en este espacio: */}
-              <motion.h5
-                variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-                className={`${estilos.textoAnimado} ${estilos.preserveLines}`}
-              >
-                🌿 Temas que puedes trabajar en este espacio:
-              </motion.h5>
-              <br />
-
-
-              <div className={estilos.iconContainer}>
-                <div className={estilos.iconC}>
-                  <div className={estilos.item} style={{ "--item-color": "#8d2d24b6" }}>
-                    <div className={estilos.icon}><FaBaby /></div>
-                    <span className={estilos.iconText}>
-                      Heridas de la infancia y su impacto en tu vida actual.
-                    </span>
-                  </div>
-
-                  <div className={estilos.item} style={{ "--item-color": "#8D2C24" }}>
-                    <div className={estilos.icon}><FaUserShield /></div>
-                    <span className={estilos.iconText}>
-                      Autoestima y autoconfianza para elegirte y priorizarte.
-                    </span>
-                  </div>
-
-                  <div className={estilos.item} style={{ "--item-color": "#8d2d24a0" }}>
-                    <div className={estilos.icon}><FaBalanceScale /></div>
-                    <span className={estilos.iconText}>
-                      Equilibrio entre energía femenina y masculina.
-                    </span>
-                  </div>
-
-                  <div className={estilos.item} style={{ "--item-color": "#AB1F1F" }}>
-                    <div className={estilos.icon}><FaLink /></div>
-                    <span className={estilos.iconText}>
-                      Dependencia emocional y vínculos poco saludables.
-                    </span>
+                <motion.h5
+                  variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
+                  className={`${estilos.textoAnimado} ${estilos.preserveLines}`}
+                >
+                  💫 Qué puedes esperar de este proceso:
+                </motion.h5>
+                <br />
+                {/* BLOQUE DE ICONOS REPETIDO */}
+                <div className={estilos.iconContainer}>
+                  <div className={estilos.iconC}>
+                    <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
+                      <div className={estilos.icon}><FaHourglassHalf /></div>
+                      <span className={estilos.iconText}>
+                        Un acompañamiento adaptado a tus tiempos y necesidades.
+                      </span>
+                    </div>
+                    <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
+                      <div className={estilos.icon}><FaWrench /></div>
+                      <span className={estilos.iconText}>
+                        Herramientas prácticas para aplicar en tu vida diaria.
+                      </span>
+                    </div>
+                    <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
+                      <div className={estilos.icon}><FaLightbulb /></div>
+                      <span className={estilos.iconText}>
+                        Mayor claridad, calma y empoderamiento para tomar decisiones.
+                      </span>
+                    </div>
+                    <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
+                      <div className={estilos.icon}><FaHandshake /></div>
+                      <span className={estilos.iconText}>
+                        Una conexión más auténtica contigo misma y con la vida.
+                      </span>
+                    </div>
                   </div>
                 </div>
-
-                <div className={estilos.iconC}>
-                  <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
-                    <div className={estilos.icon}><FaBrain /></div>
-                    <span className={estilos.iconText}>
-                      Manejo de la ansiedad y estrés desde la conexión interior.
-                    </span>
+                <br />
+                <div className={estilos.iconContainer}>
+                  <motion.p className={`${estilos.textoAnimado} ${estilos.preserveLines}`}>
+                    {acompañamientoTerapeuticoData.parrafo3}
+                  </motion.p>
+                </div>
+                {/* 🌿 Temas que puedes trabajar en este espacio: */}
+                <motion.h5
+                  variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
+                  className={`${estilos.textoAnimado} ${estilos.preserveLines}`}
+                >
+                  🌿 Temas que puedes trabajar en este espacio:
+                </motion.h5>
+                <br />
+                <div className={estilos.iconContainer}>
+                  <div className={estilos.iconC}>
+                    <div className={estilos.item} style={{ "--item-color": "#8d2d24b6" }}>
+                      <div className={estilos.icon}><FaBaby /></div>
+                      <span className={estilos.iconText}>
+                        Heridas de la infancia y su impacto en tu vida actual.
+                      </span>
+                    </div>
+                    <div className={estilos.item} style={{ "--item-color": "#8D2C24" }}>
+                      <div className={estilos.icon}><FaUserShield /></div>
+                      <span className={estilos.iconText}>
+                        Autoestima y autoconfianza para elegirte y priorizarte.
+                      </span>
+                    </div>
+                    <div className={estilos.item} style={{ "--item-color": "#8d2d24a0" }}>
+                      <div className={estilos.icon}><FaBalanceScale /></div>
+                      <span className={estilos.iconText}>
+                        Equilibrio entre energía femenina y masculina.
+                      </span>
+                    </div>
+                    <div className={estilos.item} style={{ "--item-color": "#AB1F1F" }}>
+                      <div className={estilos.icon}><FaLink /></div>
+                      <span className={estilos.iconText}>
+                        Dependencia emocional y vínculos poco saludables.
+                      </span>
+                    </div>
                   </div>
-
-                  <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
-                    <div className={estilos.icon}><FaSadTear /></div>
-                    <span className={estilos.iconText}>
-                      Pérdida, duelos y cierres de ciclo.
-                    </span>
-                  </div>
-
-                  <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
-                    <div className={estilos.icon}><FaCompass /></div>
-                    <span className={estilos.iconText}>
-                      Conexión con tu propósito y sentido de vida.
-                    </span>
-                  </div>
-
-                  <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
-                    <div className={estilos.icon}><FaSeedling /></div>
-                    <span className={estilos.iconText}>
-                      Crecimiento espiritual desde tu propia visión de la fe.
-                    </span>
+                  <div className={estilos.iconC}>
+                    <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
+                      <div className={estilos.icon}><FaBrain /></div>
+                      <span className={estilos.iconText}>
+                        Manejo de la ansiedad y estrés desde la conexión interior.
+                      </span>
+                    </div>
+                    <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
+                      <div className={estilos.icon}><FaSadTear /></div>
+                      <span className={estilos.iconText}>
+                        Pérdida, duelos y cierres de ciclo.
+                      </span>
+                    </div>
+                    <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
+                      <div className={estilos.icon}><FaCompass /></div>
+                      <span className={estilos.iconText}>
+                        Conexión con tu propósito y sentido de vida.
+                      </span>
+                    </div>
+                    <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
+                      <div className={estilos.icon}><FaSeedling /></div>
+                      <span className={estilos.iconText}>
+                        Crecimiento espiritual desde tu propia visión de la fe.
+                      </span>
+                    </div>
                   </div>
                 </div>
-
-
+                <br />
               </div>
-              <br />
 
             </div>
 

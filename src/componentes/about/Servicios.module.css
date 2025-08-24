@@ -23,7 +23,6 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  /* Espacio entre párrafos y botón */
   padding: 5%;
   padding-top: 2.5%;
   font-size: clamp(1rem, 3vw, 2rem);
@@ -153,7 +152,6 @@
 .verticalLineRight {
   position: absolute;
   width: 2px;
-  /* puedes ajustar a 0.5px si quieres más delgado */
   background-color: #8D2C24;
   top: 0;
   height: 0;
@@ -256,6 +254,12 @@
 
 /* 🌐 Media queries */
 @media (max-width: 768px) {
+
+  .verticalLineLeft,
+  .verticalLineRight {
+    display: none;
+  }
+
   .banner {
     height: 500px;
   }
@@ -294,8 +298,6 @@
     padding: 0.44em 1.11em;
 
   }
-
-
 }
 
 

@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600&family=Nunito:wght@400&display=swap');
 
-html,
-body {
-  overflow-x: hidden;
-}
+
 
 .seccion {
   background-color: #8d2d2416;
@@ -69,14 +66,11 @@ body {
 
 .tarjeta {
   background-color: transparent;
-  /* eliminamos fondo blanco */
   padding: 0.5rem 0.5rem;
-  /* menos padding */
   border-radius: 0.5rem;
   text-align: center;
   flex: 1;
   box-shadow: none;
-  /* quitamos la sombra */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -320,20 +314,12 @@ p {
 
 
 @media (max-width: 800px) {
-
-  .parallaxImagen {
-    background-image: url("../../assets/imagenes/circulo1.webp");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    /* CAMBIO CLAVE */
-    width: 100%;
-    height: auto;
-    /* 🔑 Esta línea permite que la imagen se ajuste sin dejar márgenes */
-    aspect-ratio: 3 / 2;
-    /* Opcional: para mantener una proporción visible y controlada */
-
+  
+  .verticalLineLeft,
+  .verticalLineRight {
+    display: none;
   }
+
 
   .tarjetas {
     justify-content: center;
