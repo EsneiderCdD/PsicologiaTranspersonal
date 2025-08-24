@@ -214,25 +214,25 @@ export default function Inicio() {
                   className={estilos.iconContainer}
                 >
                   <div className={estilos.iconN}>
-                    <div className={estilos.item} style={{ "--item-color": "#A3E4D7" }}>
+                    <div className={estilos.item} style={{ "--item-color": "##7B3432" }}>
                       <div className={estilos.icon}>
                         <FiCalendar />
                       </div>
                       <span>+{experiencia} Años de experiencia </span>
                     </div>
-                    <div className={estilos.item} style={{ "--item-color": "#AED6F1" }}>
+                    <div className={estilos.item} style={{ "--item-color": "#ffffffff" }}>
                       <div className={estilos.icon}>
                         <FiMessageCircle />
                       </div>
                       <span>+{sesiones} Sesiones realizadas</span>
                     </div>
-                    <div className={estilos.item} style={{ "--item-color": "#F5B7B1" }}>
+                    <div className={estilos.item} style={{ "--item-color": "#bdb1f5ff" }}>
                       <div className={estilos.icon}>
                         <FiUsers />
                       </div>
                       <span>+{pacientes} Personas atendidas </span>
                     </div>
-                    <div className={estilos.item} style={{ "--item-color": "#F9E79F" }}>
+                    <div className={estilos.item} style={{ "--item-color": "#f99ff6ff" }}>
                       <div className={estilos.icon}>
                         <FaInstagram />
                       </div>
@@ -249,7 +249,7 @@ export default function Inicio() {
                       </div>
                       <span>Certificada en sanación femenina</span>
                     </div>
-                    <div className={estilos.item} style={{ "--item-color": "#AED6F1" }}>
+                    <div className={estilos.item} style={{ "--item-color": "#f1eaaeff" }}>
                       <div className={estilos.icon}>
                         <FaUserGraduate />
                       </div>

@@ -136,25 +136,25 @@ export default function Servicios() {
 
             <div className={estilos.iconContainer}>
               <div className={estilos.iconC}>
-                <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
+                <div className={estilos.item} style={{ "--item-color": "#e8ffebff" }}>
                   <div className={estilos.icon}><FaSearch /></div>
                   <span className={estilos.iconText}>
                     Explorar las causas profundas de lo que hoy te bloquea o duele.
                   </span>
                 </div>
-                <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
+                <div className={estilos.item} style={{ "--item-color": "#fffee8ff" }}>
                   <div className={estilos.icon}><FaUnlock /></div>
                   <span className={estilos.iconText}>
                     Liberar creencias y patrones heredados que ya no sirven a tu vida.
                   </span>
                 </div>
-                <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
+                <div className={estilos.item} style={{ "--item-color": "#ffe8edff" }}>
                   <div className={estilos.icon}><FaLeaf /></div>
                   <span className={estilos.iconText}>
                     Integrar experiencias pasadas para vivir en mayor paz y plenitud.
                   </span>
                 </div>
-                <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
+                <div className={estilos.item} style={{ "--item-color": "#e8fffeff" }}>
                   <div className={estilos.icon}><FaHeart /></div>
                   <span className={estilos.iconText}>
                     Despertar tu conexión interior y tu confianza en ti misma.
@@ -257,28 +257,28 @@ export default function Servicios() {
 
               <div className={estilos.iconContainer}>
                 <div className={estilos.iconC}>
-                  <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
+                  <div className={estilos.item} style={{ "--item-color": "#8d2d24b6" }}>
                     <div className={estilos.icon}><FaBaby /></div>
                     <span className={estilos.iconText}>
                       Heridas de la infancia y su impacto en tu vida actual.
                     </span>
                   </div>
 
-                  <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
+                  <div className={estilos.item} style={{ "--item-color": "#8D2C24" }}>
                     <div className={estilos.icon}><FaUserShield /></div>
                     <span className={estilos.iconText}>
                       Autoestima y autoconfianza para elegirte y priorizarte.
                     </span>
                   </div>
 
-                  <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
+                  <div className={estilos.item} style={{ "--item-color": "#8d2d24a0" }}>
                     <div className={estilos.icon}><FaBalanceScale /></div>
                     <span className={estilos.iconText}>
                       Equilibrio entre energía femenina y masculina.
                     </span>
                   </div>
 
-                  <div className={estilos.item} style={{ "--item-color": "#F0E8FF" }}>
+                  <div className={estilos.item} style={{ "--item-color": "#AB1F1F" }}>
                     <div className={estilos.icon}><FaLink /></div>
                     <span className={estilos.iconText}>
                       Dependencia emocional y vínculos poco saludables.

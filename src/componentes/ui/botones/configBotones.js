@@ -35,7 +35,7 @@ export function useConfigBotones() {
       initial: { backgroundColor: "transparent", color: "#000" },
       animate: {
         backgroundColor: "#f7edff",
-        color: "#ca66eb",
+        color: "#6b21a8",
         boxShadow: "0 0 50px #8c00ff70 ",
         transition: { delay: 0.6, duration: 1.5, ease: "easeInOut" },
       },
@@ -46,7 +46,7 @@ export function useConfigBotones() {
       initial: { backgroundColor: "transparent", color: "#999" },
       animate: {
         backgroundColor: "#f7edff",
-        color: "#ca66eb",
+        color: "#6b21a8",
         boxShadow: "0 0 70px #6b21a87f ",
         transition: { delay: 0.6, duration: 1.5, ease: "easeInOut" },
       },
@@ -57,7 +57,7 @@ export function useConfigBotones() {
       initial: { backgroundColor: "transparent", color: "#999" },
       animate: {
         backgroundColor: "#f7edff",
-        color: "#ca66eb",
+        color: "#6b21a8",
         boxShadow: "0 0 90px #6b21a88d ",
         transition: { delay: 0.6, duration: 1.5, ease: "easeInOut" },
       },
@@ -68,7 +68,7 @@ export function useConfigBotones() {
       initial: { backgroundColor: "transparent", color: "#999" },
       animate: {
         backgroundColor: "#f7edff",
-        color: "#ca66eb",
+        color: "#6b21a8",
         boxShadow: "0 0 90px #6b21a82e ",
         transition: { delay: 0.6, duration: 1.5, ease: "easeInOut" },
       },

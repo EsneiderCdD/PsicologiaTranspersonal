@@ -83,7 +83,7 @@ const Ocupacion = () => {
                   initial={{  backgroundColor: "transparent", border: "1px solid #000000ff" }}
                   animate={{
                     backgroundColor: "#f7edff",
-                    color: "#ca66eb",
+                    color: "#6b21a8",
                     boxShadow: "0 0 70px #6b21a87f ",
                     transition: { delay: 0.6, duration: 1.5, ease: "easeInOut" },
                   }}
