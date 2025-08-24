@@ -235,6 +235,8 @@
 .seccion h5 {
   font-size: clamp(1.25rem, 2vw, 1.5rem);
   color: #8D2C24;
+  margin: 0;
+  margin-bottom: 1%;
 }
 
 
