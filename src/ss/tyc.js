@@ -1,4 +1,3 @@
-// ss/tyc.js
 
 const tyc = {
   Horarios: {

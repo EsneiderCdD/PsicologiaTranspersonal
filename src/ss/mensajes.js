@@ -1,8 +1,5 @@
-// src/ss/mensajes.js
-
 import mensajeCerrado from '../assets/imagenes/mensajeCerrado.webp';
 import mensajeAbierto from '../assets/imagenes/mensajeAbierto.webp';
-
 import testimonio1 from '../assets/imagenes/testimonio1.webp';
 import testimonio2 from '../assets/imagenes/testimonio2.webp';
 import testimonio3 from '../assets/imagenes/testimonio3.webp';

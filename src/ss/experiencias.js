@@ -7,7 +7,6 @@ import circulo2 from '../assets/imagenes/circulo2.webp';
 import circulo7 from '../assets/imagenes/circulo7.webp';
 import circulo4 from '../assets/imagenes/circulo4.webp';
 
-
 export const experienciasImages = [
   circulo1,  
   circulo,
@@ -17,5 +16,4 @@ export const experienciasImages = [
   circulo2,
   circulo3,
   circulo5,
-
 ];
