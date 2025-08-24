@@ -29,12 +29,10 @@
   text-align: center;
   margin-bottom: 30px;
 }
-
-/* ===== Sobres (mensajes) ===== */
-
 .testimoniosLista {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
   gap: 40px;
   max-width: 1200px;
@@ -109,13 +107,24 @@
   position: absolute;
   top: 10px;
   right: 15px;
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #8D2C24;
-  background: none;
+  font-size: 2rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
   border: none;
+  border-radius: 50%;
   cursor: pointer;
-  z-index: 1000;
+  width: 40px;
+  height: 40px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  transition: background 0.3s ease;
+}
+
+.cerrarModal:hover {
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .sobreCard {
@@ -133,13 +142,13 @@
 .sobreImagen {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 12px;
 }
 /* Mejoras responsivas para cartas */
 @media (max-width: 1080px) {
   .sobreCard {
-    width: 160px;
+    width: 180px;
     height: 120px;
   }
 }
