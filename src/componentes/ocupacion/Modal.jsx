@@ -1,48 +1,28 @@
 import React, { useState } from "react";
 import styles from "./Modal.module.css";
 import { FaCheckCircle } from "react-icons/fa";
-import icn1 from "../../assets/imagenes/icn1.jpg";
-import icn2 from "../../assets/imagenes/icn2.jpg";
-import icn3 from "../../assets/imagenes/icn3.jpg";
+import { productos } from "../../ss/producto"; // ✅ importamos la data centralizada
 
 const Modal = ({
   isOpen,
   onClose,
   showTerms,
   requireTermsAcceptance,
-  confirmTextPayU = "Pagar con tarjeta de debito o crédito",
+  confirmTextPayU = "Pagar con tarjeta de débito o crédito",
   confirmTextPayPal = "Pagar con PayPal",
 }) => {
   const [selectedPlan, setSelectedPlan] = useState(null);
   const [termsAccepted, setTermsAccepted] = useState(false);
 
-  const externalLinksPayU = {
-    "1 Sesión": "https://biz.payulatam.com/L0f9bc36813670A",
-    "4 Sesiones": "https://biz.payulatam.com/L0f9bc32484A754",
-    "6 Sesiones": "https://biz.payulatam.com/L0f9bc3B6BDDFD6",
-  };
-
-  const externalLinksPayPal = {
-    "1 Sesión": "https://www.paypal.com/ncp/payment/4WJU49TW32JAQ",
-    "4 Sesiones": "https://www.paypal.com/ncp/payment/WTMQNXPMQ6BYL",
-    "6 Sesiones": "https://www.paypal.com/ncp/payment/9URKKGG38JAEE",
-  };
-
-  const handleContinuePayU = () => {
+  const handleContinue = (method) => {
     if (!selectedPlan || (requireTermsAcceptance && !termsAccepted)) return;
 
-    const url = externalLinksPayU[selectedPlan];
-    if (url) {
-      window.open(url, "_blank");
-    }
-  };
-
-  const handleContinuePayPal = () => {
-    if (!selectedPlan || (requireTermsAcceptance && !termsAccepted)) return;
-
-    const url = externalLinksPayPal[selectedPlan];
-    if (url) {
-      window.open(url, "_blank");
+    const selected = productos.find((p) => p.title === selectedPlan);
+    if (selected) {
+      const url = selected.links[method];
+      if (url) {
+        window.open(url, "_blank");
+      }
     }
   };
 
@@ -55,41 +35,16 @@ const Modal = ({
         <h2 className={styles.title}>Selecciona el plan que más te gusta</h2>
 
         <div className={styles.cardContainer}>
-          {[
-            {
-              title: "1 Sesión",
-              description: "Tu primera sesión de terapia para tratar un tema puntual.",
-              price: "$40",
-              highlight: false,
-            },
-            {
-              title: "4 Sesiones",
-              description:
-                "Cuatro encuentros para conocerte, trabajar procesos y crear continuidad.",
-              price: "$140",
-              highlight: true,
-            },
-            {
-              title: "6 Sesiones",
-              description:
-                "Una experiencia profunda y sostenida para trabajar a lo largo del tiempo.",
-              price: "$200",
-              highlight: false,
-            },
-          ].map((plan) => (
+          {productos.map((plan) => (
             <div
               key={plan.title}
               onClick={() => setSelectedPlan(plan.title)}
-              className={`${styles.cardWrapper} ${selectedPlan === plan.title ? styles.selected : ""
-                }`}
+              className={`${styles.cardWrapper} ${selectedPlan === plan.title ? styles.selected : ""}`}
             >
-              <div className={`${styles.card} ${plan.highlight ? styles.highlighted : ""}`}>
-                {plan.highlight && <div className={styles.badge}>MÁS ELEGIDO</div>}
+              <div className={styles.card}>
                 <div className={styles.iconContainer}>
                   <div className={styles.iconPlaceholder}>
-                    {plan.title === "1 Sesión" && <img src={icn1} alt="Icono 1 Sesión" className={styles.icon} />}
-                    {plan.title === "4 Sesiones" && <img src={icn2} alt="Icono 4 Sesiones" className={styles.icon} />}
-                    {plan.title === "6 Sesiones" && <img src={icn3} alt="Icono 6 Sesiones" className={styles.icon} />}
+                    <img src={plan.image} alt={`Icono ${plan.title}`} className={styles.icon} />
                   </div>
                 </div>
                 <h3 className={styles.title}>{plan.title}</h3>
@@ -136,9 +91,8 @@ const Modal = ({
           <button
             className={`${styles.continueButton} ${selectedPlan && (!requireTermsAcceptance || termsAccepted)
               ? styles.active
-              : styles.disabled
-              }`}
-            onClick={handleContinuePayU}
+              : styles.disabled}`}
+            onClick={() => handleContinue("payu")}
             disabled={!selectedPlan || (requireTermsAcceptance && !termsAccepted)}
           >
             {confirmTextPayU}
@@ -147,9 +101,8 @@ const Modal = ({
           <button
             className={`${styles.continueButton} ${selectedPlan && (!requireTermsAcceptance || termsAccepted)
               ? styles.active
-              : styles.disabled
-              }`}
-            onClick={handleContinuePayPal}
+              : styles.disabled}`}
+            onClick={() => handleContinue("paypal")}
             disabled={!selectedPlan || (requireTermsAcceptance && !termsAccepted)}
           >
             {confirmTextPayPal}
