@@ -125,18 +125,18 @@ export default function CirculoMujeres() {
 
           <div className={estilos.iconContainer}>
             <div className={estilos.iconC}>
-              <div className={estilos.item} style={{ "--item-color": "#E5E0FF" }}>
+              <div className={estilos.item} style={{ "--item-color": "#e0ffe3ff" }}>
                 <div className={estilos.icon}><FaLeaf /></div>
                 <span className={estilos.iconText}>Meditaciones Profundas</span>
               </div>
 
 
-              <div className={estilos.item} style={{ "--item-color": "#E5E0FF" }}>
+              <div className={estilos.item} style={{ "--item-color": "#ffe8e0ff" }}>
                 <div className={estilos.icon}><FaHandsHelping /></div>
                 <span className={estilos.iconText}>Actividades Experienciales</span>
               </div>
 
-              <div className={estilos.item} style={{ "--item-color": "#E5E0FF" }}>
+              <div className={estilos.item} style={{ "--item-color": "#ffe0f8ff" }}>
                 <div className={estilos.icon}><FaHeart /></div>
                 <span className={estilos.iconText}>Círculo de Palabra</span>
               </div>
@@ -148,17 +148,17 @@ export default function CirculoMujeres() {
                 <span className={estilos.iconText}>Hora: de 3:00 a 7:00 pm</span>
               </div>
 
-              <div className={estilos.item} style={{ "--item-color": "#E5E0FF" }}>
+              <div className={estilos.item} style={{ "--item-color": "#fcffe0ff" }}>
                 <div className={estilos.icon}><FaMapMarkerAlt /></div>
                 <span className={estilos.iconText}>Lugar: Barrio Mesa, Envigado</span>
               </div>
 
-              <div className={estilos.item} style={{ "--item-color": "#E5E0FF" }}>
+              <div className={estilos.item} style={{ "--item-color": "#e0feffff" }}>
                 <div className={estilos.icon}><FaCalendarAlt /></div>
                 <span className={estilos.iconText}>Fecha: sábados o domingos</span>
               </div>
 
-              <div className={estilos.item} style={{ "--item-color": "#E5E0FF" }}>
+              <div className={estilos.item} style={{ "--item-color": "#ffe0e3ff" }}>
                 <div className={estilos.icon}><FaHeart /></div>
                 <span className={estilos.iconText}>Aporte: $88.000 COP</span>
               </div>

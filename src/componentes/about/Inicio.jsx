@@ -214,13 +214,13 @@ export default function Inicio() {
                   className={estilos.iconContainer}
                 >
                   <div className={estilos.iconN}>
-                    <div className={estilos.item} style={{ "--item-color": "##7B3432" }}>
+                    <div className={estilos.item} style={{ "--item-color": "#f2efb6ff" }}>
                       <div className={estilos.icon}>
                         <FiCalendar />
                       </div>
                       <span>+{experiencia} Años de experiencia </span>
                     </div>
-                    <div className={estilos.item} style={{ "--item-color": "#ffffffff" }}>
+                    <div className={estilos.item} style={{ "--item-color": "#a6ea98ff" }}>
                       <div className={estilos.icon}>
                         <FiMessageCircle />
                       </div>
