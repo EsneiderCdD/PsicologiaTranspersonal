@@ -12,8 +12,9 @@
   color: #fff;
   font-family: 'Cairo', sans-serif;
   font-weight: 900;
+  padding: 0.5rem 1rem;
+  font-family: 'EB Garamond';
   font-size: 1rem;
-  padding: 0.44em 1.11em;
   border: none;
   border-radius: 1.25em;
   cursor: pointer;
@@ -24,11 +25,12 @@
 .botonSecundario {
   font-weight: 700;
   margin-bottom: 2%;
-  padding: 0.75em 1.5em;
   background-color: transparent;
-  padding: 0.44em 1.11em;
   color: #ca66eb;
   border-radius: 1.6rem;
   font-size: 0.75rem;
   cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-family: 'EB Garamond';
+  font-size: 1rem;
 }

@@ -123,14 +123,16 @@
   margin-bottom: 2%;
   background-color: #6b21a8;
   color: #fff;
-
   font-weight: 900;
   font-size: 1rem;
-  padding: 0.44em 1.11em;
   border: none;
   border-radius: 1.25em;
   cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-family: 'EB Garamond';
+  font-size: 1rem;
 }
+
 .botones {
   display: flex;
   justify-content: center;
@@ -306,6 +308,7 @@
     font-size: clamp(2.5rem, 2.7vw, 3rem);
 
   }
+
   .titulo h4 {
     font-size: clamp(1.75rem, 2vw, 2.25rem);
   }
@@ -318,6 +321,7 @@
   .titulo {
     margin-top: 1%;
   }
+
   .item {
     font-size: 0.9rem;
 
@@ -360,6 +364,7 @@
   .banner {
     height: 400px;
   }
+
   .item {
     font-size: 0.75rem;
     max-width: 70px;
@@ -386,7 +391,7 @@
   .item span {
     font-size: 0.70rem;
   }
-  
+
   .boton {
     font-weight: 800;
     font-size: 0.9rem;
@@ -436,11 +441,12 @@
   .item span {
     font-size: 0.60rem;
   }
-    .boton {
+
+  .boton {
     font-weight: 700;
     font-size: 0.9rem;
     padding: 0.75rem 0.5rem;
     width: fit-content;
-    
+
   }
 }

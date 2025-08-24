@@ -19,11 +19,13 @@ body {
   color: #fff;
 
   font-weight: 900;
-  font-size: 1rem;
-  padding: 0.44em 1.11em;
+
   border: none;
   border-radius: 1.25em;
   cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-family: 'EB Garamond';
+  font-size: 1rem;
 }
 
 .contenedor {
