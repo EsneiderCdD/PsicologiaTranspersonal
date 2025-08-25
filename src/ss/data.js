@@ -25,20 +25,12 @@ export const mensajeData = {
   mensajes: `Fragmentos de historias y emociones que reflejan el impacto del acompañamiento en sesiones individuales y en grupo.`,
 };
 
-
-
-
-
 //SOBRE MI
 export const aboutData = {
   parrafo1: `Soy psicóloga con amplia experiencia en salud mental, bienestar emocional y desarrollo del potencial humano. Mi enfoque está basado en la psicología transpersonal, un modelo terapéutico que integra la mente, el cuerpo y la dimensión espiritual para generar procesos de transformación profunda.`,
   parrafo2: `@Psicotranspersonal es un proyecto profesional, consciente y profundamente comprometido con el bienestar integral del ser humano. Hoy, Psicotranspersonal también es un espacio digital vivo: he cultivado una comunidad que crece día a día, no solo en número, sino en profundidad. `,
   parrafo3: `Además de mi formación en psicología clínica, me he especializado en terapia transpersonal y terapia enfocada a los ciclos y necesidades femeninas, lo que me ha permitido profundizar en los procesos de sanación de la mujer. Este trabajo, especialmente en espacios grupales, ha cultivado en mí habilidades como la comunicación asertiva, la coordinación empática, la gestión de dinámicas colectivas y la capacidad de sostener procesos compartidos con escucha activa y liderazgo sensible. `,
 };
-
-
-
-
 
 // PSICOTRANSPERSONAL
 export const psicotranspersonalData = {
@@ -54,10 +46,6 @@ export const acompañamientoTerapeuticoData = {
   parrafo4: `🌿 Temas que puedes trabajar en este espacio: \n`,
   parrafo5: `💫 Qué puedes esperar de este proceso:\n`,
 };
-
-
-
-
 
 // CIRCULO DE MUJERES
 export const circuloMujeresData = {
