@@ -6,7 +6,7 @@ import card6 from "../assets/imagenes/card6.webp";
 
 export const eventoConfig = {
 
-  fechaEvento: null, 
+  fechaEvento: "2025-12-31T00:00:00",
 
   cards: [
     { id: 1, imagen: card1 },

@@ -485,11 +485,13 @@ p {
     width: 100%;
   }
 
-  .iconC {
-    flex-wrap: wrap;
-
-    gap: 0.11rem;
-  }
+.iconC {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  gap: 0.11rem;
+  
+}
 
   .item span {
     font-size: 0.75rem;
