@@ -292,7 +292,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #000;
+  color: #8D2C24;
   background-color: var(--item-color, #ccc);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   z-index: 1;

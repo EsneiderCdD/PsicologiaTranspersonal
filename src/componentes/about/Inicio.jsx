@@ -214,25 +214,25 @@ export default function Inicio() {
                   className={estilos.iconContainer}
                 >
                   <div className={estilos.iconN}>
-                    <div className={estilos.item} style={{ "--item-color": "#f2efb6ff" }}>
+                    <div className={estilos.item} style={{ "--item-color": "#e0ffe3ff" }}>
                       <div className={estilos.icon}>
                         <FiCalendar />
                       </div>
                       <span>+{experiencia} Años de experiencia </span>
                     </div>
-                    <div className={estilos.item} style={{ "--item-color": "#a6ea98ff" }}>
+                    <div className={estilos.item} style={{ "--item-color": "#ffe8e0ff" }}>
                       <div className={estilos.icon}>
                         <FiMessageCircle />
                       </div>
                       <span>+{sesiones} Sesiones realizadas</span>
                     </div>
-                    <div className={estilos.item} style={{ "--item-color": "#bdb1f5ff" }}>
+                    <div className={estilos.item} style={{ "--item-color": "#ffe0f8ff" }}>
                       <div className={estilos.icon}>
                         <FiUsers />
                       </div>
                       <span>+{pacientes} Personas atendidas </span>
                     </div>
-                    <div className={estilos.item} style={{ "--item-color": "#f99ff6ff" }}>
+                    <div className={estilos.item} style={{ "--item-color": "#E5E0FF" }}>
                       <div className={estilos.icon}>
                         <FaInstagram />
                       </div>
@@ -243,25 +243,25 @@ export default function Inicio() {
                   </div>
 
                   <div className={estilos.iconC}>
-                    <div className={estilos.item} style={{ "--item-color": "#D7BDE2" }}>
+                    <div className={estilos.item} style={{ "--item-color": "#fcffe0ff" }}>
                       <div className={estilos.icon}>
                         <GiMoon />
                       </div>
                       <span>Certificada en sanación femenina</span>
                     </div>
-                    <div className={estilos.item} style={{ "--item-color": "#f1eaaeff" }}>
+                    <div className={estilos.item} style={{ "--item-color": "#e0feffff" }}>
                       <div className={estilos.icon}>
                         <FaUserGraduate />
                       </div>
                       <span>Profesional en Psicología</span>
                     </div>
-                    <div className={estilos.item} style={{ "--item-color": "#A3E4D7" }}>
+                    <div className={estilos.item} style={{ "--item-color": "#c9bfdd80" }}>
                       <div className={estilos.icon}>
                         <GiLotus />
                       </div>
                       <span>Diplomada en Psicología Transpersonal</span>
                     </div>
-                    <div className={estilos.item} style={{ "--item-color": "#F5B7B1" }}>
+                    <div className={estilos.item} style={{ "--item-color": "#ffe0e3ff" }}>
                       <div className={estilos.icon}>
                         <HiUsers />
                       </div>

@@ -126,43 +126,6 @@ export default function Servicios() {
             >
               {psicotranspersonalData.parrafo2}
             </motion.p>
-            <motion.p
-              variants={{ hidden: { opacity: 0, x: 30 }, visible: { opacity: 1, x: 0 } }}
-              transition={{ duration: 0.5, ease: "easeOut" }}
-              className={`${estilos.textoAnimado} ${estilos.preserveLines}`}
-            >
-              {acompañamientoTerapeuticoData.parrafo2}
-            </motion.p>
-
-            <div className={estilos.iconContainer}>
-              <div className={estilos.iconC}>
-                <div className={estilos.item} style={{ "--item-color": "#e8ffebff" }}>
-                  <div className={estilos.icon}><FaSearch /></div>
-                  <span className={estilos.iconText}>
-                    Explorar las causas profundas de lo que hoy te bloquea o duele.
-                  </span>
-                </div>
-                <div className={estilos.item} style={{ "--item-color": "#fffee8ff" }}>
-                  <div className={estilos.icon}><FaUnlock /></div>
-                  <span className={estilos.iconText}>
-                    Liberar creencias y patrones heredados que ya no sirven a tu vida.
-                  </span>
-                </div>
-                <div className={estilos.item} style={{ "--item-color": "#ffe8edff" }}>
-                  <div className={estilos.icon}><FaLeaf /></div>
-                  <span className={estilos.iconText}>
-                    Integrar experiencias pasadas para vivir en mayor paz y plenitud.
-                  </span>
-                </div>
-                <div className={estilos.item} style={{ "--item-color": "#e8fffeff" }}>
-                  <div className={estilos.icon}><FaHeart /></div>
-                  <span className={estilos.iconText}>
-                    Despertar tu conexión interior y tu confianza en ti misma.
-                  </span>
-                </div>
-              </div>
-            </div>
-
 
 
             <div className={estilos.titulo}>
@@ -187,6 +150,47 @@ export default function Servicios() {
                 >
                   {acompañamientoTerapeuticoData.parrafo1}
                 </motion.p>
+
+                
+                <motion.h5
+                  variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
+                  className={`${estilos.textoAnimado} ${estilos.preserveLines}`}
+                >
+                  En este proceso, te acompaño a:
+                </motion.h5>
+
+                <div className={estilos.iconContainer}>
+                  <div className={estilos.iconC}>
+                    <div className={estilos.item} style={{ "--item-color": "#e8ffebff" }}>
+                      <div className={estilos.icon}><FaSearch /></div>
+                      <span className={estilos.iconText}>
+                        Explorar las causas profundas de lo que hoy te bloquea o duele.
+                      </span>
+                    </div>
+                    <div className={estilos.item} style={{ "--item-color": "#fffee8ff" }}>
+                      <div className={estilos.icon}><FaUnlock /></div>
+                      <span className={estilos.iconText}>
+                        Liberar creencias y patrones heredados que ya no sirven a tu vida.
+                      </span>
+                    </div>
+                    <div className={estilos.item} style={{ "--item-color": "#ffe8edff" }}>
+                      <div className={estilos.icon}><FaLeaf /></div>
+                      <span className={estilos.iconText}>
+                        Integrar experiencias pasadas para vivir en mayor paz y plenitud.
+                      </span>
+                    </div>
+                    <div className={estilos.item} style={{ "--item-color": "#e8fffeff" }}>
+                      <div className={estilos.icon}><FaHeart /></div>
+                      <span className={estilos.iconText}>
+                        Despertar tu conexión interior y tu confianza en ti misma.
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+
+
                 <motion.h5
                   variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
                   transition={{ duration: 0.5, ease: "easeOut" }}
@@ -293,7 +297,7 @@ export default function Servicios() {
                     </div>
                   </div>
                 </div>
-               
+
               </div>
 
             </div>
@@ -313,7 +317,7 @@ export default function Servicios() {
                     ease: "easeInOut",
                   },
                 }}
-   
+
               >
                 Reserva tu espacio
               </motion.button>
